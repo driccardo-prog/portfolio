@@ -75,55 +75,59 @@ body {
 
 /* ========== HERO ========== */
 .hero {
+    position: relative;
     padding: 120px 40px 80px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    column-gap: 40px;
-    row-gap: 56px;
-    align-items: start;
 }
 
 .hero-frame {
-    grid-column: 1;
-    grid-row: 1;
-    width: 260px;
+    position: absolute;
+    top: 120px;
+    left: 40px;
+    width: 290px;
     height: 320px;
     background: var(--gray-light);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.2;
     text-align: center;
 }
 
 .hero-intro {
-    grid-column: 3;
-    grid-row: 1;
-    max-width: 380px;
+    position: absolute;
+    top: 140px;
+    right: 40px;
+    max-width: 360px;
     font-size: 14px;
     line-height: 1.45;
     letter-spacing: -0.3px;
     color: var(--black);
-    margin-top: 20px;
+    margin: 0;
 }
 
 .hero-title {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    font-size: 64px;
-    font-weight: 600;
-    letter-spacing: -2.5px;
+    margin: 0;
+    padding-top: 240px;
+    text-indent: 330px;
+    font-size: 80px;
+    font-weight: 700;
+    letter-spacing: -3px;
     line-height: 1.05;
     color: var(--black);
 }
 
+.hero-bottom {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+}
+
 .hero-col-label {
     grid-column: 2;
-    grid-row: 3;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: -0.3px;
     line-height: 1.4;
     color: var(--black);
@@ -131,12 +135,12 @@ body {
 
 .hero-col-text {
     grid-column: 3;
-    grid-row: 3;
     max-width: 380px;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: -0.3px;
     line-height: 1.4;
     color: var(--black);
+    margin: 0;
 }
 
 /* ========== SELECTED WORKS ========== */
@@ -409,17 +413,18 @@ body {
     .header { grid-template-columns: 1fr auto; padding: 0 20px; }
     .nav-center { display: none; }
     .header-right { gap: 20px; }
-    .hero {
-        grid-template-columns: 1fr;
-        padding: 100px 20px 60px;
-        row-gap: 32px;
+    .hero { padding: 100px 20px 60px; }
+    .hero-frame, .hero-intro {
+        position: static;
+        width: 100%;
+        max-width: 280px;
+        margin-bottom: 24px;
     }
-    .hero-frame, .hero-intro, .hero-title,
-    .hero-col-label, .hero-col-text {
-        grid-column: 1;
-    }
-    .hero-frame { width: 100%; max-width: 280px; height: 280px; }
-    .hero-title, .work-title, .footer-text { font-size: 36px; letter-spacing: -1.5px; }
+    .hero-frame { height: 280px; }
+    .hero-title { padding-top: 0; text-indent: 0; font-size: 36px; letter-spacing: -1.5px; }
+    .hero-bottom { grid-template-columns: 1fr; row-gap: 16px; }
+    .hero-col-label, .hero-col-text { grid-column: 1; }
+    .work-title, .footer-text { font-size: 36px; letter-spacing: -1.5px; }
     .work-annotation {
         position: static;
         transform: rotate(-3deg);
