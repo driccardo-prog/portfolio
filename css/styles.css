@@ -711,8 +711,18 @@ body {
     color: var(--black);
 }
 .proj-title .bracket,
-.proj-title .title-text { display: inline-block; }
+.proj-title .title-text { display: inline-block; will-change: transform; }
 .proj-title .bracket { margin: 0 0.15em; }
+
+/* Scroll-driven bracket spread on project page (mirrors home work title) */
+.proj-title .bracket-l { transform: translateX(calc(var(--p, 0) * -500px)); }
+.proj-title .bracket-r { transform: translateX(calc(var(--p, 0) *  500px)); }
+
+/* Parallax frames — moved on Y by JS via --py */
+[data-parallax] {
+    transform: translate3d(0, var(--py, 0px), 0);
+    will-change: transform;
+}
 
 .proj-meta {
     list-style: none;
