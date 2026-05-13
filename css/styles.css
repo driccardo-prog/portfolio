@@ -1039,6 +1039,265 @@ button, input, select, textarea {
     .proj-text p { max-width: 100%; }
 }
 
+/* ========== ABOUT PAGE ========== */
+.about-page { padding-top: 64px; }
+
+/* --- Hero with scattered frames + Hello there --- */
+.about-hero {
+    position: relative;
+    padding: 80px 40px 40px;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.about-scatter {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+.about-scatter .scatter-frame { color: var(--white); font-size: 13px; }
+.about-scatter .f1 { top:  6%; left:  4%;  width: 130px; height: 170px; --rot: -2deg; }
+.about-scatter .f2 { top:  2%; left: 28%;  width: 240px; height: 110px; --rot:  1deg; }
+.about-scatter .f3 { top: 12%; right: 8%;  width: 180px; height: 220px; --rot: -1deg; }
+.about-scatter .f4 { bottom: 8%; left:  2%; width:  90px; height: 120px; --rot:  3deg; }
+.about-scatter .f5 { bottom: 4%; left: 38%; width: 140px; height:  90px; --rot: -2deg; }
+.about-scatter .f6 { bottom: 12%; right: 4%; width: 120px; height: 150px; --rot:  2deg; }
+
+.about-hello {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(64px, 11vw, 168px);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    color: var(--black);
+    margin: 0;
+    text-align: center;
+    min-height: 1.1em;
+}
+.about-hello .type-caret {
+    width: 0.05em;
+    height: 0.85em;
+    background: var(--black);
+    vertical-align: -0.04em;
+}
+
+/* --- Intro: I'm Loli + bio --- */
+.about-intro {
+    padding: 80px 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 64px;
+    align-items: start;
+}
+.about-intro-name { display: flex; flex-direction: column; gap: 4px; }
+.about-name {
+    font-size: clamp(40px, 5vw, 72px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 0;
+    color: var(--black);
+}
+.about-aka {
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gray-dark);
+    margin-left: 0.4em;
+}
+.about-bio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+.bio-col { display: flex; flex-direction: column; gap: 16px; }
+.bio-col p { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; max-width: 360px; }
+.bio-col-right { padding-top: 0; }
+
+/* --- Big belief quote --- */
+.about-belief {
+    padding: 60px 40px 100px;
+}
+.belief-text {
+    font-size: clamp(40px, 6.4vw, 104px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1;
+    color: var(--black);
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.18em 0.22em;
+}
+.belief-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(40px) skewY(6deg);
+    transition: opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1),
+                transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.belief-word.is-revealed { opacity: 1; transform: translateY(0) skewY(0deg); }
+.belief-emph { font-style: italic; }
+.belief-text > .belief-word:nth-child(1)  { transition-delay: 0.00s; }
+.belief-text > .belief-word:nth-child(2)  { transition-delay: 0.04s; }
+.belief-text > .belief-word:nth-child(3)  { transition-delay: 0.08s; }
+.belief-text > .belief-word:nth-child(4)  { transition-delay: 0.12s; }
+.belief-text > .belief-word:nth-child(5)  { transition-delay: 0.16s; }
+.belief-text > .belief-word:nth-child(6)  { transition-delay: 0.20s; }
+.belief-text > .belief-word:nth-child(7)  { transition-delay: 0.24s; }
+.belief-text > .belief-word:nth-child(8)  { transition-delay: 0.28s; }
+.belief-text > .belief-word:nth-child(9)  { transition-delay: 0.32s; }
+.belief-text > .belief-word:nth-child(10) { transition-delay: 0.36s; }
+.belief-text > .belief-word:nth-child(11) { transition-delay: 0.40s; }
+.belief-text > .belief-word:nth-child(12) { transition-delay: 0.44s; }
+.belief-text > .belief-word:nth-child(13) { transition-delay: 0.48s; }
+.belief-text > .belief-word:nth-child(14) { transition-delay: 0.52s; }
+.belief-text > .belief-word:nth-child(15) { transition-delay: 0.56s; }
+.belief-text > .belief-word:nth-child(16) { transition-delay: 0.60s; }
+
+/* --- Skills marquee --- */
+.about-skills {
+    border-top: 1px solid var(--gray-light);
+    border-bottom: 1px solid var(--gray-light);
+    padding: 28px 0;
+    overflow: hidden;
+}
+.marquee-row {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: clamp(28px, 3.4vw, 52px);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    color: var(--gray-light);
+}
+.marquee-inner {
+    display: inline-block;
+    will-change: transform;
+    animation: marqueeLoop linear infinite;
+}
+.marquee-segment { display: inline-block; }
+.marquee-sep { color: var(--gray-light); padding: 0 0.4em; }
+
+@keyframes marqueeLoop {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(var(--cycle, 100px) * -1)); }
+}
+
+/* --- Beyond design block --- */
+.about-beyond {
+    padding: 100px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 64px;
+    align-items: center;
+}
+.beyond-frame {
+    aspect-ratio: 4 / 5;
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 16px;
+}
+.beyond-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--black);
+    margin: 0;
+    max-width: 480px;
+}
+
+/* --- CTA --- */
+.about-cta {
+    padding: 60px 40px 60px;
+    position: relative;
+}
+.cta-text {
+    font-size: clamp(48px, 7.4vw, 116px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 0.98;
+    color: var(--black);
+    margin: 0 0 40px;
+    display: flex;
+    flex-direction: column;
+}
+.cta-line {
+    display: block;
+    opacity: 0;
+    transform: translateX(-80px) rotate(-3deg);
+    transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+                transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transform-origin: left center;
+}
+.cta-line.is-revealed { opacity: 1; transform: translateX(0) rotate(0); }
+.cta-text > .cta-line:nth-child(1) { transition-delay: 0.05s; }
+.cta-text > .cta-line:nth-child(2) { transition-delay: 0.18s; }
+.cta-text > .cta-line:nth-child(3) { transition-delay: 0.31s; }
+.cta-text > .cta-line:nth-child(4) { transition-delay: 0.44s; }
+.cta-text > .cta-line:nth-child(5) { transition-delay: 0.57s; }
+.cta-text > .cta-line:nth-child(6) { transition-delay: 0.70s; }
+
+.cta-wink {
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.4s ease;
+    display: inline-block;
+}
+.cta-wink:hover { transform: rotate(15deg) scale(1.15); }
+
+.cta-cv {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    position: absolute;
+    right: 40px;
+    bottom: 60px;
+}
+
+/* --- Reveal helpers --- */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) var(--delay, 0s),
+                transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) var(--delay, 0s);
+}
+.reveal-up.is-revealed { opacity: 1; transform: translateY(0); }
+
+.reveal-zoom {
+    opacity: 0;
+    transform: scale(0.85) rotate(-3deg);
+    transition: opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) var(--delay, 0s),
+                transform 1s cubic-bezier(0.2, 0.7, 0.2, 1) var(--delay, 0s);
+}
+.reveal-zoom.is-revealed { opacity: 1; transform: scale(1) rotate(0); }
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-up, .reveal-zoom, .belief-word, .cta-line {
+        opacity: 1; transform: none;
+    }
+    .marquee-inner { animation: none; }
+}
+
+@media (max-width: 900px) {
+    .about-hero { padding: 60px 20px 20px; min-height: 40vh; }
+    .about-scatter .scatter-frame { transform: scale(0.7); }
+    .about-intro { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px; }
+    .about-bio { grid-template-columns: 1fr; gap: 24px; }
+    .about-belief { padding: 40px 20px 60px; }
+    .about-beyond { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px; }
+    .about-cta { padding: 40px 20px 80px; }
+    .cta-cv { position: static; margin-top: 24px; right: auto; bottom: auto; }
+}
+
 /* ========== FOOTER ========== */
 .footer {
     padding: 80px 40px 40px;
