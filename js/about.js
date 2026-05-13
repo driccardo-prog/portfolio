@@ -41,7 +41,7 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
     const SCROLL_SPEEDS = [-14, 10, -6, 12, -10, 6];
     frames.forEach((el, i) => {
         el.dataset.scrollSpeed = SCROLL_SPEEDS[i % SCROLL_SPEEDS.length];
-        el.dataset.mouseSpeed = 18 + (i % 4) * 6;
+        el.dataset.mouseSpeed = 28 + (i % 4) * 10;
     });
 
     function updateScroll() {
