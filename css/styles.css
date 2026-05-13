@@ -70,7 +70,14 @@ button, input, select, textarea {
     align-items: center;
 }
 
-.header-location,
+.header-location {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--gray-light);
+    text-decoration: none;
+    letter-spacing: -0.025em;
+}
+
 .nav-link {
     font-size: 14px;
     font-weight: 500;
