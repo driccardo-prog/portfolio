@@ -20,7 +20,7 @@ function update() {
         const center = rect.top + rect.height / 2;
         const normalized = (center - vh / 2) / vh;
         const speed = parseFloat(el.dataset.parallax) || 0;
-        el.style.setProperty('--py', `${(-normalized * speed * 4).toFixed(2)}px`);
+        el.style.setProperty('--py', `${(-normalized * speed * 2).toFixed(2)}px`);
     });
 }
 
