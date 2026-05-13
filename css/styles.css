@@ -686,6 +686,110 @@ button, input, select, textarea {
     padding-bottom: 8px;
 }
 
+/* ===== Quote / Project Inquiry Form ===== */
+.quote-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+    padding: 80px 40px 40px;
+    border-top: 1px solid var(--gray-light);
+}
+
+.quote-headline {
+    font-size: clamp(40px, 6.2vw, 100px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 0.95;
+    color: var(--black);
+    margin: 0;
+    position: sticky;
+    top: 96px;
+}
+
+.quote-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 24px;
+}
+
+.quote-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.quote-field--full { grid-column: 1 / -1; }
+
+.quote-label {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: var(--gray-dark);
+    text-transform: uppercase;
+}
+
+.quote-field input,
+.quote-field select,
+.quote-field textarea {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--black);
+    border-radius: 0;
+    padding: 8px 0;
+    font-family: inherit;
+    font-size: 16px;
+    letter-spacing: -0.025em;
+    color: var(--black);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+.quote-field select {
+    background-image: linear-gradient(45deg, transparent 50%, var(--black) 50%),
+                      linear-gradient(135deg, var(--black) 50%, transparent 50%);
+    background-position: calc(100% - 14px) 50%, calc(100% - 8px) 50%;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 28px;
+}
+.quote-field textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+.quote-field input::placeholder,
+.quote-field textarea::placeholder { color: var(--gray-light); }
+.quote-field input:focus,
+.quote-field select:focus,
+.quote-field textarea:focus { border-bottom-width: 2px; }
+
+.quote-form-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-top: 40px;
+}
+.quote-tagline {
+    font-size: 14px;
+    color: var(--black);
+    margin: 0;
+}
+.quote-submit {
+    background: var(--black);
+    color: var(--white);
+    border: 0;
+    padding: 14px 32px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    cursor: pointer;
+    border-radius: 999px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.quote-submit:hover { transform: translateY(-1px); }
+
 .contact-footer {
     display: flex;
     gap: 28px;
@@ -703,6 +807,10 @@ button, input, select, textarea {
     .contact-info { justify-self: start; }
     .contact-socials { margin-top: 32px; }
     .contact-footer { padding: 24px 20px; }
+    .quote-section { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px 24px; }
+    .quote-headline { position: static; }
+    .quote-form-grid { grid-template-columns: 1fr; gap: 20px; }
+    .quote-form-foot { flex-direction: column; align-items: flex-start; }
 }
 
 /* ========== PROJECT PAGE ========== */
