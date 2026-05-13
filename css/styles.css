@@ -1042,32 +1042,38 @@ button, input, select, textarea {
 /* ========== ABOUT PAGE ========== */
 .about-page { padding-top: 64px; }
 
-/* --- Hero with scattered frames + Hello there --- */
+/* --- Hero with scattered frames + Hello there (mirrors home All Work) --- */
 .about-hero {
-    position: relative;
-    padding: 80px 40px 40px;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 40px 40px;
     overflow: hidden;
 }
 .about-scatter {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 720px;
 }
 .about-scatter .scatter-frame { color: var(--white); font-size: 13px; }
-.about-scatter .f1 { top:   2%;  left:  1%;   width: 150px; height: 200px; --rot: -3deg; }
-.about-scatter .f2 { top:   0%;  left: 36%;   width: 280px; height: 120px; --rot:  2deg; }
-.about-scatter .f3 { top:   8%;  right: 1%;   width: 220px; height: 240px; --rot: -2deg; }
-.about-scatter .f4 { bottom: 4%; left:  3%;   width: 110px; height: 140px; --rot:  4deg; }
-.about-scatter .f5 { bottom: 1%; left:  45%;  width: 170px; height: 100px; --rot: -3deg; }
-.about-scatter .f6 { bottom: 6%; right: 3%;   width: 140px; height: 180px; --rot:  3deg; }
+.about-scatter .f1  { top: 4%;  left: 0;        width: 130px; height: 180px; --rot: -1deg; }
+.about-scatter .f2  { top: 12%; left: 22%;      width:  90px; height: 130px; --rot:  1deg; }
+.about-scatter .f3  { top: 0;   left: 38%;      width: 230px; height: 150px; }
+.about-scatter .f4  { top: -10px; right: -20px; width: 140px; height: 130px; }
+.about-scatter .f5  { top: 32%; right: 8%;      width: 180px; height: 140px; }
+.about-scatter .f6  { top: 36%; left: 30%;      width: 100px; height: 110px; --rot: -2deg; }
+.about-scatter .f7  { top: 50%; left: 0;        width: 130px; height: 180px; --rot:  1deg; }
+.about-scatter .f8  { top: 62%; left: 22%;      width: 100px; height: 100px; }
+.about-scatter .f9  { top: 56%; left: 38%;      width: 240px; height: 160px; }
+.about-scatter .f10 { top: 60%; left: 66%;      width: 100px; height: 100px; --rot:  2deg; }
+.about-scatter .f11 { top: 55%; right: -20px;   width: 130px; height: 160px; --rot:  4deg; }
 
 .about-hello {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: clamp(64px, 11vw, 168px);
     font-weight: 700;
     letter-spacing: -0.04em;
@@ -1076,6 +1082,7 @@ button, input, select, textarea {
     margin: 0;
     text-align: center;
     min-height: 1.1em;
+    pointer-events: none;
 }
 .about-hello .type-caret {
     width: 0.05em;
@@ -1165,34 +1172,29 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
 .belief-text > .belief-word:nth-child(15) { transition-delay: 0.56s; }
 .belief-text > .belief-word:nth-child(16) { transition-delay: 0.60s; }
 
-/* --- Skills marquee --- */
+/* --- Skills: shuffle highlight (no lines) --- */
 .about-skills {
-    border-top: 1px solid var(--gray-light);
-    border-bottom: 1px solid var(--gray-light);
-    padding: 28px 0;
+    padding: 40px 40px;
     overflow: hidden;
 }
-.marquee-row {
-    display: block;
+.skills-row {
     width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    font-size: clamp(28px, 3.4vw, 52px);
+    text-align: center;
+    font-size: clamp(24px, 2.8vw, 44px);
     font-weight: 500;
     letter-spacing: -0.025em;
     color: var(--gray-light);
+    line-height: 1.4;
 }
-.marquee-inner {
+.skill-word,
+.skill-sep {
     display: inline-block;
-    will-change: transform;
-    animation: marqueeLoop linear infinite;
+    transition: color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.marquee-segment { display: inline-block; }
-.marquee-sep { color: var(--gray-light); padding: 0 0.4em; }
-
-@keyframes marqueeLoop {
-    from { transform: translateX(0); }
-    to   { transform: translateX(calc(var(--cycle, 100px) * -1)); }
+.skill-word.is-on {
+    color: var(--black);
+    transform: translateY(-2px);
 }
 
 /* --- Beyond design block --- */
@@ -1302,8 +1304,21 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
 }
 
 @media (max-width: 900px) {
-    .about-hero { padding: 60px 20px 20px; min-height: 40vh; }
-    .about-scatter .scatter-frame { transform: scale(0.7); }
+    .about-hero { padding: 20px; }
+    .about-scatter { height: 540px; }
+    .about-scatter .scatter-frame { font-size: 11px; }
+    .about-scatter .f1  { width: 90px;  height: 130px; }
+    .about-scatter .f2  { width: 70px;  height: 100px; left: 30%; }
+    .about-scatter .f3  { width: 130px; height: 100px; left: 55%; }
+    .about-scatter .f4  { width: 90px;  height: 90px;  right: -10px; }
+    .about-scatter .f5  { width: 110px; height: 90px;  top: 30%; right: 0; }
+    .about-scatter .f6  { width: 70px;  height: 80px;  top: 38%; left: 38%; }
+    .about-scatter .f7  { width: 90px;  height: 130px; top: 58%; }
+    .about-scatter .f8  { width: 70px;  height: 70px;  top: 68%; left: 30%; }
+    .about-scatter .f9  { width: 140px; height: 100px; top: 62%; left: 50%; }
+    .about-scatter .f10 { width: 70px;  height: 70px;  top: 78%; left: 70%; }
+    .about-scatter .f11 { width: 90px;  height: 110px; top: 72%; right: -10px; }
+    .about-skills { padding: 28px 20px; }
     .about-intro { grid-template-columns: 1fr; gap: 24px; padding: 60px 20px; }
     .bio-cell--name,
     .bio-cell--a,

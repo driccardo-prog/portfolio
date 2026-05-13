@@ -63,12 +63,13 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
     let tx = 0, ty = 0, cx = 0, cy = 0;
     const LERP = 0.08;
-    wrap.parentElement.addEventListener('mousemove', e => {
-        const r = wrap.parentElement.getBoundingClientRect();
+    const hero = document.querySelector('.about-hero') || wrap;
+    hero.addEventListener('mousemove', e => {
+        const r = hero.getBoundingClientRect();
         tx = (e.clientX - r.left - r.width / 2) / (r.width / 2);
         ty = (e.clientY - r.top - r.height / 2) / (r.height / 2);
     });
-    wrap.parentElement.addEventListener('mouseleave', () => { tx = 0; ty = 0; });
+    hero.addEventListener('mouseleave', () => { tx = 0; ty = 0; });
 
     function loop() {
         cx += (tx - cx) * LERP;
@@ -83,42 +84,35 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
     requestAnimationFrame(loop);
 })();
 
-/* ===== 3. Skills marquee — seamless infinite horizontal loop ===== */
+/* ===== 3. Skills shuffle highlight ===== */
 (() => {
-    const rows = document.querySelectorAll('[data-marquee]');
-    if (!rows.length || reduceMotion) return;
-    const SPEED = 60; // px per second
+    const words = Array.from(document.querySelectorAll('.skill-word'));
+    if (!words.length || reduceMotion) return;
 
-    rows.forEach(row => {
-        const text = row.dataset.marquee;
-        // measure one segment
-        const probe = document.createElement('span');
-        probe.className = 'marquee-segment';
-        probe.innerHTML = text;
-        probe.style.visibility = 'hidden';
-        row.appendChild(probe);
-        const segWidth = probe.getBoundingClientRect().width;
-        row.removeChild(probe);
+    const ACTIVE = 3;          // how many words are highlighted at any moment
+    const SWAP_MS = 700;       // interval between swaps
 
-        const rowWidth = row.clientWidth;
-        const copies = Math.max(2, Math.ceil((rowWidth * 2) / segWidth) + 1);
+    function pickRandom(excludeSet) {
+        const pool = words.filter(w => !excludeSet.has(w));
+        return pool[Math.floor(Math.random() * pool.length)];
+    }
 
-        const inner = document.createElement('div');
-        inner.className = 'marquee-inner';
-        for (let i = 0; i < copies; i++) {
-            const seg = document.createElement('span');
-            seg.className = 'marquee-segment';
-            seg.innerHTML = text + '<span class="marquee-sep"> | </span>';
-            inner.appendChild(seg);
-        }
-        row.innerHTML = '';
-        row.appendChild(inner);
+    // Initial random selection
+    const active = new Set();
+    while (active.size < ACTIVE) active.add(pickRandom(active));
+    active.forEach(w => w.classList.add('is-on'));
 
-        // measure full segment with separator
-        const realSeg = inner.querySelector('.marquee-segment').getBoundingClientRect().width;
-        inner.style.setProperty('--cycle', `${realSeg.toFixed(2)}px`);
-        inner.style.animationDuration = `${(realSeg / SPEED).toFixed(2)}s`;
-    });
+    setInterval(() => {
+        // Turn off a random active one and turn on a random inactive one
+        const offArr = Array.from(active);
+        const off = offArr[Math.floor(Math.random() * offArr.length)];
+        off.classList.remove('is-on');
+        active.delete(off);
+
+        const on = pickRandom(active);
+        on.classList.add('is-on');
+        active.add(on);
+    }, SWAP_MS);
 })();
 
 /* ===== 4. Reveal-on-scroll ===== */
