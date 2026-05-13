@@ -568,7 +568,7 @@ body {
 }
 
 .contact-headline {
-    font-size: clamp(48px, 7.4vw, 116px);
+    font-size: clamp(40px, 6.2vw, 100px);
     font-weight: 700;
     letter-spacing: -0.035em;
     line-height: 0.95;
@@ -576,13 +576,13 @@ body {
     margin: 0;
 }
 
-/* Flip-clock style headline — alternates between two phrases on a horizontal axis */
-.flip-headline { perspective: 1600px; }
+/* Flip-clock style headline — smooth crossfade between two phrases on rotateX */
+.flip-headline { perspective: 1800px; }
 
 .flip-card {
     display: grid;
     transform-style: preserve-3d;
-    animation: flipLoop 8s infinite;
+    animation: flipLoop 9s cubic-bezier(0.76, 0, 0.24, 1) infinite;
 }
 
 .flip-face {
@@ -592,16 +592,62 @@ body {
     -webkit-backface-visibility: hidden;
 }
 
+.flip-line {
+    display: block;
+    white-space: nowrap;
+}
+
 .flip-back { transform: rotateX(180deg); }
 
 @keyframes flipLoop {
-    0%, 45%   { transform: rotateX(0deg); }
-    50%, 95%  { transform: rotateX(180deg); }
+    0%, 42%   { transform: rotateX(0deg); }
+    50%, 92%  { transform: rotateX(180deg); }
     100%      { transform: rotateX(360deg); }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .flip-card { animation: none; }
+}
+
+/* Smooth entrance for the rest of the contact page */
+.contact-block-main,
+.contact-info { animation: contactFadeUp 1s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.contact-block-main { animation-delay: 0.05s; }
+.contact-info      { animation-delay: 0.25s; }
+
+.contact-socials { animation: contactFadeUp 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.55s both; }
+.contact-socials a { position: relative; transition: letter-spacing 0.4s ease, color 0.3s ease; }
+.contact-socials a:hover { letter-spacing: 0.04em; }
+
+.contact-item { animation: contactFadeUp 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.contact-item:nth-child(1) { animation-delay: 0.35s; }
+.contact-item:nth-child(2) { animation-delay: 0.45s; }
+.contact-item:nth-child(3) { animation-delay: 0.55s; }
+
+.contact-value { transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); display: inline-block; }
+.contact-item:hover .contact-value { transform: translateX(6px); }
+
+/* Gentle floating motion on the headline */
+.flip-headline {
+    animation: contactFloat 7s ease-in-out infinite;
+    transform-origin: left center;
+}
+@keyframes contactFloat {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+}
+
+@keyframes contactFadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-block-main,
+    .contact-info,
+    .contact-socials,
+    .contact-item,
+    .flip-headline { animation: none; }
 }
 
 .contact-socials {
