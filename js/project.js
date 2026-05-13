@@ -6,13 +6,11 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const title = document.querySelector('.proj-title');
 const parallaxEls = document.querySelectorAll('[data-parallax]');
 
-const TITLE_RANGE = 500;
+const TITLE_RANGE = 800;
 
 function update() {
     if (title) {
-        const rect = title.getBoundingClientRect();
-        const scrolled = Math.max(0, -rect.top);
-        const p = clamp(scrolled / TITLE_RANGE, 0, 1);
+        const p = clamp(window.scrollY / TITLE_RANGE, 0, 1);
         title.style.setProperty('--p', p.toFixed(4));
     }
     const vh = window.innerHeight;
