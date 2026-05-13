@@ -313,8 +313,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none;
     z-index: 10;
+    text-decoration: none;
+    color: inherit;
 }
 
 .all-work-title {
@@ -428,6 +429,20 @@ body {
 .work-card-frame--xtall  { aspect-ratio: 4 / 6; }
 .work-card-frame--wide   { aspect-ratio: 16 / 9; }
 
+/* Card scroll-driven progressive animation (mirrors .work on home).
+   JS sets --p (0..1) on each .work-card based on viewport position. */
+.work-card-frame {
+    position: relative;
+    overflow: hidden;
+    opacity: calc(0.55 + var(--p, 0) * 0.45);
+    transform: translateY(calc((1 - var(--p, 0)) * 24px));
+    will-change: transform, opacity;
+}
+.work-card-frame > .frame-label {
+    transform: scale(calc(1 + var(--p, 0) * 0.06));
+    will-change: transform;
+}
+
 .work-card-caption {
     display: flex;
     justify-content: space-between;
@@ -437,6 +452,19 @@ body {
     font-weight: 500;
     letter-spacing: -0.025em;
 }
+
+.card-title {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.05em;
+}
+.card-bracket,
+.card-title-text {
+    display: inline-block;
+    will-change: transform;
+}
+.card-bracket-l { transform: translateX(calc(var(--p, 0) * -40px)); }
+.card-bracket-r { transform: translateX(calc(var(--p, 0) *  40px)); }
 
 .work-card-year { color: var(--gray-light); }
 
@@ -472,6 +500,26 @@ body {
 }
 
 .list-row:hover .list-name { color: var(--black); }
+
+/* List View — infinite horizontal loop, alternating per row */
+.list-row-inner {
+    display: inline-block;
+    will-change: transform;
+}
+@keyframes slideRight {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(100px); }
+}
+@keyframes slideLeft {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100px); }
+}
+.list-row.right .list-row-inner { animation: slideRight 4s infinite linear; }
+.list-row.left  .list-row-inner { animation: slideLeft  4s infinite linear; }
+
+@media (prefers-reduced-motion: reduce) {
+    .list-row .list-row-inner { animation: none; }
+}
 
 /* ===== Work page responsive ===== */
 @media (max-width: 900px) {
