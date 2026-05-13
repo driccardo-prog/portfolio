@@ -409,9 +409,9 @@ body {
 }
 
 .work-row { display: grid; gap: 16px; }
-.work-row--1 { grid-template-columns: 1fr; --bracket-shift: 60px; }
-.work-row--2 { grid-template-columns: 1fr 1fr; --bracket-shift: 36px; }
-.work-row--3 { grid-template-columns: 1fr 1fr 1fr; --bracket-shift: 16px; }
+.work-row--1 { grid-template-columns: 1fr; --bracket-shift: 50px; }
+.work-row--2 { grid-template-columns: 1fr 1fr; --bracket-shift: 28px; }
+.work-row--3 { grid-template-columns: 1fr 1fr 1fr; --bracket-shift: 10px; }
 
 .work-card {
     display: flex;
@@ -462,6 +462,7 @@ body {
     display: inline-flex;
     align-items: baseline;
     gap: 0.05em;
+    padding-right: var(--bracket-shift, 40px);
 }
 .card-bracket,
 .card-title-text {
@@ -477,7 +478,7 @@ body {
 .work-list-view {
     display: flex;
     flex-direction: column;
-    padding: 0 40px 80px;
+    padding: 0 0 80px;
 }
 
 .list-row {
@@ -531,7 +532,7 @@ body {
     .work-head { flex-direction: column; align-items: flex-start; gap: 16px; padding: 40px 20px 20px; }
     .view-toggle { position: static; padding: 0; }
     .work-grid-view { padding: 0 20px 60px; gap: 24px; }
-    .work-list-view { padding: 0 20px 60px; }
+    .work-list-view { padding: 0 0 60px; }
     .work-row--2 { grid-template-columns: 1fr; }
     .work-row--3 { grid-template-columns: 1fr 1fr; }
     .list-row { font-size: 28px; }
