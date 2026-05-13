@@ -84,33 +84,61 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
     requestAnimationFrame(loop);
 })();
 
-/* ===== 3. Skills shuffle highlight ===== */
+/* ===== 3. Skills: infinite marquee + shuffle highlight ===== */
 (() => {
-    const words = Array.from(document.querySelectorAll('.skill-word'));
-    if (!words.length || reduceMotion) return;
+    const track = document.querySelector('.skills-track');
+    if (!track) return;
+    const SPEED = 60; // px per second
 
-    const ACTIVE = 3;          // how many words are highlighted at any moment
-    const SWAP_MS = 700;       // interval between swaps
+    // Build the marquee: duplicate inner content enough to overflow the viewport,
+    // then animate translateX by exactly one set's width so the loop is seamless.
+    if (!reduceMotion) {
+        const baseHTML = track.innerHTML;
+        // Measure one set
+        const baseWidth = track.getBoundingClientRect().width;
+        const viewWidth = track.parentElement.clientWidth;
+        const copies = Math.max(2, Math.ceil((viewWidth * 2) / baseWidth) + 1);
 
-    function pickRandom(excludeSet) {
-        const pool = words.filter(w => !excludeSet.has(w));
-        return pool[Math.floor(Math.random() * pool.length)];
+        let html = '';
+        for (let i = 0; i < copies; i++) html += baseHTML;
+        track.innerHTML = html;
+
+        track.style.setProperty('--cycle', `${baseWidth.toFixed(2)}px`);
+        track.style.animationDuration = `${(baseWidth / SPEED).toFixed(2)}s`;
     }
 
-    // Initial random selection
+    // Shuffle highlight — toggle every copy of the same skill together
+    const allWords = Array.from(track.querySelectorAll('.skill-word'));
+    if (!allWords.length) return;
+    const skillNames = [...new Set(allWords.map(w => w.dataset.skill))];
+
+    function setSkill(name, on) {
+        allWords.forEach(w => {
+            if (w.dataset.skill === name) w.classList.toggle('is-on', on);
+        });
+    }
+
+    const ACTIVE = 3;
+    const SWAP_MS = 700;
     const active = new Set();
-    while (active.size < ACTIVE) active.add(pickRandom(active));
-    active.forEach(w => w.classList.add('is-on'));
+    while (active.size < ACTIVE) {
+        const pool = skillNames.filter(s => !active.has(s));
+        const pick = pool[Math.floor(Math.random() * pool.length)];
+        active.add(pick);
+        setSkill(pick, true);
+    }
+
+    if (reduceMotion) return;
 
     setInterval(() => {
-        // Turn off a random active one and turn on a random inactive one
         const offArr = Array.from(active);
         const off = offArr[Math.floor(Math.random() * offArr.length)];
-        off.classList.remove('is-on');
+        setSkill(off, false);
         active.delete(off);
 
-        const on = pickRandom(active);
-        on.classList.add('is-on');
+        const pool = skillNames.filter(s => !active.has(s));
+        const on = pool[Math.floor(Math.random() * pool.length)];
+        setSkill(on, true);
         active.add(on);
     }, SWAP_MS);
 })();

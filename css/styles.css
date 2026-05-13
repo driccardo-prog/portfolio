@@ -1172,29 +1172,41 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
 .belief-text > .belief-word:nth-child(15) { transition-delay: 0.56s; }
 .belief-text > .belief-word:nth-child(16) { transition-delay: 0.60s; }
 
-/* --- Skills: shuffle highlight (no lines) --- */
+/* --- Skills: infinite marquee + shuffle highlight (no lines) --- */
 .about-skills {
-    padding: 40px 40px;
+    padding: 36px 0;
     overflow: hidden;
 }
-.skills-row {
+.skills-marquee {
     width: 100%;
-    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
     font-size: clamp(24px, 2.8vw, 44px);
     font-weight: 500;
     letter-spacing: -0.025em;
     color: var(--gray-light);
     line-height: 1.4;
 }
-.skill-word,
-.skill-sep {
+.skills-track {
     display: inline-block;
-    transition: color 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    animation: marqueeLoop linear infinite;
+}
+.skill-word,
+.skill-sep { display: inline-block; }
+.skill-word {
+    transition: color 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .skill-word.is-on {
     color: var(--black);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+}
+.skill-sep { color: var(--gray-light); padding: 0 0.15em; }
+
+@keyframes marqueeLoop {
+    from { transform: translateX(0); }
+    to   { transform: translateX(calc(var(--cycle, 100px) * -1)); }
 }
 
 /* --- Beyond design block --- */
