@@ -705,6 +705,53 @@ button, input, select, textarea {
     margin: 0;
     position: sticky;
     top: 96px;
+    min-height: 2.05em;
+}
+.quote-headline .type-caret {
+    width: 0.06em;
+    height: 0.78em;
+    background: var(--black);
+    vertical-align: -0.04em;
+}
+
+/* Down arrow on the flip-back headline */
+.flip-arrow {
+    display: inline-block;
+    animation: arrowNudge 1.6s ease-in-out infinite;
+}
+@keyframes arrowNudge {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(8px); }
+}
+
+/* Quote form field stagger entrance */
+.quote-field {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: quoteFieldIn 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+.quote-field:nth-child(1) { animation-delay: 0.10s; }
+.quote-field:nth-child(2) { animation-delay: 0.18s; }
+.quote-field:nth-child(3) { animation-delay: 0.26s; }
+.quote-field:nth-child(4) { animation-delay: 0.34s; }
+.quote-field:nth-child(5) { animation-delay: 0.42s; }
+.quote-field:nth-child(6) { animation-delay: 0.50s; }
+.quote-field:nth-child(7) { animation-delay: 0.58s; }
+
+.quote-form-foot {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: quoteFieldIn 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.7s forwards;
+}
+
+@keyframes quoteFieldIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .quote-field,
+    .quote-form-foot { opacity: 1; transform: none; animation: none; }
+    .flip-arrow { animation: none; }
 }
 
 .quote-form-grid {
