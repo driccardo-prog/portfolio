@@ -33,6 +33,12 @@ body {
     overflow-x: hidden;
 }
 
+/* Buttons/inputs don't inherit letter-spacing by default — force tracking -25 everywhere */
+button, input, select, textarea {
+    font-family: inherit;
+    letter-spacing: inherit;
+}
+
 /* ========== HEADER ========== */
 .header {
     position: fixed;
