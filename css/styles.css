@@ -690,6 +690,175 @@ body {
     .contact-footer { padding: 24px 20px; }
 }
 
+/* ========== PROJECT PAGE ========== */
+.project-page { padding-top: 64px; }
+
+.project {
+    padding: 60px 40px 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.proj-head { margin-bottom: 32px; }
+
+.proj-title {
+    font-size: clamp(40px, 5.4vw, 80px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    text-align: center;
+    margin: 0 0 24px;
+    color: var(--black);
+}
+.proj-title .bracket,
+.proj-title .title-text { display: inline-block; }
+.proj-title .bracket { margin: 0 0.15em; }
+
+.proj-meta {
+    list-style: none;
+    margin: 0;
+    padding: 24px 0 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    border-top: 1px solid var(--gray-light);
+    font-size: 14px;
+}
+.proj-meta li { display: flex; gap: 8px; align-items: baseline; }
+.proj-meta-label { color: var(--gray-dark); }
+.proj-meta-value { color: var(--black); font-weight: 600; }
+
+.proj-frame {
+    position: relative;
+    background: var(--gray-light);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.proj-hero {
+    aspect-ratio: 16 / 9;
+    margin: 24px 0 40px;
+}
+
+/* ---- Stage A: tall frame on left + text top-right + two more frames ---- */
+.proj-stage--a {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 80px;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+.stage-a-1 { grid-column: 1 / span 4; grid-row: 1 / span 6; }
+.stage-a-text { grid-column: 7 / span 6; grid-row: 1 / span 3; }
+.stage-a-2 { grid-column: 5 / span 6; grid-row: 4 / span 5; }
+.stage-a-3 { grid-column: 7 / span 6; grid-row: 9 / span 4; }
+
+.proj-text { display: flex; flex-direction: column; gap: 14px; padding-top: 8px; }
+.proj-text-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 6px;
+    letter-spacing: 0.04em;
+}
+.proj-text-label { font-weight: 500; }
+.proj-text p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--black);
+    margin: 0;
+    max-width: 480px;
+}
+
+/* ---- Pull-quote ---- */
+.proj-stage--quote {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin: 40px 0;
+}
+.proj-pullquote {
+    font-size: clamp(32px, 3.4vw, 52px);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    color: var(--black);
+    margin: 0;
+    max-width: 580px;
+}
+.stage-q-1 { aspect-ratio: 4 / 5; }
+
+/* ---- Stage B: second details + frames ---- */
+.proj-stage--b {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 80px;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+.stage-b-text { grid-column: 5 / span 6; grid-row: 1 / span 3; }
+.stage-b-1 { grid-column: 5 / span 6; grid-row: 4 / span 5; }
+.stage-b-2 { grid-column: 1 / span 4; grid-row: 5 / span 6; }
+.stage-b-3 { grid-column: 7 / span 6; grid-row: 10 / span 4; }
+
+/* ---- Closing wide frame ---- */
+.proj-closing {
+    aspect-ratio: 16 / 7;
+    margin: 24px 0 32px;
+}
+
+/* ---- Project footer (caption + next) ---- */
+.proj-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 24px 0 60px;
+    text-align: center;
+}
+.proj-caption {
+    font-size: 13px;
+    color: var(--black);
+    max-width: 100%;
+    margin: 0;
+    align-self: flex-start;
+    border-top: 1px solid var(--gray-light);
+    padding-top: 20px;
+    width: 100%;
+    text-align: left;
+}
+.proj-next {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+    letter-spacing: -0.025em;
+    transition: letter-spacing 0.3s ease;
+}
+.proj-next:hover { letter-spacing: 0.02em; text-decoration: underline; text-underline-offset: 6px; }
+
+@media (max-width: 900px) {
+    .project { padding: 40px 20px 24px; }
+    .proj-meta { grid-template-columns: 1fr 1fr; gap: 12px; font-size: 12px; }
+    .proj-stage--a,
+    .proj-stage--b {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .proj-stage--a > *,
+    .proj-stage--b > * { grid-column: unset; grid-row: unset; }
+    .proj-stage--a .proj-frame,
+    .proj-stage--b .proj-frame { aspect-ratio: 4 / 3; height: auto; }
+    .proj-stage--quote { grid-template-columns: 1fr; gap: 24px; }
+    .proj-text p { max-width: 100%; }
+}
+
 /* ========== FOOTER ========== */
 .footer {
     padding: 80px 40px 40px;
