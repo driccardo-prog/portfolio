@@ -84,7 +84,7 @@ body {
     font-size: 18px;
     line-height: 1.2;
     text-align: center;
-    transform: translate3d(0, var(--py, 0), 0);
+    transform: translate3d(0, var(--push, 0px), 0);
     will-change: transform;
 }
 
@@ -210,15 +210,54 @@ body {
 
 .work-frame {
     position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
+    width: 55%;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
     background: var(--gray-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate3d(0, var(--py, 0), 0);
+    transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1), aspect-ratio 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: width, aspect-ratio;
+}
+
+.work.active .work-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    transition-delay: 0.3s;
+}
+
+/* Brackets / title / meta — sequenced reveal */
+.work-title {
+    display: inline-flex;
+    gap: 0.05em;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-title .bracket,
+.work-title .title-text {
+    display: inline-block;
     will-change: transform;
 }
+
+/* On reverse (back to default): brackets close LAST (delayed) */
+.work-title .bracket { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s; }
+.work-title .title-text { transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.15s; }
+
+.work-meta,
+.work-categories {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+    will-change: transform;
+}
+
+/* On enter (.active): brackets open FIRST (no delay), then title scale, then frame */
+.work.active .work-title .bracket { transition-delay: 0s; }
+.work.active .bracket-l { transform: translateX(-50px); }
+.work.active .bracket-r { transform: translateX(50px); }
+.work.active .title-text { transform: scale(1.15); }
+.work.active .work-meta { transform: translateY(-12px); }
+.work.active .work-categories { transform: translateY(12px); }
 
 .frame-label {
     color: var(--white);
@@ -264,7 +303,9 @@ body {
     line-height: 1.2;
     text-align: center;
     letter-spacing: -0.025em;
-    transform: translate3d(0, var(--py, 0), 0) rotate(var(--rot, 0deg));
+    transform:
+        translate3d(var(--mx, 0px), calc(var(--py, 0px) + var(--my, 0px)), 0)
+        rotate(var(--rot, 0deg));
     will-change: transform;
 }
 
