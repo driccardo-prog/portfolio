@@ -715,6 +715,8 @@ body {
     min-height: 2.1em;
 }
 
+.footer-text-emph { color: var(--black); }
+
 .type-caret {
     display: inline-block;
     width: 0.06em;

@@ -13,8 +13,22 @@
     let i = 0;
     let typing = true;
 
+    function escape(s) {
+        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
     function render() {
-        const html = PHRASE.slice(0, i).replace(/\n/g, '<br>');
+        const slice = PHRASE.slice(0, i);
+        const nl = slice.indexOf('\n');
+        let html;
+        if (nl === -1) {
+            html = escape(slice);
+        } else {
+            html = escape(slice.slice(0, nl))
+                 + '<br><span class="footer-text-emph">'
+                 + escape(slice.slice(nl + 1))
+                 + '</span>';
+        }
         el.innerHTML = html + '<span class="type-caret"></span>';
     }
 
