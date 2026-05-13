@@ -84,6 +84,8 @@ body {
     font-size: 18px;
     line-height: 1.2;
     text-align: center;
+    transform: translate3d(0, var(--py, 0), 0);
+    will-change: transform;
 }
 
 .hero-intro {
@@ -214,6 +216,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transform: translate3d(0, var(--py, 0), 0);
+    will-change: transform;
 }
 
 .frame-label {
@@ -260,19 +264,21 @@ body {
     line-height: 1.2;
     text-align: center;
     letter-spacing: -0.025em;
+    transform: translate3d(0, var(--py, 0), 0) rotate(var(--rot, 0deg));
+    will-change: transform;
 }
 
-.scatter-frame.f1  { top: 4%;  left: 0;       width: 130px; height: 180px; transform: rotate(-1deg); }
-.scatter-frame.f2  { top: 12%; left: 22%;     width: 90px;  height: 130px; transform: rotate(1deg); }
+.scatter-frame.f1  { top: 4%;  left: 0;       width: 130px; height: 180px; --rot: -1deg; }
+.scatter-frame.f2  { top: 12%; left: 22%;     width: 90px;  height: 130px; --rot:  1deg; }
 .scatter-frame.f3  { top: 0;   left: 38%;     width: 230px; height: 150px; }
 .scatter-frame.f4  { top: -10px; right: -20px; width: 140px; height: 130px; }
 .scatter-frame.f5  { top: 32%; right: 8%;     width: 180px; height: 140px; }
-.scatter-frame.f6  { top: 36%; left: 30%;     width: 100px; height: 110px; transform: rotate(-2deg); }
-.scatter-frame.f7  { top: 50%; left: 0;       width: 130px; height: 180px; transform: rotate(1deg); }
+.scatter-frame.f6  { top: 36%; left: 30%;     width: 100px; height: 110px; --rot: -2deg; }
+.scatter-frame.f7  { top: 50%; left: 0;       width: 130px; height: 180px; --rot:  1deg; }
 .scatter-frame.f8  { top: 62%; left: 22%;     width: 100px; height: 100px; }
 .scatter-frame.f9  { top: 56%; left: 38%;     width: 240px; height: 160px; }
-.scatter-frame.f10 { top: 60%; left: 66%;     width: 100px; height: 100px; transform: rotate(2deg); }
-.scatter-frame.f11 { top: 55%; right: -20px;  width: 130px; height: 160px; transform: rotate(4deg); }
+.scatter-frame.f10 { top: 60%; left: 66%;     width: 100px; height: 100px; --rot:  2deg; }
+.scatter-frame.f11 { top: 55%; right: -20px;  width: 130px; height: 160px; --rot:  4deg; }
 
 .all-work-title-wrapper {
     position: absolute;
