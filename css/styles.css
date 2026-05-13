@@ -11,6 +11,15 @@
 
 html { scroll-behavior: smooth; }
 
+/* Prevent widows / orphans across the site */
+h1, h2, h3, h4,
+.hero-title, .work-title, .all-work-title, .work-page-title,
+.proj-title, .proj-pullquote, .contact-headline, .footer-text,
+.proj-text-num, .proj-meta-value { text-wrap: balance; }
+
+p, .proj-text p, .hero-col-text, .hero-intro,
+.contact-value, .frame-label { text-wrap: pretty; }
+
 body {
     background: var(--white);
     color: var(--black);
@@ -739,6 +748,7 @@ body {
     border-top: 1px solid var(--gray-light);
     font-size: 14px;
 }
+.proj-meta--3 { grid-template-columns: repeat(3, 1fr); }
 .proj-meta li { display: flex; gap: 8px; align-items: baseline; }
 .proj-meta-label { color: var(--gray-dark); }
 .proj-meta-value { color: var(--black); font-weight: 600; }
