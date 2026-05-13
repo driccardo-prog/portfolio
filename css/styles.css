@@ -27,7 +27,7 @@ body {
 }
 
 h1, h2, p { text-wrap: pretty; }
-.hero-title, .work-title, .footer-text { text-wrap: balance; }
+.work-title, .footer-text { text-wrap: balance; }
 .hero-intro, .hero-col-text { text-wrap: pretty; word-break: keep-all; hyphens: none; }
 
 /* ========== HEADER ========== */
@@ -115,13 +115,12 @@ h1, h2, p { text-wrap: pretty; }
 
 .hero-title {
     margin: 0;
-    max-width: 1200px;
-    font-size: clamp(32px, 4.2vw, 56px);
+    max-width: none;
+    font-size: clamp(28px, 3.4vw, 48px);
     font-weight: 700;
     letter-spacing: -0.025em;
     line-height: 1.2;
     color: var(--black);
-    text-wrap: balance;
 }
 
 .hero-bottom {
