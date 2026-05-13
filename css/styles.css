@@ -233,11 +233,46 @@ body {
     margin-top: 4px;
 }
 
-/* ========== ALL WORK ========== */
+/* ========== ALL WORK (scatter layout) ========== */
 .all-work {
     position: relative;
-    padding: 120px 40px;
+    padding: 80px 40px 120px;
+    overflow: hidden;
 }
+
+.scatter {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 720px;
+}
+
+.scatter-frame {
+    position: absolute;
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: -0.025em;
+}
+
+.scatter-frame.f1  { top: 4%;  left: 0;       width: 130px; height: 180px; transform: rotate(-1deg); }
+.scatter-frame.f2  { top: 12%; left: 22%;     width: 90px;  height: 130px; transform: rotate(1deg); }
+.scatter-frame.f3  { top: 0;   left: 38%;     width: 230px; height: 150px; }
+.scatter-frame.f4  { top: -10px; right: -20px; width: 140px; height: 130px; }
+.scatter-frame.f5  { top: 32%; right: 8%;     width: 180px; height: 140px; }
+.scatter-frame.f6  { top: 36%; left: 30%;     width: 100px; height: 110px; transform: rotate(-2deg); }
+.scatter-frame.f7  { top: 50%; left: 0;       width: 130px; height: 180px; transform: rotate(1deg); }
+.scatter-frame.f8  { top: 62%; left: 22%;     width: 100px; height: 100px; }
+.scatter-frame.f9  { top: 56%; left: 38%;     width: 240px; height: 160px; }
+.scatter-frame.f10 { top: 60%; left: 66%;     width: 100px; height: 100px; transform: rotate(2deg); }
+.scatter-frame.f11 { top: 55%; right: -20px;  width: 130px; height: 160px; transform: rotate(4deg); }
 
 .all-work-title-wrapper {
     position: absolute;
@@ -246,50 +281,25 @@ body {
     align-items: center;
     justify-content: center;
     pointer-events: none;
-    z-index: 5;
+    z-index: 10;
 }
 
 .all-work-title {
-    font-size: clamp(72px, 10vw, 140px);
+    font-size: clamp(72px, 9vw, 130px);
     font-weight: 700;
     letter-spacing: -0.04em;
     color: var(--black);
     text-align: center;
     line-height: 1;
+    white-space: nowrap;
 }
 
 .all-work-count {
-    font-size: 0.35em;
+    font-size: 0.4em;
     font-weight: 500;
     vertical-align: super;
-    margin-left: 0.1em;
+    margin-left: 0.05em;
 }
-
-.all-work-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: 200px;
-    gap: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.grid-item {
-    background: var(--gray-light);
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.2;
-    text-align: center;
-}
-
-.grid-item.size-large-w { grid-column: span 2; }
-.grid-item.size-large-h { grid-row: span 2; }
-.grid-item.size-large-both { grid-column: span 2; grid-row: span 2; }
 
 /* ========== FOOTER ========== */
 .footer {
@@ -388,7 +398,18 @@ body {
         margin: 0 auto 8px;
     }
     .all-work-title { font-size: 56px; }
-    .all-work-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
-    .grid-item.size-large-w, .grid-item.size-large-both { grid-column: span 2; }
+    .scatter { height: 900px; }
+    .scatter-frame { font-size: 11px; }
+    .scatter-frame.f1  { width: 90px;  height: 130px; }
+    .scatter-frame.f2  { width: 70px;  height: 100px; left: 30%; }
+    .scatter-frame.f3  { width: 130px; height: 100px; left: 55%; }
+    .scatter-frame.f4  { width: 90px;  height: 90px;  right: -10px; }
+    .scatter-frame.f5  { width: 110px; height: 90px;  top: 36%; right: 0; }
+    .scatter-frame.f6  { width: 70px;  height: 80px;  top: 40%; left: 38%; }
+    .scatter-frame.f7  { width: 90px;  height: 130px; top: 60%; }
+    .scatter-frame.f8  { width: 70px;  height: 70px;  top: 70%; left: 30%; }
+    .scatter-frame.f9  { width: 140px; height: 100px; top: 65%; left: 50%; }
+    .scatter-frame.f10 { width: 70px;  height: 70px;  top: 80%; left: 70%; }
+    .scatter-frame.f11 { width: 90px;  height: 110px; top: 75%; right: -10px; }
     .footer { grid-template-columns: 1fr; padding: 60px 20px 40px; }
 }
