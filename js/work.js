@@ -47,6 +47,8 @@ if (!reduceMotion) {
 /* ===== List View — fill each row with repeated names + infinite slide ===== */
 const listRows = document.querySelectorAll('.list-row');
 
+const SPEED_PX_PER_SEC = 40;
+
 function buildListRows() {
     listRows.forEach((row, rowIdx) => {
         const original = row.querySelector('.list-name');
@@ -66,19 +68,32 @@ function buildListRows() {
         row.removeChild(tmp);
 
         const rowWidth = row.clientWidth;
-        const MAX = 12;
-        const fit = each > 0 ? Math.max(2, Math.ceil(rowWidth / each) + 2) : 4;
-        const total = Math.min(MAX, fit);
+        const M = each > 0 ? Math.max(2, Math.ceil(rowWidth / each) + 1) : 4;
 
         const inner = document.createElement('span');
         inner.className = 'list-row-inner';
-        for (let i = 1; i <= total; i++) {
-            const s = document.createElement('span');
-            s.className = 'list-name' + (i === activeIdx ? ' is-bold' : '');
-            s.textContent = text;
-            inner.appendChild(s);
+
+        // Build two identical sets so the loop is seamless.
+        for (let pass = 0; pass < 2; pass++) {
+            for (let i = 1; i <= M; i++) {
+                const s = document.createElement('span');
+                s.className = 'list-name' + (i === activeIdx ? ' is-bold' : '');
+                s.textContent = text;
+                inner.appendChild(s);
+            }
         }
         row.appendChild(inner);
+
+        // Measure exact width of the first set (M spans) → animation cycle.
+        const names = inner.querySelectorAll('.list-name');
+        let cycle = 0;
+        for (let i = 0; i < M; i++) {
+            const r = names[i].getBoundingClientRect();
+            const mr = parseFloat(getComputedStyle(names[i]).marginRight || 0);
+            cycle += r.width + mr;
+        }
+        inner.style.setProperty('--cycle', `${cycle.toFixed(2)}px`);
+        inner.style.animationDuration = `${(cycle / SPEED_PX_PER_SEC).toFixed(2)}s`;
 
         row.classList.remove('right', 'left');
         row.classList.add(rowIdx % 2 === 0 ? 'right' : 'left');
