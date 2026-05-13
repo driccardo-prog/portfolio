@@ -66,6 +66,38 @@ function onScroll() {
     }
 }
 
+/* Mouse tracking — moves items TOWARD the mouse position */
+const allWork = document.querySelector('.all-work');
+let mouseTicking = false;
+let lastMX = 0, lastMY = 0;
+
+if (allWork && !reduceMotion) {
+    allWork.addEventListener('mousemove', (e) => {
+        const r = allWork.getBoundingClientRect();
+        lastMX = (e.clientX - r.left - r.width / 2) / (r.width / 2);  /* -1..1 */
+        lastMY = (e.clientY - r.top - r.height / 2) / (r.height / 2);
+        if (!mouseTicking) {
+            requestAnimationFrame(() => {
+                scatterFrames.forEach(el => {
+                    const s = parseFloat(el.dataset.mouseSpeed);
+                    el.style.setProperty('--mx', `${(lastMX * s).toFixed(1)}px`);
+                    el.style.setProperty('--my', `${(lastMY * s).toFixed(1)}px`);
+                });
+                mouseTicking = false;
+            });
+            mouseTicking = true;
+        }
+    });
+
+    allWork.addEventListener('mouseleave', () => {
+        scatterFrames.forEach(el => {
+            el.style.setProperty('--mx', '0px');
+            el.style.setProperty('--my', '0px');
+        });
+    });
+}
+
+/* ========== Single scroll handler ========== */
 if (!reduceMotion) {
     window.addEventListener('scroll', onScroll, { passive: true });
     updateHeroPush();
