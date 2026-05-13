@@ -208,26 +208,23 @@ body {
     margin-top: 12px;
 }
 
+/* Work case — scroll-driven progressive animations.
+   Each .work has --p (0..1) set by JS based on scroll position.
+   All transforms read from --p via calc(). No transitions: scroll drives smoothness. */
+
 .work-frame {
     position: relative;
-    width: 55%;
-    aspect-ratio: 1 / 1;
+    width: calc(600px + var(--p, 0) * (100% - 600px));
+    aspect-ratio: calc(1 + var(--p, 0) * 0.778);
+    max-width: 100%;
     margin: 0 auto;
     background: var(--gray-light);
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1), aspect-ratio 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     will-change: width, aspect-ratio;
 }
 
-.work.active .work-frame {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    transition-delay: 0.3s;
-}
-
-/* Brackets / title / meta — sequenced reveal */
 .work-title {
     display: inline-flex;
     gap: 0.05em;
@@ -241,23 +238,12 @@ body {
     will-change: transform;
 }
 
-/* On reverse (back to default): brackets close LAST (delayed) */
-.work-title .bracket { transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.3s; }
-.work-title .title-text { transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.15s; }
+.bracket-l { transform: translateX(calc(var(--p, 0) * -500px)); }
+.bracket-r { transform: translateX(calc(var(--p, 0) * 500px)); }
+.title-text { transform: scale(calc(1 + var(--p, 0) * 0.4)); }
 
-.work-meta,
-.work-categories {
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
-    will-change: transform;
-}
-
-/* On enter (.active): brackets open FIRST (no delay), then title scale, then frame */
-.work.active .work-title .bracket { transition-delay: 0s; }
-.work.active .bracket-l { transform: translateX(-50px); }
-.work.active .bracket-r { transform: translateX(50px); }
-.work.active .title-text { transform: scale(1.15); }
-.work.active .work-meta { transform: translateY(-12px); }
-.work.active .work-categories { transform: translateY(12px); }
+.work-meta { transform: translateY(calc(var(--p, 0) * -20px)); will-change: transform; }
+.work-categories { transform: translateY(calc(var(--p, 0) * 20px)); will-change: transform; }
 
 .frame-label {
     color: var(--white);

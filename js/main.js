@@ -1,49 +1,44 @@
-/* Portfolio Dolores Riccardo */
+/* Portfolio Dolores Riccardo — scroll-driven animations */
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
-/* ========== 1. HERO PUSH-DOWN ON SCROLL ==========
-   Hero image starts at natural position. Scrolling pushes it down (1:1 with
-   scroll) so it stays in viewport. Once scrollY exceeds HERO_LOCK, the image
-   stops being offset (the "text catches up" point) and scrolls off naturally. */
+/* ========== 1. HERO PUSH-DOWN (progressive) ==========
+   --push grows 0 → 300px progressively over 600px of scroll. */
 const heroFrame = document.querySelector('.hero-frame');
-const HERO_LOCK = 360;
+const HERO_RANGE = 600;
+const HERO_MAX = 300;
 
 function updateHeroPush() {
     if (!heroFrame) return;
-    const offset = Math.min(HERO_LOCK, Math.max(0, window.scrollY));
-    heroFrame.style.setProperty('--push', `${offset}px`);
+    const progress = clamp(window.scrollY / HERO_RANGE, 0, 1);
+    heroFrame.style.setProperty('--push', `${(progress * HERO_MAX).toFixed(1)}px`);
 }
 
-/* ========== 2. WORK CASES — sequence on intersection ==========
-   When the .work enters viewport center band, add .active.
-   CSS handles the sequenced transitions (brackets → title → meta → frame). */
+/* ========== 2. WORK CASES — scroll-driven --p (0..1) ==========
+   Progress = 1 when work center is at viewport top, 0 when at viewport bottom.
+   CSS reads --p and applies bracket spread, title scale, meta shift, frame expand. */
 const works = document.querySelectorAll('.work');
-const workIO = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        entry.target.classList.toggle('active', entry.isIntersecting);
-    });
-}, {
-    threshold: 0,
-    rootMargin: '-25% 0px -25% 0px'  /* trigger band: middle 50% of viewport */
-});
 
-if (!reduceMotion) {
-    works.forEach(w => workIO.observe(w));
+function updateWorks() {
+    const vh = window.innerHeight;
+    works.forEach(work => {
+        const rect = work.getBoundingClientRect();
+        const center = rect.top + rect.height / 2;
+        /* 0 when center at bottom of viewport, 1 when at top */
+        const progress = clamp((vh - center) / vh, 0, 1);
+        work.style.setProperty('--p', progress.toFixed(4));
+    });
 }
 
-/* ========== 3. SCATTER — scroll parallax + mouse tracking (toward mouse) ========== */
+/* ========== 3. SCATTER — scroll parallax (subtle vertical drift) ========== */
 const scatterFrames = document.querySelectorAll('.scatter-frame');
-
-/* Per-element scroll-parallax speed (subtle drift) */
 const SCROLL_SPEEDS = [-14, 10, -6, 12, -10, 6, -12, 8];
 scatterFrames.forEach((el, i) => {
     el.dataset.scrollSpeed = SCROLL_SPEEDS[i % SCROLL_SPEEDS.length];
-    /* mouse speed: varied per item (12 to 28 px range) */
-    el.dataset.mouseSpeed = 12 + (i % 5) * 4;
+    el.dataset.mouseSpeed = 14 + (i % 5) * 5;  /* 14..34 px */
 });
 
-let scrollTicking = false;
 function updateScatterScroll() {
     const vh = window.innerHeight;
     scatterFrames.forEach(el => {
@@ -55,54 +50,61 @@ function updateScatterScroll() {
         const offset = -normalized * speed * 2;
         el.style.setProperty('--py', `${offset.toFixed(2)}px`);
     });
-    scrollTicking = false;
 }
 
-/* Mouse tracking — moves items TOWARD the mouse position */
-const allWork = document.querySelector('.all-work');
-let mouseTicking = false;
-let lastMX = 0, lastMY = 0;
+/* ========== Single rAF-throttled scroll handler ========== */
+let scrollPending = false;
+function onScroll() {
+    if (!scrollPending) {
+        requestAnimationFrame(() => {
+            updateHeroPush();
+            updateWorks();
+            updateScatterScroll();
+            scrollPending = false;
+        });
+        scrollPending = true;
+    }
+}
 
-if (allWork && !reduceMotion) {
+if (!reduceMotion) {
+    window.addEventListener('scroll', onScroll, { passive: true });
+    updateHeroPush();
+    updateWorks();
+    updateScatterScroll();
+}
+
+/* ========== 4. ALL WORK — mouse tracking with lerp smoothing ==========
+   Target mouse position updates on mousemove.
+   Continuous rAF loop interpolates current toward target (smooth, no jerk). */
+const allWork = document.querySelector('.all-work');
+
+if (allWork && !reduceMotion && scatterFrames.length) {
+    let targetMX = 0, targetMY = 0;
+    let currentMX = 0, currentMY = 0;
+    const LERP = 0.08;  /* 0 = no movement, 1 = instant. 0.08 = smooth lag */
+
     allWork.addEventListener('mousemove', (e) => {
         const r = allWork.getBoundingClientRect();
-        lastMX = (e.clientX - r.left - r.width / 2) / (r.width / 2);  /* -1..1 */
-        lastMY = (e.clientY - r.top - r.height / 2) / (r.height / 2);
-        if (!mouseTicking) {
-            requestAnimationFrame(() => {
-                scatterFrames.forEach(el => {
-                    const s = parseFloat(el.dataset.mouseSpeed);
-                    el.style.setProperty('--mx', `${(lastMX * s).toFixed(1)}px`);
-                    el.style.setProperty('--my', `${(lastMY * s).toFixed(1)}px`);
-                });
-                mouseTicking = false;
-            });
-            mouseTicking = true;
-        }
+        targetMX = (e.clientX - r.left - r.width / 2) / (r.width / 2);
+        targetMY = (e.clientY - r.top - r.height / 2) / (r.height / 2);
     });
 
     allWork.addEventListener('mouseleave', () => {
-        scatterFrames.forEach(el => {
-            el.style.setProperty('--mx', '0px');
-            el.style.setProperty('--my', '0px');
-        });
+        targetMX = 0;
+        targetMY = 0;
     });
-}
 
-/* ========== Single scroll handler ========== */
-if (!reduceMotion) {
-    window.addEventListener('scroll', () => {
-        if (!scrollTicking) {
-            requestAnimationFrame(() => {
-                updateHeroPush();
-                updateScatterScroll();
-                scrollTicking = false;
-            });
-            scrollTicking = true;
-        }
-    }, { passive: true });
-    updateHeroPush();
-    updateScatterScroll();
+    function mouseLoop() {
+        currentMX += (targetMX - currentMX) * LERP;
+        currentMY += (targetMY - currentMY) * LERP;
+        scatterFrames.forEach(el => {
+            const s = parseFloat(el.dataset.mouseSpeed);
+            el.style.setProperty('--mx', `${(currentMX * s).toFixed(2)}px`);
+            el.style.setProperty('--my', `${(currentMY * s).toFixed(2)}px`);
+        });
+        requestAnimationFrame(mouseLoop);
+    }
+    requestAnimationFrame(mouseLoop);
 }
 
 /* ========== Smooth scroll for in-page anchors ========== */
