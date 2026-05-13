@@ -364,10 +364,15 @@ body {
 }
 
 .view-toggle {
+    position: fixed;
+    top: 96px;
+    right: 40px;
     display: flex;
     align-items: baseline;
     gap: 12px;
-    padding-bottom: 18px;
+    z-index: 900;
+    background: var(--white);
+    padding: 6px 0 6px 12px;
 }
 
 .view-toggle-btn {
@@ -404,9 +409,9 @@ body {
 }
 
 .work-row { display: grid; gap: 16px; }
-.work-row--1 { grid-template-columns: 1fr; }
-.work-row--2 { grid-template-columns: 1fr 1fr; }
-.work-row--3 { grid-template-columns: 1fr 1fr 1fr; }
+.work-row--1 { grid-template-columns: 1fr; --bracket-shift: 60px; }
+.work-row--2 { grid-template-columns: 1fr 1fr; --bracket-shift: 36px; }
+.work-row--3 { grid-template-columns: 1fr 1fr 1fr; --bracket-shift: 16px; }
 
 .work-card {
     display: flex;
@@ -463,8 +468,8 @@ body {
     display: inline-block;
     will-change: transform;
 }
-.card-bracket-l { transform: translateX(calc(var(--p, 0) * -40px)); }
-.card-bracket-r { transform: translateX(calc(var(--p, 0) *  40px)); }
+.card-bracket-l { transform: translateX(calc(var(--p, 0) * var(--bracket-shift, 40px) * -1)); }
+.card-bracket-r { transform: translateX(calc(var(--p, 0) * var(--bracket-shift, 40px))); }
 
 .work-card-year { color: var(--gray-light); }
 
@@ -524,7 +529,7 @@ body {
 /* ===== Work page responsive ===== */
 @media (max-width: 900px) {
     .work-head { flex-direction: column; align-items: flex-start; gap: 16px; padding: 40px 20px 20px; }
-    .view-toggle { padding-bottom: 0; }
+    .view-toggle { position: static; padding: 0; }
     .work-grid-view { padding: 0 20px 60px; gap: 24px; }
     .work-list-view { padding: 0 20px 60px; }
     .work-row--2 { grid-template-columns: 1fr; }
