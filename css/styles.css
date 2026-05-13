@@ -576,6 +576,34 @@ body {
     margin: 0;
 }
 
+/* Flip-clock style headline — alternates between two phrases on a horizontal axis */
+.flip-headline { perspective: 1600px; }
+
+.flip-card {
+    display: grid;
+    transform-style: preserve-3d;
+    animation: flipLoop 8s infinite;
+}
+
+.flip-face {
+    grid-area: 1 / 1;
+    display: block;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.flip-back { transform: rotateX(180deg); }
+
+@keyframes flipLoop {
+    0%, 45%   { transform: rotateX(0deg); }
+    50%, 95%  { transform: rotateX(180deg); }
+    100%      { transform: rotateX(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flip-card { animation: none; }
+}
+
 .contact-socials {
     font-size: 16px;
     color: var(--black);
