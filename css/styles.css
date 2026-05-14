@@ -1412,6 +1412,154 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
     .cta-cv { position: static; margin-top: 24px; right: auto; bottom: auto; }
 }
 
+/* ========== CV PAGE ========== */
+.cv-page { padding-top: 64px; }
+
+.cv-hero {
+    padding: 80px 40px 40px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 48px;
+    align-items: end;
+}
+.cv-hero-photo {
+    aspect-ratio: 4 / 5;
+    background: var(--gray-light);
+    overflow: hidden;
+}
+.cv-hero-photo img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.cv-hero-text { display: flex; flex-direction: column; gap: 8px; }
+.cv-name {
+    font-size: clamp(48px, 8vw, 128px);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 0.95;
+    color: var(--black);
+    margin: 0;
+    min-height: 1.05em;
+}
+.cv-name .type-caret {
+    width: 0.05em;
+    height: 0.82em;
+    background: var(--black);
+    vertical-align: -0.04em;
+}
+.cv-subname {
+    font-size: 16px;
+    color: var(--gray-dark);
+    margin: 0;
+}
+
+.cv-section {
+    padding: 80px 40px;
+    border-top: 1px solid var(--gray-light);
+}
+.cv-section-title {
+    font-size: clamp(36px, 5.4vw, 80px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--black);
+    margin: 0 0 48px;
+}
+
+.cv-entries {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 64px;
+}
+.cv-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 520px;
+}
+.cv-date {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--gray-dark);
+    text-transform: uppercase;
+}
+.cv-arrow {
+    display: inline-block;
+    margin: 0 0.3em;
+    transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.cv-entry:hover .cv-arrow { transform: translateX(6px); }
+.cv-role {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    color: var(--black);
+    margin: 0;
+}
+.cv-role em { font-style: normal; font-weight: 500; color: var(--black); }
+.cv-sep { color: var(--gray-light); font-weight: 500; }
+.cv-entry p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--black);
+    margin: 4px 0 0;
+}
+
+/* Tools */
+.cv-section--tools { padding-bottom: 120px; }
+.cv-tools {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 64px;
+    max-width: 1100px;
+}
+.cv-tool {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+    gap: 24px;
+}
+.cv-tool-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--black);
+}
+.cv-bar {
+    display: block;
+    height: 10px;
+    border-radius: 999px;
+    border: 1px solid var(--black);
+    overflow: hidden;
+    position: relative;
+}
+.cv-bar-fill {
+    display: block;
+    height: 100%;
+    width: var(--lv, 0%);
+    background: var(--black);
+    border-radius: 999px;
+    transform-origin: left;
+    animation: cvBarGrow 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes cvBarGrow {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+}
+
+@media (max-width: 900px) {
+    .cv-hero { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px 24px; }
+    .cv-hero-photo { max-width: 320px; }
+    .cv-section { padding: 60px 20px; }
+    .cv-section-title { margin-bottom: 32px; }
+    .cv-entries { grid-template-columns: 1fr; gap: 32px; }
+    .cv-tools { grid-template-columns: 1fr; gap: 16px; }
+    .cv-tool { grid-template-columns: 120px 1fr; gap: 16px; }
+}
+
 /* ========== FOOTER ========== */
 .footer {
     padding: 80px 40px 40px;
