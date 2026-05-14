@@ -1539,16 +1539,12 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
 .cv-bar-fill {
     display: block;
     height: 100%;
-    width: var(--lv, 0%);
+    width: 0%;
     background: var(--black);
     border-radius: 999px;
-    transform-origin: left;
-    animation: cvBarGrow 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+    transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--delay, 0s) + 0.15s);
 }
-@keyframes cvBarGrow {
-    from { transform: scaleX(0); }
-    to   { transform: scaleX(1); }
-}
+.cv-tool.is-revealed .cv-bar-fill { width: var(--lv, 0%); }
 
 @media (max-width: 900px) {
     .cv-hero { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px 24px; }
