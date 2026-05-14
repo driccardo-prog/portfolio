@@ -931,16 +931,22 @@ button, input, select, textarea {
     list-style: none;
     margin: 0;
     padding: 24px 0 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 40px;
+    row-gap: 12px;
     border-top: 1px solid var(--gray-light);
     font-size: 14px;
 }
-.proj-meta--3 { grid-template-columns: repeat(3, 1fr); }
-.proj-meta li { display: flex; gap: 8px; align-items: baseline; }
+.proj-meta li {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+    flex: 0 1 auto;
+}
 .proj-meta-label { color: var(--gray-dark); }
-.proj-meta-value { color: var(--black); font-weight: 600; }
+.proj-meta-value { color: var(--black); font-weight: 500; }
 
 .proj-frame {
     position: relative;
