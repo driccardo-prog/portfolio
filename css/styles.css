@@ -1686,3 +1686,260 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
     .scatter-frame.f11 { width: 90px;  height: 110px; top: 75%; right: -10px; }
     .footer { grid-template-columns: 1fr; padding: 60px 20px 40px; }
 }
+
+/* ========== MOBILE POLISH (≤760px) — refines existing 900px rules without touching desktop ========== */
+@media (max-width: 760px) {
+    /* Header: location text hidden on small screens to make room */
+    .header {
+        height: 56px;
+        grid-template-columns: auto 1fr auto;
+        padding: 0 16px;
+    }
+    .logo { font-size: 16px; }
+    .header-location { display: none; }
+    .header-right { gap: 12px; align-items: center; }
+    .header-right .nav-link { font-size: 12px; white-space: nowrap; }
+
+    body { font-size: 13px; }
+
+    /* Hero (home): tighter padding, smaller fixed frame, more readable title */
+    .hero { padding: 80px 18px 40px; }
+    .hero-frame { width: 100%; max-width: none; height: 240px; margin: 0 0 16px; }
+    .hero-intro { font-size: 13px; max-width: 100%; margin-bottom: 12px; }
+    .hero-title {
+        font-size: clamp(28px, 7vw, 40px);
+        line-height: 1.1;
+        padding-top: 0;
+        text-indent: 0;
+    }
+    .hero-bottom { margin-top: 32px; row-gap: 12px; }
+
+    /* Selected Works */
+    .selected-works { padding: 60px 18px; gap: 60px; }
+    .work-meta {
+        flex-wrap: wrap;
+        gap: 6px 12px;
+        font-size: 11px;
+    }
+    .work-meta span { white-space: nowrap; }
+    .work-title {
+        font-size: clamp(32px, 9vw, 56px);
+        line-height: 0.98;
+    }
+    .work-categories { font-size: 11px; letter-spacing: 1px; margin-top: 8px; }
+    .work-annotation { font-size: 16px; }
+    .work-frame { width: 100% !important; aspect-ratio: 4 / 3 !important; }
+    .work-cta { font-size: 12px; }
+
+    /* All Work scatter: shrink container so it's not absurdly tall on mobile */
+    .all-work { padding: 60px 18px 80px; }
+    .scatter { height: 680px; max-width: 100%; }
+    .all-work-title { font-size: 48px; }
+    .all-work-count { font-size: 0.38em; }
+
+    /* Footer: tighter padding + nav columns */
+    .footer { padding: 60px 18px 32px; gap: 40px; }
+    .footer-text { font-size: 32px; line-height: 1.05; min-height: 2.4em; }
+    .footer-nav { gap: 6px; }
+    .footer-nav-link { font-size: 13px; }
+    .footer-contact-info { gap: 12px; }
+    .contact-label { font-size: 9px; }
+    .contact-value { font-size: 12px; padding-left: 8px; }
+
+    /* === Work page === */
+    .work-head { padding: 32px 18px 16px; gap: 12px; }
+    .work-page-title { font-size: clamp(48px, 14vw, 80px); }
+    .view-toggle { font-size: 14px; }
+    .view-toggle-btn { font-size: 14px; }
+    .work-grid-view { padding: 0 18px 60px; gap: 20px; }
+    .work-card-caption { font-size: 13px; gap: 10px; }
+
+    /* List view text size smaller on mobile */
+    .list-row { font-size: 22px; }
+    .work-list-view { padding: 40px 0 60px; }
+
+    /* === Project page === */
+    .project { padding: 32px 18px 24px; }
+    .proj-title {
+        font-size: clamp(28px, 8vw, 44px);
+        margin: 0 0 16px;
+        padding: 4px 0;
+        top: 64px;
+    }
+    .proj-meta {
+        padding: 16px 0 0;
+        font-size: 12px;
+        column-gap: 16px;
+        row-gap: 8px;
+        justify-content: flex-start;
+    }
+    .proj-hero { margin: 16px 0 48px; }
+    .stage-tall { min-height: 0; aspect-ratio: 4 / 5; }
+    .stage-q-1 { min-height: 0; aspect-ratio: 4 / 5; }
+    .proj-stage--ab,
+    .proj-stage--ba,
+    .proj-stage--quote,
+    .proj-pair,
+    .proj-stage--results {
+        margin-bottom: 60px;
+        gap: 16px;
+    }
+    .proj-text { padding: 8px 0; max-width: 100%; }
+    .proj-text p { font-size: 13px; }
+    .proj-pullquote {
+        font-size: clamp(24px, 6vw, 36px);
+        line-height: 1.1;
+        max-width: 100%;
+    }
+    .proj-closing { margin: 0 0 32px; aspect-ratio: 16 / 9; }
+    .proj-footer { padding: 24px 0 60px; }
+    .proj-next { font-size: 22px; }
+    .proj-text-num { font-size: 11px; }
+
+    /* === Contact page === */
+    .contact-block {
+        padding: 40px 18px;
+        gap: 32px;
+    }
+    .contact-headline { font-size: clamp(36px, 11vw, 64px); }
+    .contact-socials { font-size: 14px; }
+    .contact-info { gap: 16px; }
+    .quote-section { padding: 48px 18px 24px; gap: 24px; }
+    .quote-headline {
+        font-size: clamp(32px, 10vw, 56px);
+        min-height: 2em;
+    }
+    .quote-field input,
+    .quote-field select,
+    .quote-field textarea { font-size: 14px; }
+    .quote-tagline { font-size: 13px; }
+    .quote-submit { padding: 12px 24px; font-size: 13px; width: 100%; text-align: center; }
+
+    /* === About page === */
+    .about-hero { padding: 16px; }
+    .about-scatter { height: 460px; }
+    .about-hello {
+        font-size: clamp(40px, 12vw, 72px);
+        line-height: 1.05;
+    }
+    .about-intro { padding: 40px 18px; gap: 20px; }
+    .about-name { font-size: clamp(32px, 9vw, 48px); }
+    .about-aka { font-size: 12px; }
+    .bio-cell p, p.bio-cell { font-size: 13px; max-width: 100%; }
+    .about-belief { padding: 32px 18px 60px; }
+    .belief-text {
+        font-size: clamp(28px, 9vw, 48px);
+        line-height: 1.05;
+        gap: 0.12em 0.18em;
+    }
+    .about-skills { padding: 24px 0; }
+    .skills-marquee { font-size: clamp(18px, 5vw, 28px); }
+    .about-beyond { padding: 48px 18px; gap: 24px; }
+    .beyond-frame { max-width: 100%; }
+    .beyond-text { font-size: 13px; max-width: 100%; }
+    .about-cta { padding: 32px 18px 60px; }
+    .cta-text {
+        font-size: clamp(36px, 11vw, 60px);
+        line-height: 1;
+        margin-bottom: 32px;
+    }
+    .cta-line {
+        transform: translateX(-120px) rotate(-3deg) skewX(-4deg);
+    }
+    .cta-line:nth-child(even) {
+        transform: translateX(120px) rotate(3deg) skewX(4deg);
+    }
+    .cta-cv { font-size: 13px; }
+
+    /* === CV page === */
+    .cv-hero { padding: 32px 18px 16px; gap: 20px; }
+    .cv-hero-photo { max-width: 220px; }
+    .cv-name { font-size: clamp(36px, 11vw, 64px); }
+    .cv-subname { font-size: 14px; }
+    .cv-section { padding: 48px 18px; }
+    .cv-section-title {
+        font-size: clamp(28px, 8vw, 44px);
+        margin-bottom: 24px;
+    }
+    .cv-entries { gap: 24px; }
+    .cv-entry { max-width: 100%; }
+    .cv-role { font-size: 18px; }
+    .cv-entry p { font-size: 13px; }
+    .cv-date { font-size: 11px; }
+    .cv-section--tools { padding-bottom: 80px; }
+    .cv-tools { gap: 14px; }
+    .cv-tool { grid-template-columns: 110px 1fr; gap: 12px; }
+    .cv-tool-name { font-size: 13px; }
+    .cv-bar { height: 8px; }
+}
+
+/* ========== EXTRA SMALL (≤480px) — tighten further ========== */
+@media (max-width: 480px) {
+    .header { padding: 0 12px; }
+    .header-right .nav-link { font-size: 11px; }
+    .logo { font-size: 14px; }
+
+    .hero { padding: 70px 14px 32px; }
+    .hero-frame { height: 200px; }
+    .hero-title { font-size: 26px; }
+
+    .selected-works { padding: 40px 14px; gap: 48px; }
+    .work-title { font-size: clamp(26px, 10vw, 40px); }
+    .work-meta { font-size: 10px; gap: 4px 10px; }
+
+    .all-work { padding: 40px 14px 60px; }
+    .scatter { height: 520px; }
+    .all-work-title { font-size: 36px; }
+
+    .footer { padding: 40px 14px 24px; gap: 28px; }
+    .footer-text { font-size: 28px; }
+
+    .work-head { padding: 24px 14px 12px; }
+    .work-page-title { font-size: 48px; }
+    .work-grid-view { padding: 0 14px 40px; gap: 16px; }
+    .list-row { font-size: 18px; }
+
+    .project { padding: 24px 14px 20px; }
+    .proj-title { font-size: 24px; top: 56px; }
+    .proj-meta { font-size: 11px; column-gap: 12px; }
+    .proj-pullquote { font-size: 22px; }
+    .proj-next { font-size: 18px; }
+
+    .contact-block { padding: 32px 14px; }
+    .contact-headline { font-size: 40px; }
+    .quote-section { padding: 32px 14px 20px; }
+    .quote-headline { font-size: 36px; }
+    .quote-label { font-size: 11px; }
+
+    .about-hero { padding: 12px; }
+    .about-scatter { height: 360px; }
+    .about-hello { font-size: 36px; }
+    .about-intro { padding: 32px 14px; }
+    .about-name { font-size: 28px; }
+    .belief-text { font-size: 26px; }
+    .skills-marquee { font-size: 18px; }
+    .cta-text { font-size: 36px; }
+
+    .cv-hero { padding: 24px 14px 12px; }
+    .cv-hero-photo { max-width: 180px; }
+    .cv-name { font-size: 36px; }
+    .cv-section { padding: 36px 14px; }
+    .cv-section-title { font-size: 26px; }
+    .cv-role { font-size: 16px; }
+    .cv-tool { grid-template-columns: 96px 1fr; gap: 10px; }
+    .cv-tool-name { font-size: 12px; }
+}
+
+/* ========== Reduce heavy animations on mobile/touch ========== */
+@media (max-width: 760px) {
+    /* Soften the cta-line and belief-word transforms so they don't overshoot off-screen on narrow viewports */
+    .belief-word {
+        transform: translateY(60px) rotate(-4deg) scale(0.85);
+        filter: blur(4px);
+    }
+    /* Disable mouse-driven parallax (it's only relevant on cursor-capable devices) */
+    .scatter-frame,
+    .about-scatter .scatter-frame { --mx: 0px; --my: 0px; }
+    /* Project title isn't sticky on mobile (saves space) */
+    .proj-title { position: static; }
+}
