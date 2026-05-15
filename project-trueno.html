@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trueno x EA Sports FIFA 22 — Dolores Riccardo</title>
+    <title data-i18n-title="project.trueno.title">Trueno x EA Sports FIFA 22 — Dolores Riccardo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/i18n.js"></script>
 </head>
 <body class="project-page">
+    <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
+    <div id="lang-overlay" hidden>
+      <div class="lang-picker">
+        <h1 class="lang-title">Choose your language<br><span>Elegí tu idioma</span></h1>
+        <div class="lang-buttons">
+          <button data-lang="en">English</button>
+          <button data-lang="es">Español</button>
+        </div>
+      </div>
+    </div>
+    <div id="loader-overlay" hidden>
+      <div class="loader-counter">0%</div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header">
         <a href="./index.html" class="logo">Dolores,R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
+            <a href="./index.html" class="nav-link" data-i18n="common.nav.home">Home</a>,&nbsp;<a href="./work.html" class="nav-link" data-i18n="common.nav.work">Work</a>,&nbsp;<a href="./about.html" class="nav-link" data-i18n="common.nav.about">About</a>
         </nav>
         <div class="header-right">
-            <span class="header-location">Bs As &amp; Worldwide</span>
-            <a href="./contact.html" class="nav-link">Let's get in touch ;)</a>
+            <span class="header-location" data-i18n="common.header.location">Bs As &amp; Worldwide</span>
+            <a href="./contact.html" class="nav-link" data-i18n="common.header.contact">Let's get in touch ;)</a>
         </div>
     </header>
 
@@ -31,10 +46,10 @@
                 <span class="bracket bracket-r">]</span>
             </h1>
             <ul class="proj-meta">
-                <li><span class="proj-meta-label">Client</span><span class="proj-meta-value">EA Sports</span></li>
-                <li><span class="proj-meta-label">Artist</span><span class="proj-meta-value">Trueno</span></li>
-                <li><span class="proj-meta-label">Year</span><span class="proj-meta-value">2022</span></li>
-                <li><span class="proj-meta-label">Campaign</span><span class="proj-meta-value">Vanity Kit "Tierra Zanta"</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.client">Client</span><span class="proj-meta-value">EA Sports</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.artist">Artist</span><span class="proj-meta-value">Trueno</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.year">Year</span><span class="proj-meta-value">2022</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.campaign">Campaign</span><span class="proj-meta-value" data-i18n="project.trueno.campaign">Vanity Kit "Tierra Zanta"</span></li>
             </ul>
         </header>
 
@@ -49,9 +64,9 @@
                 <img src="./images/trueno/trueno-shirt-bw.png" alt="Trueno holding Tierra Zanta kit">
             </div>
             <div class="stage-text proj-text">
-                <span class="proj-text-num">01<span class="proj-text-label"> Contexto</span></span>
-                <p>Para FIFA 22, se encarga el diseño de un vanity kit basado en "Tierra Zanta", canción del álbum "Bien o Mal" de Trueno (2022).</p>
-                <p>El desafío era traducir un concepto profundamente identitario —raíces, resistencia, orgullo latinoamericano— en un kit visual funcional para un videojuego. No era simplemente un uniforme: era materializar una declaración de identidad dentro de las limitaciones técnicas de un videojuego.</p>
+                <span class="proj-text-num">01<span class="proj-text-label"> <span data-i18n="project.context">Contexto</span></span></span>
+                <p data-i18n="project.trueno.ctx1">Para FIFA 22, se encarga el diseño de un vanity kit basado en "Tierra Zanta", canción del álbum "Bien o Mal" de Trueno (2022).</p>
+                <p data-i18n="project.trueno.ctx2">El desafío era traducir un concepto profundamente identitario —raíces, resistencia, orgullo latinoamericano— en un kit visual funcional para un videojuego. No era simplemente un uniforme: era materializar una declaración de identidad dentro de las limitaciones técnicas de un videojuego.</p>
             </div>
         </section>
 
@@ -66,7 +81,7 @@
 
         <!-- Pull-quote -->
         <section class="proj-stage proj-stage--quote">
-            <h2 class="proj-pullquote">Soy de donde nací, donde voy a morir. Mi tierra zanta.</h2>
+            <h2 class="proj-pullquote" data-i18n="project.trueno.pull">Soy de donde nací, donde voy a morir. Mi tierra zanta.</h2>
             <div class="proj-frame stage-q-1" data-parallax="14">
                 <img src="./images/trueno/kit-mockup.png" alt="Tierra Zanta kit mockup">
             </div>
@@ -75,9 +90,9 @@
         <!-- Stage B: Ejecución + tall frame -->
         <section class="proj-stage proj-stage--ba">
             <div class="stage-text proj-text">
-                <span class="proj-text-num">02<span class="proj-text-label"> Ejecución Creativa</span></span>
-                <p>Trabajé directamente con Trueno en reuniones estratégicas para entender la profundidad de "Tierra Zanta". A partir de sus elementos visuales —firma, símbolos personales, referencias visuales de su territorio— diseñé el kit completo: camiseta, pantalones, accesorios.</p>
-                <p>La decisión creativa fue la paleta: dorado y negro. Estos colores viven en el ADN visual de Trueno y del álbum "Bien o Mal". Cada elemento respondía directamente a lo que Trueno explicaba sobre su identidad, su territorio y su historia.</p>
+                <span class="proj-text-num">02<span class="proj-text-label"> <span data-i18n="project.executionCreative">Ejecución Creativa</span></span></span>
+                <p data-i18n="project.trueno.ex1">Trabajé directamente con Trueno en reuniones estratégicas para entender la profundidad de "Tierra Zanta". A partir de sus elementos visuales —firma, símbolos personales, referencias visuales de su territorio— diseñé el kit completo: camiseta, pantalones, accesorios.</p>
+                <p data-i18n="project.trueno.ex2">La decisión creativa fue la paleta: dorado y negro. Estos colores viven en el ADN visual de Trueno y del álbum "Bien o Mal". Cada elemento respondía directamente a lo que Trueno explicaba sobre su identidad, su territorio y su historia.</p>
             </div>
             <div class="proj-frame stage-tall" data-parallax="-12">
                 <img src="./images/trueno/trueno-shirt-bw.png" alt="Trueno presenting Tierra Zanta kit">
@@ -96,9 +111,9 @@
         <!-- Results -->
         <section class="proj-stage proj-stage--results">
             <div class="proj-text">
-                <span class="proj-text-num">03<span class="proj-text-label"> Resultados</span></span>
-                <p>El kit lanzó en FIFA 22 y la respuesta fue inmediata: fans pidiendo que se vendiera como camiseta oficial, comentarios masivos en redes, viralización.</p>
-                <p>Los jugadores no solo usaban el uniforme; llevaban la identidad completa de Trueno. El diseño funcionó porque era auténtico.</p>
+                <span class="proj-text-num">03<span class="proj-text-label"> <span data-i18n="project.results">Resultados</span></span></span>
+                <p data-i18n="project.trueno.res1">El kit lanzó en FIFA 22 y la respuesta fue inmediata: fans pidiendo que se vendiera como camiseta oficial, comentarios masivos en redes, viralización.</p>
+                <p data-i18n="project.trueno.res2">Los jugadores no solo usaban el uniforme; llevaban la identidad completa de Trueno. El diseño funcionó porque era auténtico.</p>
             </div>
         </section>
 
@@ -109,38 +124,38 @@
 
         <!-- Next project -->
         <footer class="proj-footer">
-            <a href="./project-glenlivet.html" class="proj-next">Next Project &gt;</a>
+            <a href="./project-glenlivet.html" class="proj-next" data-i18n="common.nextProject">Next Project &gt;</a>
         </footer>
     </article>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="footer-left">
-            <h2 class="footer-text">Let's talk about<br>your next project ;)</h2>
-            <a href="./contact.html" class="footer-contact-link">Contact</a>
+            <h2 class="footer-text" data-i18n="common.footer.text">Let's talk about<br>your next project ;)</h2>
+            <a href="./contact.html" class="footer-contact-link" data-i18n="common.footer.contactLink">Contact</a>
         </div>
 
         <nav class="footer-nav">
-            <a href="./index.html" class="footer-nav-link">Home</a>
-            <a href="./work.html" class="footer-nav-link">Work</a>
-            <a href="./contact.html" class="footer-nav-link">Contact</a>
-            <a href="./cv.html" class="footer-nav-link">CV</a>
-            <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Linkedin</a>
-            <a href="https://www.instagram.com/loliriccardo/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram</a>
+            <a href="./index.html" class="footer-nav-link" data-i18n="common.nav.home">Home</a>
+            <a href="./work.html" class="footer-nav-link" data-i18n="common.nav.work">Work</a>
+            <a href="./contact.html" class="footer-nav-link" data-i18n="common.nav.contact">Contact</a>
+            <a href="./cv.html" class="footer-nav-link" data-i18n="common.nav.cv">CV</a>
+            <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="common.nav.linkedin">Linkedin</a>
+            <a href="https://www.instagram.com/loliriccardo/" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="common.nav.instagram">Instagram</a>
         </nav>
 
         <div class="footer-contact-info">
             <div class="contact-item">
-                <span class="contact-label">PHONE</span>
+                <span class="contact-label" data-i18n="common.footer.phone">PHONE</span>
                 <span class="contact-value">+54 9 11 4177 3952</span>
             </div>
             <div class="contact-item">
-                <span class="contact-label">MAIL</span>
+                <span class="contact-label" data-i18n="common.footer.mail">MAIL</span>
                 <span class="contact-value">d.riccardo@icloud.com</span>
             </div>
             <div class="contact-item">
-                <span class="contact-label">LOCATION</span>
-                <span class="contact-value">Buenos Aires &amp; Worldwide</span>
+                <span class="contact-label" data-i18n="common.footer.location">LOCATION</span>
+                <span class="contact-value" data-i18n="common.footer.locationValue">Buenos Aires &amp; Worldwide</span>
             </div>
         </div>
     </footer>

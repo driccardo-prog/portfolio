@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculum Vitae — Dolores Riccardo</title>
+    <title data-i18n-title="cv.title">Curriculum Vitae — Dolores Riccardo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/i18n.js"></script>
 </head>
 <body class="cv-page">
+    <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
+    <div id="lang-overlay" hidden>
+      <div class="lang-picker">
+        <h1 class="lang-title">Choose your language<br><span>Elegí tu idioma</span></h1>
+        <div class="lang-buttons">
+          <button data-lang="en">English</button>
+          <button data-lang="es">Español</button>
+        </div>
+      </div>
+    </div>
+    <div id="loader-overlay" hidden>
+      <div class="loader-counter">0%</div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header">
         <a href="./index.html" class="logo">Dolores,R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
+            <a href="./index.html" class="nav-link" data-i18n="common.nav.home">Home</a>,&nbsp;<a href="./work.html" class="nav-link" data-i18n="common.nav.work">Work</a>,&nbsp;<a href="./about.html" class="nav-link" data-i18n="common.nav.about">About</a>
         </nav>
         <div class="header-right">
-            <span class="header-location">Bs As &amp; Worldwide</span>
-            <a href="./contact.html" class="nav-link">Let's get in touch ;)</a>
+            <span class="header-location" data-i18n="common.header.location">Bs As &amp; Worldwide</span>
+            <a href="./contact.html" class="nav-link" data-i18n="common.header.contact">Let's get in touch ;)</a>
         </div>
     </header>
 
@@ -28,108 +43,108 @@
             <img src="./images/loli-hero-bw.jpg" alt="Dolores Riccardo">
         </div>
         <div class="cv-hero-text">
-            <h1 class="cv-name" data-typewriter="Curriculum Vitae"><span class="type-caret"></span></h1>
-            <p class="cv-subname reveal-up" style="--delay: 0.2s">Dolores Riccardo · BsAs, Argentina.</p>
+            <h1 class="cv-name" data-typewriter="Curriculum Vitae" data-i18n-typewriter="cv.typewriter"><span class="type-caret"></span></h1>
+            <p class="cv-subname reveal-up" style="--delay: 0.2s" data-i18n="cv.subname">Dolores Riccardo · BsAs, Argentina.</p>
         </div>
     </section>
 
     <!-- ========== WHAT I'VE DONE ========== -->
     <section class="cv-section">
-        <h2 class="cv-section-title reveal-up">What I've done</h2>
+        <h2 class="cv-section-title reveal-up" data-i18n="cv.done">What I've done</h2>
         <div class="cv-entries">
             <article class="cv-entry reveal-up" style="--delay: 0.05s">
-                <span class="cv-date">2025 <span class="cv-arrow">&rarr;</span> Currently</span>
-                <h3 class="cv-role">Oliver Agency <span class="cv-sep">/</span> <em>Sr. Graphic Designer</em></h3>
-                <p>Design and develop end-to-end creative pieces for campaigns and brands, ensuring quality and visual consistency. Provide strategic input, manage multiple projects, and focus on innovation and AI tools.</p>
+                <span class="cv-date">2025 <span class="cv-arrow">&rarr;</span> <span data-i18n="cv.currently">Currently</span></span>
+                <h3 class="cv-role"><span data-i18n="cv.roles.oliver">Oliver Agency</span> <span class="cv-sep">/</span> <em data-i18n="cv.roles.oliverRole">Sr. Graphic Designer</em></h3>
+                <p data-i18n="cv.roles.oliverDesc">Design and develop end-to-end creative pieces for campaigns and brands, ensuring quality and visual consistency. Provide strategic input, manage multiple projects, and focus on innovation and AI tools.</p>
             </article>
 
             <article class="cv-entry reveal-up" style="--delay: 0.12s">
-                <span class="cv-date">2017 <span class="cv-arrow">&rarr;</span> Currently</span>
-                <h3 class="cv-role">Designer <span class="cv-sep">/</span> <em>Freelance</em></h3>
-                <p>Create visual identities and design strategies to strengthen brands, also collaborating with agencies on design and art direction.</p>
+                <span class="cv-date">2017 <span class="cv-arrow">&rarr;</span> <span data-i18n="cv.currently">Currently</span></span>
+                <h3 class="cv-role"><span data-i18n="cv.roles.freelance">Designer</span> <span class="cv-sep">/</span> <em data-i18n="cv.roles.freelanceRole">Freelance</em></h3>
+                <p data-i18n="cv.roles.freelanceDesc">Create visual identities and design strategies to strengthen brands, also collaborating with agencies on design and art direction.</p>
             </article>
 
             <article class="cv-entry reveal-up" style="--delay: 0.19s">
                 <span class="cv-date">2023 <span class="cv-arrow">&rarr;</span> 2025</span>
-                <h3 class="cv-role">Lumos / Grupo Taquion <span class="cv-sep">/</span> <em>Head of Design — Sr. Graphic Designer</em></h3>
-                <p>As Design Lead, I create and execute branding, social media assets, digital ads, political campaign materials, and corporate reports, ensuring impactful and consistent visual communication.</p>
+                <h3 class="cv-role"><span data-i18n="cv.roles.lumos">Lumos / Grupo Taquion</span> <span class="cv-sep">/</span> <em data-i18n="cv.roles.lumosRole">Head of Design — Sr. Graphic Designer</em></h3>
+                <p data-i18n="cv.roles.lumosDesc">As Design Lead, I create and execute branding, social media assets, digital ads, political campaign materials, and corporate reports, ensuring impactful and consistent visual communication.</p>
             </article>
 
             <article class="cv-entry reveal-up" style="--delay: 0.26s">
                 <span class="cv-date">2021 <span class="cv-arrow">&rarr;</span> 2023</span>
-                <h3 class="cv-role">We Are Laugh <span class="cv-sep">/</span> <em>Art Direction</em></h3>
-                <p>Led art direction for interactive campaigns, websites, and social media, ensuring cohesive visuals and impactful messaging. Managed high-stakes projects and oversaw strategic content distribution.</p>
+                <h3 class="cv-role"><span data-i18n="cv.roles.laugh">We Are Laugh</span> <span class="cv-sep">/</span> <em data-i18n="cv.roles.laughRole">Art Direction</em></h3>
+                <p data-i18n="cv.roles.laughDesc">Led art direction for interactive campaigns, websites, and social media, ensuring cohesive visuals and impactful messaging. Managed high-stakes projects and oversaw strategic content distribution.</p>
             </article>
         </div>
     </section>
 
     <!-- ========== WHERE I LEARNED ========== -->
     <section class="cv-section">
-        <h2 class="cv-section-title reveal-up">Where I learned</h2>
+        <h2 class="cv-section-title reveal-up" data-i18n="cv.learned">Where I learned</h2>
         <div class="cv-entries">
             <article class="cv-entry reveal-up" style="--delay: 0.05s">
                 <span class="cv-date">2020 <span class="cv-arrow">&rarr;</span> 2021</span>
-                <h3 class="cv-role">Corporate Image Design <span class="cv-sep">/</span> <em>Universidad de Palermo</em></h3>
-                <p>Degree · Corporate Image Design.</p>
+                <h3 class="cv-role"><span data-i18n="cv.roles.corp">Corporate Image Design</span> <span class="cv-sep">/</span> <em data-i18n="cv.roles.corpRole">Universidad de Palermo</em></h3>
+                <p data-i18n="cv.roles.corpDesc">Degree · Corporate Image Design.</p>
             </article>
 
             <article class="cv-entry reveal-up" style="--delay: 0.12s">
                 <span class="cv-date">2017 <span class="cv-arrow">&rarr;</span> 2020</span>
-                <h3 class="cv-role">Graphic Design <span class="cv-sep">/</span> <em>Universidad de Palermo</em></h3>
-                <p>Degree.</p>
+                <h3 class="cv-role"><span data-i18n="cv.roles.gd">Graphic Design</span> <span class="cv-sep">/</span> <em data-i18n="cv.roles.gdRole">Universidad de Palermo</em></h3>
+                <p data-i18n="cv.roles.gdDesc">Degree.</p>
             </article>
 
             <article class="cv-entry reveal-up" style="--delay: 0.19s">
                 <span class="cv-date">2003 <span class="cv-arrow">&rarr;</span> 2016</span>
-                <h3 class="cv-role">Bilingual Diploma <span class="cv-sep">/</span> <em>Colegio Santa María de Pilar</em></h3>
-                <p>Degree focused on Humanistic Sciences.</p>
+                <h3 class="cv-role"><span data-i18n="cv.roles.school">Bilingual Diploma</span> <span class="cv-sep">/</span> <em data-i18n="cv.roles.schoolRole">Colegio Santa María de Pilar</em></h3>
+                <p data-i18n="cv.roles.schoolDesc">Degree focused on Humanistic Sciences.</p>
             </article>
         </div>
     </section>
 
     <!-- ========== TOOLS ========== -->
     <section class="cv-section cv-section--tools">
-        <h2 class="cv-section-title reveal-up">Tools I rock at</h2>
+        <h2 class="cv-section-title reveal-up" data-i18n="cv.tools">Tools I rock at</h2>
         <ul class="cv-tools">
-            <li class="cv-tool reveal-up" style="--delay: 0.05s; --lv: 100%"><span class="cv-tool-name">Photoshop</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
-            <li class="cv-tool reveal-up" style="--delay: 0.10s; --lv: 100%"><span class="cv-tool-name">Illustrator</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
-            <li class="cv-tool reveal-up" style="--delay: 0.15s; --lv: 70%"><span class="cv-tool-name">Premiere</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
-            <li class="cv-tool reveal-up" style="--delay: 0.20s; --lv: 60%"><span class="cv-tool-name">After Effects</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
-            <li class="cv-tool reveal-up" style="--delay: 0.25s; --lv: 75%"><span class="cv-tool-name">InDesign</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
-            <li class="cv-tool reveal-up" style="--delay: 0.30s; --lv: 55%"><span class="cv-tool-name">Figma</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
-            <li class="cv-tool reveal-up" style="--delay: 0.35s; --lv: 100%"><span class="cv-tool-name">Social Media</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
-            <li class="cv-tool reveal-up" style="--delay: 0.40s; --lv: 90%"><span class="cv-tool-name">Inteligencia Artificial</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
+            <li class="cv-tool reveal-up" style="--delay: 0.05s; --lv: 100%"><span class="cv-tool-name" data-i18n="cv.toolNames.ps">Photoshop</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
+            <li class="cv-tool reveal-up" style="--delay: 0.10s; --lv: 100%"><span class="cv-tool-name" data-i18n="cv.toolNames.ai">Illustrator</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
+            <li class="cv-tool reveal-up" style="--delay: 0.15s; --lv: 70%"><span class="cv-tool-name" data-i18n="cv.toolNames.pr">Premiere</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
+            <li class="cv-tool reveal-up" style="--delay: 0.20s; --lv: 60%"><span class="cv-tool-name" data-i18n="cv.toolNames.ae">After Effects</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
+            <li class="cv-tool reveal-up" style="--delay: 0.25s; --lv: 75%"><span class="cv-tool-name" data-i18n="cv.toolNames.id">InDesign</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
+            <li class="cv-tool reveal-up" style="--delay: 0.30s; --lv: 55%"><span class="cv-tool-name" data-i18n="cv.toolNames.fg">Figma</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
+            <li class="cv-tool reveal-up" style="--delay: 0.35s; --lv: 100%"><span class="cv-tool-name" data-i18n="cv.toolNames.sm">Social Media</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
+            <li class="cv-tool reveal-up" style="--delay: 0.40s; --lv: 90%"><span class="cv-tool-name" data-i18n="cv.toolNames.aiTool">Inteligencia Artificial</span><span class="cv-bar"><span class="cv-bar-fill"></span></span></li>
         </ul>
     </section>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="footer-left">
-            <h2 class="footer-text">Let's talk about<br>your next project ;)</h2>
-            <a href="./contact.html" class="footer-contact-link">Contact</a>
+            <h2 class="footer-text" data-i18n="common.footer.text">Let's talk about<br>your next project ;)</h2>
+            <a href="./contact.html" class="footer-contact-link" data-i18n="common.footer.contactLink">Contact</a>
         </div>
 
         <nav class="footer-nav">
-            <a href="./index.html" class="footer-nav-link">Home</a>
-            <a href="./work.html" class="footer-nav-link">Work</a>
-            <a href="./contact.html" class="footer-nav-link">Contact</a>
-            <a href="./cv.html" class="footer-nav-link">CV</a>
-            <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Linkedin</a>
-            <a href="https://www.instagram.com/loliriccardo/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram</a>
+            <a href="./index.html" class="footer-nav-link" data-i18n="common.nav.home">Home</a>
+            <a href="./work.html" class="footer-nav-link" data-i18n="common.nav.work">Work</a>
+            <a href="./contact.html" class="footer-nav-link" data-i18n="common.nav.contact">Contact</a>
+            <a href="./cv.html" class="footer-nav-link" data-i18n="common.nav.cv">CV</a>
+            <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="common.nav.linkedin">Linkedin</a>
+            <a href="https://www.instagram.com/loliriccardo/" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="common.nav.instagram">Instagram</a>
         </nav>
 
         <div class="footer-contact-info">
             <div class="contact-item">
-                <span class="contact-label">PHONE</span>
+                <span class="contact-label" data-i18n="common.footer.phone">PHONE</span>
                 <span class="contact-value">+54 9 11 4177 3952</span>
             </div>
             <div class="contact-item">
-                <span class="contact-label">MAIL</span>
+                <span class="contact-label" data-i18n="common.footer.mail">MAIL</span>
                 <span class="contact-value">d.riccardo@icloud.com</span>
             </div>
             <div class="contact-item">
-                <span class="contact-label">LOCATION</span>
-                <span class="contact-value">Buenos Aires &amp; Worldwide</span>
+                <span class="contact-label" data-i18n="common.footer.location">LOCATION</span>
+                <span class="contact-value" data-i18n="common.footer.locationValue">Buenos Aires &amp; Worldwide</span>
             </div>
         </div>
     </footer>

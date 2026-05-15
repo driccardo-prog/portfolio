@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Dolores Riccardo</title>
+    <title data-i18n-title="about.title">About — Dolores Riccardo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/i18n.js"></script>
 </head>
 <body class="about-page">
+    <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
+    <div id="lang-overlay" hidden>
+      <div class="lang-picker">
+        <h1 class="lang-title">Choose your language<br><span>Elegí tu idioma</span></h1>
+        <div class="lang-buttons">
+          <button data-lang="en">English</button>
+          <button data-lang="es">Español</button>
+        </div>
+      </div>
+    </div>
+    <div id="loader-overlay" hidden>
+      <div class="loader-counter">0%</div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header">
         <a href="./index.html" class="logo">Dolores,R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
+            <a href="./index.html" class="nav-link" data-i18n="common.nav.home">Home</a>,&nbsp;<a href="./work.html" class="nav-link" data-i18n="common.nav.work">Work</a>,&nbsp;<a href="./about.html" class="nav-link" data-i18n="common.nav.about">About</a>
         </nav>
         <div class="header-right">
-            <span class="header-location">Bs As &amp; Worldwide</span>
-            <a href="./contact.html" class="nav-link">Let's get in touch ;)</a>
+            <span class="header-location" data-i18n="common.header.location">Bs As &amp; Worldwide</span>
+            <a href="./contact.html" class="nav-link" data-i18n="common.header.contact">Let's get in touch ;)</a>
         </div>
     </header>
 
@@ -36,27 +51,27 @@
             <div class="scatter-frame f9"><img src="./images/about/about-09.jpg" alt=""></div>
             <div class="scatter-frame f10"><img src="./images/about/about-10.jpg" alt=""></div>
             <div class="scatter-frame f11"><img src="./images/about/about-11.jpg" alt=""></div>
-            <h1 class="about-hello" data-typewriter="Hello there,"><span class="type-caret"></span></h1>
+            <h1 class="about-hello" data-typewriter="Hello there," data-i18n-typewriter="about.hello"><span class="type-caret"></span></h1>
         </div>
     </section>
 
     <!-- ========== INTRO: I'm Loli + bio (offset grid) ========== -->
     <section class="about-intro">
         <div class="bio-cell bio-cell--name reveal-up">
-            <h2 class="about-name">I'm Loli,</h2>
-            <span class="about-aka">(or Lo, Loló, Lolita.)</span>
+            <h2 class="about-name" data-i18n="about.name">I'm Loli,</h2>
+            <span class="about-aka" data-i18n="about.aka">(or Lo, Loló, Lolita.)</span>
         </div>
 
-        <p class="bio-cell bio-cell--a reveal-up" style="--delay: 0.10s">
+        <p class="bio-cell bio-cell--a reveal-up" style="--delay: 0.10s" data-i18n="about.bio1">
             Senior graphic designer specialized in branding, art direction and creative campaigns. I studied at Universidad de Palermo and have been working in the industry since 2017.
         </p>
-        <p class="bio-cell bio-cell--b reveal-up" style="--delay: 0.22s">
+        <p class="bio-cell bio-cell--b reveal-up" style="--delay: 0.22s" data-i18n="about.bio2">
             For over 8 years I've been translating complex identities into coherent visual systems. My career was built on 360 campaigns, key visuals, spots and countless brands. Always learning that graphic design is narrative and coherence, not just something pretty.
         </p>
-        <p class="bio-cell bio-cell--c reveal-up" style="--delay: 0.34s">
+        <p class="bio-cell bio-cell--c reveal-up" style="--delay: 0.34s" data-i18n="about.bio3">
             I started as a freelancer, worked at agencies that shaped my practice intensely, and now I balance my role at Pernod Ricard with independent projects.
         </p>
-        <p class="bio-cell bio-cell--d reveal-up" style="--delay: 0.46s">
+        <p class="bio-cell bio-cell--d reveal-up" style="--delay: 0.46s" data-i18n="about.bio4">
             I want to collaborate with people and brands that demand the best from me. Projects that challenge, where I can propose ideas and be behind every detail.
         </p>
     </section>
@@ -64,22 +79,22 @@
     <!-- ========== BIG QUOTE ========== -->
     <section class="about-belief">
         <h2 class="belief-text">
-            <span class="belief-word">Good</span>
-            <span class="belief-word">design</span>
-            <span class="belief-word">is</span>
-            <span class="belief-word">rooted</span>
-            <span class="belief-word">in</span>
-            <span class="belief-word">a</span>
-            <span class="belief-word">balanced</span>
-            <span class="belief-word">blend</span>
-            <span class="belief-word">of</span>
-            <span class="belief-word belief-emph">Strategy</span>
-            <span class="belief-word">&amp;</span>
-            <span class="belief-word belief-emph">Coherence.</span>
-            <span class="belief-word">In</span>
-            <span class="belief-word">that</span>
-            <span class="belief-word">I</span>
-            <span class="belief-word">believe.</span>
+            <span class="belief-word" data-i18n="about.belief.w1">Good</span>
+            <span class="belief-word" data-i18n="about.belief.w2">design</span>
+            <span class="belief-word" data-i18n="about.belief.w3">is</span>
+            <span class="belief-word" data-i18n="about.belief.w4">rooted</span>
+            <span class="belief-word" data-i18n="about.belief.w5">in</span>
+            <span class="belief-word" data-i18n="about.belief.w6">a</span>
+            <span class="belief-word" data-i18n="about.belief.w7">balanced</span>
+            <span class="belief-word" data-i18n="about.belief.w8">blend</span>
+            <span class="belief-word" data-i18n="about.belief.w9">of</span>
+            <span class="belief-word belief-emph" data-i18n="about.belief.w10">Strategy</span>
+            <span class="belief-word" data-i18n="about.belief.w11">&amp;</span>
+            <span class="belief-word belief-emph" data-i18n="about.belief.w12">Coherence.</span>
+            <span class="belief-word" data-i18n="about.belief.w13">In</span>
+            <span class="belief-word" data-i18n="about.belief.w14">that</span>
+            <span class="belief-word" data-i18n="about.belief.w15">I</span>
+            <span class="belief-word" data-i18n="about.belief.w16">believe.</span>
         </h2>
     </section>
 
@@ -106,7 +121,7 @@
         <div class="beyond-frame reveal-zoom">
             <img src="./images/about/about-12.jpg" alt="Loli — beyond design">
         </div>
-        <p class="beyond-text reveal-up" style="--delay: 0.15s">
+        <p class="beyond-text reveal-up" style="--delay: 0.15s" data-i18n="about.beyond">
             Beyond design: I'm passionate about animals, music —singing and playing guitar— and the constant act of creating. Creativity doesn't stop when I leave the computer.
         </p>
     </section>
@@ -114,44 +129,44 @@
     <!-- ========== CTA ========== -->
     <section class="about-cta">
         <h2 class="cta-text">
-            <span class="cta-line">If you think</span>
-            <span class="cta-line">we could do</span>
-            <span class="cta-line">cool stuff</span>
-            <span class="cta-line">together, you</span>
-            <span class="cta-line">know where</span>
-            <span class="cta-line">to find me <a href="./contact.html" class="cta-wink">;)</a></span>
+            <span class="cta-line" data-i18n="about.cta.l1">If you think</span>
+            <span class="cta-line" data-i18n="about.cta.l2">we could do</span>
+            <span class="cta-line" data-i18n="about.cta.l3">cool stuff</span>
+            <span class="cta-line" data-i18n="about.cta.l4">together, you</span>
+            <span class="cta-line" data-i18n="about.cta.l5">know where</span>
+            <span class="cta-line"><span data-i18n="about.cta.l6">to find me</span> <a href="./contact.html" class="cta-wink">;)</a></span>
         </h2>
-        <a href="./cv.html" class="cta-cv">My Curriculum Vitae</a>
+        <a href="./cv.html" class="cta-cv" data-i18n="about.ctaCv">My Curriculum Vitae</a>
     </section>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="footer-left">
-            <h2 class="footer-text">Let's talk about<br>your next project ;)</h2>
-            <a href="./contact.html" class="footer-contact-link">Contact</a>
+            <h2 class="footer-text" data-i18n="common.footer.text">Let's talk about<br>your next project ;)</h2>
+            <a href="./contact.html" class="footer-contact-link" data-i18n="common.footer.contactLink">Contact</a>
         </div>
 
         <nav class="footer-nav">
-            <a href="./index.html" class="footer-nav-link">Home</a>
-            <a href="./work.html" class="footer-nav-link">Work</a>
-            <a href="./contact.html" class="footer-nav-link">Contact</a>
-            <a href="./cv.html" class="footer-nav-link">CV</a>
-            <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Linkedin</a>
-            <a href="https://www.instagram.com/loliriccardo/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram</a>
+            <a href="./index.html" class="footer-nav-link" data-i18n="common.nav.home">Home</a>
+            <a href="./work.html" class="footer-nav-link" data-i18n="common.nav.work">Work</a>
+            <a href="./contact.html" class="footer-nav-link" data-i18n="common.nav.contact">Contact</a>
+            <a href="./cv.html" class="footer-nav-link" data-i18n="common.nav.cv">CV</a>
+            <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="common.nav.linkedin">Linkedin</a>
+            <a href="https://www.instagram.com/loliriccardo/" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="common.nav.instagram">Instagram</a>
         </nav>
 
         <div class="footer-contact-info">
             <div class="contact-item">
-                <span class="contact-label">PHONE</span>
+                <span class="contact-label" data-i18n="common.footer.phone">PHONE</span>
                 <span class="contact-value">+54 9 11 4177 3952</span>
             </div>
             <div class="contact-item">
-                <span class="contact-label">MAIL</span>
+                <span class="contact-label" data-i18n="common.footer.mail">MAIL</span>
                 <span class="contact-value">d.riccardo@icloud.com</span>
             </div>
             <div class="contact-item">
-                <span class="contact-label">LOCATION</span>
-                <span class="contact-value">Buenos Aires &amp; Worldwide</span>
+                <span class="contact-label" data-i18n="common.footer.location">LOCATION</span>
+                <span class="contact-value" data-i18n="common.footer.locationValue">Buenos Aires &amp; Worldwide</span>
             </div>
         </div>
     </footer>

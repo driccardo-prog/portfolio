@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dolores Riccardo - Art Director & Creative</title>
+    <title data-i18n-title="home.title">Dolores Riccardo - Art Director & Creative</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/i18n.js"></script>
 </head>
 <body>
+    <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
+    <div id="lang-overlay" hidden>
+      <div class="lang-picker">
+        <h1 class="lang-title">Choose your language<br><span>Elegí tu idioma</span></h1>
+        <div class="lang-buttons">
+          <button data-lang="en">English</button>
+          <button data-lang="es">Español</button>
+        </div>
+      </div>
+    </div>
+    <div id="loader-overlay" hidden>
+      <div class="loader-counter">0%</div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header">
         <a href="#" class="logo">Dolores,R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
+            <a href="./index.html" class="nav-link" data-i18n="common.nav.home">Home</a>,&nbsp;<a href="./work.html" class="nav-link" data-i18n="common.nav.work">Work</a>,&nbsp;<a href="./about.html" class="nav-link" data-i18n="common.nav.about">About</a>
         </nav>
         <div class="header-right">
-            <span class="header-location">Bs As &amp; Worldwide</span>
-            <a href="./contact.html" class="nav-link">Let's get in touch ;)</a>
+            <span class="header-location" data-i18n="common.header.location">Bs As &amp; Worldwide</span>
+            <a href="./contact.html" class="nav-link" data-i18n="common.header.contact">Let's get in touch ;)</a>
         </div>
     </header>
 
@@ -27,20 +42,20 @@
         <div class="hero-frame">
             <img src="./images/loli-hero-bw.jpg" alt="Loli — Dolores Riccardo">
         </div>
-        <p class="hero-intro">
+        <p class="hero-intro" data-i18n="home.hero.intro">
             I develop visual identities and art-directed campaigns for brands. Specialized in branding systems, narrative direction, and strategic use of AI.
         </p>
-        <h1 class="hero-title">
+        <h1 class="hero-title" data-i18n="home.hero.title">
             Hello :) I'm&nbsp;Loli,<br>
             Buenos Aires-based Art Director &amp; Creative, developing strategic&nbsp;visual<br>
             identities and campaigns for brands&nbsp;seeking<br>
             to break through&nbsp;noise.
         </h1>
         <div class="hero-bottom">
-            <div class="hero-col-label">
+            <div class="hero-col-label" data-i18n="home.hero.colLabel">
                 Art Direction<br>&amp; Creativity
             </div>
-            <p class="hero-col-text">
+            <p class="hero-col-text" data-i18n="home.hero.colText">
                 With 6+ years crafting visual identities, campaigns, and digital experiences, I believe strategy must drive design.
             </p>
         </div>
@@ -51,56 +66,56 @@
         <!-- Project 01 -->
         <article class="work">
             <div class="work-meta work-meta--four">
-                <span>Selected Works</span>
+                <span data-i18n="home.works.selected">Selected Works</span>
                 <span>[ 01 ]</span>
-                <span>Guillermo Francella x Bplay</span>
-                <span>Year 2022</span>
+                <span data-i18n="home.works.bplayClient">Guillermo Francella x Bplay</span>
+                <span><span data-i18n="home.works.year">Year</span> 2022</span>
             </div>
             <div class="work-title-wrapper">
-                <span class="work-annotation work-annotation--left">Sponsor Oficial<br>del Corazón Argento</span>
+                <span class="work-annotation work-annotation--left" data-i18n="home.works.bplayAnnot">Sponsor Oficial<br>del Corazón Argento</span>
                 <h2 class="work-title"><span class="bracket bracket-l">[</span><span class="title-text">Guillermo Francella x Bplay</span><span class="bracket bracket-r">]</span></h2>
-                <div class="work-categories">ART DIRECTION | KEY VISUAL | OFF &amp; ONLINE MEDIA</div>
+                <div class="work-categories" data-i18n="home.works.bplayCats">ART DIRECTION | KEY VISUAL | OFF &amp; ONLINE MEDIA</div>
             </div>
             <a href="./project-bplay.html" class="work-frame-link"><div class="work-frame">
                 <img src="./images/bplay/01-hero-mosaic.png" alt="Pepe Argento x Bplay">
             </div></a>
-            <a href="./project-bplay.html" class="work-cta">&lt; See the whole deal &gt;</a>
+            <a href="./project-bplay.html" class="work-cta" data-i18n="common.seeWholeDeal">&lt; See the whole deal &gt;</a>
         </article>
 
         <!-- Project 02 -->
         <article class="work">
             <div class="work-meta">
                 <span>[ 02 ]</span>
-                <span>Build Your Own. Superfood Lab</span>
-                <span>Year 2022</span>
+                <span data-i18n="home.works.byoClient">Build Your Own. Superfood Lab</span>
+                <span><span data-i18n="home.works.year">Year</span> 2022</span>
             </div>
             <div class="work-title-wrapper">
-                <span class="work-annotation work-annotation--right">Tu mejor versión<br>todos los días.</span>
+                <span class="work-annotation work-annotation--right" data-i18n="home.works.byoAnnot">Tu mejor versión<br>todos los días.</span>
                 <h2 class="work-title"><span class="bracket bracket-l">[</span><span class="title-text">Byo. Superfood Lab</span><span class="bracket bracket-r">]</span></h2>
-                <div class="work-categories">BRANDING | CONCEPTS | OFF &amp; ONLINE MEDIA | AI GENERATION</div>
+                <div class="work-categories" data-i18n="home.works.byoCats">BRANDING | CONCEPTS | OFF &amp; ONLINE MEDIA | AI GENERATION</div>
             </div>
             <a href="./project-byo.html" class="work-frame-link"><div class="work-frame">
                 <img src="./images/byo/bolsa.jpg" alt="Byo Superfood Lab — paper bag">
             </div></a>
-            <a href="./project-byo.html" class="work-cta">&lt; See the whole deal &gt;</a>
+            <a href="./project-byo.html" class="work-cta" data-i18n="common.seeWholeDeal">&lt; See the whole deal &gt;</a>
         </article>
 
         <!-- Project 03 -->
         <article class="work">
             <div class="work-meta">
                 <span>[ 03 ]</span>
-                <span>Juan Martín del Potro x DHL</span>
-                <span>Year 2022</span>
+                <span data-i18n="home.works.dhlClient">Juan Martín del Potro x DHL</span>
+                <span><span data-i18n="home.works.year">Year</span> 2022</span>
             </div>
             <div class="work-title-wrapper">
-                <span class="work-annotation work-annotation--center-left">Juan Martín<br>del Potro</span>
+                <span class="work-annotation work-annotation--center-left" data-i18n="home.works.dhlAnnot">Juan Martín<br>del Potro</span>
                 <h2 class="work-title"><span class="bracket bracket-l">[</span><span class="title-text">Open for Us x DHL</span><span class="bracket bracket-r">]</span></h2>
-                <div class="work-categories">ART DIRECTION | CAMPAIGN | SPATIAL DESIGN</div>
+                <div class="work-categories" data-i18n="home.works.dhlCats">ART DIRECTION | CAMPAIGN | SPATIAL DESIGN</div>
             </div>
             <a href="./project-dhl.html" class="work-frame-link"><div class="work-frame">
                 <img src="./images/dhl/hero-keyvisual.png" alt="Juan Martín del Potro x DHL — #NuncaTeRindas">
             </div></a>
-            <a href="./project-dhl.html" class="work-cta">&lt; See the whole deal &gt;</a>
+            <a href="./project-dhl.html" class="work-cta" data-i18n="common.seeWholeDeal">&lt; See the whole deal &gt;</a>
         </article>
     </section>
 
@@ -120,7 +135,7 @@
             <a class="scatter-frame f11" href="./project-glenlivet.html"><img src="./images/glenlivet/cap-keyvisual.jpg" alt=""></a>
 
             <a href="./work.html" class="all-work-title-wrapper">
-                <h2 class="all-work-title">All Work<sup class="all-work-count">(6)</sup></h2>
+                <h2 class="all-work-title"><span data-i18n="home.allWork">All Work</span><sup class="all-work-count">(6)</sup></h2>
             </a>
         </div>
     </section>
@@ -128,31 +143,31 @@
     <!-- ========== FOOTER ========== -->
     <footer class="footer" id="contact">
         <div class="footer-left">
-            <h2 class="footer-text">Let's talk about<br>your next project ;)</h2>
-            <a href="mailto:d.riccardo@icloud.com" class="footer-contact-link">Contact</a>
+            <h2 class="footer-text" data-i18n="common.footer.text">Let's talk about<br>your next project ;)</h2>
+            <a href="mailto:d.riccardo@icloud.com" class="footer-contact-link" data-i18n="common.footer.contactLink">Contact</a>
         </div>
 
         <nav class="footer-nav">
-            <a href="#" class="footer-nav-link">Home</a>
-            <a href="./work.html" class="footer-nav-link">Work</a>
-            <a href="./contact.html" class="footer-nav-link">Contact</a>
-            <a href="./cv.html" class="footer-nav-link">CV</a>
-            <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Linkedin</a>
-            <a href="https://www.instagram.com/loliriccardo/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram</a>
+            <a href="#" class="footer-nav-link" data-i18n="common.nav.home">Home</a>
+            <a href="./work.html" class="footer-nav-link" data-i18n="common.nav.work">Work</a>
+            <a href="./contact.html" class="footer-nav-link" data-i18n="common.nav.contact">Contact</a>
+            <a href="./cv.html" class="footer-nav-link" data-i18n="common.nav.cv">CV</a>
+            <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="common.nav.linkedin">Linkedin</a>
+            <a href="https://www.instagram.com/loliriccardo/" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="common.nav.instagram">Instagram</a>
         </nav>
 
         <div class="footer-contact-info">
             <div class="contact-item">
-                <span class="contact-label">PHONE</span>
+                <span class="contact-label" data-i18n="common.footer.phone">PHONE</span>
                 <span class="contact-value">+54 9 11 4177 3952</span>
             </div>
             <div class="contact-item">
-                <span class="contact-label">MAIL</span>
+                <span class="contact-label" data-i18n="common.footer.mail">MAIL</span>
                 <span class="contact-value">d.riccardo@icloud.com</span>
             </div>
             <div class="contact-item">
-                <span class="contact-label">LOCATION</span>
-                <span class="contact-value">Buenos Aires &amp; Worldwide</span>
+                <span class="contact-label" data-i18n="common.footer.location">LOCATION</span>
+                <span class="contact-value" data-i18n="common.footer.locationValue">Buenos Aires &amp; Worldwide</span>
             </div>
         </div>
     </footer>

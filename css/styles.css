@@ -1950,3 +1950,97 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
     /* Project title isn't sticky on mobile (saves space) */
     .proj-title { position: static; }
 }
+
+/* ==========================================================================
+   i18n: Language picker + loading screen overlays
+   ========================================================================== */
+body.lang-locked { overflow: hidden; }
+
+#lang-overlay,
+#loader-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+#lang-overlay[hidden],
+#loader-overlay[hidden] { display: none; }
+
+#lang-overlay.is-visible,
+#loader-overlay.is-visible { opacity: 1; }
+
+#lang-overlay.is-hidden,
+#loader-overlay.is-hidden { opacity: 0; }
+
+.lang-picker {
+    text-align: center;
+    padding: 2rem;
+    max-width: 720px;
+    width: 100%;
+}
+
+.lang-title {
+    font-weight: 300;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    letter-spacing: -0.01em;
+    margin: 0 0 3rem 0;
+    line-height: 1.25;
+}
+.lang-title span {
+    font-family: 'Caveat', 'Snell Roundhand', 'Brush Script MT', cursive;
+    font-size: 1.2em;
+    opacity: 0.85;
+    display: inline-block;
+    margin-top: 0.25rem;
+}
+
+.lang-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lang-buttons button {
+    appearance: none;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 1rem 2.75rem;
+    font-family: inherit;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, letter-spacing 0.25s ease;
+    border-radius: 0;
+}
+.lang-buttons button:hover,
+.lang-buttons button:focus-visible {
+    background: #fff;
+    color: #000;
+    transform: scale(1.03);
+    letter-spacing: 0.06em;
+    outline: none;
+}
+
+.loader-counter {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: clamp(3rem, 10vw, 7rem);
+    letter-spacing: -0.04em;
+    color: #fff;
+    font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 540px) {
+    .lang-buttons { flex-direction: column; align-items: stretch; }
+    .lang-buttons button { width: 100%; }
+}
