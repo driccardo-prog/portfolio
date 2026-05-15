@@ -241,6 +241,12 @@ button, input, select, textarea {
    Each .work has --p (0..1) set by JS based on scroll position.
    All transforms read from --p via calc(). No transitions: scroll drives smoothness. */
 
+.work-frame-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
 .work-frame {
     position: relative;
     width: calc(600px + var(--p, 0) * (100% - 600px));
@@ -329,6 +335,7 @@ button, input, select, textarea {
     text-align: center;
     letter-spacing: -0.025em;
     overflow: hidden;
+    text-decoration: none;
     transform:
         translate3d(var(--mx, 0px), calc(var(--py, 0px) + var(--my, 0px)), 0)
         rotate(var(--rot, 0deg));
