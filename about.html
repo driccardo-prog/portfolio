@@ -14,11 +14,12 @@
     <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
     <div id="lang-overlay" hidden>
       <div class="lang-picker">
-        <h1 class="lang-title">Choose your language<br><span>Elegí tu idioma</span></h1>
-        <div class="lang-buttons">
-          <button data-lang="en">English</button>
-          <button data-lang="es">Español</button>
+        <div class="lang-toggle">
+          <button class="lang-option is-active" data-lang="en">ENGLISH</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-option" data-lang="es">SPANISH</button>
         </div>
+        <a href="#" class="lang-go">GO</a>
       </div>
     </div>
     <div id="loader-overlay" hidden>
@@ -29,11 +30,16 @@
     <header class="header">
         <a href="./index.html" class="logo">Dolores,R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link" data-i18n="common.nav.home">Home</a>,&nbsp;<a href="./work.html" class="nav-link" data-i18n="common.nav.work">Work</a>,&nbsp;<a href="./about.html" class="nav-link" data-i18n="common.nav.about">About</a>
+            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
         </nav>
         <div class="header-right">
-            <span class="header-location" data-i18n="common.header.location">Bs As &amp; Worldwide</span>
-            <a href="./contact.html" class="nav-link" data-i18n="common.header.contact">Let's get in touch ;)</a>
+            <span class="header-location">Bs As &amp; Worldwide</span>
+            <div class="lang-switch">
+                <button class="lang-switch-btn is-active" data-lang="en">EN</button>
+                <span>/</span>
+                <button class="lang-switch-btn" data-lang="es">ES</button>
+            </div>
+            <a href="./contact.html" class="nav-link">Let's get in touch ;)</a>
         </div>
     </header>
 
@@ -102,16 +108,16 @@
     <section class="about-skills">
         <div class="skills-marquee">
             <div class="skills-track">
-                <span class="skill-word" data-skill="Branding">Branding</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="AI Content">AI Content</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Social Media">Social Media</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="OOH">OOH</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Packaging">Packaging</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="360 Campaigns">360 Campaigns</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Visual Identity &amp; Strategy">Visual Identity &amp; Strategy</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Creativity">Creativity</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Online &amp; Offline Media">Online &amp; Offline Media</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Art Direction">Art Direction</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Branding" data-i18n="about.skills.branding">Branding</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="AI Content" data-i18n="about.skills.ai">AI Content</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Social Media" data-i18n="about.skills.social">Social Media</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="OOH" data-i18n="about.skills.ooh">OOH</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Packaging" data-i18n="about.skills.packaging">Packaging</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="360 Campaigns" data-i18n="about.skills.campaigns">360 Campaigns</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Visual Identity &amp; Strategy" data-i18n="about.skills.identity">Visual Identity &amp; Strategy</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Creativity" data-i18n="about.skills.creativity">Creativity</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Online &amp; Offline Media" data-i18n="about.skills.media">Online &amp; Offline Media</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Art Direction" data-i18n="about.skills.artdir">Art Direction</span><span class="skill-sep"> | </span>
             </div>
         </div>
     </section>
@@ -142,31 +148,31 @@
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="footer-left">
-            <h2 class="footer-text" data-i18n="common.footer.text">Let's talk about<br>your next project ;)</h2>
-            <a href="./contact.html" class="footer-contact-link" data-i18n="common.footer.contactLink">Contact</a>
+            <h2 class="footer-text">Let's talk about<br>your next project ;)</h2>
+            <a href="./contact.html" class="footer-contact-link">Contact</a>
         </div>
 
         <nav class="footer-nav">
-            <a href="./index.html" class="footer-nav-link" data-i18n="common.nav.home">Home</a>
-            <a href="./work.html" class="footer-nav-link" data-i18n="common.nav.work">Work</a>
-            <a href="./contact.html" class="footer-nav-link" data-i18n="common.nav.contact">Contact</a>
-            <a href="./cv.html" class="footer-nav-link" data-i18n="common.nav.cv">CV</a>
-            <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="common.nav.linkedin">Linkedin</a>
-            <a href="https://www.instagram.com/loliriccardo/" target="_blank" rel="noopener noreferrer" class="footer-nav-link" data-i18n="common.nav.instagram">Instagram</a>
+            <a href="./index.html" class="footer-nav-link">Home</a>
+            <a href="./work.html" class="footer-nav-link">Work</a>
+            <a href="./contact.html" class="footer-nav-link">Contact</a>
+            <a href="./cv.html" class="footer-nav-link">CV</a>
+            <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Linkedin</a>
+            <a href="https://www.instagram.com/loliriccardo/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram</a>
         </nav>
 
         <div class="footer-contact-info">
             <div class="contact-item">
-                <span class="contact-label" data-i18n="common.footer.phone">PHONE</span>
+                <span class="contact-label">PHONE</span>
                 <span class="contact-value">+54 9 11 4177 3952</span>
             </div>
             <div class="contact-item">
-                <span class="contact-label" data-i18n="common.footer.mail">MAIL</span>
+                <span class="contact-label">MAIL</span>
                 <span class="contact-value">d.riccardo@icloud.com</span>
             </div>
             <div class="contact-item">
-                <span class="contact-label" data-i18n="common.footer.location">LOCATION</span>
-                <span class="contact-value" data-i18n="common.footer.locationValue">Buenos Aires &amp; Worldwide</span>
+                <span class="contact-label">LOCATION</span>
+                <span class="contact-value">Buenos Aires &amp; Worldwide</span>
             </div>
         </div>
     </footer>

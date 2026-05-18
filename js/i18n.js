@@ -19,18 +19,6 @@
           linkedin: 'Linkedin',
           instagram: 'Instagram'
         },
-        header: {
-          location: 'Bs As & Worldwide',
-          contact: "Let's get in touch ;)"
-        },
-        footer: {
-          text: "Let's talk about<br>your next project ;)",
-          contactLink: 'Contact',
-          phone: 'PHONE',
-          mail: 'MAIL',
-          location: 'LOCATION',
-          locationValue: 'Buenos Aires & Worldwide'
-        },
         nextProject: 'Next Project >',
         seeWholeDeal: '< See the whole deal >'
       },
@@ -69,6 +57,11 @@
         belief: {
           w1: 'Good', w2: 'design', w3: 'is', w4: 'rooted', w5: 'in', w6: 'a', w7: 'balanced', w8: 'blend', w9: 'of',
           w10: 'Strategy', w11: '&', w12: 'Coherence.', w13: 'In', w14: 'that', w15: 'I', w16: 'believe.'
+        },
+        skills: {
+          branding: 'Branding', ai: 'AI Content', social: 'Social Media', ooh: 'OOH',
+          packaging: 'Packaging', campaigns: '360 Campaigns', identity: 'Visual Identity & Strategy',
+          creativity: 'Creativity', media: 'Online & Offline Media', artdir: 'Art Direction'
         },
         beyond: "Beyond design: I'm passionate about animals, music —singing and playing guitar— and the constant act of creating. Creativity doesn't stop when I leave the computer.",
         cta: {
@@ -240,38 +233,26 @@
           linkedin: 'Linkedin',
           instagram: 'Instagram'
         },
-        header: {
-          location: 'Bs As & Mundo',
-          contact: 'Hablemos ;)'
-        },
-        footer: {
-          text: 'Hablemos de<br>tu próximo proyecto ;)',
-          contactLink: 'Contacto',
-          phone: 'TELÉFONO',
-          mail: 'MAIL',
-          location: 'UBICACIÓN',
-          locationValue: 'Buenos Aires & Mundo'
-        },
         nextProject: 'Próximo Proyecto >',
-        seeWholeDeal: '< Mirá todo el proyecto >'
+        seeWholeDeal: '< Mirá el proyecto completo >'
       },
       home: {
         title: 'Dolores Riccardo — Directora de Arte & Creativa',
         hero: {
-          intro: 'Desarrollo identidades visuales y campañas con dirección de arte para marcas. Especializada en sistemas de branding, dirección narrativa y uso estratégico de IA.',
-          title: 'Hola :) Soy&nbsp;Loli,<br>Directora de Arte &amp; Creativa basada en Buenos Aires, desarrollando identidades&nbsp;visuales<br>estratégicas y campañas para marcas que&nbsp;buscan<br>romper el&nbsp;ruido.',
+          intro: 'Hola :) Soy Loli, directora de arte y creativa basada en Buenos Aires. Creo identidades visuales y campañas para marcas. Me especializo en sistemas de branding, dirección creativa y uso estratégico de IA.',
+          title: 'Hola :) Soy&nbsp;Loli,<br>directora de arte y creativa basada en Buenos Aires. Creo identidades visuales y campañas para marcas. Me especializo en sistemas de&nbsp;branding,<br>dirección creativa y uso estratégico de&nbsp;IA.',
           colLabel: 'Dirección de Arte<br>&amp; Creatividad',
-          colText: 'Con más de 6 años creando identidades visuales, campañas y experiencias digitales, creo que la estrategia tiene que guiar al diseño.'
+          colText: 'Con más de 6 años creando identidades visuales, campañas y experiencias digitales, creo que la estrategia debe manejar el diseño.'
         },
         works: {
-          selected: 'Trabajos Seleccionados',
+          selected: 'Trabajos Destacados',
           year: 'Año',
           bplayClient: 'Guillermo Francella x Bplay',
           bplayAnnot: 'Sponsor Oficial<br>del Corazón Argento',
-          bplayCats: 'DIRECCIÓN DE ARTE | KEY VISUAL | OFF & ONLINE',
-          byoClient: 'Build Your Own. Superfood Lab',
+          bplayCats: 'DIRECCIÓN DE ARTE | VISUAL CLAVE | MEDIOS OFF & ONLINE',
+          byoClient: 'Armá la tuya. Superfood Lab',
           byoAnnot: 'Tu mejor versión<br>todos los días.',
-          byoCats: 'BRANDING | CONCEPTOS | OFF & ONLINE | GENERACIÓN CON IA',
+          byoCats: 'BRANDING | CONCEPTOS | MEDIOS OFF & ONLINE | GENERACIÓN IA',
           dhlClient: 'Juan Martín del Potro x DHL',
           dhlAnnot: 'Juan Martín<br>del Potro',
           dhlCats: 'DIRECCIÓN DE ARTE | CAMPAÑA | DISEÑO ESPACIAL'
@@ -288,12 +269,17 @@
         bio3: 'Empecé como freelance, trabajé en agencias que moldearon mi práctica de manera intensa, y ahora balanceo mi rol en Pernod Ricard con proyectos independientes.',
         bio4: 'Quiero colaborar con personas y marcas que me exijan lo mejor. Proyectos que desafíen, donde pueda proponer ideas y estar atrás de cada detalle.',
         belief: {
-          w1: 'El', w2: 'buen', w3: 'diseño', w4: 'está', w5: 'enraizado', w6: 'en', w7: 'una', w8: 'mezcla', w9: 'equilibrada de',
-          w10: 'Estrategia', w11: '&', w12: 'Coherencia.', w13: 'En', w14: 'eso', w15: 'yo', w16: 'creo.'
+          w1: 'Un', w2: 'buen', w3: 'diseño', w4: 'está', w5: 'enraizado', w6: 'en', w7: 'un', w8: 'balance', w9: 'entre',
+          w10: 'Estrategia', w11: '&', w12: 'Coherencia.', w13: 'En', w14: 'eso', w15: '', w16: 'creo.'
         },
-        beyond: 'Más allá del diseño: me apasionan los animales, la música —canto y toco la guitarra— y el acto constante de crear. La creatividad no se frena cuando me alejo de la compu.',
+        skills: {
+          branding: 'Branding', ai: 'Contenido IA', social: 'Social Media', ooh: 'OOH',
+          packaging: 'Packaging', campaigns: 'Campañas 360', identity: 'Identidad Visual & Estrategia',
+          creativity: 'Creatividad', media: 'Medios Online & Offline', artdir: 'Dirección de Arte'
+        },
+        beyond: 'Más allá del diseño: me apasionan los animales, la música —cantar y tocar guitarra— y el acto constante de crear. La creatividad no para cuando cierro la compu.',
         cta: {
-          l1: 'Si pensás', l2: 'que podemos', l3: 'hacer cosas', l4: 'copadas juntos,', l5: 'ya sabés', l6: 'dónde encontrarme'
+          l1: 'Si pensás', l2: 'que podemos', l3: 'hacer cosas', l4: 'copadas juntas,', l5: 'sabés', l6: 'dónde encontrarme'
         },
         ctaCv: 'Mi Curriculum Vitae'
       },
@@ -338,31 +324,31 @@
         typewriter: 'Curriculum Vitae',
         subname: 'Dolores Riccardo · BsAs, Argentina.',
         done: 'Lo que hice',
-        learned: 'Dónde aprendí',
-        tools: 'Herramientas que domino',
-        currently: 'Actualidad',
+        learned: 'Dónde estudié',
+        tools: 'Lo que domino',
+        currently: 'Actualmente',
         roles: {
           oliver: 'Oliver Agency',
-          oliverRole: 'Sr. Graphic Designer',
+          oliverRole: 'Diseñadora Gráfica Senior',
           oliverDesc: 'Diseño y desarrollo piezas creativas end-to-end para campañas y marcas, asegurando calidad y coherencia visual. Aporto input estratégico, manejo múltiples proyectos y me enfoco en innovación y herramientas de IA.',
           freelance: 'Diseñadora',
           freelanceRole: 'Freelance',
           freelanceDesc: 'Creo identidades visuales y estrategias de diseño para fortalecer marcas, también colaborando con agencias en diseño y dirección de arte.',
           lumos: 'Lumos / Grupo Taquion',
-          lumosRole: 'Head of Design — Sr. Graphic Designer',
+          lumosRole: 'Head of Design — Diseñadora Gráfica Senior',
           lumosDesc: 'Como Design Lead, creo y ejecuto branding, contenido para redes, ads digitales, materiales de campañas políticas y reportes corporativos, asegurando una comunicación visual potente y consistente.',
           laugh: 'We Are Laugh',
           laughRole: 'Dirección de Arte',
           laughDesc: 'Lideré la dirección de arte de campañas interactivas, sitios web y redes sociales, garantizando visuales cohesivos y mensajes con impacto. Manejé proyectos de alta exigencia y supervisé la distribución estratégica de contenido.',
-          corp: 'Diseño de Imagen Corporativa',
+          corp: 'Diseño de Imagen Empresaria',
           corpRole: 'Universidad de Palermo',
-          corpDesc: 'Título · Diseño de Imagen Corporativa.',
+          corpDesc: 'Carrera · Diseño de Imagen Empresaria.',
           gd: 'Diseño Gráfico',
           gdRole: 'Universidad de Palermo',
-          gdDesc: 'Título.',
-          school: 'Bachillerato Bilingüe',
+          gdDesc: 'Carrera.',
+          school: 'Diploma Bilingüe',
           schoolRole: 'Colegio Santa María de Pilar',
-          schoolDesc: 'Bachillerato orientado a Ciencias Humanísticas.'
+          schoolDesc: 'Carrera enfocada en Humanidades.'
         },
         toolNames: {
           ps: 'Photoshop', ai: 'Illustrator', pr: 'Premiere', ae: 'After Effects',
@@ -512,10 +498,32 @@
     document.documentElement.setAttribute('lang', lang);
   }
 
+  function updateHeaderSwitchActive(lang) {
+    document.querySelectorAll('.lang-switch-btn').forEach(function (btn) {
+      if (btn.getAttribute('data-lang') === lang) {
+        btn.classList.add('is-active');
+      } else {
+        btn.classList.remove('is-active');
+      }
+    });
+  }
+
   function setLanguage(lang) {
     if (lang !== 'en' && lang !== 'es') lang = 'en';
-    try { localStorage.setItem('lang', lang); } catch (e) {}
+    try { localStorage.setItem('preferredLanguage', lang); } catch (e) {}
+    document.documentElement.setAttribute('lang', lang);
     applyTranslations(lang);
+    updateHeaderSwitchActive(lang);
+  }
+
+  function bindHeaderSwitch() {
+    document.querySelectorAll('.lang-switch-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const lang = btn.getAttribute('data-lang');
+        setLanguage(lang);
+      });
+    });
   }
   window.setLanguage = setLanguage;
   window.TRANSLATIONS = TRANSLATIONS;
@@ -572,17 +580,29 @@
     overlay.classList.add('is-visible');
     lockScroll();
 
-    overlay.querySelectorAll('button[data-lang]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        const lang = btn.getAttribute('data-lang');
+    let selected = 'en';
+    const options = overlay.querySelectorAll('.lang-option');
+    options.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        selected = btn.getAttribute('data-lang');
+        options.forEach(function (o) { o.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+      });
+    });
+
+    const goLink = overlay.querySelector('.lang-go');
+    if (goLink) {
+      goLink.addEventListener('click', function (e) {
+        e.preventDefault();
         overlay.classList.add('is-hidden');
         setTimeout(function () {
           overlay.hidden = true;
           overlay.classList.remove('is-visible', 'is-hidden');
-          onPick && onPick(lang);
+          onPick && onPick(selected);
         }, 450);
-      }, { once: false });
-    });
+      });
+    }
   }
 
   // --------------------------------------------------------------------------
@@ -590,7 +610,9 @@
   // --------------------------------------------------------------------------
   function init() {
     let stored = null;
-    try { stored = localStorage.getItem('lang'); } catch (e) {}
+    try { stored = localStorage.getItem('preferredLanguage'); } catch (e) {}
+
+    bindHeaderSwitch();
 
     if (!stored) {
       // Picker first, then loader
