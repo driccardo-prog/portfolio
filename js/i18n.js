@@ -25,10 +25,10 @@
       home: {
         title: 'Dolores Riccardo — Art Director & Creative',
         hero: {
-          intro: 'I develop visual identities and art-directed campaigns for brands. Specialized in branding systems, narrative direction, and strategic use of AI.',
-          title: "Hello :) I'm&nbsp;Loli,<br>Buenos Aires-based Art Director &amp; Creative, developing strategic&nbsp;visual<br>identities and campaigns for brands&nbsp;seeking<br>to break through&nbsp;noise.",
+          intro: 'With over six years of experience, I work freelance and in collaboration with creative agencies, turning ideas into visual identities that communicate and leave a mark.',
+          title: "I'm&nbsp;Dolores, though&nbsp;everyone<br>calls me&nbsp;loli&nbsp;:)<br>I'm 27 and&nbsp;based in Buenos&nbsp;Aires.<br>I'm a Graphic Designer with&nbsp;a degree in&nbsp;Corporate&nbsp;Image&nbsp;Design.",
           colLabel: 'Art Direction<br>&amp; Creativity',
-          colText: 'With 6+ years crafting visual identities, campaigns, and digital experiences, I believe strategy must drive design.'
+          colText: "Design isn't just my profession — it's part of my everyday life. In my portfolio you'll find a selection of some of my best work, where every design has a reason to be."
         },
         works: {
           selected: 'Selected Works',
@@ -50,10 +50,10 @@
         hello: 'Hello there,',
         name: "I'm Loli,",
         aka: '(or Lo, Loló, Lolita.)',
-        bio1: "I'm Dolores, though everyone calls me loli :) I'm 27 and based in Buenos Aires. I'm a Graphic Designer with a degree in Corporate Image Design.",
-        bio2: 'With over six years of experience, I work freelance and in collaboration with creative agencies, turning ideas into visual identities that communicate and leave a mark.',
-        bio3: "Design isn't just my profession — it's part of my everyday life.",
-        bio4: "In my portfolio you'll find a selection of some of my best work, where every design has a reason to be.",
+        bio1: 'Senior graphic designer specialized in branding, art direction and creative campaigns. I studied at Universidad de Palermo and have been working in the industry since 2017.',
+        bio2: "For over 8 years I've been translating complex identities into coherent visual systems. My career was built on 360 campaigns, key visuals, spots and countless brands. Always learning that graphic design is narrative and coherence, not just something pretty.",
+        bio3: 'I started as a freelancer, worked at agencies that shaped my practice intensely, and now I balance my role at Pernod Ricard with independent projects.',
+        bio4: 'I want to collaborate with people and brands that demand the best from me. Projects that challenge, where I can propose ideas and be behind every detail.',
         belief: {
           w1: 'Good', w2: 'design', w3: 'is', w4: 'rooted', w5: 'in', w6: 'a', w7: 'balanced', w8: 'blend', w9: 'of',
           w10: 'Strategy', w11: '&', w12: 'Coherence.', w13: 'In', w14: 'that', w15: 'I', w16: 'believe.'
@@ -239,10 +239,10 @@
       home: {
         title: 'Dolores Riccardo — Directora de Arte & Creativa',
         hero: {
-          intro: 'Hola :) Soy Loli, directora de arte y creativa basada en Buenos Aires. Creo identidades visuales y campañas para marcas. Me especializo en sistemas de branding, dirección creativa y uso estratégico de IA.',
-          title: 'Hola :) Soy&nbsp;Loli,<br>directora de arte y creativa basada en Buenos Aires. Creo identidades visuales y campañas para marcas. Me especializo en sistemas de&nbsp;branding,<br>dirección creativa y uso estratégico de&nbsp;IA.',
+          intro: 'Con más de seis años de experiencia, trabajo de forma freelance y en colaboración con agencias creativas, transformando ideas en identidades visuales que comunican y dejan huella.',
+          title: 'Soy&nbsp;Dolores, aunque todo el&nbsp;mundo<br>me dice&nbsp;loli&nbsp;:)<br>Tengo 27 años y vivo&nbsp;en Buenos&nbsp;Aires.<br>Soy Diseñadora Gráfica y Lic. en Diseño de&nbsp;Imagen&nbsp;Empresarial.',
           colLabel: 'Dirección de Arte<br>&amp; Creatividad',
-          colText: 'Con más de 6 años creando identidades visuales, campañas y experiencias digitales, creo que la estrategia debe manejar el diseño.'
+          colText: 'El diseño no es solo mi profesión, es parte de mi día a día. En mi portfolio vas a encontrar una selección de algunos de mis mejores trabajos, donde cada diseño tiene una razón de ser.'
         },
         works: {
           selected: 'Trabajos Destacados',
@@ -264,10 +264,10 @@
         hello: 'Hola, qué tal,',
         name: 'Soy Loli,',
         aka: '(o Lo, Loló, Lolita.)',
-        bio1: 'Soy Dolores, aunque todo el mundo me dice loli :) Tengo 27 años y vivo en Buenos Aires. Soy Diseñadora Gráfica y Lic. en Diseño de Imagen Empresarial.',
-        bio2: 'Con más de seis años de experiencia, trabajo de forma freelance y en colaboración con agencias creativas, transformando ideas en identidades visuales que comunican y dejan huella.',
-        bio3: 'El diseño no es solo mi profesión, es parte de mi día a día.',
-        bio4: 'En mi portfolio vas a encontrar una selección de algunos de mis mejores trabajos, donde cada diseño tiene una razón de ser.',
+        bio1: 'Diseñadora gráfica senior especializada en branding, dirección de arte y campañas creativas. Estudié en la Universidad de Palermo y trabajo en la industria desde 2017.',
+        bio2: 'Hace más de 8 años que traduzco identidades complejas en sistemas visuales coherentes. Mi carrera se construyó con campañas 360, key visuals, spots y un montón de marcas. Siempre aprendiendo que el diseño gráfico es narrativa y coherencia, no solo algo lindo.',
+        bio3: 'Empecé como freelance, trabajé en agencias que moldearon mi práctica de manera intensa, y ahora balanceo mi rol en Pernod Ricard con proyectos independientes.',
+        bio4: 'Quiero colaborar con personas y marcas que me exijan lo mejor. Proyectos que desafíen, donde pueda proponer ideas y estar atrás de cada detalle.',
         belief: {
           w1: 'Un', w2: 'buen', w3: 'diseño', w4: 'está', w5: 'enraizado', w6: 'en', w7: 'un', w8: 'balance', w9: 'entre',
           w10: 'Estrategia', w11: '&', w12: 'Coherencia.', w13: 'En', w14: 'eso', w15: '', w16: 'creo.'
