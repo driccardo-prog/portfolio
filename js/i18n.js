@@ -240,7 +240,7 @@
         title: 'Dolores Riccardo — Directora de Arte & Creativa',
         hero: {
           intro: 'Con más de ocho años de experiencia, trabajo de forma freelance y en colaboración con agencias creativas, transformando ideas en identidades visuales que comunican y dejan huella.',
-          title: 'Soy Dolores, aunque todo el mundo me&nbsp;dice<br>Loli :) Tengo 27 años y vivo en Buenos&nbsp;Aires.<br>Soy Diseñadora Gráfica y Lic. en&nbsp;Diseño<br>de Imagen Empresarial.',
+          title: 'Soy Dolores, aunque<br>todo&nbsp;el&nbsp;mundo&nbsp;me&nbsp;dice&nbsp;Loli&nbsp;:)<br>Tengo 27 años y vivo en Buenos&nbsp;Aires.<br>Soy Diseñadora Gráfica y&nbsp;Lic.<br>en&nbsp;Diseño&nbsp;de&nbsp;Imagen&nbsp;Empresarial.',
           colLabel: 'Dirección de Arte<br>&amp; Creatividad',
           colText: 'Marcas que se hacen notar y recordar.'
         },
