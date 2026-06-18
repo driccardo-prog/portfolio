@@ -2205,11 +2205,9 @@ html.is-preloading #lang-overlay { visibility: visible; }
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
     white-space: nowrap;
     cursor: pointer;
+    pointer-events: auto;
     will-change: transform;
-    /* Slow drift around the viewport using vw/vh, plus a subtle wobble */
-    animation:
-        cvRoam 28s ease-in-out infinite,
-        cvWobble 4.5s ease-in-out infinite;
+    animation: cvRoamWild 14s cubic-bezier(.65,.05,.35,1) infinite;
     transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 }
 .cv-roaming:hover {
@@ -2218,26 +2216,26 @@ html.is-preloading #lang-overlay { visibility: visible; }
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
     outline: 1.5px solid var(--black);
     outline-offset: -1.5px;
+    animation-play-state: paused;
 }
-.cv-roaming:active { transform: scale(0.97); }
-
-/* Pause drift on hover so it's easy to click */
-.cv-roaming:hover { animation-play-state: paused; }
-
-@keyframes cvRoam {
-      0% { transform: translate(8vw, 80vh) rotate(-3deg); }
-     15% { transform: translate(72vw, 78vh) rotate(2deg); }
-     30% { transform: translate(78vw, 18vh) rotate(-2deg); }
-     45% { transform: translate(38vw, 42vh) rotate(3deg); }
-     60% { transform: translate(6vw, 22vh) rotate(-2deg); }
-     75% { transform: translate(48vw, 70vh) rotate(2deg); }
-     90% { transform: translate(74vw, 50vh) rotate(-3deg); }
-    100% { transform: translate(8vw, 80vh) rotate(-3deg); }
+.cv-roaming:focus-visible {
+    outline: 2px solid var(--black);
+    outline-offset: 3px;
+    animation-play-state: paused;
 }
 
-@keyframes cvWobble {
-    0%, 100% { margin-top: 0; }
-    50%      { margin-top: -6px; }
+@keyframes cvRoamWild {
+      0% { transform: translate( 4vw,  82vh) rotate(-8deg)  scale(1);    }
+     10% { transform: translate(70vw,  85vh) rotate( 12deg) scale(1.1);  }
+     20% { transform: translate(82vw,  20vh) rotate(-15deg) scale(0.92); }
+     30% { transform: translate(20vw,   8vh) rotate( 9deg)  scale(1.08); }
+     40% { transform: translate(50vw,  55vh) rotate(-20deg) scale(1);    }
+     50% { transform: translate( 6vw,  40vh) rotate( 14deg) scale(0.95); }
+     60% { transform: translate(78vw,  60vh) rotate(-10deg) scale(1.12); }
+     70% { transform: translate(30vw,  86vh) rotate( 18deg) scale(0.98); }
+     80% { transform: translate(60vw,  12vh) rotate(-12deg) scale(1.05); }
+     90% { transform: translate(10vw,  68vh) rotate( 6deg)  scale(1);    }
+    100% { transform: translate( 4vw,  82vh) rotate(-8deg)  scale(1);    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2254,13 +2252,14 @@ html.is-preloading #lang-overlay { visibility: visible; }
     .cv-roaming {
         padding: 11px 20px;
         font-size: 12px;
-        animation-duration: 32s, 5s;
+        animation-duration: 18s;
     }
-    @keyframes cvRoam {
-          0% { transform: translate(6vw, 82vh); }
-         25% { transform: translate(55vw, 60vh); }
-         50% { transform: translate(60vw, 20vh); }
-         75% { transform: translate(8vw, 38vh); }
-        100% { transform: translate(6vw, 82vh); }
+    @keyframes cvRoamWild {
+          0% { transform: translate( 4vw, 82vh) rotate(-8deg)  scale(1);    }
+         20% { transform: translate(55vw, 70vh) rotate( 12deg) scale(1.08); }
+         40% { transform: translate(58vw, 14vh) rotate(-15deg) scale(0.95); }
+         60% { transform: translate( 6vw, 30vh) rotate( 10deg) scale(1.05); }
+         80% { transform: translate(40vw, 88vh) rotate(-10deg) scale(1);    }
+        100% { transform: translate( 4vw, 82vh) rotate(-8deg)  scale(1);    }
     }
 }
