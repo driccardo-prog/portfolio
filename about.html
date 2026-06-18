@@ -9,6 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="./js/i18n.js"></script>
+    <script>
+        (function () {
+            try {
+                var hasLang = !!localStorage.getItem('preferredLanguage');
+                var p = (location.pathname || '').toLowerCase();
+                var isHome = p === '/' || p === '' || p.endsWith('/index.html') || p === '/index.html';
+                var homeShown = sessionStorage.getItem('homeLoaderShown') === '1';
+                if (!hasLang || (isHome && !homeShown)) {
+                    document.documentElement.classList.add('is-preloading');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body class="about-page">
     <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
@@ -28,10 +41,9 @@
 
     <!-- ========== HEADER ========== -->
     <header class="header">
-        <a href="./index.html" class="logo">Dolores,R</a>
+        <a href="./index.html" class="logo">Dolores R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
-        </nav>
+            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>,&nbsp;<a href="./cv.html" class="nav-link nav-link--cv-es" data-i18n="common.nav.cv">CV</a></nav>
         <div class="header-right">
             <span class="header-location">Bs As &amp; Worldwide</span>
             <div class="lang-switch">
@@ -82,6 +94,10 @@
         </p>
     </section>
 
+    <div class="cv-inline-block">
+        <a href="./cv.html" class="cv-button" data-i18n="about.ctaCv">Curriculum Vitae →</a>
+    </div>
+
     <!-- ========== BIG QUOTE ========== -->
     <section class="about-belief">
         <h2 class="belief-text">
@@ -122,6 +138,10 @@
         </div>
     </section>
 
+    <div class="cv-inline-block cv-inline-block--alt">
+        <a href="./cv.html" class="cv-button cv-button--ghost" data-i18n="about.ctaCv">Curriculum Vitae →</a>
+    </div>
+
     <!-- ========== BEYOND DESIGN ========== -->
     <section class="about-beyond">
         <div class="beyond-frame reveal-zoom">
@@ -142,8 +162,10 @@
             <span class="cta-line" data-i18n="about.cta.l5">know where</span>
             <span class="cta-line"><span data-i18n="about.cta.l6">to find me</span> <a href="./contact.html" class="cta-wink">;)</a></span>
         </h2>
-        <a href="./cv.html" class="cta-cv" data-i18n="about.ctaCv">My Curriculum Vitae</a>
+        <a href="./cv.html" class="cta-cv cv-button cv-button--xl" data-i18n="about.ctaCv">Curriculum Vitae →</a>
     </section>
+
+    <a href="./cv.html" class="cv-floating" data-i18n="about.ctaCv">Curriculum Vitae →</a>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
@@ -164,11 +186,11 @@
         <div class="footer-contact-info">
             <div class="contact-item">
                 <span class="contact-label">PHONE</span>
-                <span class="contact-value">+54 9 11 4177 3952</span>
+                <a class="contact-value" href="https://wa.me/5491141773952" target="_blank" rel="noopener noreferrer">+54 9 11 4177 3952</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">MAIL</span>
-                <span class="contact-value">d.riccardo@icloud.com</span>
+                <a class="contact-value" href="mailto:d.riccardo@icloud.com">d.riccardo@icloud.com</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">LOCATION</span>

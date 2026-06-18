@@ -67,7 +67,7 @@
         cta: {
           l1: 'If you think', l2: 'we could do', l3: 'cool stuff', l4: 'together, you', l5: 'know where', l6: 'to find me'
         },
-        ctaCv: 'My Curriculum Vitae'
+        ctaCv: 'Curriculum Vitae →'
       },
       contact: {
         title: 'Contact — Dolores Riccardo',
@@ -257,7 +257,7 @@
           dhlAnnot: 'Juan Martín<br>del Potro',
           dhlCats: 'DIRECCIÓN DE ARTE | CAMPAÑA | DISEÑO ESPACIAL'
         },
-        allWork: 'Todos los Trabajos'
+        allWork: '+ Proyectos'
       },
       about: {
         title: 'Sobre mí — Dolores Riccardo',
@@ -281,7 +281,7 @@
         cta: {
           l1: 'Si pensás', l2: 'que podemos', l3: 'hacer cosas', l4: 'copadas juntxs,', l5: 'sabés', l6: 'dónde encontrarme'
         },
-        ctaCv: 'Mi Curriculum Vitae'
+        ctaCv: 'Curriculum Vitae →'
       },
       contact: {
         title: 'Contacto — Dolores Riccardo',
@@ -608,23 +608,53 @@
   // --------------------------------------------------------------------------
   // Bootstrap
   // --------------------------------------------------------------------------
+  function isHomePage() {
+    const p = (location.pathname || '').replace(/\/+$/, '').toLowerCase();
+    return p === '' || p.endsWith('/index.html') || p === '/index.html' || p === '/index';
+  }
+
+  function homeLoaderAlreadyShown() {
+    try { return sessionStorage.getItem('homeLoaderShown') === '1'; } catch (e) { return false; }
+  }
+  function markHomeLoaderShown() {
+    try { sessionStorage.setItem('homeLoaderShown', '1'); } catch (e) {}
+  }
+
   function init() {
     let stored = null;
     try { stored = localStorage.getItem('preferredLanguage'); } catch (e) {}
 
     bindHeaderSwitch();
 
+    const home = isHomePage();
+    const shouldRunLoader = home && !homeLoaderAlreadyShown();
+
+    function finishLoader() {
+      document.documentElement.classList.remove('is-preloading');
+      if (home) markHomeLoaderShown();
+    }
+
     if (!stored) {
-      // Picker first, then loader
+      // Picker first; loader only on home first visit
       lockScroll();
       showPicker(function (lang) {
         setLanguage(lang);
-        runLoader();
+        if (shouldRunLoader) {
+          runLoader(finishLoader);
+        } else {
+          document.documentElement.classList.remove('is-preloading');
+          unlockScroll();
+        }
       });
     } else {
       setLanguage(stored);
-      lockScroll();
-      runLoader();
+      if (shouldRunLoader) {
+        lockScroll();
+        runLoader(finishLoader);
+      } else {
+        document.documentElement.classList.remove('is-preloading');
+        unlockScroll();
+      }
     }
   }
 
