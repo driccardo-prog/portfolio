@@ -2185,3 +2185,82 @@ html.is-preloading #lang-overlay { visibility: visible; }
 @media (max-width: 900px) {
     .contact-info--below { padding: 20px 20px 32px; gap: 24px; }
 }
+
+/* ========================================================================
+   Roaming CV button — drifts across the viewport, always clickable
+   ======================================================================== */
+.cv-roaming {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 950;
+    padding: 14px 26px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+    white-space: nowrap;
+    cursor: pointer;
+    will-change: transform;
+    /* Slow drift around the viewport using vw/vh, plus a subtle wobble */
+    animation:
+        cvRoam 28s ease-in-out infinite,
+        cvWobble 4.5s ease-in-out infinite;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.cv-roaming:hover {
+    background: var(--white);
+    color: var(--black);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+    outline: 1.5px solid var(--black);
+    outline-offset: -1.5px;
+}
+.cv-roaming:active { transform: scale(0.97); }
+
+/* Pause drift on hover so it's easy to click */
+.cv-roaming:hover { animation-play-state: paused; }
+
+@keyframes cvRoam {
+      0% { transform: translate(8vw, 80vh) rotate(-3deg); }
+     15% { transform: translate(72vw, 78vh) rotate(2deg); }
+     30% { transform: translate(78vw, 18vh) rotate(-2deg); }
+     45% { transform: translate(38vw, 42vh) rotate(3deg); }
+     60% { transform: translate(6vw, 22vh) rotate(-2deg); }
+     75% { transform: translate(48vw, 70vh) rotate(2deg); }
+     90% { transform: translate(74vw, 50vh) rotate(-3deg); }
+    100% { transform: translate(8vw, 80vh) rotate(-3deg); }
+}
+
+@keyframes cvWobble {
+    0%, 100% { margin-top: 0; }
+    50%      { margin-top: -6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cv-roaming {
+        animation: none;
+        top: auto;
+        bottom: 24px;
+        right: 24px;
+        left: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .cv-roaming {
+        padding: 11px 20px;
+        font-size: 12px;
+        animation-duration: 32s, 5s;
+    }
+    @keyframes cvRoam {
+          0% { transform: translate(6vw, 82vh); }
+         25% { transform: translate(55vw, 60vh); }
+         50% { transform: translate(60vw, 20vh); }
+         75% { transform: translate(8vw, 38vh); }
+        100% { transform: translate(6vw, 82vh); }
+    }
+}
