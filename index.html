@@ -1,23 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dolores Riccardo - Art Director & Creative</title>
+    <title data-i18n-title="home.title">Dolores Riccardo - Art Director & Creative</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/i18n.js"></script>
+    <script>
+        (function () {
+            try {
+                var hasLang = !!localStorage.getItem('preferredLanguage');
+                var p = (location.pathname || '').toLowerCase();
+                var isHome = p === '/' || p === '' || p.endsWith('/index.html') || p === '/index.html';
+                var homeShown = sessionStorage.getItem('homeLoaderShown') === '1';
+                if (!hasLang || (isHome && !homeShown)) {
+                    document.documentElement.classList.add('is-preloading');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body>
+    <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
+    <div id="lang-overlay" hidden>
+      <div class="lang-picker">
+        <div class="lang-toggle">
+          <button class="lang-option is-active" data-lang="en">ENGLISH</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-option" data-lang="es">SPANISH</button>
+        </div>
+        <a href="#" class="lang-go">GO</a>
+      </div>
+    </div>
+    <div id="loader-overlay" hidden>
+      <div class="loader-counter">0%</div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header">
-        <a href="#" class="logo">Dolores,R</a>
+        <a href="#" class="logo">Dolores R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
-        </nav>
+            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>,&nbsp;<a href="./cv.html" class="nav-link nav-link--cv-es" data-i18n="common.nav.cv">CV</a></nav>
         <div class="header-right">
             <span class="header-location">Bs As &amp; Worldwide</span>
+            <div class="lang-switch">
+                <button class="lang-switch-btn is-active" data-lang="en">EN</button>
+                <span>/</span>
+                <button class="lang-switch-btn" data-lang="es">ES</button>
+            </div>
             <a href="./contact.html" class="nav-link">Let's get in touch ;)</a>
         </div>
     </header>
@@ -27,20 +60,20 @@
         <div class="hero-frame">
             <img src="./images/loli-hero-bw.jpg" alt="Loli — Dolores Riccardo">
         </div>
-        <p class="hero-intro">
+        <p class="hero-intro" data-i18n="home.hero.intro">
             I develop visual identities and art-directed campaigns for brands. Specialized in branding systems, narrative direction, and strategic use of AI.
         </p>
-        <h1 class="hero-title">
+        <h1 class="hero-title" data-i18n="home.hero.title">
             Hello :) I'm&nbsp;Loli,<br>
             Buenos Aires-based Art Director &amp; Creative, developing strategic&nbsp;visual<br>
             identities and campaigns for brands&nbsp;seeking<br>
             to break through&nbsp;noise.
         </h1>
         <div class="hero-bottom">
-            <div class="hero-col-label">
+            <div class="hero-col-label" data-i18n="home.hero.colLabel">
                 Art Direction<br>&amp; Creativity
             </div>
-            <p class="hero-col-text">
+            <p class="hero-col-text" data-i18n="home.hero.colText">
                 With 6+ years crafting visual identities, campaigns, and digital experiences, I believe strategy must drive design.
             </p>
         </div>
@@ -51,56 +84,56 @@
         <!-- Project 01 -->
         <article class="work">
             <div class="work-meta work-meta--four">
-                <span>Selected Works</span>
+                <span data-i18n="home.works.selected">Selected Works</span>
                 <span>[ 01 ]</span>
-                <span>Guillermo Francella x Bplay</span>
-                <span>Year 2022</span>
+                <span data-i18n="home.works.bplayClient">Guillermo Francella x Bplay</span>
+                <span><span data-i18n="home.works.year">Year</span> 2022</span>
             </div>
             <div class="work-title-wrapper">
-                <span class="work-annotation work-annotation--left">Sponsor Oficial<br>del Corazón Argento</span>
+                <span class="work-annotation work-annotation--left" data-i18n="home.works.bplayAnnot">Sponsor Oficial<br>del Corazón Argento</span>
                 <h2 class="work-title"><span class="bracket bracket-l">[</span><span class="title-text">Guillermo Francella x Bplay</span><span class="bracket bracket-r">]</span></h2>
-                <div class="work-categories">ART DIRECTION | KEY VISUAL | OFF &amp; ONLINE MEDIA</div>
+                <div class="work-categories" data-i18n="home.works.bplayCats">ART DIRECTION | KEY VISUAL | OFF &amp; ONLINE MEDIA</div>
             </div>
             <a href="./project-bplay.html" class="work-frame-link"><div class="work-frame">
                 <img src="./images/bplay/01-hero-mosaic.png" alt="Pepe Argento x Bplay">
             </div></a>
-            <a href="./project-bplay.html" class="work-cta">&lt; See the whole deal &gt;</a>
+            <a href="./project-bplay.html" class="work-cta" data-i18n="common.seeWholeDeal">&lt; See the whole deal &gt;</a>
         </article>
 
         <!-- Project 02 -->
         <article class="work">
             <div class="work-meta">
                 <span>[ 02 ]</span>
-                <span>Build Your Own. Superfood Lab</span>
-                <span>Year 2022</span>
+                <span data-i18n="home.works.byoClient">Byo. Superfood Lab</span>
+                <span><span data-i18n="home.works.year">Year</span> 2022</span>
             </div>
             <div class="work-title-wrapper">
-                <span class="work-annotation work-annotation--right">Tu mejor versión<br>todos los días.</span>
+                <span class="work-annotation work-annotation--right" data-i18n="home.works.byoAnnot">Tu mejor versión<br>todos los días.</span>
                 <h2 class="work-title"><span class="bracket bracket-l">[</span><span class="title-text">Byo. Superfood Lab</span><span class="bracket bracket-r">]</span></h2>
-                <div class="work-categories">BRANDING | CONCEPTS | OFF &amp; ONLINE MEDIA | AI GENERATION</div>
+                <div class="work-categories" data-i18n="home.works.byoCats">BRANDING | CONCEPTS | OFF &amp; ONLINE MEDIA | AI GENERATION</div>
             </div>
             <a href="./project-byo.html" class="work-frame-link"><div class="work-frame">
                 <img src="./images/byo/bolsa.jpg" alt="Byo Superfood Lab — paper bag">
             </div></a>
-            <a href="./project-byo.html" class="work-cta">&lt; See the whole deal &gt;</a>
+            <a href="./project-byo.html" class="work-cta" data-i18n="common.seeWholeDeal">&lt; See the whole deal &gt;</a>
         </article>
 
         <!-- Project 03 -->
         <article class="work">
             <div class="work-meta">
                 <span>[ 03 ]</span>
-                <span>Juan Martín del Potro x DHL</span>
-                <span>Year 2022</span>
+                <span data-i18n="home.works.dhlClient">Juan Martín del Potro x DHL</span>
+                <span><span data-i18n="home.works.year">Year</span> 2022</span>
             </div>
             <div class="work-title-wrapper">
-                <span class="work-annotation work-annotation--center-left">Juan Martín<br>del Potro</span>
+                <span class="work-annotation work-annotation--center-left" data-i18n="home.works.dhlAnnot">Juan Martín<br>del Potro</span>
                 <h2 class="work-title"><span class="bracket bracket-l">[</span><span class="title-text">Open for Us x DHL</span><span class="bracket bracket-r">]</span></h2>
-                <div class="work-categories">ART DIRECTION | CAMPAIGN | SPATIAL DESIGN</div>
+                <div class="work-categories" data-i18n="home.works.dhlCats">ART DIRECTION | CAMPAIGN | SPATIAL DESIGN</div>
             </div>
             <a href="./project-dhl.html" class="work-frame-link"><div class="work-frame">
                 <img src="./images/dhl/hero-keyvisual.png" alt="Juan Martín del Potro x DHL — #NuncaTeRindas">
             </div></a>
-            <a href="./project-dhl.html" class="work-cta">&lt; See the whole deal &gt;</a>
+            <a href="./project-dhl.html" class="work-cta" data-i18n="common.seeWholeDeal">&lt; See the whole deal &gt;</a>
         </article>
     </section>
 
@@ -120,7 +153,7 @@
             <a class="scatter-frame f11" href="./project-glenlivet.html"><img src="./images/glenlivet/cap-keyvisual.jpg" alt=""></a>
 
             <a href="./work.html" class="all-work-title-wrapper">
-                <h2 class="all-work-title">All Work<sup class="all-work-count">(6)</sup></h2>
+                <h2 class="all-work-title"><span data-i18n="home.allWork">All Work</span><sup class="all-work-count">(6)</sup></h2>
             </a>
         </div>
     </section>
@@ -144,11 +177,11 @@
         <div class="footer-contact-info">
             <div class="contact-item">
                 <span class="contact-label">PHONE</span>
-                <span class="contact-value">+54 9 11 4177 3952</span>
+                <a class="contact-value" href="https://wa.me/5491141773952" target="_blank" rel="noopener noreferrer">+54 9 11 4177 3952</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">MAIL</span>
-                <span class="contact-value">d.riccardo@icloud.com</span>
+                <a class="contact-value" href="mailto:d.riccardo@icloud.com">d.riccardo@icloud.com</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">LOCATION</span>

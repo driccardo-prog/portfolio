@@ -1,23 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Martín del Potro x DHL — Dolores Riccardo</title>
+    <title data-i18n-title="project.dhl.title">Juan Martín del Potro x DHL — Dolores Riccardo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/i18n.js"></script>
+    <script>
+        (function () {
+            try {
+                var hasLang = !!localStorage.getItem('preferredLanguage');
+                var p = (location.pathname || '').toLowerCase();
+                var isHome = p === '/' || p === '' || p.endsWith('/index.html') || p === '/index.html';
+                var homeShown = sessionStorage.getItem('homeLoaderShown') === '1';
+                if (!hasLang || (isHome && !homeShown)) {
+                    document.documentElement.classList.add('is-preloading');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body class="project-page">
+    <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
+    <div id="lang-overlay" hidden>
+      <div class="lang-picker">
+        <div class="lang-toggle">
+          <button class="lang-option is-active" data-lang="en">ENGLISH</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-option" data-lang="es">SPANISH</button>
+        </div>
+        <a href="#" class="lang-go">GO</a>
+      </div>
+    </div>
+    <div id="loader-overlay" hidden>
+      <div class="loader-counter">0%</div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header">
-        <a href="./index.html" class="logo">Dolores,R</a>
+        <a href="./index.html" class="logo">Dolores R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
-        </nav>
+            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>,&nbsp;<a href="./cv.html" class="nav-link nav-link--cv-es" data-i18n="common.nav.cv">CV</a></nav>
         <div class="header-right">
             <span class="header-location">Bs As &amp; Worldwide</span>
+            <div class="lang-switch">
+                <button class="lang-switch-btn is-active" data-lang="en">EN</button>
+                <span>/</span>
+                <button class="lang-switch-btn" data-lang="es">ES</button>
+            </div>
             <a href="./contact.html" class="nav-link">Let's get in touch ;)</a>
         </div>
     </header>
@@ -31,10 +64,10 @@
                 <span class="bracket bracket-r">]</span>
             </h1>
             <ul class="proj-meta">
-                <li><span class="proj-meta-label">Client</span><span class="proj-meta-value">DHL Express</span></li>
-                <li><span class="proj-meta-label">Agency</span><span class="proj-meta-value">We Are Laugh</span></li>
-                <li><span class="proj-meta-label">Year</span><span class="proj-meta-value">2023</span></li>
-                <li><span class="proj-meta-label">Campaign</span><span class="proj-meta-value">Open for Us</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.client">Client</span><span class="proj-meta-value">DHL Express</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.agency">Agency</span><span class="proj-meta-value">We Are Laugh</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.year">Year</span><span class="proj-meta-value">2023</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.campaign">Campaign</span><span class="proj-meta-value" data-i18n="project.dhl.campaign">Open for Us</span></li>
             </ul>
         </header>
 
@@ -49,9 +82,9 @@
                 <img src="./images/dhl/boxes-stack.png" alt="DHL Open for Us — boxes installation">
             </div>
             <div class="stage-text proj-text">
-                <span class="proj-text-num">01<span class="proj-text-label"> Contexto</span></span>
-                <p>DHL Express lanza en Argentina la campaña "Open for Us" junto a Juan Martín del Potro, con el mensaje #NuncaTeRindas.</p>
-                <p>El desafío era crear una identidad visual que comunicara resiliencia y superación —los valores de Del Potro— sin comprometer los guidelines estrictos de DHL. La campaña incluía eventos presenciales, activaciones en redes y material impreso.</p>
+                <span class="proj-text-num">01<span class="proj-text-label"> <span data-i18n="project.context">Contexto</span></span></span>
+                <p data-i18n="project.dhl.ctx1">DHL Express lanza en Argentina la campaña "Open for Us" junto a Juan Martín del Potro, con el mensaje #NuncaTeRindas.</p>
+                <p data-i18n="project.dhl.ctx2">El desafío era crear una identidad visual que comunicara resiliencia y superación —los valores de Del Potro— sin comprometer los guidelines estrictos de DHL. La campaña incluía eventos presenciales, activaciones en redes y material impreso.</p>
             </div>
         </section>
 
@@ -66,7 +99,7 @@
 
         <!-- Pull-quote -->
         <section class="proj-stage proj-stage--quote">
-            <h2 class="proj-pullquote">Cuando alguien nunca se rinde, los límites dejan de existir.</h2>
+            <h2 class="proj-pullquote" data-i18n="project.dhl.pull">Cuando alguien nunca se rinde, los límites dejan de existir.</h2>
             <div class="proj-frame stage-q-1" data-parallax="14">
                 <img src="./images/dhl/detail-racket.png" alt="DHL Open for Us — tennis detail">
             </div>
@@ -75,10 +108,10 @@
         <!-- Stage B: Ejecución + tall frame -->
         <section class="proj-stage proj-stage--ba">
             <div class="stage-text proj-text">
-                <span class="proj-text-num">02<span class="proj-text-label"> Ejecución Creativa</span></span>
-                <p>Diseñé la identidad gráfica completa de la campaña: desarrollé el logo "Open for Us" y el sistema visual de "#NuncaTeRindas".</p>
-                <p>Medios offline: OOH, photo opportunities, postales, menú, merchandising, gráficas, pantallas. Dirección de arte de la escenografía del evento en el MALBA. Medios online: redes sociales, banners digitales, contenido para plataformas.</p>
-                <p>El desafío fue mantener la identidad corporativa de DHL —con sus guidelines muy estrictos— mientras generaba una dirección visual fresca, moderna y que honrara la narrativa de resiliencia de Del Potro.</p>
+                <span class="proj-text-num">02<span class="proj-text-label"> <span data-i18n="project.executionCreative">Ejecución Creativa</span></span></span>
+                <p data-i18n="project.dhl.ex1">Diseñé la identidad gráfica completa de la campaña: desarrollé el logo "Open for Us" y el sistema visual de "#NuncaTeRindas".</p>
+                <p data-i18n="project.dhl.ex2">Medios offline: OOH, photo opportunities, postales, menú, merchandising, gráficas, pantallas. Dirección de arte de la escenografía del evento en el MALBA. Medios online: redes sociales, banners digitales, contenido para plataformas.</p>
+                <p data-i18n="project.dhl.ex3">El desafío fue mantener la identidad corporativa de DHL —con sus guidelines muy estrictos— mientras generaba una dirección visual fresca, moderna y que honrara la narrativa de resiliencia de Del Potro.</p>
             </div>
             <div class="proj-frame stage-tall" data-parallax="-12">
                 <img src="./images/dhl/box-closeup.png" alt="DHL Open for Us — yellow box">
@@ -97,9 +130,9 @@
         <!-- Results -->
         <section class="proj-stage proj-stage--results">
             <div class="proj-text">
-                <span class="proj-text-num">03<span class="proj-text-label"> Resultados</span></span>
-                <p>La campaña se ejecutó durante 2023 con múltiples touchpoints: evento presencial en el MALBA en junio con presencia de ejecutivos y clientes, activaciones en redes sociales, y material impreso distribuido regionalmente.</p>
-                <p>La identidad visual funcionó en todos los formatos. La marca comunicó claramente el mensaje de superación sin perder la identidad corporativa de DHL.</p>
+                <span class="proj-text-num">03<span class="proj-text-label"> <span data-i18n="project.results">Resultados</span></span></span>
+                <p data-i18n="project.dhl.res1">La campaña se ejecutó durante 2023 con múltiples touchpoints: evento presencial en el MALBA en junio con presencia de ejecutivos y clientes, activaciones en redes sociales, y material impreso distribuido regionalmente.</p>
+                <p data-i18n="project.dhl.res2">La identidad visual funcionó en todos los formatos. La marca comunicó claramente el mensaje de superación sin perder la identidad corporativa de DHL.</p>
             </div>
         </section>
 
@@ -133,11 +166,11 @@
         <div class="footer-contact-info">
             <div class="contact-item">
                 <span class="contact-label">PHONE</span>
-                <span class="contact-value">+54 9 11 4177 3952</span>
+                <a class="contact-value" href="https://wa.me/5491141773952" target="_blank" rel="noopener noreferrer">+54 9 11 4177 3952</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">MAIL</span>
-                <span class="contact-value">d.riccardo@icloud.com</span>
+                <a class="contact-value" href="mailto:d.riccardo@icloud.com">d.riccardo@icloud.com</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">LOCATION</span>

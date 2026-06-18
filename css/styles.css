@@ -1950,3 +1950,240 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
     /* Project title isn't sticky on mobile (saves space) */
     .proj-title { position: static; }
 }
+
+/* ==========================================================================
+   i18n: Language picker + loading screen overlays
+   ========================================================================== */
+body.lang-locked { overflow: hidden; }
+
+#lang-overlay,
+#loader-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #000;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+#lang-overlay[hidden],
+#loader-overlay[hidden] { display: none; }
+
+#lang-overlay.is-visible,
+#loader-overlay.is-visible { opacity: 1; }
+
+#lang-overlay.is-hidden,
+#loader-overlay.is-hidden { opacity: 0; }
+
+.lang-picker {
+    text-align: center;
+    padding: 2rem;
+    max-width: 720px;
+    width: 100%;
+}
+
+.lang-toggle {
+    display: flex;
+    gap: 0.6rem;
+    justify-content: center;
+    align-items: baseline;
+    margin: 0 0 1.5rem 0;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+}
+
+.lang-option {
+    appearance: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    color: #999;
+    font-weight: 400;
+    cursor: pointer;
+    transition: color 0.2s ease, font-weight 0.2s ease;
+}
+.lang-option.is-active {
+    color: #000;
+    font-weight: 700;
+}
+.lang-option:hover { color: #000; }
+.lang-option:focus-visible { outline: none; }
+
+.lang-sep {
+    color: #999;
+    font-size: 14px;
+}
+
+.lang-go {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #000;
+    font-family: inherit;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+.lang-go:hover { opacity: 0.6; }
+
+.loader-counter {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: clamp(3rem, 10vw, 7rem);
+    letter-spacing: -0.04em;
+    color: #000;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+}
+
+/* Header language switcher */
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    letter-spacing: -0.025em;
+    color: var(--gray-light, #999);
+}
+.lang-switch-btn {
+    appearance: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: 13px;
+    letter-spacing: -0.025em;
+    color: var(--gray-light, #999);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+}
+.lang-switch-btn.is-active {
+    color: var(--black, #000);
+    font-weight: 700;
+    text-decoration: underline;
+}
+.lang-switch-btn:hover { color: var(--black, #000); }
+.lang-switch-btn:focus-visible { outline: none; }
+
+@media (max-width: 540px) {
+    .lang-toggle { flex-direction: row; }
+}
+
+/* ========================================================================
+   Updates: preloader gate, nowrap, footer contact links, CV buttons,
+   contact-info-below-form, ES-only CV nav link
+   ======================================================================== */
+
+/* Hide page content while picker/loader is about to run (first visit / home first-of-session) */
+html.is-preloading body > *:not(#lang-overlay):not(#loader-overlay) { visibility: hidden; }
+html.is-preloading #loader-overlay,
+html.is-preloading #lang-overlay { visibility: visible; }
+
+/* Header: "Let's get in touch ;)" + lang switch in one line */
+.header-right .nav-link { white-space: nowrap; }
+
+/* Home/work bracket titles: prevent the brackets from spreading the title onto two lines */
+.work-title .title-text,
+.card-title-text,
+.proj-title .title-text { white-space: nowrap; }
+
+/* Footer contact links — keep visual style identical to .contact-value */
+.footer-contact-info a.contact-value {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+.footer-contact-info a.contact-value:hover { opacity: 0.7; }
+
+/* ES-only CV nav link — visible only when html[lang="es"] */
+.nav-link--cv-es { display: none; }
+html[lang="es"] .nav-link--cv-es { display: inline; }
+html[lang="es"] .nav-link--cv-es-sep { display: inline; }
+
+/* CV BUTTON (about page) */
+.cv-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+}
+.cv-button:hover { transform: translateY(-2px); }
+.cv-button--ghost {
+    background: transparent;
+    color: var(--black);
+    border: 1.5px solid var(--black);
+}
+.cv-button--ghost:hover { background: var(--black); color: var(--white); }
+.cv-button--xl { padding: 18px 36px; font-size: 18px; }
+
+.cv-inline-block {
+    display: flex;
+    justify-content: center;
+    padding: 24px 40px 8px;
+}
+.cv-inline-block--alt { justify-content: flex-end; padding: 24px 40px; }
+
+/* Floating CV (about page only) — always visible while scrolling */
+.cv-floating {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 900;
+    padding: 12px 22px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+}
+.cv-floating:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 600px) {
+    .cv-floating { right: 16px; bottom: 16px; padding: 10px 18px; font-size: 12px; }
+    .cv-inline-block, .cv-inline-block--alt { padding: 18px 20px; justify-content: center; }
+}
+
+/* Contact: contact-info moved below the form, no longer in the grid above */
+.contact-info--below {
+    display: flex;
+    gap: 40px;
+    padding: 24px 40px 40px;
+    flex-wrap: wrap;
+}
+.contact-info--below .contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.contact-block--compact { min-height: auto; padding-bottom: 0; }
+.contact-block--compact .contact-block-main { grid-column: 1 / -1; }
+@media (max-width: 900px) {
+    .contact-info--below { padding: 20px 20px 32px; gap: 24px; }
+}

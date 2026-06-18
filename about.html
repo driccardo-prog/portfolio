@@ -1,23 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About — Dolores Riccardo</title>
+    <title data-i18n-title="about.title">About — Dolores Riccardo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/i18n.js"></script>
+    <script>
+        (function () {
+            try {
+                var hasLang = !!localStorage.getItem('preferredLanguage');
+                var p = (location.pathname || '').toLowerCase();
+                var isHome = p === '/' || p === '' || p.endsWith('/index.html') || p === '/index.html';
+                var homeShown = sessionStorage.getItem('homeLoaderShown') === '1';
+                if (!hasLang || (isHome && !homeShown)) {
+                    document.documentElement.classList.add('is-preloading');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body class="about-page">
+    <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
+    <div id="lang-overlay" hidden>
+      <div class="lang-picker">
+        <div class="lang-toggle">
+          <button class="lang-option is-active" data-lang="en">ENGLISH</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-option" data-lang="es">SPANISH</button>
+        </div>
+        <a href="#" class="lang-go">GO</a>
+      </div>
+    </div>
+    <div id="loader-overlay" hidden>
+      <div class="loader-counter">0%</div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header">
-        <a href="./index.html" class="logo">Dolores,R</a>
+        <a href="./index.html" class="logo">Dolores R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
-        </nav>
+            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>,&nbsp;<a href="./cv.html" class="nav-link nav-link--cv-es" data-i18n="common.nav.cv">CV</a></nav>
         <div class="header-right">
             <span class="header-location">Bs As &amp; Worldwide</span>
+            <div class="lang-switch">
+                <button class="lang-switch-btn is-active" data-lang="en">EN</button>
+                <span>/</span>
+                <button class="lang-switch-btn" data-lang="es">ES</button>
+            </div>
             <a href="./contact.html" class="nav-link">Let's get in touch ;)</a>
         </div>
     </header>
@@ -36,50 +69,54 @@
             <div class="scatter-frame f9"><img src="./images/about/about-09.jpg" alt=""></div>
             <div class="scatter-frame f10"><img src="./images/about/about-10.jpg" alt=""></div>
             <div class="scatter-frame f11"><img src="./images/about/about-11.jpg" alt=""></div>
-            <h1 class="about-hello" data-typewriter="Hello there,"><span class="type-caret"></span></h1>
+            <h1 class="about-hello" data-typewriter="Hello there," data-i18n-typewriter="about.hello"><span class="type-caret"></span></h1>
         </div>
     </section>
 
     <!-- ========== INTRO: I'm Loli + bio (offset grid) ========== -->
     <section class="about-intro">
         <div class="bio-cell bio-cell--name reveal-up">
-            <h2 class="about-name">I'm Loli,</h2>
-            <span class="about-aka">(or Lo, Loló, Lolita.)</span>
+            <h2 class="about-name" data-i18n="about.name">I'm Loli,</h2>
+            <span class="about-aka" data-i18n="about.aka">(or Lo, Loló, Lolita.)</span>
         </div>
 
-        <p class="bio-cell bio-cell--a reveal-up" style="--delay: 0.10s">
+        <p class="bio-cell bio-cell--a reveal-up" style="--delay: 0.10s" data-i18n="about.bio1">
             Senior graphic designer specialized in branding, art direction and creative campaigns. I studied at Universidad de Palermo and have been working in the industry since 2017.
         </p>
-        <p class="bio-cell bio-cell--b reveal-up" style="--delay: 0.22s">
+        <p class="bio-cell bio-cell--b reveal-up" style="--delay: 0.22s" data-i18n="about.bio2">
             For over 8 years I've been translating complex identities into coherent visual systems. My career was built on 360 campaigns, key visuals, spots and countless brands. Always learning that graphic design is narrative and coherence, not just something pretty.
         </p>
-        <p class="bio-cell bio-cell--c reveal-up" style="--delay: 0.34s">
+        <p class="bio-cell bio-cell--c reveal-up" style="--delay: 0.34s" data-i18n="about.bio3">
             I started as a freelancer, worked at agencies that shaped my practice intensely, and now I balance my role at Pernod Ricard with independent projects.
         </p>
-        <p class="bio-cell bio-cell--d reveal-up" style="--delay: 0.46s">
+        <p class="bio-cell bio-cell--d reveal-up" style="--delay: 0.46s" data-i18n="about.bio4">
             I want to collaborate with people and brands that demand the best from me. Projects that challenge, where I can propose ideas and be behind every detail.
         </p>
     </section>
 
+    <div class="cv-inline-block">
+        <a href="./cv.html" class="cv-button" data-i18n="about.ctaCv">Curriculum Vitae →</a>
+    </div>
+
     <!-- ========== BIG QUOTE ========== -->
     <section class="about-belief">
         <h2 class="belief-text">
-            <span class="belief-word">Good</span>
-            <span class="belief-word">design</span>
-            <span class="belief-word">is</span>
-            <span class="belief-word">rooted</span>
-            <span class="belief-word">in</span>
-            <span class="belief-word">a</span>
-            <span class="belief-word">balanced</span>
-            <span class="belief-word">blend</span>
-            <span class="belief-word">of</span>
-            <span class="belief-word belief-emph">Strategy</span>
-            <span class="belief-word">&amp;</span>
-            <span class="belief-word belief-emph">Coherence.</span>
-            <span class="belief-word">In</span>
-            <span class="belief-word">that</span>
-            <span class="belief-word">I</span>
-            <span class="belief-word">believe.</span>
+            <span class="belief-word" data-i18n="about.belief.w1">Good</span>
+            <span class="belief-word" data-i18n="about.belief.w2">design</span>
+            <span class="belief-word" data-i18n="about.belief.w3">is</span>
+            <span class="belief-word" data-i18n="about.belief.w4">rooted</span>
+            <span class="belief-word" data-i18n="about.belief.w5">in</span>
+            <span class="belief-word" data-i18n="about.belief.w6">a</span>
+            <span class="belief-word" data-i18n="about.belief.w7">balanced</span>
+            <span class="belief-word" data-i18n="about.belief.w8">blend</span>
+            <span class="belief-word" data-i18n="about.belief.w9">of</span>
+            <span class="belief-word belief-emph" data-i18n="about.belief.w10">Strategy</span>
+            <span class="belief-word" data-i18n="about.belief.w11">&amp;</span>
+            <span class="belief-word belief-emph" data-i18n="about.belief.w12">Coherence.</span>
+            <span class="belief-word" data-i18n="about.belief.w13">In</span>
+            <span class="belief-word" data-i18n="about.belief.w14">that</span>
+            <span class="belief-word" data-i18n="about.belief.w15">I</span>
+            <span class="belief-word" data-i18n="about.belief.w16">believe.</span>
         </h2>
     </section>
 
@@ -87,26 +124,30 @@
     <section class="about-skills">
         <div class="skills-marquee">
             <div class="skills-track">
-                <span class="skill-word" data-skill="Branding">Branding</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="AI Content">AI Content</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Social Media">Social Media</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="OOH">OOH</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Packaging">Packaging</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="360 Campaigns">360 Campaigns</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Visual Identity &amp; Strategy">Visual Identity &amp; Strategy</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Creativity">Creativity</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Online &amp; Offline Media">Online &amp; Offline Media</span><span class="skill-sep"> | </span>
-                <span class="skill-word" data-skill="Art Direction">Art Direction</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Branding" data-i18n="about.skills.branding">Branding</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="AI Content" data-i18n="about.skills.ai">AI Content</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Social Media" data-i18n="about.skills.social">Social Media</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="OOH" data-i18n="about.skills.ooh">OOH</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Packaging" data-i18n="about.skills.packaging">Packaging</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="360 Campaigns" data-i18n="about.skills.campaigns">360 Campaigns</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Visual Identity &amp; Strategy" data-i18n="about.skills.identity">Visual Identity &amp; Strategy</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Creativity" data-i18n="about.skills.creativity">Creativity</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Online &amp; Offline Media" data-i18n="about.skills.media">Online &amp; Offline Media</span><span class="skill-sep"> | </span>
+                <span class="skill-word" data-skill="Art Direction" data-i18n="about.skills.artdir">Art Direction</span><span class="skill-sep"> | </span>
             </div>
         </div>
     </section>
+
+    <div class="cv-inline-block cv-inline-block--alt">
+        <a href="./cv.html" class="cv-button cv-button--ghost" data-i18n="about.ctaCv">Curriculum Vitae →</a>
+    </div>
 
     <!-- ========== BEYOND DESIGN ========== -->
     <section class="about-beyond">
         <div class="beyond-frame reveal-zoom">
             <img src="./images/about/about-12.jpg" alt="Loli — beyond design">
         </div>
-        <p class="beyond-text reveal-up" style="--delay: 0.15s">
+        <p class="beyond-text reveal-up" style="--delay: 0.15s" data-i18n="about.beyond">
             Beyond design: I'm passionate about animals, music —singing and playing guitar— and the constant act of creating. Creativity doesn't stop when I leave the computer.
         </p>
     </section>
@@ -114,15 +155,17 @@
     <!-- ========== CTA ========== -->
     <section class="about-cta">
         <h2 class="cta-text">
-            <span class="cta-line">If you think</span>
-            <span class="cta-line">we could do</span>
-            <span class="cta-line">cool stuff</span>
-            <span class="cta-line">together, you</span>
-            <span class="cta-line">know where</span>
-            <span class="cta-line">to find me <a href="./contact.html" class="cta-wink">;)</a></span>
+            <span class="cta-line" data-i18n="about.cta.l1">If you think</span>
+            <span class="cta-line" data-i18n="about.cta.l2">we could do</span>
+            <span class="cta-line" data-i18n="about.cta.l3">cool stuff</span>
+            <span class="cta-line" data-i18n="about.cta.l4">together, you</span>
+            <span class="cta-line" data-i18n="about.cta.l5">know where</span>
+            <span class="cta-line"><span data-i18n="about.cta.l6">to find me</span> <a href="./contact.html" class="cta-wink">;)</a></span>
         </h2>
-        <a href="./cv.html" class="cta-cv">My Curriculum Vitae</a>
+        <a href="./cv.html" class="cta-cv cv-button cv-button--xl" data-i18n="about.ctaCv">Curriculum Vitae →</a>
     </section>
+
+    <a href="./cv.html" class="cv-floating" data-i18n="about.ctaCv">Curriculum Vitae →</a>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
@@ -143,11 +186,11 @@
         <div class="footer-contact-info">
             <div class="contact-item">
                 <span class="contact-label">PHONE</span>
-                <span class="contact-value">+54 9 11 4177 3952</span>
+                <a class="contact-value" href="https://wa.me/5491141773952" target="_blank" rel="noopener noreferrer">+54 9 11 4177 3952</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">MAIL</span>
-                <span class="contact-value">d.riccardo@icloud.com</span>
+                <a class="contact-value" href="mailto:d.riccardo@icloud.com">d.riccardo@icloud.com</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">LOCATION</span>

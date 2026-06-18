@@ -1,23 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Glenlivet x Carnaval de Barranquilla — Dolores Riccardo</title>
+    <title data-i18n-title="project.glenlivet.title">The Glenlivet x Carnaval de Barranquilla — Dolores Riccardo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/i18n.js"></script>
+    <script>
+        (function () {
+            try {
+                var hasLang = !!localStorage.getItem('preferredLanguage');
+                var p = (location.pathname || '').toLowerCase();
+                var isHome = p === '/' || p === '' || p.endsWith('/index.html') || p === '/index.html';
+                var homeShown = sessionStorage.getItem('homeLoaderShown') === '1';
+                if (!hasLang || (isHome && !homeShown)) {
+                    document.documentElement.classList.add('is-preloading');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body class="project-page">
+    <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
+    <div id="lang-overlay" hidden>
+      <div class="lang-picker">
+        <div class="lang-toggle">
+          <button class="lang-option is-active" data-lang="en">ENGLISH</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-option" data-lang="es">SPANISH</button>
+        </div>
+        <a href="#" class="lang-go">GO</a>
+      </div>
+    </div>
+    <div id="loader-overlay" hidden>
+      <div class="loader-counter">0%</div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header">
-        <a href="./index.html" class="logo">Dolores,R</a>
+        <a href="./index.html" class="logo">Dolores R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
-        </nav>
+            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>,&nbsp;<a href="./cv.html" class="nav-link nav-link--cv-es" data-i18n="common.nav.cv">CV</a></nav>
         <div class="header-right">
             <span class="header-location">Bs As &amp; Worldwide</span>
+            <div class="lang-switch">
+                <button class="lang-switch-btn is-active" data-lang="en">EN</button>
+                <span>/</span>
+                <button class="lang-switch-btn" data-lang="es">ES</button>
+            </div>
             <a href="./contact.html" class="nav-link">Let's get in touch ;)</a>
         </div>
     </header>
@@ -31,10 +64,10 @@
                 <span class="bracket bracket-r">]</span>
             </h1>
             <ul class="proj-meta">
-                <li><span class="proj-meta-label">Client</span><span class="proj-meta-value">Pernod Ricard</span></li>
-                <li><span class="proj-meta-label">Agency</span><span class="proj-meta-value">Oliver Agency</span></li>
-                <li><span class="proj-meta-label">Year</span><span class="proj-meta-value">2026</span></li>
-                <li><span class="proj-meta-label">Campaign</span><span class="proj-meta-value">Carnaval de Barranquilla</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.client">Client</span><span class="proj-meta-value">Pernod Ricard</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.agency">Agency</span><span class="proj-meta-value">Oliver Agency</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.year">Year</span><span class="proj-meta-value">2026</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.campaign">Campaign</span><span class="proj-meta-value" data-i18n="project.glenlivet.campaign">Carnaval de Barranquilla</span></li>
             </ul>
         </header>
 
@@ -49,9 +82,9 @@
                 <img src="./images/glenlivet/social-01.jpg" alt="The Glenlivet — Faltan 15 días para vernos en Barranquilla">
             </div>
             <div class="stage-text proj-text">
-                <span class="proj-text-num">01<span class="proj-text-label"> Contexto</span></span>
-                <p>The Glenlivet lanza en Carnaval de Barranquilla 2026 una campaña que dialoga con el espíritu del festival sin perder su carácter de marca.</p>
-                <p>El desafío era crear una identidad visual que capturara la energía, color y ritmo del carnaval mientras respetaba los guidelines estrictos de The Glenlivet. La pregunta era cómo hacer que una marca escocesa hablara el idioma de Barranquilla sin sonar forzada.</p>
+                <span class="proj-text-num">01<span class="proj-text-label"> <span data-i18n="project.context">Contexto</span></span></span>
+                <p data-i18n="project.glenlivet.ctx1">The Glenlivet lanza en Carnaval de Barranquilla 2026 una campaña que dialoga con el espíritu del festival sin perder su carácter de marca.</p>
+                <p data-i18n="project.glenlivet.ctx2">El desafío era crear una identidad visual que capturara la energía, color y ritmo del carnaval mientras respetaba los guidelines estrictos de The Glenlivet. La pregunta era cómo hacer que una marca escocesa hablara el idioma de Barranquilla sin sonar forzada.</p>
             </div>
         </section>
 
@@ -66,7 +99,7 @@
 
         <!-- Pull-quote -->
         <section class="proj-stage proj-stage--quote">
-            <h2 class="proj-pullquote">Hecho para ser único como el carnaval.</h2>
+            <h2 class="proj-pullquote" data-i18n="project.glenlivet.pull">Hecho para ser único como el carnaval.</h2>
             <div class="proj-frame stage-q-1" data-parallax="14">
                 <img src="./images/glenlivet/social-09.jpg" alt="The Glenlivet — pieza social Carnaval">
             </div>
@@ -75,10 +108,10 @@
         <!-- Stage B: Ejecución + tall frame -->
         <section class="proj-stage proj-stage--ba">
             <div class="stage-text proj-text">
-                <span class="proj-text-num">02<span class="proj-text-label"> Ejecución Creativa</span></span>
-                <p>Desarrollé la dirección de arte completa de la campaña: key visual + todas las aplicaciones y ejecución. Elegimos el Camino 01 —el más expresivo—, basado en ilustraciones, color y ritmo visual que interpretan el carnaval sin caer en el exceso.</p>
-                <p>Los elementos visuales clave fueron pájaros stylizados en tonos vibrantes, que funcionan como código visual del festival, combinados con la botella de Glenlivet como protagonista discreta pero presente. Cada aplicación —desde vía pública hasta redes sociales— mantiene coherencia visual mientras adapta el mensaje al contexto local.</p>
-                <p>El mayor desafío fue respetar los guidelines rigurosos de The Glenlivet sin que la marca perdiera personalidad frente a la intensidad visual del carnaval.</p>
+                <span class="proj-text-num">02<span class="proj-text-label"> <span data-i18n="project.executionCreative">Ejecución Creativa</span></span></span>
+                <p data-i18n="project.glenlivet.ex1">Desarrollé la dirección de arte completa de la campaña: key visual + todas las aplicaciones y ejecución. Elegimos el Camino 01 —el más expresivo—, basado en ilustraciones, color y ritmo visual que interpretan el carnaval sin caer en el exceso.</p>
+                <p data-i18n="project.glenlivet.ex2">Los elementos visuales clave fueron pájaros stylizados en tonos vibrantes, que funcionan como código visual del festival, combinados con la botella de Glenlivet como protagonista discreta pero presente. Cada aplicación —desde vía pública hasta redes sociales— mantiene coherencia visual mientras adapta el mensaje al contexto local.</p>
+                <p data-i18n="project.glenlivet.ex3">El mayor desafío fue respetar los guidelines rigurosos de The Glenlivet sin que la marca perdiera personalidad frente a la intensidad visual del carnaval.</p>
             </div>
             <div class="proj-frame stage-tall" data-parallax="-12">
                 <img src="./images/glenlivet/cap-portrait.jpg" alt="The Glenlivet — pieza vertical Carnaval">
@@ -97,9 +130,9 @@
         <!-- Results -->
         <section class="proj-stage proj-stage--results">
             <div class="proj-text">
-                <span class="proj-text-num">03<span class="proj-text-label"> Resultados</span></span>
-                <p>La campaña lanzó durante Carnaval 2026 en múltiples touchpoints: vía pública, redes sociales, material impreso.</p>
-                <p>El concepto funcionó: la marca dialogó naturalmente con la audiencia local sin sacrificar su identidad corporativa. La ejecución fue coherente en todos los formatos, demostrando que el diseño estratégico puede balancear restricciones de marca con libertad creativa.</p>
+                <span class="proj-text-num">03<span class="proj-text-label"> <span data-i18n="project.results">Resultados</span></span></span>
+                <p data-i18n="project.glenlivet.res1">La campaña lanzó durante Carnaval 2026 en múltiples touchpoints: vía pública, redes sociales, material impreso.</p>
+                <p data-i18n="project.glenlivet.res2">El concepto funcionó: la marca dialogó naturalmente con la audiencia local sin sacrificar su identidad corporativa. La ejecución fue coherente en todos los formatos, demostrando que el diseño estratégico puede balancear restricciones de marca con libertad creativa.</p>
             </div>
         </section>
 
@@ -133,11 +166,11 @@
         <div class="footer-contact-info">
             <div class="contact-item">
                 <span class="contact-label">PHONE</span>
-                <span class="contact-value">+54 9 11 4177 3952</span>
+                <a class="contact-value" href="https://wa.me/5491141773952" target="_blank" rel="noopener noreferrer">+54 9 11 4177 3952</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">MAIL</span>
-                <span class="contact-value">d.riccardo@icloud.com</span>
+                <a class="contact-value" href="mailto:d.riccardo@icloud.com">d.riccardo@icloud.com</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">LOCATION</span>

@@ -1,23 +1,56 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Byo. Superfood Lab — Dolores Riccardo</title>
+    <title data-i18n-title="project.byo.title">Byo. Superfood Lab — Dolores Riccardo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/i18n.js"></script>
+    <script>
+        (function () {
+            try {
+                var hasLang = !!localStorage.getItem('preferredLanguage');
+                var p = (location.pathname || '').toLowerCase();
+                var isHome = p === '/' || p === '' || p.endsWith('/index.html') || p === '/index.html';
+                var homeShown = sessionStorage.getItem('homeLoaderShown') === '1';
+                if (!hasLang || (isHome && !homeShown)) {
+                    document.documentElement.classList.add('is-preloading');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body class="project-page">
+    <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
+    <div id="lang-overlay" hidden>
+      <div class="lang-picker">
+        <div class="lang-toggle">
+          <button class="lang-option is-active" data-lang="en">ENGLISH</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-option" data-lang="es">SPANISH</button>
+        </div>
+        <a href="#" class="lang-go">GO</a>
+      </div>
+    </div>
+    <div id="loader-overlay" hidden>
+      <div class="loader-counter">0%</div>
+    </div>
+
     <!-- ========== HEADER ========== -->
     <header class="header">
-        <a href="./index.html" class="logo">Dolores,R</a>
+        <a href="./index.html" class="logo">Dolores R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
-        </nav>
+            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>,&nbsp;<a href="./cv.html" class="nav-link nav-link--cv-es" data-i18n="common.nav.cv">CV</a></nav>
         <div class="header-right">
             <span class="header-location">Bs As &amp; Worldwide</span>
+            <div class="lang-switch">
+                <button class="lang-switch-btn is-active" data-lang="en">EN</button>
+                <span>/</span>
+                <button class="lang-switch-btn" data-lang="es">ES</button>
+            </div>
             <a href="./contact.html" class="nav-link">Let's get in touch ;)</a>
         </div>
     </header>
@@ -31,9 +64,9 @@
                 <span class="bracket bracket-r">]</span>
             </h1>
             <ul class="proj-meta proj-meta--3">
-                <li><span class="proj-meta-label">Client</span><span class="proj-meta-value">Byo Superfood Lab</span></li>
-                <li><span class="proj-meta-label">Year</span><span class="proj-meta-value">2025</span></li>
-                <li><span class="proj-meta-label">Deliverables</span><span class="proj-meta-value">Full Branding &amp; Art Direction</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.client">Client</span><span class="proj-meta-value">Byo Superfood Lab</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.year">Year</span><span class="proj-meta-value">2025</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.deliverables">Deliverables</span><span class="proj-meta-value" data-i18n="project.byo.deliverables">Full Branding &amp; Art Direction</span></li>
             </ul>
         </header>
 
@@ -48,9 +81,9 @@
                 <img src="./images/byo/jugos-2.jpg" alt="Byo — Jugos funcionales">
             </div>
             <div class="stage-text proj-text">
-                <span class="proj-text-num">01<span class="proj-text-label"> Contexto</span></span>
-                <p>Byo nace como un local de superfood bowls, hot bowls, protein shakes, jugos y shots en Pilar. El desafío no era simplemente crear una marca de alimentos saludables —el mercado está saturado. El desafío era construir una identidad que comunicara funcionalidad, autenticidad y vitalidad, con un concepto lo suficientemente fuerte como para diferenciarse en un contexto local.</p>
-                <p>El brief era claro: la marca debía orbitar alrededor de cinco superalimentos específicos (cacao, matcha, espirulina, remolacha, acaí) como núcleo estratégico. Eso fue el punto de partida.</p>
+                <span class="proj-text-num">01<span class="proj-text-label"> <span data-i18n="project.context">Contexto</span></span></span>
+                <p data-i18n="project.byo.ctx1">Byo nace como un local de superfood bowls, hot bowls, protein shakes, jugos y shots en Pilar. El desafío no era simplemente crear una marca de alimentos saludables —el mercado está saturado. El desafío era construir una identidad que comunicara funcionalidad, autenticidad y vitalidad, con un concepto lo suficientemente fuerte como para diferenciarse en un contexto local.</p>
+                <p data-i18n="project.byo.ctx2">El brief era claro: la marca debía orbitar alrededor de cinco superalimentos específicos (cacao, matcha, espirulina, remolacha, acaí) como núcleo estratégico. Eso fue el punto de partida.</p>
             </div>
         </section>
 
@@ -65,7 +98,7 @@
 
         <!-- Pull-quote -->
         <section class="proj-stage proj-stage--quote">
-            <h2 class="proj-pullquote">Cinco superalimentos. Un sistema visual. IA como dirección creativa.</h2>
+            <h2 class="proj-pullquote" data-i18n="project.byo.pull">Cinco superalimentos. Un sistema visual. IA como dirección creativa.</h2>
             <div class="proj-frame stage-q-1" data-parallax="14">
                 <img src="./images/byo/cap1.jpg" data-fit="contain" alt="Byo — Superfoods, conocé nuestras bases">
             </div>
@@ -74,11 +107,11 @@
         <!-- Stage B: Ejecución + tall frame -->
         <section class="proj-stage proj-stage--ba">
             <div class="stage-text proj-text">
-                <span class="proj-text-num">02<span class="proj-text-label"> Ejecución Creativa</span></span>
-                <p>Diseñé la identidad visual completa y dirigí el arte de todos los touchpoints: logo, paleta cromática, cartelería, uniformes, menús, envases y presencia en redes. La decisión creativa central fue hacer de los cinco superalimentos el eje absoluto de la marca. No solo de la comunicación —de TODO. La paleta cromática surgió de ellos. El sistema de ilustraciones surgió de ellos. Cada color representa un superfood, cada ilustración es un superhéroe visual.</p>
-                <p>Desarrollé un sistema completo de iconografía donde cada superfood se traduce en representación visual única, funcional y reconocible. La marca no es un logo aplicado; es un sistema vivo donde los superalimentos son el lenguaje.</p>
-                <p>La materialización integral de la identidad —fotografía de productos, video de local, renders del espacio, contenido para redes sociales— se ejecutó utilizando IA como herramienta de dirección creativa. Cada visual fue direccionado bajo criterio de art direction, cada iteración respondía a decisiones estéticas y estratégicas específicas. IA no reemplazó la creatividad; amplió la capacidad de ejecutarla.</p>
-                <p>El resultado es una marca con coherencia visual total, donde cada asset —independientemente de cómo fue generado— habla el mismo idioma visual. Control creativo sin compromisos.</p>
+                <span class="proj-text-num">02<span class="proj-text-label"> <span data-i18n="project.executionCreative">Ejecución Creativa</span></span></span>
+                <p data-i18n="project.byo.ex1">Diseñé la identidad visual completa y dirigí el arte de todos los touchpoints: logo, paleta cromática, cartelería, uniformes, menús, envases y presencia en redes. La decisión creativa central fue hacer de los cinco superalimentos el eje absoluto de la marca. No solo de la comunicación —de TODO. La paleta cromática surgió de ellos. El sistema de ilustraciones surgió de ellos. Cada color representa un superfood, cada ilustración es un superhéroe visual.</p>
+                <p data-i18n="project.byo.ex2">Desarrollé un sistema completo de iconografía donde cada superfood se traduce en representación visual única, funcional y reconocible. La marca no es un logo aplicado; es un sistema vivo donde los superalimentos son el lenguaje.</p>
+                <p data-i18n="project.byo.ex3">La materialización integral de la identidad —fotografía de productos, video de local, renders del espacio, contenido para redes sociales— se ejecutó utilizando IA como herramienta de dirección creativa. Cada visual fue direccionado bajo criterio de art direction, cada iteración respondía a decisiones estéticas y estratégicas específicas. IA no reemplazó la creatividad; amplió la capacidad de ejecutarla.</p>
+                <p data-i18n="project.byo.ex4">El resultado es una marca con coherencia visual total, donde cada asset —independientemente de cómo fue generado— habla el mismo idioma visual. Control creativo sin compromisos.</p>
             </div>
             <div class="proj-frame stage-tall" data-parallax="-12">
                 <img src="./images/byo/jugos-4.jpg" alt="Byo — Purple Boost juice">
@@ -97,9 +130,9 @@
         <!-- Results -->
         <section class="proj-stage proj-stage--results">
             <div class="proj-text">
-                <span class="proj-text-num">03<span class="proj-text-label"> Resultados</span></span>
-                <p>El local abrió en 2025. El concepto funcionó: la identidad comunica funcionalidad antes de que alguien entre. Cada color cuenta qué esperás encontrar. Cada ilustración refuerza el mensaje de nutrición consciente y real.</p>
-                <p>El feedback fue inmediato y positivo. La marca no vende "comida saludable"; vende poder, elección, ingredientes que funcionan. Y eso se ve en cada touchpoint.</p>
+                <span class="proj-text-num">03<span class="proj-text-label"> <span data-i18n="project.results">Resultados</span></span></span>
+                <p data-i18n="project.byo.res1">El local abrió en 2025. El concepto funcionó: la identidad comunica funcionalidad antes de que alguien entre. Cada color cuenta qué esperás encontrar. Cada ilustración refuerza el mensaje de nutrición consciente y real.</p>
+                <p data-i18n="project.byo.res2">El feedback fue inmediato y positivo. La marca no vende "comida saludable"; vende poder, elección, ingredientes que funcionan. Y eso se ve en cada touchpoint.</p>
             </div>
         </section>
 
@@ -133,11 +166,11 @@
         <div class="footer-contact-info">
             <div class="contact-item">
                 <span class="contact-label">PHONE</span>
-                <span class="contact-value">+54 9 11 4177 3952</span>
+                <a class="contact-value" href="https://wa.me/5491141773952" target="_blank" rel="noopener noreferrer">+54 9 11 4177 3952</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">MAIL</span>
-                <span class="contact-value">d.riccardo@icloud.com</span>
+                <a class="contact-value" href="mailto:d.riccardo@icloud.com">d.riccardo@icloud.com</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">LOCATION</span>
