@@ -2106,10 +2106,8 @@ html.is-preloading #lang-overlay { visibility: visible; }
 }
 .footer-contact-info a.contact-value:hover { opacity: 0.7; }
 
-/* ES-only CV nav link — visible only when html[lang="es"] */
-.nav-link--cv-es { display: none; }
-html[lang="es"] .nav-link--cv-es { display: inline; }
-html[lang="es"] .nav-link--cv-es-sep { display: inline; }
+/* CV nav link — visible in both languages */
+.nav-link--cv-es { display: inline; }
 
 /* CV BUTTON (about page) */
 .cv-button {
