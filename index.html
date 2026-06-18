@@ -8,11 +8,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script>
+        (function () {
+            try {
+                if (!sessionStorage.getItem('dr_home_loaded')) {
+                    document.documentElement.classList.add('is-loading');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body>
+    <div class="page-loader" aria-hidden="true">
+        <span class="page-loader-mark">Dolores R</span>
+        <span class="page-loader-bar"><span class="page-loader-bar-fill"></span></span>
+    </div>
     <!-- ========== HEADER ========== -->
     <header class="header">
-        <a href="#" class="logo">Dolores,R</a>
+        <a href="#" class="logo">Dolores R</a>
         <nav class="nav-center">
             <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
         </nav>
@@ -120,7 +133,7 @@
             <a class="scatter-frame f11" href="./project-glenlivet.html"><img src="./images/glenlivet/cap-keyvisual.jpg" alt=""></a>
 
             <a href="./work.html" class="all-work-title-wrapper">
-                <h2 class="all-work-title">All Work<sup class="all-work-count">(6)</sup></h2>
+                <h2 class="all-work-title">+ Proyectos<sup class="all-work-count">(6)</sup></h2>
             </a>
         </div>
     </section>
@@ -144,11 +157,11 @@
         <div class="footer-contact-info">
             <div class="contact-item">
                 <span class="contact-label">PHONE</span>
-                <span class="contact-value">+54 9 11 4177 3952</span>
+                <a class="contact-value" href="https://wa.me/5491141773952" target="_blank" rel="noopener noreferrer">+54 9 11 4177 3952</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">MAIL</span>
-                <span class="contact-value">d.riccardo@icloud.com</span>
+                <a class="contact-value" href="mailto:d.riccardo@icloud.com">d.riccardo@icloud.com</a>
             </div>
             <div class="contact-item">
                 <span class="contact-label">LOCATION</span>
@@ -159,5 +172,23 @@
 
     <script src="./js/main.js" defer></script>
     <script src="./js/footer.js" defer></script>
+    <script>
+        (function () {
+            var html = document.documentElement;
+            if (!html.classList.contains('is-loading')) return;
+            var minHold = 900;
+            var start = Date.now();
+            function finish() {
+                var wait = Math.max(0, minHold - (Date.now() - start));
+                setTimeout(function () {
+                    html.classList.remove('is-loading');
+                    html.classList.add('is-loaded');
+                    try { sessionStorage.setItem('dr_home_loaded', '1'); } catch (e) {}
+                }, wait);
+            }
+            if (document.readyState === 'complete') finish();
+            else window.addEventListener('load', finish);
+        })();
+    </script>
 </body>
 </html>

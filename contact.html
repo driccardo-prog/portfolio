@@ -12,9 +12,9 @@
 <body class="contact-page">
     <!-- ========== HEADER ========== -->
     <header class="header">
-        <a href="./index.html" class="logo">Dolores,R</a>
+        <a href="./index.html" class="logo">Dolores R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>
+            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>,&nbsp;<a href="./cv.html" class="nav-link">CV</a>
         </nav>
         <div class="header-right">
             <span class="header-location">Bs As &amp; Worldwide</span>
@@ -23,7 +23,7 @@
     </header>
 
     <!-- ========== CONTACT ========== -->
-    <section class="contact-block">
+    <section class="contact-block contact-block--compact">
         <div class="contact-block-main">
             <h1 class="contact-headline flip-headline">
                 <span class="flip-card">
@@ -37,82 +37,83 @@
                 <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer">Linkedin</a>
             </div>
         </div>
-        <aside class="contact-info">
-            <div class="contact-item">
-                <span class="contact-label">PHONE</span>
-                <span class="contact-value">+54 9 11 4177 3952</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">MAIL</span>
-                <span class="contact-value">d.riccardo@icloud.com</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">LOCATION</span>
-                <span class="contact-value">Buenos Aires &amp; Worldwide</span>
-            </div>
-        </aside>
     </section>
 
     <!-- ========== CONTACT FORM ========== -->
     <section class="quote-section" id="quote">
-        <h2 class="quote-headline" data-typewriter="¿Hablamos&#10;de tu idea?"><span class="type-caret"></span></h2>
+        <h2 class="quote-headline" data-typewriter="Let's talk&#10;about your idea?"><span class="type-caret"></span></h2>
         <form class="quote-form" action="https://formsubmit.co/d.riccardo@icloud.com" method="POST">
-            <input type="hidden" name="_subject" value="Nueva consulta desde el portfolio">
+            <input type="hidden" name="_subject" value="New inquiry from the portfolio">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_captcha" value="false">
 
             <div class="quote-form-grid">
                 <label class="quote-field">
-                    <span class="quote-label">Nombre*</span>
-                    <input type="text" name="nombre" placeholder="Camila Vázquez" required>
+                    <span class="quote-label">Name*</span>
+                    <input type="text" name="name" placeholder="Camila Vázquez" required>
                 </label>
                 <label class="quote-field">
-                    <span class="quote-label">Correo*</span>
-                    <input type="email" name="correo" placeholder="camila@gmail.com" required>
-                </label>
-
-                <label class="quote-field">
-                    <span class="quote-label">Teléfono*</span>
-                    <input type="tel" name="telefono" placeholder="+54…" required>
-                </label>
-                <label class="quote-field">
-                    <span class="quote-label">País*</span>
-                    <input type="text" name="pais" placeholder="Argentina" required>
+                    <span class="quote-label">Email*</span>
+                    <input type="email" name="email" placeholder="camila@gmail.com" required>
                 </label>
 
                 <label class="quote-field">
-                    <span class="quote-label">¿Cómo me conociste?*</span>
-                    <select name="origen" required>
-                        <option value="" disabled selected>Elegí una opción</option>
+                    <span class="quote-label">Phone*</span>
+                    <input type="tel" name="phone" placeholder="+54…" required>
+                </label>
+                <label class="quote-field">
+                    <span class="quote-label">Country*</span>
+                    <input type="text" name="country" placeholder="Argentina" required>
+                </label>
+
+                <label class="quote-field">
+                    <span class="quote-label">How did you find me?*</span>
+                    <select name="source" required>
+                        <option value="" disabled selected>Pick one</option>
                         <option>Instagram</option>
                         <option>LinkedIn</option>
-                        <option>Referencia</option>
-                        <option>Búsqueda en Google</option>
-                        <option>Otro</option>
+                        <option>Referral</option>
+                        <option>Google Search</option>
+                        <option>Other</option>
                     </select>
                 </label>
                 <label class="quote-field">
-                    <span class="quote-label">Presupuesto*</span>
-                    <select name="presupuesto" required>
-                        <option value="" disabled selected>Elegí una opción</option>
-                        <option>Menos de USD 1.500</option>
-                        <option>USD 2.000 – 3.500</option>
-                        <option>No lo sé</option>
+                    <span class="quote-label">Budget*</span>
+                    <select name="budget" required>
+                        <option value="" disabled selected>Pick one</option>
+                        <option>Less than USD 1,500</option>
+                        <option>USD 2,000 – 3,500</option>
+                        <option>Not sure</option>
                     </select>
                 </label>
 
                 <label class="quote-field quote-field--full">
-                    <span class="quote-label">¿De qué va tu proyecto?*</span>
-                    <textarea name="proyecto" rows="4" placeholder="Contame de qué va tu proyecto…" required></textarea>
+                    <span class="quote-label">What's your project about?*</span>
+                    <textarea name="project" rows="4" placeholder="Tell me what your project is about…" required></textarea>
                 </label>
             </div>
 
             <div class="quote-form-foot">
-                <p class="quote-tagline">Hagamos que tu proyecto crezca.</p>
-                <button type="submit" class="quote-submit">Enviar</button>
+                <p class="quote-tagline">Let's make your project grow.</p>
+                <button type="submit" class="quote-submit">Send</button>
             </div>
         </form>
     </section>
+
+    <aside class="contact-info contact-info--below">
+        <div class="contact-item">
+            <span class="contact-label">PHONE</span>
+            <a class="contact-value" href="https://wa.me/5491141773952" target="_blank" rel="noopener noreferrer">+54 9 11 4177 3952</a>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">MAIL</span>
+            <a class="contact-value" href="mailto:d.riccardo@icloud.com">d.riccardo@icloud.com</a>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">LOCATION</span>
+            <span class="contact-value">Buenos Aires &amp; Worldwide</span>
+        </div>
+    </aside>
 
     <script src="./js/contact.js" defer></script>
 
