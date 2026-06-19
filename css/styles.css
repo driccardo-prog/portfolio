@@ -2287,6 +2287,7 @@ html.is-preloading #lang-overlay { visibility: visible; }
     margin-top: 80px;
     flex-wrap: wrap;
 }
+.contact-socials .social-chip,
 .social-chip {
     display: inline-flex;
     align-items: center;
@@ -2303,6 +2304,7 @@ html.is-preloading #lang-overlay { visibility: visible; }
     animation: socialDrift 6s ease-in-out infinite;
     will-change: transform;
 }
+.contact-socials .social-chip--alt,
 .social-chip--alt {
     background: var(--white);
     color: var(--black);
@@ -2310,10 +2312,12 @@ html.is-preloading #lang-overlay { visibility: visible; }
     animation-delay: -2.5s;
     animation-duration: 7s;
 }
+.contact-socials .social-chip:hover,
 .social-chip:hover {
     transform: translateY(-2px) scale(1.03);
     animation-play-state: paused;
 }
+.contact-socials .social-chip--alt:hover,
 .social-chip--alt:hover { background: var(--black); color: var(--white); }
 
 @keyframes socialDrift {
