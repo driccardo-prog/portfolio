@@ -162,14 +162,14 @@
         bplay: {
           title: 'Guillermo Francella x Bplay — Dolores Riccardo',
           campaign: 'Official Sponsor of the Argentine Heart',
-          ctx1: 'In 2022, Bplay faced a clear challenge: competing during the World Cup in a market where a direct competitor was already the official sponsor of the National Team.',
-          ctx2: 'The question was not how to reach more people, but how to emotionally connect with Argentine fans. The answer was something deeper than a team: the rituals, the cábalas, the superstition that defines how Argentines live football.',
-          ctx3: "Bplay wasn't competing against an official sponsorship; it was competing for the heart.",
-          pull: "Bplay wasn't competing against an official sponsorship; it was competing for the heart.",
-          ex1: 'I created the full visual identity for the campaign: I designed the key visual "Official Sponsor of the Argentine Heart" and developed the entire graphic strategy for digital, OOH, social media and paid media. The choice was clear: light blue and white as a direct visual code for national identity, and a typography that would evoke argentinidad without falling into the obvious.',
-          ex2: 'Each graphic piece became an extension of the concept: fans don\'t just watch the World Cup, they participate in it.',
-          ex3: "Bplay wasn't a sponsor; it was an accomplice.",
-          res1: '"Corazón Argento" won three silver medals in the Film, Sports & Gaming, and Audiovisual Production categories.'
+          ctx1: "The challenge wasn't visibility — Bplay already had reach. During the 2022 World Cup, the real question was emotional: how do you win fans over when your direct competitor owns the official sponsorship?",
+          ctx2: "The answer wasn't about the team. It was about something more Argentine than football itself: the rituals, the cábalas, the superstitions that turn watching a game into a collective religion.",
+          ctx3: "Bplay wasn't chasing a sponsorship title. It was chasing something harder to buy.",
+          pull: "Bplay wasn't chasing a sponsorship title. It was chasing something harder to buy.",
+          ex1: 'I built the full visual identity for the campaign — from the key visual "Sponsor Oficial del Corazón Argento" to the complete graphic system across digital, OOH, social media and paid media. The direction was clear: celeste and white as an unambiguous visual shorthand for Argentine identity, and type that felt local without leaning on the obvious.',
+          ex2: "Every piece extended the same idea: fans don't just watch the World Cup — they live it.",
+          ex3: "Bplay wasn't a sponsor. It was a co-conspirator.",
+          res1: '"Corazón Argento" took three silver medals — Film, Sports & Gaming, and Audiovisual Production.'
         },
         byo: {
           title: 'Byo. Superfood Lab — Dolores Riccardo',
