@@ -187,14 +187,14 @@
         dhl: {
           title: 'Juan Martín del Potro x DHL — Dolores Riccardo',
           campaign: 'Open for Us',
-          ctx1: 'DHL Express launches the "Open for Us" campaign in Argentina alongside Juan Martín del Potro, with the message #NuncaTeRindas (Never Give Up).',
-          ctx2: "The challenge was to create a visual identity that communicated resilience and overcoming —Del Potro's values— without compromising DHL's strict guidelines. The campaign included in-person events, social activations and printed material.",
-          pull: 'When someone never gives up, limits cease to exist.',
-          ex1: 'I designed the full graphic identity of the campaign: I developed the "Open for Us" logo and the "#NuncaTeRindas" visual system.',
-          ex2: 'Offline media: OOH, photo opportunities, postcards, menu, merchandising, graphics, screens. Art direction of the event scenography at MALBA. Online media: social networks, digital banners, platform content.',
-          ex3: "The challenge was keeping DHL's corporate identity —with its very strict guidelines— while generating a fresh, modern visual direction that honored Del Potro's resilience narrative.",
-          res1: 'The campaign ran during 2023 with multiple touchpoints: in-person event at MALBA in June with executives and clients, social media activations, and printed material distributed regionally.',
-          res2: "The visual identity worked across all formats. The brand clearly communicated the message of overcoming without losing DHL's corporate identity."
+          ctx1: 'DHL Express launched "Open for Us" in Argentina alongside Juan Martín del Potro — a campaign built around resilience and the belief that limits are only as real as you let them be.',
+          ctx2: "The challenge had two sides: communicate Del Potro's story authentically, and do it inside DHL's notoriously strict brand guidelines. The brief wasn't just creative — it was a tightrope.",
+          pull: "The brief wasn't just creative — it was a tightrope.",
+          ex1: 'I developed the full visual identity for the campaign — the "Open for Us" logo and the #NeverGiveUp graphic system — across every touchpoint: OOH, social media, digital banners, print, merch, and event materials.',
+          ex2: 'The art direction extended to the physical space: I directed the set design for the launch event at MALBA.',
+          ex3: "The real creative decision was restraint — letting Del Potro's story carry the emotion while the design stayed precise, modern, and disciplined.",
+          res1: 'The campaign ran in June 2023 — flagship event at MALBA, digital activations, regional print distribution.',
+          res2: "The visual system held across every format without losing DHL's corporate identity or Del Potro's personal story. That was the brief. That's what it delivered."
         },
         glenlivet: {
           title: 'The Glenlivet x Carnaval de Barranquilla — Dolores Riccardo',
@@ -401,14 +401,14 @@
         dhl: {
           title: 'Juan Martín del Potro x DHL — Dolores Riccardo',
           campaign: 'Open for Us',
-          ctx1: 'DHL Express lanza en Argentina la campaña "Open for Us" junto a Juan Martín del Potro, con el mensaje #NuncaTeRindas.',
-          ctx2: 'El desafío era crear una identidad visual que comunicara resiliencia y superación —los valores de Del Potro— sin comprometer los guidelines estrictos de DHL. La campaña incluía eventos presenciales, activaciones en redes y material impreso.',
-          pull: 'Cuando alguien nunca se rinde, los límites dejan de existir.',
-          ex1: 'Diseñé la identidad gráfica completa de la campaña: desarrollé el logo "Open for Us" y el sistema visual de "#NuncaTeRindas".',
-          ex2: 'Medios offline: OOH, photo opportunities, postales, menú, merchandising, gráficas, pantallas. Dirección de arte de la escenografía del evento en el MALBA. Medios online: redes sociales, banners digitales, contenido para plataformas.',
-          ex3: 'El desafío fue mantener la identidad corporativa de DHL —con sus guidelines muy estrictos— mientras generaba una dirección visual fresca, moderna y que honrara la narrativa de resiliencia de Del Potro.',
-          res1: 'La campaña se ejecutó durante 2023 con múltiples touchpoints: evento presencial en el MALBA en junio con presencia de ejecutivos y clientes, activaciones en redes sociales, y material impreso distribuido regionalmente.',
-          res2: 'La identidad visual funcionó en todos los formatos. La marca comunicó claramente el mensaje de superación sin perder la identidad corporativa de DHL.'
+          ctx1: 'DHL Express lanzó "Open for Us" en Argentina junto a Juan Martín del Potro, con el mensaje #NuncaTeRindas.',
+          ctx2: 'El desafío tenía dos caras: comunicar la narrativa personal de Del Potro con autenticidad, y hacerlo dentro de los guidelines corporativos más estrictos del mercado. El brief no era solo creativo — era un equilibrio.',
+          pull: 'El brief no era solo creativo — era un equilibrio.',
+          ex1: 'Desarrollé la identidad visual completa de la campaña: el logo "Open for Us" y el sistema gráfico de #NuncaTeRindas en todos los touchpoints — OOH, redes, banners digitales, impresión, merchandising y materiales de evento.',
+          ex2: 'La dirección de arte se extendió al espacio físico: dirigí la escenografía del evento de lanzamiento en el MALBA.',
+          ex3: 'La decisión creativa central fue la restricción — dejar que la historia de Del Potro cargara la emoción mientras el diseño se mantenía preciso, moderno y disciplinado.',
+          res1: 'La campaña se ejecutó en junio de 2023 con presencia en el MALBA, activaciones digitales y distribución regional de material impreso.',
+          res2: 'El sistema visual sostuvo todos los formatos sin perder la identidad corporativa ni la historia detrás de la campaña — que es exactamente lo que el brief pedía.'
         },
         glenlivet: {
           title: 'The Glenlivet x Carnaval de Barranquilla — Dolores Riccardo',
