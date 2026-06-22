@@ -174,15 +174,15 @@
         byo: {
           title: 'Byo. Superfood Lab — Dolores Riccardo',
           deliverables: 'Full Branding & Art Direction',
-          ctx1: "Byo is born as a superfood bowls, hot bowls, protein shakes, juices and shots spot in Pilar. The challenge wasn't simply to create a healthy food brand —the market is saturated. The challenge was to build an identity that communicated functionality, authenticity and vitality, with a concept strong enough to stand out in a local context.",
-          ctx2: 'The brief was clear: the brand had to orbit around five specific superfoods (cacao, matcha, spirulina, beetroot, açaí) as the strategic core. That was the starting point.',
-          pull: 'Five superfoods. One visual system. AI as creative direction.',
-          ex1: 'I designed the full visual identity and art-directed every touchpoint: logo, color palette, signage, uniforms, menus, packaging and social presence. The central creative decision was to make the five superfoods the absolute axis of the brand. Not just of communication —of EVERYTHING. The color palette came from them. The illustration system came from them. Each color represents a superfood, each illustration is a visual superhero.',
-          ex2: 'I developed a complete iconography system where each superfood translates into a unique, functional, recognizable visual representation. The brand is not a logo applied; it is a living system where superfoods are the language.',
-          ex3: 'The full materialization of the identity —product photography, in-store video, space renders, social content— was executed using AI as a creative direction tool. Each visual was directed under art direction criteria, each iteration responded to specific aesthetic and strategic decisions. AI didn\'t replace creativity; it amplified the capacity to execute it.',
-          ex4: 'The result is a brand with total visual coherence, where each asset —regardless of how it was generated— speaks the same visual language. Creative control without compromise.',
-          res1: "The store opened in 2025. The concept worked: the identity communicates functionality before anyone walks in. Each color tells you what to expect. Each illustration reinforces the message of conscious, real nutrition.",
-          res2: "The feedback was immediate and positive. The brand doesn't sell 'healthy food'; it sells power, choice, ingredients that work. And that shows in every touchpoint."
+          ctx1: "Byo launched as a superfood bowl spot in Pilar — bowls, hot bowls, protein shakes, juices, shots. The market for \"healthy food\" is crowded. The real challenge was building an identity that could communicate functionality, authenticity, and energy without looking like every other wellness brand.",
+          ctx2: "The brief gave us a clear anchor: five specific superfoods — cacao, matcha, spirulina, beetroot, açaí. That was the starting point.",
+          pull: "Five superfoods. One visual system. AI as creative direction.",
+          ex1: "I designed the full visual identity and art-directed every touchpoint: logo, color palette, signage, uniforms, menus, packaging, and social media. The central creative decision was making the five superfoods the absolute axis of the brand — not just in communication, but in everything. The palette came from them. The illustration system came from them. Each color is a superfood; each illustration, a visual superhero.",
+          ex2: "I developed a complete iconography system where every superfood translates into a unique, functional, and recognizable visual. The brand isn't a logo applied to things — it's a living system where the ingredients are the language.",
+          ex3: "The full materialization of the identity — product photography, store video, space renders, social content — was executed using AI as a creative direction tool. Every visual was art-directed: each iteration answered to specific aesthetic and strategic decisions. AI didn't replace the creativity. It expanded the capacity to execute it.",
+          ex4: '',
+          res1: "Byo opened in 2026. The identity communicates functionality before anyone walks in — every color tells you what to expect, every illustration reinforces the promise of real, conscious nutrition.",
+          res2: "Byo doesn't sell \"healthy food.\" It sells power, choice, ingredients that work. And that reads across every single touchpoint."
         },
         dhl: {
           title: 'Juan Martín del Potro x DHL — Dolores Riccardo',
@@ -391,12 +391,12 @@
           ctx1: 'Byo nace como un local de superfood bowls, hot bowls, protein shakes, jugos y shots en Pilar. El desafío no era simplemente crear una marca de alimentos saludables —el mercado está saturado. El desafío era construir una identidad que comunicara funcionalidad, autenticidad y vitalidad, con un concepto lo suficientemente fuerte como para diferenciarse en un contexto local.',
           ctx2: 'El brief era claro: la marca debía orbitar alrededor de cinco superalimentos específicos (cacao, matcha, espirulina, remolacha, acaí) como núcleo estratégico. Eso fue el punto de partida.',
           pull: 'Cinco superalimentos. Un sistema visual. IA como dirección creativa.',
-          ex1: 'Diseñé la identidad visual completa y dirigí el arte de todos los touchpoints: logo, paleta cromática, cartelería, uniformes, menús, envases y presencia en redes. La decisión creativa central fue hacer de los cinco superalimentos el eje absoluto de la marca. No solo de la comunicación —de TODO. La paleta cromática surgió de ellos. El sistema de ilustraciones surgió de ellos. Cada color representa un superfood, cada ilustración es un superhéroe visual.',
-          ex2: 'Desarrollé un sistema completo de iconografía donde cada superfood se traduce en representación visual única, funcional y reconocible. La marca no es un logo aplicado; es un sistema vivo donde los superalimentos son el lenguaje.',
-          ex3: 'La materialización integral de la identidad —fotografía de productos, video de local, renders del espacio, contenido para redes sociales— se ejecutó utilizando IA como herramienta de dirección creativa. Cada visual fue direccionado bajo criterio de art direction, cada iteración respondía a decisiones estéticas y estratégicas específicas. IA no reemplazó la creatividad; amplió la capacidad de ejecutarla.',
-          ex4: 'El resultado es una marca con coherencia visual total, donde cada asset —independientemente de cómo fue generado— habla el mismo idioma visual. Control creativo sin compromisos.',
-          res1: 'El local abrió en 2025. El concepto funcionó: la identidad comunica funcionalidad antes de que alguien entre. Cada color cuenta qué esperás encontrar. Cada ilustración refuerza el mensaje de nutrición consciente y real.',
-          res2: 'El feedback fue inmediato y positivo. La marca no vende "comida saludable"; vende poder, elección, ingredientes que funcionan. Y eso se ve en cada touchpoint.'
+          ex1: 'Diseñé la identidad visual completa y dirigí el arte de todos los touchpoints: logo, paleta cromática, cartelería, uniformes, menús, envases y presencia en redes. La decisión creativa central fue hacer de los cinco superalimentos el eje absoluto de la marca. No solo de la comunicación — de todo. La paleta nació de ellos. El sistema de ilustraciones también. Cada color representa un superfood; cada ilustración, un superhéroe visual.',
+          ex2: 'Desarrollé un sistema completo de iconografía donde cada superfood se traduce en una representación visual única, funcional y reconocible. La marca no es un logo aplicado; es un sistema vivo donde los superalimentos son el lenguaje.',
+          ex3: 'La materialización integral de la identidad — fotografía de productos, video de local, renders del espacio, contenido para redes — se ejecutó con IA como herramienta de dirección creativa. Cada visual fue dirigido bajo criterio de art direction; cada iteración respondía a decisiones estéticas y estratégicas específicas. La IA no reemplazó la creatividad; amplió la capacidad de ejecutarla.',
+          ex4: '',
+          res1: 'El local abrió en 2026. La identidad comunica funcionalidad antes de que alguien entre: cada color anticipa lo que vas a encontrar, cada ilustración refuerza la promesa de nutrición consciente y real.',
+          res2: 'Byo no vende "comida saludable" — vende poder, elección, ingredientes que funcionan. Y eso se ve en cada touchpoint.'
         },
         dhl: {
           title: 'Juan Martín del Potro x DHL — Dolores Riccardo',
