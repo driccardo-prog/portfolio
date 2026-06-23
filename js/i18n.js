@@ -49,23 +49,20 @@
         title: 'About — Dolores Riccardo',
         hello: 'Hello there,',
         name: "I'm Loli,",
-        aka: '(or Lo, Loló, Lolita.)',
-        bio1: 'Senior graphic designer specialized in branding, art direction and creative campaigns. I studied at Universidad de Palermo and have been working in the industry since 2017.',
-        bio2: "For over 8 years I've been translating complex identities into coherent visual systems. My career was built on 360 campaigns, key visuals, spots and countless brands. Always learning that graphic design is narrative and coherence, not just something pretty.",
-        bio3: 'I started as a freelancer, worked at agencies that shaped my practice intensely, and now I balance my role at Pernod Ricard with independent projects.',
-        bio4: 'I want to collaborate with people and brands that demand the best from me. Projects that challenge, where I can propose ideas and be behind every detail.',
-        belief: {
-          w1: 'Good', w2: 'design', w3: 'is', w4: 'rooted', w5: 'in', w6: 'a', w7: 'balanced', w8: 'blend', w9: 'of',
-          w10: 'Strategy', w11: '&', w12: 'Coherence.', w13: 'In', w14: 'that', w15: 'I', w16: 'believe.'
-        },
+        aka: '(Lo, Loló, Lolita — take your pick.)',
+        bio1: 'Senior graphic designer specializing in branding, art direction, and creative campaigns. I studied at Universidad de Palermo and have been in the industry since 2017.',
+        bio2: "Eight years building visual identities — 360 campaigns, key visuals, brand systems, spots. Enough time to know that pretty doesn't cut it if there's nothing to say.",
+        bio3: 'I started freelancing, worked at agencies that pushed me hard, and now split my time between Pernod Ricard and independent projects.',
+        bio4: 'I want to work with people and brands that challenge me — projects where I can bring ideas, make decisions, and own every detail.',
+        belief: '<span class="belief-word">Design</span> <span class="belief-word">that</span> <span class="belief-word">only</span> <span class="belief-word">looks</span> <span class="belief-word">good</span> <span class="belief-word belief-emph">doesn&rsquo;t</span> <span class="belief-word belief-emph">talk</span> <span class="belief-word">to</span> <span class="belief-word belief-emph">anyone.</span>',
         skills: {
           branding: 'Branding', ai: 'AI Content', social: 'Social Media', ooh: 'OOH',
           packaging: 'Packaging', campaigns: '360 Campaigns', identity: 'Visual Identity & Strategy',
           creativity: 'Creativity', media: 'Online & Offline Media', artdir: 'Art Direction'
         },
-        beyond: "Beyond design: I'm passionate about animals, music —singing and playing guitar— and the constant act of creating. Creativity doesn't stop when I leave the computer.",
+        beyond: "Outside design: animals, music — I sing and play guitar — and the constant need to make things. Creativity doesn't switch off.",
         cta: {
-          l1: 'If you think', l2: 'we could do', l3: 'cool stuff', l4: 'together, you', l5: 'know where', l6: 'to find me'
+          l1: 'If you think', l2: 'we could do', l3: 'something great', l4: 'together, you', l5: 'know where', l6: 'to find me'
         },
         ctaCv: 'Curriculum Vitae →'
       },
@@ -265,13 +262,10 @@
         name: 'Soy Loli,',
         aka: '(o Lo, Loló, Lolita.)',
         bio1: 'Diseñadora gráfica senior especializada en branding, dirección de arte y campañas creativas. Estudié en la Universidad de Palermo y trabajo en la industria desde 2017.',
-        bio2: 'Hace más de 8 años que traduzco identidades complejas en sistemas visuales coherentes. Mi carrera se construyó con campañas 360, key visuals, spots y un montón de marcas. Siempre aprendiendo que el diseño gráfico es narrativa y coherencia, no solo algo lindo.',
-        bio3: 'Empecé como freelance, trabajé en agencias que moldearon mi práctica de manera intensa, y ahora balanceo mi rol en Pernod Ricard con proyectos independientes.',
-        bio4: 'Quiero colaborar con personas y marcas que me exijan lo mejor. Proyectos que desafíen, donde pueda proponer ideas y estar atrás de cada detalle.',
-        belief: {
-          w1: 'Un', w2: 'buen', w3: 'diseño', w4: 'está', w5: 'enraizado', w6: 'en', w7: 'un', w8: 'balance', w9: 'entre',
-          w10: 'Estrategia', w11: '&', w12: 'Coherencia.', w13: 'En', w14: 'eso', w15: '', w16: 'creo.'
-        },
+        bio2: 'Hace más de 8 años que construyo identidades visuales — campañas 360, key visuals, spots, marcas desde cero. Aprendí que el diseño gráfico es narrativa y coherencia, no solo algo que se ve bien.',
+        bio3: 'Empecé freelance, pasé por agencias que me formaron mucho, y hoy combino mi trabajo en Pernod Ricard con proyectos propios.',
+        bio4: 'Quiero colaborar con personas y marcas que me desafíen. Proyectos donde pueda proponer, decidir y estar detrás de cada detalle.',
+        belief: '<span class="belief-word">El</span> <span class="belief-word">diseño</span> <span class="belief-word">que</span> <span class="belief-word">solo</span> <span class="belief-word">se</span> <span class="belief-word">ve</span> <span class="belief-word">bien</span> <span class="belief-word">no</span> <span class="belief-word">le</span> <span class="belief-word belief-emph">habla</span> <span class="belief-word">a</span> <span class="belief-word belief-emph">nadie.</span>',
         skills: {
           branding: 'Branding', ai: 'Contenido IA', social: 'Social Media', ooh: 'OOH',
           packaging: 'Packaging', campaigns: 'Campañas 360', identity: 'Identidad Visual & Estrategia',
@@ -279,7 +273,7 @@
         },
         beyond: 'Más allá del diseño: me apasionan los animales, la música —cantar y tocar guitarra— y el acto constante de crear. La creatividad no para cuando cierro la compu.',
         cta: {
-          l1: 'Si pensás', l2: 'que podemos', l3: 'hacer cosas', l4: 'copadas juntxs,', l5: 'sabés', l6: 'dónde encontrarme'
+          l1: 'Si pensás', l2: 'que podemos', l3: 'hacer cosas', l4: 'copadas juntos,', l5: 'sabés&nbsp;dónde', l6: 'encontrarme'
         },
         ctaCv: 'Curriculum Vitae →'
       },
