@@ -2344,3 +2344,15 @@ html.is-preloading #lang-overlay { visibility: visible; }
 @media (max-width: 900px) {
     .footer { grid-template-columns: 1fr; }
 }
+
+/* ========================================================================
+   Glenlivet project: long title forced onto a single line
+   ======================================================================== */
+.project-page--glenlivet .proj-title {
+    font-size: clamp(22px, 3.1vw, 48px);
+    white-space: nowrap;
+}
+.project-page--glenlivet .proj-title .title-text { white-space: nowrap; }
+@media (max-width: 640px) {
+    .project-page--glenlivet .proj-title { font-size: clamp(16px, 5vw, 22px); }
+}
