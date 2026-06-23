@@ -211,13 +211,13 @@
         trueno: {
           title: 'Trueno x EA Sports FIFA 22 — Dolores Riccardo',
           campaign: 'Vanity Kit "Tierra Zanta"',
-          ctx1: 'For FIFA 22, a vanity kit was commissioned based on "Tierra Zanta", a track from Trueno\'s album "Bien o Mal" (2022).',
-          ctx2: 'The challenge was to translate a deeply identity-based concept —roots, resistance, Latin American pride— into a functional visual kit for a video game. It was not simply a uniform: it was materializing a declaration of identity within the technical limitations of a game.',
-          pull: "I'm from where I was born, where I'll die. My tierra zanta.",
-          ex1: 'I worked directly with Trueno in strategy meetings to understand the depth of "Tierra Zanta". From his visual elements —signature, personal symbols, visual references from his territory— I designed the full kit: jersey, pants, accessories.',
-          ex2: 'The creative decision was the palette: gold and black. These colors live in the visual DNA of Trueno and the album "Bien o Mal". Each element responded directly to what Trueno explained about his identity, his territory and his story.',
-          res1: 'The kit launched in FIFA 22 and the response was immediate: fans asking for it to be sold as an official jersey, massive social comments, virality.',
-          res2: "Players weren't just wearing the uniform; they were carrying Trueno's full identity. The design worked because it was authentic."
+          ctx1: 'For FIFA 22, I was commissioned to design a vanity kit based on "Tierra Zanta" — a track from Trueno\'s 2022 album "Bien o Mal."',
+          ctx2: "The challenge was translating a deeply personal concept — roots, resistance, Latin American pride — into a functional visual kit for a video game. This wasn't just a uniform. It was a statement of identity built inside the technical constraints of a game engine.",
+          pull: 'Soy de donde nací, donde voy a morir. Mi tierra zanta.',
+          ex1: 'I worked directly with Trueno through a series of sessions to understand what "Tierra Zanta" meant beyond the music — his visual signature, personal symbols, references from his territory. From that, I designed the full kit: shirt, shorts, accessories.',
+          ex2: 'The central creative decision was the palette: gold and black. These colors live in Trueno\'s visual DNA and throughout "Bien o Mal." Every element answered directly to what he told me about his identity, his place, and his story.',
+          res1: 'The kit dropped with FIFA 22 and the response was immediate — fans asking for it as an official shirt, comments flooding in, the content spreading on its own.',
+          res2: "Players weren't just wearing a uniform; they were carrying Trueno's full identity into the game. It worked because it was real."
         }
       }
     },
@@ -428,10 +428,10 @@
           ctx1: 'Para FIFA 22, se encarga el diseño de un vanity kit basado en "Tierra Zanta", canción del álbum "Bien o Mal" de Trueno (2022).',
           ctx2: 'El desafío era traducir un concepto profundamente identitario —raíces, resistencia, orgullo latinoamericano— en un kit visual funcional para un videojuego. No era simplemente un uniforme: era materializar una declaración de identidad dentro de las limitaciones técnicas de un videojuego.',
           pull: 'Soy de donde nací, donde voy a morir. Mi tierra zanta.',
-          ex1: 'Trabajé directamente con Trueno en reuniones estratégicas para entender la profundidad de "Tierra Zanta". A partir de sus elementos visuales —firma, símbolos personales, referencias visuales de su territorio— diseñé el kit completo: camiseta, pantalones, accesorios.',
+          ex1: 'Trabajé directamente con Trueno en sesiones de trabajo para entender la profundidad de "Tierra Zanta". A partir de sus elementos visuales —firma, símbolos personales, referencias de su territorio— diseñé el kit completo: camiseta, pantalones, accesorios.',
           ex2: 'La decisión creativa fue la paleta: dorado y negro. Estos colores viven en el ADN visual de Trueno y del álbum "Bien o Mal". Cada elemento respondía directamente a lo que Trueno explicaba sobre su identidad, su territorio y su historia.',
-          res1: 'El kit lanzó en FIFA 22 y la respuesta fue inmediata: fans pidiendo que se vendiera como camiseta oficial, comentarios masivos en redes, viralización.',
-          res2: 'Los jugadores no solo usaban el uniforme; llevaban la identidad completa de Trueno. El diseño funcionó porque era auténtico.'
+          res1: 'El kit lanzó en FIFA 22 y la respuesta fue inmediata: fans pidiendo que se vendiera como camiseta oficial, comentarios masivos en redes, el contenido circuló solo.',
+          res2: 'Los jugadores no solo usaban el uniforme — llevaban la identidad completa de Trueno. El diseño funcionó porque era auténtico.'
         }
       }
     }
