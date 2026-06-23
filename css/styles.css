@@ -469,7 +469,7 @@ button, input, select, textarea {
 .work-card {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 4px;
     text-decoration: none;
     color: var(--black);
 }
@@ -477,26 +477,34 @@ button, input, select, textarea {
 .work-card-frame {
     position: relative;
     width: 100%;
-    background: var(--gray-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: transparent;
+    display: block;
     overflow: hidden;
 }
 .work-card-frame > img,
 .work-card-frame > video {
-    position: absolute;
-    inset: 0;
+    position: relative;
+    inset: auto;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: contain;
     display: block;
 }
 
-.work-card-frame--square { aspect-ratio: 1 / 1; }
-.work-card-frame--tall   { aspect-ratio: 4 / 5; }
-.work-card-frame--xtall  { aspect-ratio: 4 / 6; }
-.work-card-frame--wide   { aspect-ratio: 16 / 9; }
+/* Aspect-ratio modifiers neutralized: the image dictates the height so there are no gray letterbox borders */
+.work-card-frame--square,
+.work-card-frame--tall,
+.work-card-frame--xtall,
+.work-card-frame--wide { aspect-ratio: auto; }
+
+/* Placeholder card (no image, only a label) keeps its old square footprint */
+.work-card-frame:has(> .frame-label) {
+    aspect-ratio: 1 / 1;
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /* Card scroll-driven progressive animation (mirrors .work on home).
    JS sets --p (0..1) on each .work-card based on viewport position. */
@@ -2364,5 +2372,5 @@ html.is-preloading #lang-overlay { visibility: visible; }
 .selected-works .work-frame,
 .work-grid-view .work-card-frame,
 .project-page .proj-frame {
-    background: #FFFFFF;
+    background: transparent;
 }

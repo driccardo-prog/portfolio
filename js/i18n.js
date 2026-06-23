@@ -68,7 +68,7 @@
       },
       contact: {
         title: 'Contact — Dolores Riccardo',
-        flipFront1: 'BsAs',
+        flipFront1: 'Buenos Aires',
         flipFront2: '& Worldwide.',
         flipBack1: "Let's talk about",
         flipBack2: 'your next project',
@@ -279,8 +279,8 @@
       },
       contact: {
         title: 'Contacto — Dolores Riccardo',
-        flipFront1: 'BsAs',
-        flipFront2: '& Mundo.',
+        flipFront1: 'Buenos Aires',
+        flipFront2: '& Worldwide.',
         flipBack1: 'Hablemos de',
         flipBack2: 'tu próximo proyecto',
         instagram: 'Instagram',
