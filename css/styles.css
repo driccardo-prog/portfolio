@@ -266,7 +266,7 @@ button, input, select, textarea {
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
@@ -489,7 +489,7 @@ button, input, select, textarea {
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
@@ -985,7 +985,7 @@ button, input, select, textarea {
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 .proj-frame > img[data-fit="contain"],
@@ -2355,4 +2355,14 @@ html.is-preloading #lang-overlay { visibility: visible; }
 .project-page--glenlivet .proj-title .title-text { white-space: nowrap; }
 @media (max-width: 640px) {
     .project-page--glenlivet .proj-title { font-size: clamp(16px, 5vw, 22px); }
+}
+
+/* ========================================================================
+   Work + project frames: switch to contain to avoid cropping text inside
+   the images. Use a neutral white canvas so the letterboxing reads clean.
+   ======================================================================== */
+.selected-works .work-frame,
+.work-grid-view .work-card-frame,
+.project-page .proj-frame {
+    background: #FFFFFF;
 }
