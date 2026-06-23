@@ -461,7 +461,7 @@ button, input, select, textarea {
     padding: 0 40px 80px;
 }
 
-.work-row { display: grid; gap: 16px; }
+.work-row { display: grid; gap: 16px; align-items: start; }
 .work-row--1 { grid-template-columns: 1fr; --bracket-shift: 50px; }
 .work-row--2 { grid-template-columns: 1fr 1fr; --bracket-shift: 28px; }
 .work-row--3 { grid-template-columns: 1fr 1fr 1fr; --bracket-shift: 10px; }
@@ -472,6 +472,7 @@ button, input, select, textarea {
     gap: 4px;
     text-decoration: none;
     color: var(--black);
+    align-self: start;
 }
 
 .work-card-frame {
