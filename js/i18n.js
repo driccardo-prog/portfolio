@@ -25,8 +25,8 @@
       home: {
         title: 'Dolores Riccardo — Art Director & Creative',
         hero: {
-          intro: 'Brand identities and art-directed campaigns — branding systems, narrative direction, and AI as a creative tool.',
-          title: "Hi :) I'm&nbsp;Loli&nbsp;—<br>I think, design and&nbsp;art-direct<br>brands that actually have<br>something to&nbsp;say.",
+          intro: 'I develop visual identities and art-directed campaigns for brands. Specialized in branding systems, narrative direction, and strategic use of AI.',
+          title: "Hello :) I'm&nbsp;Loli,<br>Buenos Aires-based Art Director &amp; Creative, developing strategic&nbsp;visual<br>identities and campaigns for brands&nbsp;seeking<br>to break through&nbsp;noise.",
           colLabel: 'Art Direction<br>&amp; Creativity',
           colText: 'Senior graphic designer &amp; creative, 8+ years in the field. Strategy leads — design follows.'
         },
@@ -239,10 +239,10 @@
       home: {
         title: 'Dolores Riccardo — Directora de Arte & Creativa',
         hero: {
-          intro: 'Me muevo entre el branding y la dirección de arte — identidades, campañas y sistemas con narrativa. La IA es parte de mi proceso, no un extra.',
-          title: 'Hola :) Soy&nbsp;Dolores,<br>aunque todos me&nbsp;dicen&nbsp;Loli.<br>Pienso, diseño y dirijo&nbsp;marcas<br>que tienen algo para&nbsp;decir.',
-          colLabel: 'Dirección de Arte<br>&amp; Creatividad',
-          colText: 'Diseñadora gráfica senior y creativa, con más de 8 años de experiencia. El buen diseño empieza antes del diseño.'
+          intro: 'Con más de ocho años de experiencia, trabajo de forma freelance y en colaboración con agencias creativas, transformando ideas en identidades visuales que comunican y dejan huella.',
+          title: 'Soy Dolores, aunque<br>todo&nbsp;el&nbsp;mundo&nbsp;me&nbsp;dice&nbsp;Loli&nbsp;:)<br>Tengo 27 años y vivo en Buenos&nbsp;Aires.<br>Soy Diseñadora Gráfica y&nbsp;Lic.<br>en&nbsp;Diseño&nbsp;de&nbsp;Imagen&nbsp;Empresarial.',
+          colLabel: 'Art Direction<br>&amp; Creativity',
+          colText: 'Diseñadora gráfica senior y creativa, con más de 8 años de experiencia.'
         },
         works: {
           selected: 'Trabajos Destacados',
