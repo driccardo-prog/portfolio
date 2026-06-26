@@ -193,18 +193,6 @@
           res1: 'The campaign ran in June 2023 — flagship event at MALBA, digital activations, regional print distribution.',
           res2: "The visual system held across every format without losing DHL's corporate identity or Del Potro's personal story. That was the brief. That's what it delivered."
         },
-        glenlivet: {
-          title: 'The Glenlivet x Carnaval de Barranquilla — Dolores Riccardo',
-          campaign: 'Carnaval de Barranquilla',
-          ctx1: 'The Glenlivet launched at Carnaval de Barranquilla 2026 with a campaign that speaks the language of the festival without losing its identity as a brand.',
-          ctx2: "The challenge: capture the energy, color, and rhythm of one of the world's most intense cultural celebrations — while staying inside tight brand guidelines. The question was how to make a Scottish whisky brand feel at home in Barranquilla. The answer was finding what they share — character, distinction, and the belief that ordinary isn't enough.",
-          pull: 'Made to be as one-of-a-kind as the carnival itself.',
-          ex1: 'I developed the full art direction for the campaign: key visual and all applications. We chose Direction 01 — the most expressive route — built on illustration, color, and visual rhythm that interprets the carnival without tipping into excess.',
-          ex2: 'The core visual elements were stylized birds in vibrant tones, used as a visual code for the festival, paired with the Glenlivet bottle as a quiet but present protagonist. Every application — outdoor, social, print — held visual consistency while adapting to the local context.',
-          ex3: "The real challenge was keeping The Glenlivet's strict brand identity intact while giving the campaign enough personality to hold its own against the visual intensity of carnaval.",
-          res1: 'The campaign launched during Carnaval 2026 across outdoor, social media, and print.',
-          res2: "The brand connected with a local audience without compromising its identity — which was the brief. A Scottish whisky at the most Colombian carnival in the world, and it felt like it belonged."
-        },
         trueno: {
           title: 'Trueno x EA Sports FIFA 22 — Dolores Riccardo',
           campaign: 'Vanity Kit "Tierra Zanta"',
@@ -403,18 +391,6 @@
           ex3: 'La decisión creativa central fue la restricción — dejar que la historia de Del Potro cargara la emoción mientras el diseño se mantenía preciso, moderno y disciplinado.',
           res1: 'La campaña se ejecutó en junio de 2023 con presencia en el MALBA, activaciones digitales y distribución regional de material impreso.',
           res2: 'El sistema visual sostuvo todos los formatos sin perder la identidad corporativa ni la historia detrás de la campaña — que es exactamente lo que el brief pedía.'
-        },
-        glenlivet: {
-          title: 'The Glenlivet x Carnaval de Barranquilla — Dolores Riccardo',
-          campaign: 'Carnaval de Barranquilla',
-          ctx1: 'The Glenlivet lanza en Carnaval de Barranquilla 2026 una campaña que dialoga con el espíritu del festival sin perder su carácter de marca.',
-          ctx2: 'El desafío era crear una identidad visual que capturara la energía, el color y el ritmo del carnaval mientras respetaba los guidelines estrictos de The Glenlivet. La pregunta era cómo hacer que una marca escocesa hablara el idioma de Barranquilla. La respuesta: encontrar lo que comparten — carácter, distinción, la convicción de que lo ordinario no alcanza.',
-          pull: 'Hecho para ser único como el carnaval.',
-          ex1: 'Desarrollé la dirección de arte completa de la campaña: key visual y todas las aplicaciones. Elegimos el Camino 01 —el más expresivo—, basado en ilustraciones, color y ritmo visual que interpretan el carnaval sin caer en el exceso.',
-          ex2: 'Los elementos visuales clave fueron pájaros estilizados en tonos vibrantes, que funcionan como código visual del festival, combinados con la botella de Glenlivet como protagonista discreta pero presente. Cada aplicación — desde vía pública hasta redes sociales — mantiene coherencia visual mientras adapta el mensaje al contexto local.',
-          ex3: 'El mayor desafío fue respetar los guidelines rigurosos de The Glenlivet sin que la marca perdiera personalidad frente a la intensidad visual del carnaval.',
-          res1: 'La campaña lanzó durante Carnaval 2026 en múltiples touchpoints: vía pública, redes sociales, material impreso.',
-          res2: 'La marca dialogó con la audiencia local sin perder su identidad — que era exactamente el desafío. Una marca escocesa en el carnaval más colombiano del mundo, y se sentía natural.'
         },
         trueno: {
           title: 'Trueno x EA Sports FIFA 22 — Dolores Riccardo',
