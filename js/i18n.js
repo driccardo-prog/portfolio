@@ -214,6 +214,16 @@
           ex2: "Visually, the red chili became the absolute protagonist. I generated a system of images where the chili floats, flies, and coexists inside the Volaris cabin. The astronaut — already part of Absolut's visual DNA — integrated naturally into the narrative. I used AI as a creative direction tool: each image was concept plus visual execution under art direction criteria. The result is a campaign that speaks to Absolut without asking permission, that is visually coherent, and that speaks Volaris' language without sounding forced.",
           res1: "Communicating in a sensitive context requires precise language. A flight is not a place for \"fire\" — but it is for \"intensity\".",
           res2: "Absolut approved a strategic expansion of its visual identity without compromising its guidelines. For a brand with that level of rigor, that means the idea worked on two levels: strategic and visual."
+        },
+        ojodetigre: {
+          title: 'Ojo de Tigre Reposado — Dolores Riccardo',
+          campaign: 'Same Character, More Temper',
+          ctx1: "Pernod launches Ojo de Tigre Reposado in Colombia. The challenge wasn't simply introducing a new product — it was launching an aged version without undermining the original.",
+          ctx2: "Ojo de Tigre Joven is the star product. The Reposado couldn't compete against it; it had to accompany it. The question was how to position another experience of the same mezcal without cannibalizing what already works. It's a balance many brands break.",
+          pull: "It's not a new mezcal. It's the same one as always, with more temper.",
+          ex1: "The conceptual decision was the claim: \"Same character, more temper.\" A phrase that protects the Joven while opening a new door. It's not \"better\" or \"an evolution\" — it's simply another way to enjoy the same mezcal. Another moment. Another person. Another sensory palette.",
+          ex2: "I directed the complete visual strategy: from graphic identity to every touchpoint of the Medellín launch. The timing was smart — the city was already predisposed to talk about maturation (Colombia Moda + Feria de las Flores) — but I connected the visual concept to that narrative. Invitations, menus, cocktails, event signage: everything responds to the same logic. Palette, typography, composition. Each piece reinforces that it's the same mezcal, just with more time in barrel. Elegance without subtraction.",
+          res1: "The event was executed in Medellín. The concept worked within the logic of protecting while accompanying: the Reposado enters without asking the Joven to leave."
         }
       }
     },
@@ -424,6 +434,16 @@
           ex2: 'Visualmente, el ají rojo se convirtió en protagonista absoluto. Generé un sistema de imágenes donde el ají flota, vuela, convive en la cabina de Volaris. El astronauta —que ya es parte del ADN visual de Absolut— se integró naturalmente a la narrativa. Usé IA como herramienta de dirección creativa: cada imagen fue concepto + ejecución visual bajo criterio art direction. El resultado es una campaña que conversa con Absolut sin pedirle permiso, que es coherente visualmente, y que habla el idioma de Volaris sin sonar forzada.',
           res1: 'Comunicar en un contexto sensible requiere lenguaje preciso. Un vuelo no es lugar para "fuego" pero sí para "intensidad".',
           res2: 'Absolut aprobó una expansión estratégica de su identidad visual sin comprometer sus guidelines. Para una marca con esa rigidez, eso significa que la idea funcionó en dos planos: estratégico y visual.'
+        },
+        ojodetigre: {
+          title: 'Ojo de Tigre Reposado — Dolores Riccardo',
+          campaign: 'Mismo Carácter, Más Temple',
+          ctx1: 'Pernod lanza Ojo de Tigre Reposado en Colombia. El desafío no era simplemente introducir un nuevo producto: era lanzar una versión envejecida sin demonizar la original.',
+          ctx2: 'Ojo de Tigre Joven es el producto estrella. El Reposado no podía competir contra él; tenía que acompañarlo. La pregunta era cómo posicionar otra experiencia del mismo mezcal sin canibalizar lo que ya funciona. Es un equilibrio que muchas marcas rompen.',
+          pull: 'No es un mezcal nuevo. Es el mismo de siempre, con más temple.',
+          ex1: 'La decisión conceptual fue el claim: "Mismo carácter, más temple". Una frase que protege al Joven mientras abre puerta nueva. No es "mejor" ni "evolución" — es simplemente otra forma de disfrutar el mismo mezcal. Otro momento. Otra persona. Otra paleta sensorial.',
+          ex2: 'Dirigí la estrategia visual completa: desde la identidad gráfica hasta cada touchpoint del lanzamiento en Medellín. El timing fue inteligente —la ciudad estaba predispuesta a hablar de maduración (Colombia Moda + Feria de las Flores)— pero conecté el concepto visual con ese relato. Invitaciones, menús, cocktails, cartelería del evento: todo responde a la misma lógica. La paleta, la tipografía, la composición. Cada pieza refuerza que es el mismo mezcal, solo con más tiempo en barrica. Elegancia sin restar.',
+          res1: 'El evento se ejecutó en Medellín. El concepto funcionó en la lógica de proteger mientras acompañás: el Reposado entra sin pedir que el Joven salga.'
         }
       }
     }

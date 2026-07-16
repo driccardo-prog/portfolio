@@ -359,6 +359,7 @@ button, input, select, textarea {
 .scatter-frame.f9  { top: 56%; left: 38%;     width: 240px; height: 160px; }
 .scatter-frame.f10 { top: 60%; left: 66%;     width: 100px; height: 100px; --rot:  2deg; }
 .scatter-frame.f11 { top: 55%; right: -20px;  width: 130px; height: 160px; --rot:  4deg; }
+.scatter-frame.f12 { top: 26%; left: 52%;      width: 140px; height: 180px; --rot: -3deg; }
 
 .all-work-title-wrapper {
     position: absolute;
