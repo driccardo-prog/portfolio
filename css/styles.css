@@ -81,10 +81,17 @@ button, input, select, textarea {
 .nav-link {
     font-size: 14px;
     font-weight: 500;
-    color: var(--black);
+    color: var(--gray-light);
     text-decoration: none;
     letter-spacing: -0.025em;
+    transition: color 0.15s ease;
 }
+.nav-link:hover,
+.nav-link.is-active,
+.nav-link[aria-current="page"] { color: var(--black); }
+/* The CTA link keeps default black (visual anchor) */
+.nav-link--cta { color: var(--black); }
+.nav-link--cta:hover { color: var(--gray-dark); }
 
 /* ========== HERO ========== */
 .hero {
@@ -1562,6 +1569,15 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
     transition: width 1.4s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--delay, 0s) + 0.15s);
 }
 .cv-tool.is-revealed .cv-bar-fill { width: var(--lv, 0%); }
+.cv-tool-note {
+    display: block;
+    margin-top: 2px;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--gray-dark);
+    letter-spacing: -0.02em;
+}
 
 @media (max-width: 900px) {
     .cv-hero { grid-template-columns: 1fr; gap: 32px; padding: 60px 20px 24px; }

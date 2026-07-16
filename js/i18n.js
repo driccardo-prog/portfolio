@@ -20,7 +20,8 @@
           instagram: 'Instagram'
         },
         nextProject: 'Next Project >',
-        seeWholeDeal: '< See the whole deal >'
+        seeWholeDeal: '< See the whole deal >',
+        getInTouch: "Let's talk about your next project ;)"
       },
       home: {
         title: 'Dolores Riccardo — Art Director & Creative',
@@ -58,7 +59,8 @@
         skills: {
           branding: 'Branding', ai: 'AI Content', social: 'Social Media', ooh: 'OOH',
           packaging: 'Packaging', campaigns: '360 Campaigns', identity: 'Visual Identity & Strategy',
-          creativity: 'Creativity', media: 'Online & Offline Media', artdir: 'Art Direction'
+          creativity: 'Creativity', media: 'Online & Offline Media', artdir: 'Art Direction',
+          events: 'Event Organization', entrepreneur: 'Entrepreneur', mindracing: 'Mind Always Racing'
         },
         beyond: "Outside design: animals, music — I sing and play guitar — and the constant need to make things. Creativity doesn't switch off.",
         cta: {
@@ -135,7 +137,8 @@
         },
         toolNames: {
           ps: 'Photoshop', ai: 'Illustrator', pr: 'Premiere', ae: 'After Effects',
-          id: 'InDesign', fg: 'Figma', sm: 'Social Media', aiTool: 'Artificial Intelligence'
+          id: 'InDesign', fg: 'Figma', sm: 'Social Media', aiTool: 'Artificial Intelligence',
+          aiNote: '(image and video generation)'
         }
       },
       work: {
@@ -207,23 +210,23 @@
         absolut: {
           title: 'Absolut Tabasco x Volaris — Dolores Riccardo',
           campaign: 'Intensity On Board',
-          ctx1: "Absolut launches the mini Tabasco on Volaris domestic flights. The challenge wasn't simply promoting a product — it was communicating heat, fire, intensity inside an ultra-sensitive context like air travel.",
-          ctx2: "The paradox was clear. How do you talk about \"fire\" when you're in the air? Absolut, on top of that, is a brand with consolidated and strict visual guidelines. The question was how to break that structure without losing identity, using Tabasco as the rupture point.",
+          ctx1: "Absolut launched a mini Tabasco format on Volaris' domestic flights. The brief wasn't about promoting a product — it was about talking heat, fire, and intensity inside one of the most sensitive settings there is: a plane.",
+          ctx2: "The paradox was obvious. How do you sell \"fire\" 30,000 feet up? On top of that, Absolut runs on tight, well-established brand guidelines. The real question: how do we bend that structure without breaking the brand — with Tabasco as the wedge?",
           pull: 'Intensity. The word Absolut needed to fly.',
-          ex1: "The strategic decision was to replace \"spicy\" and \"fire\" with \"Intensity\" — a word that works both for the product and for the experience of flying. Everything was then built around different phrases of intensity: \"What about spicy at 30,000 feet?\", \"How far can intensity take you?\", \"Intensity on board\".",
-          ex2: "Visually, the red chili became the absolute protagonist. I generated a system of images where the chili floats, flies, and coexists inside the Volaris cabin. The astronaut — already part of Absolut's visual DNA — integrated naturally into the narrative. I used AI as a creative direction tool: each image was concept plus visual execution under art direction criteria. The result is a campaign that speaks to Absolut without asking permission, that is visually coherent, and that speaks Volaris' language without sounding forced.",
-          res1: "Communicating in a sensitive context requires precise language. A flight is not a place for \"fire\" — but it is for \"intensity\".",
-          res2: "Absolut approved a strategic expansion of its visual identity without compromising its guidelines. For a brand with that level of rigor, that means the idea worked on two levels: strategic and visual."
+          ex1: "The strategic move was swapping \"spicy\" and \"fire\" for \"intensity\" — a word that carries the product and the flight at the same time. Everything else followed: \"How's the heat at 30,000 feet?\", \"How far can intensity take you?\", \"Intensity on board.\"",
+          ex2: "Visually, the red chili took the lead. I built a system where the chili floats, flies, and lives inside the Volaris cabin. The astronaut — already part of Absolut's visual DNA — folded into the story without forcing anything. AI ran as a creative direction tool: every image was concept first, execution second, always art-directed. The result: a campaign that talks to Absolut without asking permission, holds its own visually, and speaks Volaris' language without trying too hard.",
+          res1: "Communicating in a sensitive setting takes precise language. A plane isn't a place for \"fire\" — but it is for \"intensity.\"",
+          res2: "Absolut signed off on a strategic expansion of its visual identity without touching its guidelines. For a brand that rigid, that's the sign an idea worked on both fronts — strategic and visual."
         },
         ojodetigre: {
           title: 'Ojo de Tigre Reposado — Dolores Riccardo',
           campaign: 'Same Character, More Temper',
-          ctx1: "Pernod launches Ojo de Tigre Reposado in Colombia. The challenge wasn't simply introducing a new product — it was launching an aged version without undermining the original.",
-          ctx2: "Ojo de Tigre Joven is the star product. The Reposado couldn't compete against it; it had to accompany it. The question was how to position another experience of the same mezcal without cannibalizing what already works. It's a balance many brands break.",
+          ctx1: "Pernod launched Ojo de Tigre Reposado in Colombia. The brief wasn't about introducing another product — it was about landing an aged version without pulling the rug out from the original.",
+          ctx2: "Ojo de Tigre Joven is the flagship. The Reposado couldn't go head-to-head with it — it had to sit alongside. The real question: how do we position a second experience of the same mezcal without eating into what already works? A balance most brands get wrong.",
           pull: "It's not a new mezcal. It's the same one as always, with more temper.",
-          ex1: "The conceptual decision was the claim: \"Same character, more temper.\" A phrase that protects the Joven while opening a new door. It's not \"better\" or \"an evolution\" — it's simply another way to enjoy the same mezcal. Another moment. Another person. Another sensory palette.",
-          ex2: "I directed the complete visual strategy: from graphic identity to every touchpoint of the Medellín launch. The timing was smart — the city was already predisposed to talk about maturation (Colombia Moda + Feria de las Flores) — but I connected the visual concept to that narrative. Invitations, menus, cocktails, event signage: everything responds to the same logic. Palette, typography, composition. Each piece reinforces that it's the same mezcal, just with more time in barrel. Elegance without subtraction.",
-          res1: "The event was executed in Medellín. The concept worked within the logic of protecting while accompanying: the Reposado enters without asking the Joven to leave."
+          ex1: "The concept came down to the claim: \"Same character, more temper.\" A line that protects the Joven while opening a new door. Not \"better.\" Not \"the evolution.\" Just another way into the same mezcal. Another moment. Another drinker. Another sensory palette.",
+          ex2: "I led the full visual strategy — from graphic identity to every touchpoint of the Medellín launch. The timing worked in our favor: the city was already primed to talk about maturation (Colombia Moda + Feria de las Flores), and I hooked the visual concept into that conversation. Invitations, menus, cocktails, event signage — everything runs on the same logic. Palette, typography, composition. Every piece reinforces that it's the same mezcal, just with more time in barrel. Elegance without giving anything up.",
+          res1: "The launch played out in Medellín. The concept did exactly what it was meant to — protect while accompanying. The Reposado walked in without asking the Joven to leave."
         }
       }
     },
@@ -240,12 +243,13 @@
           instagram: 'Instagram'
         },
         nextProject: 'Próximo Proyecto >',
-        seeWholeDeal: '< Mirá el proyecto completo >'
+        seeWholeDeal: '< Mirá el proyecto completo >',
+        getInTouch: 'Hablemos de tu próximo proyecto ;)'
       },
       home: {
         title: 'Dolores Riccardo — Directora de Arte & Creativa',
         hero: {
-          intro: 'Con más de ocho años de experiencia, trabajo de forma freelance y en colaboración con agencias creativas, transformando ideas en identidades visuales que comunican y dejan huella.',
+          intro: 'Con más de ocho años de experiencia, trabajo de forma freelance y en colaboración con agencias creativas, siempre buscando transformar ideas en identidades visuales que comuniquen, solucionen y dejen huella.',
           title: 'Soy Dolores, aunque<br>todo&nbsp;el&nbsp;mundo&nbsp;me&nbsp;dice&nbsp;Loli&nbsp;:)<br>Tengo 27 años y vivo en Buenos&nbsp;Aires.<br>Soy Diseñadora Gráfica y&nbsp;Lic.<br>en&nbsp;Diseño&nbsp;de&nbsp;Imagen&nbsp;Empresarial.',
           colLabel: 'Art Direction<br>&amp; Creativity',
           colText: 'Diseñadora gráfica senior y creativa, con más de 8 años de experiencia.'
@@ -278,7 +282,8 @@
         skills: {
           branding: 'Branding', ai: 'Contenido IA', social: 'Social Media', ooh: 'OOH',
           packaging: 'Packaging', campaigns: 'Campañas 360', identity: 'Identidad Visual & Estrategia',
-          creativity: 'Creatividad', media: 'Medios Online & Offline', artdir: 'Dirección de Arte'
+          creativity: 'Creatividad', media: 'Medios Online & Offline', artdir: 'Dirección de Arte',
+          events: 'Organización de Eventos', entrepreneur: 'Emprendedora', mindracing: 'La cabeza siempre a mil'
         },
         beyond: 'Más allá del diseño: me apasionan los animales, la música —cantar y tocar guitarra— y el acto constante de crear. La creatividad no para cuando cierro la compu.',
         cta: {
@@ -355,7 +360,8 @@
         },
         toolNames: {
           ps: 'Photoshop', ai: 'Illustrator', pr: 'Premiere', ae: 'After Effects',
-          id: 'InDesign', fg: 'Figma', sm: 'Redes Sociales', aiTool: 'Inteligencia Artificial'
+          id: 'InDesign', fg: 'Figma', sm: 'Redes Sociales', aiTool: 'Inteligencia Artificial',
+          aiNote: '(generación de imagen y video)'
         }
       },
       work: {
