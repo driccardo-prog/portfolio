@@ -218,6 +218,18 @@
           res1: "Communicating in a sensitive setting takes precise language. A plane isn't a place for \"fire\" — but it is for \"intensity.\"",
           res2: "Absolut signed off on a strategic expansion of its visual identity without touching its guidelines. For a brand that rigid, that's the sign an idea worked on both fronts — strategic and visual."
         },
+        glenlivet: {
+          title: 'The Glenlivet x Carnaval de Barranquilla — Dolores Riccardo',
+          campaign: 'Carnaval de Barranquilla',
+          ctx1: 'The Glenlivet launched at Carnaval de Barranquilla 2026 with a campaign that speaks the language of the festival without giving up its identity as a brand.',
+          ctx2: "The challenge: capture the energy, color, and rhythm of one of the world's most intense cultural celebrations — while staying inside tight brand guidelines. The question was how to make a Scottish whisky feel at home in Barranquilla. The answer was finding what they share — character, distinction, and the belief that ordinary isn't enough.",
+          pull: 'Made to be as one-of-a-kind as the carnival itself.',
+          ex1: 'I led the full art direction of the campaign — key visual and every application. We chose Direction 01, the most expressive route, built on illustration, color, and visual rhythm that interprets the carnival without tipping into excess.',
+          ex2: "The core visual elements were stylized birds in vibrant tones, used as a visual code for the festival, paired with the Glenlivet bottle as a quiet but present protagonist. Every application — outdoor, social, print — held its visual consistency while adapting to the local context.",
+          ex3: "The real challenge was keeping The Glenlivet's strict brand identity intact while giving the campaign enough personality to hold its own against the visual intensity of the carnaval.",
+          res1: 'The campaign launched during Carnaval 2026 across outdoor, social media, and print.',
+          res2: "The brand connected with a local audience without giving up its identity — which was the brief. A Scottish whisky at the most Colombian carnival in the world, and it felt like it belonged."
+        },
         ojodetigre: {
           title: 'Ojo de Tigre Reposado — Dolores Riccardo',
           campaign: 'Same Character, More Temper',
@@ -227,6 +239,16 @@
           ex1: "The concept came down to the claim: \"Same character, more temper.\" A line that protects the Joven while opening a new door. Not \"better.\" Not \"the evolution.\" Just another way into the same mezcal. Another moment. Another drinker. Another sensory palette.",
           ex2: "I led the full visual strategy — from graphic identity to every touchpoint of the Medellín launch. The timing worked in our favor: the city was already primed to talk about maturation (Colombia Moda + Feria de las Flores), and I hooked the visual concept into that conversation. Invitations, menus, cocktails, event signage — everything runs on the same logic. Palette, typography, composition. Every piece reinforces that it's the same mezcal, just with more time in barrel. Elegance without giving anything up.",
           res1: "The launch played out in Medellín. The concept did exactly what it was meant to — protect while accompanying. The Reposado walked in without asking the Joven to leave."
+        },
+        ramazzotti: {
+          title: 'Ramazzotti Spritz Brasil — Dolores Riccardo',
+          campaign: 'Ramazzotti Spritz Brazil',
+          ctx1: "Pernod launched Ramazzotti Spritz in Brazil, up against Aperol and Cynar. The brief wasn't just about competing — it was about selling a non-bitter product in a market ruled by bitters.",
+          ctx2: "The real question was how to stand out visually without going defensive. Not by saying \"we're not bitter\" — but by proving Ramazzotti is simple, easy, and made for any moment.",
+          pull: 'The recipe is the concept. Simple, easy, made for any moment.',
+          ex1: "The strategy was to lead with the recipe. Not as a technical checklist — as an experience. Every post ran the same thread: there's a way to make this, there's a moment to try it, it's easy, and it works. Portuguese copy said it straight.",
+          ex2: "I directed the full visual strategy: every image built from scratch with AI, holding a consistent palette, light, and context. Each visual makes a different angle of the same case — Ramazzotti isn't complicated, isn't bitter, is for right now. Headlines closed each frame with precision. This wasn't about making pretty pictures; it was about each image proving a point.",
+          res1: "The campaign goes live in Brazil in two days. Approved by Pernod. The concept did what it needed to — communicate non-bitterness without going defensive, just by showing ease and enjoyment."
         }
       }
     },
@@ -441,6 +463,18 @@
           res1: 'Comunicar en un contexto sensible requiere lenguaje preciso. Un vuelo no es lugar para "fuego" pero sí para "intensidad".',
           res2: 'Absolut aprobó una expansión estratégica de su identidad visual sin comprometer sus guidelines. Para una marca con esa rigidez, eso significa que la idea funcionó en dos planos: estratégico y visual.'
         },
+        glenlivet: {
+          title: 'The Glenlivet x Carnaval de Barranquilla — Dolores Riccardo',
+          campaign: 'Carnaval de Barranquilla',
+          ctx1: 'The Glenlivet lanza en Carnaval de Barranquilla 2026 una campaña que dialoga con el espíritu del festival sin perder su carácter de marca.',
+          ctx2: 'El desafío era crear una identidad visual que capturara la energía, el color y el ritmo del carnaval mientras respetaba los guidelines estrictos de The Glenlivet. La pregunta era cómo hacer que una marca escocesa hablara el idioma de Barranquilla. La respuesta: encontrar lo que comparten — carácter, distinción, la convicción de que lo ordinario no alcanza.',
+          pull: 'Hecho para ser único como el carnaval.',
+          ex1: 'Desarrollé la dirección de arte completa de la campaña: key visual y todas las aplicaciones. Elegimos el Camino 01 —el más expresivo—, basado en ilustraciones, color y ritmo visual que interpretan el carnaval sin caer en el exceso.',
+          ex2: 'Los elementos visuales clave fueron pájaros estilizados en tonos vibrantes, que funcionan como código visual del festival, combinados con la botella de Glenlivet como protagonista discreta pero presente. Cada aplicación — desde vía pública hasta redes sociales — mantiene coherencia visual mientras adapta el mensaje al contexto local.',
+          ex3: 'El mayor desafío fue respetar los guidelines rigurosos de The Glenlivet sin que la marca perdiera personalidad frente a la intensidad visual del carnaval.',
+          res1: 'La campaña lanzó durante Carnaval 2026 en múltiples touchpoints: vía pública, redes sociales, material impreso.',
+          res2: 'La marca dialogó con la audiencia local sin perder su identidad — que era exactamente el desafío. Una marca escocesa en el carnaval más colombiano del mundo, y se sentía natural.'
+        },
         ojodetigre: {
           title: 'Ojo de Tigre Reposado — Dolores Riccardo',
           campaign: 'Mismo Carácter, Más Temple',
@@ -450,6 +484,16 @@
           ex1: 'La decisión conceptual fue el claim: "Mismo carácter, más temple". Una frase que protege al Joven mientras abre puerta nueva. No es "mejor" ni "evolución" — es simplemente otra forma de disfrutar el mismo mezcal. Otro momento. Otra persona. Otra paleta sensorial.',
           ex2: 'Dirigí la estrategia visual completa: desde la identidad gráfica hasta cada touchpoint del lanzamiento en Medellín. El timing fue inteligente —la ciudad estaba predispuesta a hablar de maduración (Colombia Moda + Feria de las Flores)— pero conecté el concepto visual con ese relato. Invitaciones, menús, cocktails, cartelería del evento: todo responde a la misma lógica. La paleta, la tipografía, la composición. Cada pieza refuerza que es el mismo mezcal, solo con más tiempo en barrica. Elegancia sin restar.',
           res1: 'El evento se ejecutó en Medellín. El concepto funcionó en la lógica de proteger mientras acompañás: el Reposado entra sin pedir que el Joven salga.'
+        },
+        ramazzotti: {
+          title: 'Ramazzotti Spritz Brasil — Dolores Riccardo',
+          campaign: 'Ramazzotti Spritz Brasil',
+          ctx1: 'Pernod lanza Ramazzotti Spritz en Brasil contra Aperol y Cynar. El desafío no era simplemente competir: era comunicar un producto sin amargura en un mercado dominado por amargos.',
+          ctx2: 'La pregunta era cómo diferenciarse visualmente sin defensiva, sin decir "no somos amargos" sino demostrando que Ramazzotti es simple, accesible, y para cualquier momento.',
+          pull: 'La receta es el concepto. Simple, accesible, para cualquier momento.',
+          ex1: 'La estrategia fue mostrar la receta. No como lista técnica: como experiencia. Cada post tenía el mismo hilo: hay un modo de hacer esto, hay un momento para probarlo, es fácil, y funciona. Los copys en portugués comunicaban eso directo.',
+          ex2: 'Dirigí la dirección visual completa: generé todas las imágenes desde cero con IA, mantuve coherencia en paleta, luz y contexto. Cada visual cuenta una versión diferente del mismo mensaje: Ramazzotti no es complicado, no es amargo, es para ahora. Los headlines cerraban cada propuesta con precisión. No fue sobre generar imágenes bonitas; fue sobre que cada imagen probara algo.',
+          res1: 'La campaña sale en Brasil en dos días. Está aprobada por Pernod. El concepto funcionó: comunicar NO amargura sin defensiva, solo mostrando facilidad y disfrute.'
         }
       }
     }

@@ -43,7 +43,7 @@
     <header class="header">
         <a href="./index.html" class="logo">Dolores R</a>
         <nav class="nav-center">
-            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>,&nbsp;<a href="./cv.html" class="nav-link nav-link--cv-es" data-i18n="common.nav.cv">CV</a></nav>
+            <a href="./index.html" class="nav-link">Home</a>,&nbsp;<a href="./work.html" class="nav-link is-active">Work</a>,&nbsp;<a href="./about.html" class="nav-link">About</a>,&nbsp;<a href="./cv.html" class="nav-link nav-link--cv-es" data-i18n="common.nav.cv">CV</a></nav>
         <div class="header-right">
             <span class="header-location">Bs As &amp; Worldwide</span>
             <div class="lang-switch">
@@ -76,9 +76,11 @@
             <img src="./images/ojodetigre/hero.jpg" alt="Ojo de Tigre Reposado — bottle & title">
         </div>
 
-        <!-- Stage A: tall frame + Contexto -->
+        <!-- ===== CONCEPTUAL BLOCK: Contexto + claim + pull + Ejecución ===== -->
+
+        <!-- Stage A: Contexto + tall claim -->
         <section class="proj-stage proj-stage--ab">
-            <div class="proj-frame stage-tall" data-parallax="12">
+            <div class="proj-frame stage-tall stage-tall--xl" data-parallax="12">
                 <img src="./images/ojodetigre/claim.jpg" alt="Mismo carácter, más temple — key visual">
             </div>
             <div class="stage-text proj-text">
@@ -88,39 +90,26 @@
             </div>
         </section>
 
-        <section class="proj-pair">
-            <div class="proj-frame pair-a" data-parallax="-10">
-                <img src="./images/ojodetigre/mezcal-oclock.jpg" alt="Mezcal O'Clock — activación">
-            </div>
-            <div class="proj-frame pair-b" data-parallax="14">
-                <img src="./images/ojodetigre/menu.jpg" alt="Menú del evento de lanzamiento">
-            </div>
-        </section>
-
         <!-- Pull-quote -->
         <section class="proj-stage proj-stage--quote">
             <h2 class="proj-pullquote" data-i18n="project.ojodetigre.pull">No es un mezcal nuevo. Es el mismo de siempre, con más temple.</h2>
         </section>
 
-        <!-- Stage B: Ejecución + tall frame -->
-        <section class="proj-stage proj-stage--ba">
-            <div class="stage-text proj-text">
+        <!-- Stage B: Ejecución (text only, no image — keeps focus on the concept) -->
+        <section class="proj-stage proj-stage--results">
+            <div class="proj-text">
                 <span class="proj-text-num">02<span class="proj-text-label"> <span data-i18n="project.executionCreative">Ejecución Creativa</span></span></span>
                 <p data-i18n="project.ojodetigre.ex1">La decisión conceptual fue el claim: "Mismo carácter, más temple". Una frase que protege al Joven mientras abre puerta nueva. No es "mejor" ni "evolución" — es simplemente otra forma de disfrutar el mismo mezcal. Otro momento. Otra persona. Otra paleta sensorial.</p>
                 <p data-i18n="project.ojodetigre.ex2">Dirigí la estrategia visual completa: desde la identidad gráfica hasta cada touchpoint del lanzamiento en Medellín. El timing fue inteligente —la ciudad estaba predispuesta a hablar de maduración (Colombia Moda + Feria de las Flores)— pero conecté el concepto visual con ese relato. Invitaciones, menús, cocktails, cartelería del evento: todo responde a la misma lógica. La paleta, la tipografía, la composición. Cada pieza refuerza que es el mismo mezcal, solo con más tiempo en barrica. Elegancia sin restar.</p>
             </div>
-            <div class="proj-frame stage-tall" data-parallax="-12">
-                <img src="./images/ojodetigre/invitation.jpg" alt="Invitación al evento de lanzamiento">
-            </div>
         </section>
 
-        <section class="proj-pair">
-            <div class="proj-frame pair-a" data-parallax="14">
-                <img src="./images/ojodetigre/thankyou.jpg" alt="Tarjeta de agradecimiento">
-            </div>
-            <div class="proj-frame pair-b" data-parallax="-10">
-                <img src="./images/ojodetigre/muchas-gracias.jpg" alt="Muchas gracias — cierre de campaña">
-            </div>
+        <!-- ===== GRAPHIC PIECES BLOCK: playful scatter of the launch collateral ===== -->
+        <section class="proj-pieces-scatter" aria-label="Piezas gráficas">
+            <div class="piece piece--mezcaloclock"><img src="./images/ojodetigre/mezcal-oclock.jpg" alt="Mezcal O'Clock — activación"></div>
+            <div class="piece piece--menu"><img src="./images/ojodetigre/menu.jpg" alt="Menú del evento de lanzamiento"></div>
+            <div class="piece piece--invitation"><img src="./images/ojodetigre/invitation.jpg" alt="Invitación al evento de lanzamiento"></div>
+            <div class="piece piece--thankyou"><img src="./images/ojodetigre/thankyou.jpg" alt="Tarjeta de agradecimiento"></div>
         </section>
 
         <!-- Results -->
@@ -133,7 +122,7 @@
 
         <!-- Next project -->
         <footer class="proj-footer">
-            <a href="./project-bplay.html" class="proj-next">Next Project &gt;</a>
+            <a href="./project-ramazzotti.html" class="proj-next">Next Project &gt;</a>
         </footer>
     </article>
 

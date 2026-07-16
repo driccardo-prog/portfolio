@@ -367,6 +367,8 @@ button, input, select, textarea {
 .scatter-frame.f10 { top: 60%; left: 66%;     width: 100px; height: 100px; --rot:  2deg; }
 .scatter-frame.f11 { top: 55%; right: -20px;  width: 130px; height: 160px; --rot:  4deg; }
 .scatter-frame.f12 { top: 26%; left: 52%;      width: 140px; height: 180px; --rot: -3deg; }
+.scatter-frame.f13 { top: 8%;  left: 68%;      width: 150px; height: 170px; --rot:  3deg; }
+.scatter-frame.f14 { top: 42%; left: 46%;      width: 120px; height: 160px; --rot: -4deg; }
 
 .all-work-title-wrapper {
     position: absolute;
@@ -2379,4 +2381,61 @@ html.is-preloading #lang-overlay { visibility: visible; }
 .work-grid-view .work-card-frame,
 .project-page .proj-frame {
     background: transparent;
+}
+
+/* Glenlivet: long project title on a single line */
+.project-page--glenlivet .proj-title {
+    font-size: clamp(22px, 3.1vw, 48px);
+    white-space: nowrap;
+}
+.project-page--glenlivet .proj-title .title-text { white-space: nowrap; }
+@media (max-width: 640px) {
+    .project-page--glenlivet .proj-title { font-size: clamp(16px, 5vw, 22px); }
+}
+
+/* Generous breathing room between hero image and project title on every project page */
+.project-page .proj-head { margin-top: 40px; margin-bottom: 40px; }
+.project-page .proj-hero { margin-bottom: 60px; }
+.project-page .proj-stage { margin-bottom: 40px; }
+@media (max-width: 900px) {
+    .project-page .proj-hero { margin-bottom: 40px; }
+}
+
+/* ========================================================================
+   Ojo de Tigre: playful scatter of graphic pieces + enlarged claim frame
+   ======================================================================== */
+.stage-tall--xl { aspect-ratio: 4 / 5; min-height: 640px; }
+@media (max-width: 900px) {
+    .stage-tall--xl { min-height: 0; aspect-ratio: 4 / 5; }
+}
+
+.proj-pieces-scatter {
+    position: relative;
+    padding: 80px 40px 120px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+.proj-pieces-scatter .piece {
+    overflow: hidden;
+    transition: transform 0.4s ease;
+}
+.proj-pieces-scatter .piece:hover { transform: translateY(-6px) rotate(0) !important; }
+.proj-pieces-scatter .piece img { width: 100%; height: auto; display: block; }
+
+.piece--mezcaloclock { grid-column: 1 / span 5; margin-top: 0;    transform: rotate(-2.5deg); }
+.piece--menu         { grid-column: 7 / span 4; margin-top: 80px; transform: rotate(1.8deg); }
+.piece--invitation   { grid-column: 3 / span 5; margin-top: 40px; transform: rotate(-1.2deg); }
+.piece--thankyou     { grid-column: 8 / span 5; margin-top: -40px; transform: rotate(2.8deg); }
+
+@media (max-width: 900px) {
+    .proj-pieces-scatter { padding: 40px 20px 80px; gap: 32px; grid-template-columns: 1fr; }
+    .piece--mezcaloclock,
+    .piece--menu,
+    .piece--invitation,
+    .piece--thankyou {
+        grid-column: 1;
+        margin-top: 0;
+    }
 }
