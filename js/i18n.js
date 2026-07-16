@@ -203,6 +203,17 @@
           ex2: 'The central creative decision was the palette: gold and black. These colors live in Trueno\'s visual DNA and throughout "Bien o Mal." Every element answered directly to what he told me about his identity, his place, and his story.',
           res1: 'The kit dropped with FIFA 22 and the response was immediate — fans asking for it as an official shirt, comments flooding in, the content spreading on its own.',
           res2: "Players weren't just wearing a uniform; they were carrying Trueno's full identity into the game. It worked because it was real."
+        },
+        absolut: {
+          title: 'Absolut Tabasco x Volaris — Dolores Riccardo',
+          campaign: 'Intensity On Board',
+          ctx1: "Absolut launches the mini Tabasco on Volaris domestic flights. The challenge wasn't simply promoting a product — it was communicating heat, fire, intensity inside an ultra-sensitive context like air travel.",
+          ctx2: "The paradox was clear. How do you talk about \"fire\" when you're in the air? Absolut, on top of that, is a brand with consolidated and strict visual guidelines. The question was how to break that structure without losing identity, using Tabasco as the rupture point.",
+          pull: 'Intensity. The word Absolut needed to fly.',
+          ex1: "The strategic decision was to replace \"spicy\" and \"fire\" with \"Intensity\" — a word that works both for the product and for the experience of flying. Everything was then built around different phrases of intensity: \"What about spicy at 30,000 feet?\", \"How far can intensity take you?\", \"Intensity on board\".",
+          ex2: "Visually, the red chili became the absolute protagonist. I generated a system of images where the chili floats, flies, and coexists inside the Volaris cabin. The astronaut — already part of Absolut's visual DNA — integrated naturally into the narrative. I used AI as a creative direction tool: each image was concept plus visual execution under art direction criteria. The result is a campaign that speaks to Absolut without asking permission, that is visually coherent, and that speaks Volaris' language without sounding forced.",
+          res1: "Communicating in a sensitive context requires precise language. A flight is not a place for \"fire\" — but it is for \"intensity\".",
+          res2: "Absolut approved a strategic expansion of its visual identity without compromising its guidelines. For a brand with that level of rigor, that means the idea worked on two levels: strategic and visual."
         }
       }
     },
@@ -402,6 +413,17 @@
           ex2: 'La decisión creativa fue la paleta: dorado y negro. Estos colores viven en el ADN visual de Trueno y del álbum "Bien o Mal". Cada elemento respondía directamente a lo que Trueno explicaba sobre su identidad, su territorio y su historia.',
           res1: 'El kit lanzó en FIFA 22 y la respuesta fue inmediata: fans pidiendo que se vendiera como camiseta oficial, comentarios masivos en redes, el contenido circuló solo.',
           res2: 'Los jugadores no solo usaban el uniforme — llevaban la identidad completa de Trueno. El diseño funcionó porque era auténtico.'
+        },
+        absolut: {
+          title: 'Absolut Tabasco x Volaris — Dolores Riccardo',
+          campaign: 'Intensidad a Bordo',
+          ctx1: 'Absolut lanza la mini Tabasco en vuelos nacionales de Volaris. El desafío no era simplemente promocionar un producto: era comunicar picante, fuego, intensidad en un contexto ultra sensible como un vuelo.',
+          ctx2: 'La paradoja estaba clara. ¿Cómo hablás de "fuego" cuando estás en el aire? Absolut, además, es marca con guidelines visuales consolidados y restrictivos. La pregunta era cómo romper esa estructura sin perder identidad, usando Tabasco como punto de quiebre.',
+          pull: 'Intensidad. La palabra que Absolut necesitaba para volar.',
+          ex1: 'La decisión estratégica fue reemplazar "picante" y "fuego" por "Intensidad". Una palabra que funciona tanto para el producto como para la experiencia de volar. Después, todo se construyó alrededor de distintas frases de intensidad: "¿Qué tal el picante a 30.000 pies?", "¿Hasta dónde te puede llevar la intensidad?", "Intensidad a bordo".',
+          ex2: 'Visualmente, el ají rojo se convirtió en protagonista absoluto. Generé un sistema de imágenes donde el ají flota, vuela, convive en la cabina de Volaris. El astronauta —que ya es parte del ADN visual de Absolut— se integró naturalmente a la narrativa. Usé IA como herramienta de dirección creativa: cada imagen fue concepto + ejecución visual bajo criterio art direction. El resultado es una campaña que conversa con Absolut sin pedirle permiso, que es coherente visualmente, y que habla el idioma de Volaris sin sonar forzada.',
+          res1: 'Comunicar en un contexto sensible requiere lenguaje preciso. Un vuelo no es lugar para "fuego" pero sí para "intensidad".',
+          res2: 'Absolut aprobó una expansión estratégica de su identidad visual sin comprometer sus guidelines. Para una marca con esa rigidez, eso significa que la idea funcionó en dos planos: estratégico y visual.'
         }
       }
     }
