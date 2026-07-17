@@ -2503,7 +2503,7 @@ html.is-preloading #lang-overlay { visibility: visible; }
 /* ========================================================================
    Genstone project: brand green, product carousel, big site CTA
    ======================================================================== */
-.project-page--genstone { --genstone-green: #7DE1A2; }
+.project-page--genstone { --genstone-green: #68D38E; }
 
 /* Product line-up: static 3×2 grid of the family, no arrows */
 .genstone-lineup {
@@ -2544,20 +2544,22 @@ html.is-preloading #lang-overlay { visibility: visible; }
     display: block;
 }
 
-/* Product zoom pair — sits right after the line-up */
+/* Product zoom — the two shots were composed to sit together as one wide diptych */
 .genstone-zooms {
     padding: 20px 40px 60px;
     max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    gap: 0;
+    background: #E9EAE9;
+    border-radius: 8px;
+    overflow: hidden;
 }
 .genstone-zoom-item {
-    aspect-ratio: 4 / 3;
-    background: #F1F2F1;
+    aspect-ratio: 4 / 5;
+    background: transparent;
     overflow: hidden;
-    border-radius: 8px;
 }
 .genstone-zoom-item img {
     width: 100%;
@@ -2565,16 +2567,22 @@ html.is-preloading #lang-overlay { visibility: visible; }
     object-fit: cover;
     display: block;
 }
+/* Nudge the two halves toward each other so the product joins across the gutter */
+.genstone-zoom-item:first-child img { object-position: right center; }
+.genstone-zoom-item:last-child  img { object-position: left center; }
 
 @media (max-width: 900px) {
     .genstone-lineup { padding: 24px 20px 10px; }
     .genstone-lineup-grid { grid-template-columns: 1fr 1fr; padding: 16px; gap: 12px; }
     .genstone-zooms { grid-template-columns: 1fr; padding: 10px 20px 40px; }
+    .genstone-zoom-item { aspect-ratio: 4 / 3; }
+    .genstone-zoom-item:first-child img,
+    .genstone-zoom-item:last-child img { object-position: center; }
 }
 
-/* Site CTA — 80% smaller with the new brand green */
+/* Site CTA — compact pill with the brand green */
 .genstone-site-cta {
-    padding: 48px 40px 96px;
+    padding: 40px 40px 80px;
     display: flex;
     justify-content: center;
 }
@@ -2582,34 +2590,35 @@ html.is-preloading #lang-overlay { visibility: visible; }
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
-    padding: 22px 44px;
-    background: var(--genstone-green, #7DE1A2);
+    gap: 2px;
+    padding: 10px 22px;
+    background: var(--genstone-green, #68D38E);
     color: var(--black);
     text-decoration: none;
     border-radius: 999px;
     font-weight: 700;
     letter-spacing: -0.02em;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-    box-shadow: 0 10px 24px rgba(48, 168, 74, 0.22);
+    box-shadow: 0 6px 14px rgba(48, 168, 74, 0.22);
 }
 .genstone-site-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 32px rgba(48, 168, 74, 0.30);
-    background: #96EAB2;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(48, 168, 74, 0.30);
+    background: #7ADD9E;
 }
 .genstone-site-btn-label {
-    font-size: 12px;
+    font-size: 9px;
     text-transform: uppercase;
-    letter-spacing: 2.2px;
+    letter-spacing: 1.6px;
     color: var(--black);
 }
 .genstone-site-btn-url {
-    font-size: clamp(22px, 3.2vw, 34px);
+    font-size: 15px;
     color: var(--black);
     line-height: 1;
 }
 @media (max-width: 700px) {
-    .genstone-site-cta { padding: 32px 20px 64px; }
-    .genstone-site-btn { padding: 18px 26px; }
+    .genstone-site-cta { padding: 28px 20px 56px; }
+    .genstone-site-btn { padding: 8px 16px; }
+    .genstone-site-btn-url { font-size: 13px; }
 }

@@ -21,7 +21,7 @@
         },
         nextProject: 'Next Project >',
         seeWholeDeal: '< See the whole deal >',
-        getInTouch: "let's get in touch :)!"
+        getInTouch: "Let's get in touch ;)"
       },
       home: {
         title: 'Dolores Riccardo — Art Director & Creative',
