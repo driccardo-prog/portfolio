@@ -87,39 +87,14 @@
             </div>
         </section>
 
-        <!-- Product carousel — replaces the placeholder from the earlier version -->
-        <section class="genstone-carousel" aria-label="Nuestros productos">
-            <div class="genstone-carousel-header">
-                <span class="genstone-carousel-eyebrow">&lt; <span data-i18n="project.genstone.productsEyebrow">Nuestros Productos</span> &gt;</span>
-            </div>
-            <div class="genstone-carousel-track" data-carousel>
-                <button type="button" class="genstone-carousel-arrow genstone-carousel-arrow--prev" data-carousel-prev aria-label="Previous">&lsaquo;</button>
-                <div class="genstone-carousel-viewport">
-                    <ul class="genstone-carousel-slides" data-carousel-slides>
-                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-01.jpg" alt="Genstone GS12"></li>
-                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-02.jpg" alt="Genstone product"></li>
-                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-03.jpg" alt="Genstone product"></li>
-                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-04.jpg" alt="Genstone product"></li>
-                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-05.jpg" alt="Genstone product"></li>
-                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-06.jpg" alt="Genstone product"></li>
-                    </ul>
-                </div>
-                <button type="button" class="genstone-carousel-arrow genstone-carousel-arrow--next" data-carousel-next aria-label="Next">&rsaquo;</button>
-            </div>
-            <div class="genstone-carousel-dots" data-carousel-dots></div>
-        </section>
-
         <!-- Pull-quote -->
         <section class="proj-stage proj-stage--quote">
             <h2 class="proj-pullquote" data-i18n="project.genstone.pull">Lo que necesitás, sigue en marcha.</h2>
         </section>
 
-        <!-- 02 Ejecución — text + product zoom detail -->
-        <section class="proj-stage proj-stage--ab">
-            <div class="proj-frame stage-tall" data-parallax="12">
-                <img src="./images/genstone/zoom-01.jpg" alt="Genstone — product zoom detail">
-            </div>
-            <div class="stage-text proj-text">
+        <!-- 02 Ejecución Creativa — text -->
+        <section class="proj-stage proj-stage--results">
+            <div class="proj-text">
                 <span class="proj-text-num">02<span class="proj-text-label"> <span data-i18n="project.executionCreative">Ejecución Creativa</span></span></span>
                 <p data-i18n="project.genstone.ex1">Desarrollé la estrategia integral de marca: naming, identidad visual, concepto estratégico, sistema de branding, desarrollo web, fichas técnicas, material colateral y gestión de redes sociales.</p>
                 <p data-i18n="project.genstone.ex2">El concepto creativo central comunica continuidad: Genstone no promete un generador, promete que tu vida siga sin cortes. Que tu rutina, tu ritmo, tu comodidad no se detengan. La propuesta es simple pero potente: lo que necesitás, sigue en marcha. Esto diferencia a Genstone de la competencia no por especificaciones técnicas sino por qué resuelve: mantiene activa tu vida, protege tu tiempo. Solidez, eficiencia y continuidad como ejes del mensaje.</p>
@@ -127,14 +102,25 @@
             </div>
         </section>
 
-        <!-- Product zoom pair -->
-        <section class="proj-pair">
-            <div class="proj-frame pair-a" data-parallax="-10">
-                <img src="./images/genstone/zoom-02.jpg" alt="Genstone — product zoom detail">
+        <!-- Product line-up — the 6 units of the Genstone family, no arrows, just a clean grid -->
+        <section class="genstone-lineup" aria-label="Product line-up">
+            <div class="genstone-lineup-header">
+                <span class="genstone-lineup-eyebrow">&lt; <span data-i18n="project.genstone.productsEyebrow">Nuestros Productos</span> &gt;</span>
             </div>
-            <div class="proj-frame pair-b" data-parallax="14">
-                <img src="./images/genstone/lifestyle-02.jpg" alt="Genstone — lifestyle">
+            <div class="genstone-lineup-grid">
+                <div class="genstone-lineup-item"><img src="./images/genstone/product-01.jpg" alt="Genstone GS12"></div>
+                <div class="genstone-lineup-item"><img src="./images/genstone/product-02.jpg" alt="Genstone product"></div>
+                <div class="genstone-lineup-item"><img src="./images/genstone/product-03.jpg" alt="Genstone product"></div>
+                <div class="genstone-lineup-item"><img src="./images/genstone/product-04.jpg" alt="Genstone product"></div>
+                <div class="genstone-lineup-item"><img src="./images/genstone/product-05.jpg" alt="Genstone product"></div>
+                <div class="genstone-lineup-item"><img src="./images/genstone/product-06.jpg" alt="Genstone product"></div>
             </div>
+        </section>
+
+        <!-- Product craft — the two zoom-ins side by side after the line-up so the detail sits next to the family -->
+        <section class="genstone-zooms">
+            <div class="genstone-zoom-item"><img src="./images/genstone/zoom-01.jpg" alt="Genstone — product zoom detail"></div>
+            <div class="genstone-zoom-item"><img src="./images/genstone/zoom-02.jpg" alt="Genstone — product zoom detail"></div>
         </section>
 
         <!-- Social media playful scatter -->
@@ -210,6 +196,5 @@
 
     <script src="./js/project.js" defer></script>
     <script src="./js/footer.js" defer></script>
-    <script src="./js/genstone-carousel.js" defer></script>
 </body>
 </html>
