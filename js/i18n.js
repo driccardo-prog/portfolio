@@ -21,7 +21,7 @@
         },
         nextProject: 'Next Project >',
         seeWholeDeal: '< See the whole deal >',
-        getInTouch: "Let's talk about your next project ;)"
+        getInTouch: "let's get in touch :)!"
       },
       home: {
         title: 'Dolores Riccardo — Art Director & Creative',
@@ -62,7 +62,7 @@
           creativity: 'Creativity', media: 'Online & Offline Media', artdir: 'Art Direction',
           events: 'Event Organization', entrepreneur: 'Entrepreneur', mindracing: 'Mind Always Racing'
         },
-        beyond: "Outside design: animals, music — I sing and play guitar — and the constant need to make things. Creativity doesn't switch off.",
+        beyond: "Outside design: animals, music — I sing and play guitar — and the constant need to make things. Creativity doesn't switch off. I'm an entrepreneur at heart, and I love running and organizing events too.",
         cta: {
           l1: 'If you think', l2: 'we could do', l3: 'something great', l4: 'together, you', l5: 'know where', l6: 'to find me'
         },
@@ -77,7 +77,7 @@
         instagram: 'Instagram',
         linkedin: 'Linkedin',
         quote: {
-          typewriter: 'Shall we talk\nabout your idea?',
+          typewriter: "Let's talk about\nyour next project?",
           name: 'Name*',
           namePh: 'Camila Vázquez',
           email: 'Email*',
@@ -161,7 +161,7 @@
         results: 'Results',
         bplay: {
           title: 'Guillermo Francella x Bplay — Dolores Riccardo',
-          campaign: 'Official Sponsor of the Argentine Heart',
+          campaign: 'Sponsor Oficial del Corazón Argento',
           ctx1: "The challenge wasn't visibility — Bplay already had reach. During the 2022 World Cup, the real question was emotional: how do you win fans over when your direct competitor owns the official sponsorship?",
           ctx2: "The answer wasn't about the team. It was about something more Argentine than football itself: the rituals, the cábalas, the superstitions that turn watching a game into a collective religion.",
           ctx3: "Bplay wasn't chasing a sponsorship title. It was chasing something harder to buy.",
@@ -209,7 +209,7 @@
         },
         absolut: {
           title: 'Absolut Tabasco x Volaris — Dolores Riccardo',
-          campaign: 'Intensity On Board',
+          campaign: 'Intensidad a Bordo',
           ctx1: "Absolut launched a mini Tabasco format on Volaris' domestic flights. The brief wasn't about promoting a product — it was about talking heat, fire, and intensity inside one of the most sensitive settings there is: a plane.",
           ctx2: "The paradox was obvious. How do you sell \"fire\" 30,000 feet up? On top of that, Absolut runs on tight, well-established brand guidelines. The real question: how do we bend that structure without breaking the brand — with Tabasco as the wedge?",
           pull: 'Intensity. The word Absolut needed to fly.',
@@ -232,7 +232,7 @@
         },
         ojodetigre: {
           title: 'Ojo de Tigre Reposado — Dolores Riccardo',
-          campaign: 'Same Character, More Temper',
+          campaign: 'Mismo Carácter, Más Temple',
           ctx1: "Pernod launched Ojo de Tigre Reposado in Colombia. The brief wasn't about introducing another product — it was about landing an aged version without pulling the rug out from the original.",
           ctx2: "Ojo de Tigre Joven is the flagship. The Reposado couldn't go head-to-head with it — it had to sit alongside. The real question: how do we position a second experience of the same mezcal without eating into what already works? A balance most brands get wrong.",
           pull: "It's not a new mezcal. It's the same one as always, with more temper.",
@@ -242,7 +242,7 @@
         },
         ramazzotti: {
           title: 'Ramazzotti Spritz Brasil — Dolores Riccardo',
-          campaign: 'Ramazzotti Spritz Brazil',
+          campaign: 'Ramazzotti Spritz Brasil',
           ctx1: "Pernod launched Ramazzotti Spritz in Brazil, up against Aperol and Cynar. The brief wasn't just about competing — it was about selling a non-bitter product in a market ruled by bitters.",
           ctx2: "The real question was how to stand out visually without going defensive. Not by saying \"we're not bitter\" — but by proving Ramazzotti is simple, easy, and made for any moment.",
           pull: 'The recipe is the concept. Simple, easy, made for any moment.',
@@ -307,7 +307,7 @@
           creativity: 'Creatividad', media: 'Medios Online & Offline', artdir: 'Dirección de Arte',
           events: 'Organización de Eventos', entrepreneur: 'Emprendedora', mindracing: 'La cabeza siempre a mil'
         },
-        beyond: 'Más allá del diseño: me apasionan los animales, la música —cantar y tocar guitarra— y el acto constante de crear. La creatividad no para cuando cierro la compu.',
+        beyond: 'Más allá del diseño: me apasionan los animales, la música —cantar y tocar guitarra— y el acto constante de crear. La creatividad no para cuando cierro la compu. Soy emprendedora por naturaleza, y me encanta organizar y hacer eventos.',
         cta: {
           l1: 'Si pensás', l2: 'que podemos', l3: 'hacer cosas', l4: 'copadas juntos,', l5: 'sabés&nbsp;dónde', l6: 'encontrarme'
         },
