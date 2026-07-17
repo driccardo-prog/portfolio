@@ -23,7 +23,7 @@
         })();
     </script>
 </head>
-<body class="project-page">
+<body class="project-page project-page--genstone">
     <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
     <div id="lang-overlay" hidden>
       <div class="lang-picker">
@@ -65,36 +65,48 @@
             <ul class="proj-meta">
                 <li><span class="proj-meta-label" data-i18n="project.client">Client</span><span class="proj-meta-value" data-i18n="project.genstone.clientValue">Generadores Genstone</span></li>
                 <li><span class="proj-meta-label" data-i18n="project.year">Year</span><span class="proj-meta-value">2026</span></li>
-                <li><span class="proj-meta-label" data-i18n="project.deliverables">Deliverables</span><span class="proj-meta-value" data-i18n="project.genstone.deliverables">Branding & Digital Strategy</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.deliverables">Deliverables</span><span class="proj-meta-value" data-i18n="project.genstone.deliverables">Branding &amp; Estrategia Digital</span></li>
                 <li><span class="proj-meta-label">Web</span><a class="proj-meta-value" href="https://www.genstone.com.ar" target="_blank" rel="noopener noreferrer">genstone.com.ar</a></li>
             </ul>
         </header>
 
-        <!-- Hero -->
+        <!-- Hero — open-lid product shot -->
         <div class="proj-hero proj-frame" data-parallax="6">
-            <img src="./images/genstone/hero.jpg" alt="Genstone — brand hero">
+            <img src="./images/genstone/lifestyle-01.jpg" alt="Genstone — product open lid hero">
         </div>
 
-        <!-- Stage A: Contexto + tall product -->
-        <section class="proj-stage proj-stage--ab">
-            <div class="proj-frame stage-tall" data-parallax="12">
-                <img src="./images/genstone/product-01.jpg" alt="Genstone — generador producto">
-            </div>
+        <!-- 01 Contexto — text left + phone splash right -->
+        <section class="proj-stage proj-stage--ba">
             <div class="stage-text proj-text">
                 <span class="proj-text-num">01<span class="proj-text-label"> <span data-i18n="project.context">Contexto</span></span></span>
                 <p data-i18n="project.genstone.ctx1">El mercado de generadores domésticos premium es altamente competitivo y consolidado. Marcas establecidas dominan el posicionamiento con márgenes elevados.</p>
                 <p data-i18n="project.genstone.ctx2">El desafío estratégico fue diferenciarse mediante una propuesta clara: ofrecer generadores con especificaciones técnicas y rendimiento equivalentes a competidores premium, pero con una estructura de precios significativamente más competitiva. Lograr posicionamiento de confiabilidad sin comprometer accesibilidad.</p>
             </div>
+            <div class="proj-frame stage-tall" data-parallax="-12">
+                <img src="./images/genstone/mobile-web.jpg" alt="Genstone — mobile splash">
+            </div>
         </section>
 
-        <!-- Pair 1: lifestyle -->
-        <section class="proj-pair">
-            <div class="proj-frame pair-a" data-parallax="-10">
-                <img src="./images/genstone/lifestyle-01.jpg" alt="Genstone — brand lifestyle">
+        <!-- Product carousel — replaces the placeholder from the earlier version -->
+        <section class="genstone-carousel" aria-label="Nuestros productos">
+            <div class="genstone-carousel-header">
+                <span class="genstone-carousel-eyebrow">&lt; <span data-i18n="project.genstone.productsEyebrow">Nuestros Productos</span> &gt;</span>
             </div>
-            <div class="proj-frame pair-b" data-parallax="14">
-                <img src="./images/genstone/lifestyle-02.jpg" alt="Genstone — brand lifestyle">
+            <div class="genstone-carousel-track" data-carousel>
+                <button type="button" class="genstone-carousel-arrow genstone-carousel-arrow--prev" data-carousel-prev aria-label="Previous">&lsaquo;</button>
+                <div class="genstone-carousel-viewport">
+                    <ul class="genstone-carousel-slides" data-carousel-slides>
+                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-01.jpg" alt="Genstone GS12"></li>
+                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-02.jpg" alt="Genstone product"></li>
+                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-03.jpg" alt="Genstone product"></li>
+                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-04.jpg" alt="Genstone product"></li>
+                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-05.jpg" alt="Genstone product"></li>
+                        <li class="genstone-carousel-slide"><img src="./images/genstone/product-06.jpg" alt="Genstone product"></li>
+                    </ul>
+                </div>
+                <button type="button" class="genstone-carousel-arrow genstone-carousel-arrow--next" data-carousel-next aria-label="Next">&rsaquo;</button>
             </div>
+            <div class="genstone-carousel-dots" data-carousel-dots></div>
         </section>
 
         <!-- Pull-quote -->
@@ -102,43 +114,43 @@
             <h2 class="proj-pullquote" data-i18n="project.genstone.pull">Lo que necesitás, sigue en marcha.</h2>
         </section>
 
-        <!-- Stage B: Ejecución + web mockup -->
-        <section class="proj-stage proj-stage--ba">
+        <!-- 02 Ejecución — text + product zoom detail -->
+        <section class="proj-stage proj-stage--ab">
+            <div class="proj-frame stage-tall" data-parallax="12">
+                <img src="./images/genstone/zoom-01.jpg" alt="Genstone — product zoom detail">
+            </div>
             <div class="stage-text proj-text">
                 <span class="proj-text-num">02<span class="proj-text-label"> <span data-i18n="project.executionCreative">Ejecución Creativa</span></span></span>
                 <p data-i18n="project.genstone.ex1">Desarrollé la estrategia integral de marca: naming, identidad visual, concepto estratégico, sistema de branding, desarrollo web, fichas técnicas, material colateral y gestión de redes sociales.</p>
                 <p data-i18n="project.genstone.ex2">El concepto creativo central comunica continuidad: Genstone no promete un generador, promete que tu vida siga sin cortes. Que tu rutina, tu ritmo, tu comodidad no se detengan. La propuesta es simple pero potente: lo que necesitás, sigue en marcha. Esto diferencia a Genstone de la competencia no por especificaciones técnicas sino por qué resuelve: mantiene activa tu vida, protege tu tiempo. Solidez, eficiencia y continuidad como ejes del mensaje.</p>
                 <p data-i18n="project.genstone.ex3">Los generadores aún no habían llegado a Argentina. Utilicé generación de imágenes con IA para producir visuales precisas del producto final, resolviendo timing de producción de contenido. Cada aplicación —web, material técnico, redes sociales— mantiene coherencia visual y comunica consistentemente: especificaciones premium, precio competitivo, confiabilidad operativa.</p>
             </div>
-            <div class="proj-frame stage-tall" data-parallax="-12">
-                <img src="./images/genstone/mobile-web.jpg" alt="Genstone — mobile web">
+        </section>
+
+        <!-- Product zoom pair -->
+        <section class="proj-pair">
+            <div class="proj-frame pair-a" data-parallax="-10">
+                <img src="./images/genstone/zoom-02.jpg" alt="Genstone — product zoom detail">
+            </div>
+            <div class="proj-frame pair-b" data-parallax="14">
+                <img src="./images/genstone/lifestyle-02.jpg" alt="Genstone — lifestyle">
             </div>
         </section>
 
-        <!-- Social media grid — playful scatter of posts -->
-        <section class="proj-pieces-scatter" aria-label="Redes sociales">
+        <!-- Social media playful scatter -->
+        <section class="proj-pieces-scatter" aria-label="Social media">
             <div class="piece piece--mezcaloclock"><img src="./images/genstone/post-01.jpg" alt="Genstone — social media post"></div>
             <div class="piece piece--menu"><img src="./images/genstone/post-02.jpg" alt="Genstone — Mantené activa tu rutina"></div>
             <div class="piece piece--invitation"><img src="./images/genstone/post-03.jpg" alt="Genstone — beneficio"></div>
             <div class="piece piece--thankyou"><img src="./images/genstone/post-04.jpg" alt="Genstone — beneficio"></div>
         </section>
 
-        <!-- Pair 2: FAQs + Product Zoom -->
-        <section class="proj-pair">
-            <div class="proj-frame pair-a" data-parallax="14">
-                <img src="./images/genstone/faq-01.jpg" alt="Genstone — FAQ social">
-            </div>
-            <div class="proj-frame pair-b" data-parallax="-10">
-                <img src="./images/genstone/zoom-01.jpg" alt="Genstone — product zoom">
-            </div>
-        </section>
-
-        <!-- Wide brand lifestyle -->
+        <!-- Full-width closing lifestyle -->
         <div class="proj-frame proj-closing" data-parallax="8">
             <img src="./images/genstone/lifestyle-03.jpg" alt="Genstone — brand lifestyle">
         </div>
 
-        <!-- Ficha técnica cover + gorra pair -->
+        <!-- Technical documentation + merch -->
         <section class="proj-pair">
             <div class="proj-frame pair-a" data-parallax="-10">
                 <img src="./images/genstone/ats-cover.jpg" alt="Genstone — ficha técnica cover">
@@ -148,13 +160,20 @@
             </div>
         </section>
 
-        <!-- Results -->
+        <!-- 03 Resultados -->
         <section class="proj-stage proj-stage--results">
             <div class="proj-text">
                 <span class="proj-text-num">03<span class="proj-text-label"> <span data-i18n="project.results">Resultados</span></span></span>
                 <p data-i18n="project.genstone.res1">Proyecto ejecutado y lanzado. Marca operativa en mercado.</p>
-                <p class="proj-web-link"><a href="https://www.genstone.com.ar" target="_blank" rel="noopener noreferrer">genstone.com.ar &gt;</a></p>
             </div>
+        </section>
+
+        <!-- Big green CTA to the live site -->
+        <section class="genstone-site-cta">
+            <a class="genstone-site-btn" href="https://www.genstone.com.ar" target="_blank" rel="noopener noreferrer">
+                <span class="genstone-site-btn-label" data-i18n="project.genstone.visitLabel">Visitá la web</span>
+                <span class="genstone-site-btn-url">www.genstone.com.ar &rarr;</span>
+            </a>
         </section>
 
         <!-- Next project -->
@@ -191,5 +210,6 @@
 
     <script src="./js/project.js" defer></script>
     <script src="./js/footer.js" defer></script>
+    <script src="./js/genstone-carousel.js" defer></script>
 </body>
 </html>

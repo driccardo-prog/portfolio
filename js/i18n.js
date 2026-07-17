@@ -250,7 +250,9 @@
           ex1: 'I developed the complete brand strategy: naming, visual identity system, brand concept, web platform, technical specifications, collateral materials, and social media management.',
           ex2: "The core creative concept centers on continuity: Genstone doesn't promise a generator — it promises your life keeps running uninterrupted. Your routine, your pace, your comfort remain intact. The proposition is straightforward but powerful: what you need stays on. This differentiates Genstone from competitors not through technical specifications alone, but through what it actually solves — it keeps your life active and protects your time. Reliability, efficiency, and continuity anchor the messaging.",
           ex3: 'The generator units had not yet arrived in Argentina. I leveraged AI image generation to produce precise product visuals, solving content-production timing constraints. Every application — web, technical documentation, social channels — maintains visual coherence and consistently communicates the same value: premium specifications, competitive pricing, operational reliability.',
-          res1: 'Project executed and launched. Brand active in market.'
+          res1: 'Project executed and launched. Brand active in market.',
+          productsEyebrow: 'Our Products',
+          visitLabel: 'Visit the site'
         },
         ramazzotti: {
           title: 'Ramazzotti Spritz Brasil — Dolores Riccardo',
@@ -507,7 +509,9 @@
           ex1: 'Desarrollé la estrategia integral de marca: naming, identidad visual, concepto estratégico, sistema de branding, desarrollo web, fichas técnicas, material colateral y gestión de redes sociales.',
           ex2: 'El concepto creativo central comunica continuidad: Genstone no promete un generador, promete que tu vida siga sin cortes. Que tu rutina, tu ritmo, tu comodidad no se detengan. La propuesta es simple pero potente: lo que necesitás, sigue en marcha. Esto diferencia a Genstone de la competencia no por especificaciones técnicas sino por qué resuelve: mantiene activa tu vida, protege tu tiempo. Solidez, eficiencia y continuidad como ejes del mensaje.',
           ex3: 'Los generadores aún no habían llegado a Argentina. Utilicé generación de imágenes con IA para producir visuales precisas del producto final, resolviendo timing de producción de contenido. Cada aplicación —web, material técnico, redes sociales— mantiene coherencia visual y comunica consistentemente: especificaciones premium, precio competitivo, confiabilidad operativa.',
-          res1: 'Proyecto ejecutado y lanzado. Marca operativa en mercado.'
+          res1: 'Proyecto ejecutado y lanzado. Marca operativa en mercado.',
+          productsEyebrow: 'Nuestros Productos',
+          visitLabel: 'Visitá la web'
         },
         ramazzotti: {
           title: 'Ramazzotti Spritz Brasil — Dolores Riccardo',

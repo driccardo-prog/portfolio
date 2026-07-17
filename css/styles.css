@@ -2498,3 +2498,158 @@ html.is-preloading #lang-overlay { visibility: visible; }
 @media (max-width: 900px) {
     .proj-process { padding: 32px 16px; gap: 24px; }
 }
+
+/* ========================================================================
+   Genstone project: brand green, product carousel, big site CTA
+   ======================================================================== */
+.project-page--genstone { --genstone-green: #A2E8A2; }
+
+.genstone-carousel {
+    padding: 60px 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+.genstone-carousel-header {
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--gray-dark);
+    text-transform: uppercase;
+}
+.genstone-carousel-track {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+}
+.genstone-carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+    background: #F1F2F1;
+    border-radius: 12px;
+}
+.genstone-carousel-slides {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+    will-change: transform;
+}
+.genstone-carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.genstone-carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #F1F2F1;
+}
+
+.genstone-carousel-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.12);
+    background: var(--white);
+    color: var(--black);
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    padding-bottom: 2px;
+}
+.genstone-carousel-arrow:hover {
+    background: var(--genstone-green, #A2E8A2);
+    color: var(--black);
+    transform: translateY(-2px);
+}
+.genstone-carousel-arrow:focus-visible {
+    outline: 2px solid var(--black);
+    outline-offset: 2px;
+}
+
+.genstone-carousel-dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+.genstone-carousel-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: 0;
+    border-radius: 999px;
+    background: rgba(0,0,0,0.16);
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+.genstone-carousel-dot.is-active {
+    background: var(--genstone-green, #A2E8A2);
+    transform: scale(1.4);
+}
+
+@media (max-width: 700px) {
+    .genstone-carousel { padding: 40px 20px; }
+    .genstone-carousel-arrow { width: 40px; height: 40px; font-size: 22px; }
+    .genstone-carousel-slide { aspect-ratio: 4 / 4; }
+}
+
+/* Big green site CTA at the end of the project page */
+.genstone-site-cta {
+    padding: 60px 40px 120px;
+    display: flex;
+    justify-content: center;
+}
+.genstone-site-btn {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 32px 64px;
+    background: var(--genstone-green, #A2E8A2);
+    color: var(--black);
+    text-decoration: none;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 12px 32px rgba(48, 168, 74, 0.22);
+}
+.genstone-site-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(48, 168, 74, 0.32);
+    background: #B9EEB9;
+}
+.genstone-site-btn-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    color: var(--black);
+}
+.genstone-site-btn-url {
+    font-size: clamp(28px, 4vw, 44px);
+    color: var(--black);
+    line-height: 1;
+}
+@media (max-width: 700px) {
+    .genstone-site-cta { padding: 40px 20px 80px; }
+    .genstone-site-btn { padding: 24px 32px; }
+}
