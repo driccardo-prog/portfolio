@@ -500,7 +500,7 @@ button, input, select, textarea {
 .work-card {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 20px;
     text-decoration: none;
     color: var(--black);
     align-self: start;
