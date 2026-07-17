@@ -93,6 +93,11 @@ button, input, select, textarea {
 .nav-link--cta { color: var(--black); }
 .nav-link--cta:hover { color: var(--gray-dark); }
 
+/* Nav commas: gray by default, black on the comma next to the active tab */
+.nav-comma { color: var(--gray-light); transition: color 0.15s ease; }
+.nav-link.is-active + .nav-comma,
+.nav-comma:has(+ .nav-link.is-active) { color: var(--black); }
+
 /* ========== HERO ========== */
 .hero {
     position: relative;
