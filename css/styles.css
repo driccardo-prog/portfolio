@@ -388,6 +388,8 @@ button, input, select, textarea {
 .scatter-frame.f20 { top: 20%; left: 82%;      width: 110px; height: 140px; --rot: -3deg; }
 .scatter-frame.f21 { top: 45%; left: 12%;      width: 160px; height: 150px; --rot:  2deg; }
 .scatter-frame.f22 { top: 30%; left: 12%;      width: 120px; height: 90px;  --rot: -2deg; }
+.scatter-frame.f23 { top: 66%; left: 60%;      width: 170px; height: 130px; --rot: -3deg; }
+.scatter-frame.f24 { top: 82%; left: 32%;      width: 140px; height: 140px; --rot:  2deg; }
 
 .all-work-title-wrapper {
     position: absolute;
@@ -1748,7 +1750,9 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
     .scatter-frame.f19,
     .scatter-frame.f20,
     .scatter-frame.f21,
-    .scatter-frame.f22 { display: none; }
+    .scatter-frame.f22,
+    .scatter-frame.f23,
+    .scatter-frame.f24 { display: none; }
     .footer { grid-template-columns: 1fr; padding: 60px 20px 40px; }
 }
 

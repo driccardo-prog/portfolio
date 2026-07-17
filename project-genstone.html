@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n-title="project.genstone.title">Genstone — Dolores Riccardo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/i18n.js"></script>
+    <script>
+        (function () {
+            try {
+                var hasLang = !!localStorage.getItem('preferredLanguage');
+                var p = (location.pathname || '').toLowerCase();
+                var isHome = p === '/' || p === '' || p.endsWith('/index.html') || p === '/index.html';
+                var homeShown = sessionStorage.getItem('homeLoaderShown') === '1';
+                if (!hasLang || (isHome && !homeShown)) {
+                    document.documentElement.classList.add('is-preloading');
+                }
+            } catch (e) {}
+        })();
+    </script>
+</head>
+<body class="project-page">
+    <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
+    <div id="lang-overlay" hidden>
+      <div class="lang-picker">
+        <div class="lang-toggle">
+          <button class="lang-option is-active" data-lang="en">ENGLISH</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-option" data-lang="es">SPANISH</button>
+        </div>
+        <a href="#" class="lang-go">GO</a>
+      </div>
+    </div>
+    <div id="loader-overlay" hidden>
+      <div class="loader-counter">0%</div>
+    </div>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <a href="./index.html" class="logo">Dolores R</a>
+        <nav class="nav-center">
+            <a href="./index.html" class="nav-link">Home</a><span class="nav-comma">,&nbsp;</span><a href="./work.html" class="nav-link is-active">Work</a><span class="nav-comma">,&nbsp;</span><a href="./about.html" class="nav-link">About</a><span class="nav-comma">,&nbsp;</span><a href="./cv.html" class="nav-link nav-link--cv-es" data-i18n="common.nav.cv">CV</a></nav>
+        <div class="header-right">
+            <span class="header-location">Bs As &amp; Worldwide</span>
+            <div class="lang-switch">
+                <button class="lang-switch-btn is-active" data-lang="en">EN</button>
+                <span>/</span>
+                <button class="lang-switch-btn" data-lang="es">ES</button>
+            </div>
+            <a href="./contact.html" class="nav-link nav-link--cta" data-i18n="common.nav.getInTouch">let's get in touch :)!</a>
+        </div>
+    </header>
+
+    <article class="project">
+        <header class="proj-head">
+            <h1 class="proj-title">
+                <span class="bracket bracket-l">[</span>
+                <span class="title-text">Genstone</span>
+                <span class="bracket bracket-r">]</span>
+            </h1>
+            <ul class="proj-meta">
+                <li><span class="proj-meta-label" data-i18n="project.client">Client</span><span class="proj-meta-value" data-i18n="project.genstone.clientValue">Generadores Genstone</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.year">Year</span><span class="proj-meta-value">2026</span></li>
+                <li><span class="proj-meta-label" data-i18n="project.deliverables">Deliverables</span><span class="proj-meta-value" data-i18n="project.genstone.deliverables">Branding & Digital Strategy</span></li>
+                <li><span class="proj-meta-label">Web</span><a class="proj-meta-value" href="https://www.genstone.com.ar" target="_blank" rel="noopener noreferrer">genstone.com.ar</a></li>
+            </ul>
+        </header>
+
+        <!-- Hero -->
+        <div class="proj-hero proj-frame" data-parallax="6">
+            <img src="./images/genstone/hero.jpg" alt="Genstone — brand hero">
+        </div>
+
+        <!-- Stage A: Contexto + tall product -->
+        <section class="proj-stage proj-stage--ab">
+            <div class="proj-frame stage-tall" data-parallax="12">
+                <img src="./images/genstone/product-01.jpg" alt="Genstone — generador producto">
+            </div>
+            <div class="stage-text proj-text">
+                <span class="proj-text-num">01<span class="proj-text-label"> <span data-i18n="project.context">Contexto</span></span></span>
+                <p data-i18n="project.genstone.ctx1">El mercado de generadores domésticos premium es altamente competitivo y consolidado. Marcas establecidas dominan el posicionamiento con márgenes elevados.</p>
+                <p data-i18n="project.genstone.ctx2">El desafío estratégico fue diferenciarse mediante una propuesta clara: ofrecer generadores con especificaciones técnicas y rendimiento equivalentes a competidores premium, pero con una estructura de precios significativamente más competitiva. Lograr posicionamiento de confiabilidad sin comprometer accesibilidad.</p>
+            </div>
+        </section>
+
+        <!-- Pair 1: lifestyle -->
+        <section class="proj-pair">
+            <div class="proj-frame pair-a" data-parallax="-10">
+                <img src="./images/genstone/lifestyle-01.jpg" alt="Genstone — brand lifestyle">
+            </div>
+            <div class="proj-frame pair-b" data-parallax="14">
+                <img src="./images/genstone/lifestyle-02.jpg" alt="Genstone — brand lifestyle">
+            </div>
+        </section>
+
+        <!-- Pull-quote -->
+        <section class="proj-stage proj-stage--quote">
+            <h2 class="proj-pullquote" data-i18n="project.genstone.pull">Lo que necesitás, sigue en marcha.</h2>
+        </section>
+
+        <!-- Stage B: Ejecución + web mockup -->
+        <section class="proj-stage proj-stage--ba">
+            <div class="stage-text proj-text">
+                <span class="proj-text-num">02<span class="proj-text-label"> <span data-i18n="project.executionCreative">Ejecución Creativa</span></span></span>
+                <p data-i18n="project.genstone.ex1">Desarrollé la estrategia integral de marca: naming, identidad visual, concepto estratégico, sistema de branding, desarrollo web, fichas técnicas, material colateral y gestión de redes sociales.</p>
+                <p data-i18n="project.genstone.ex2">El concepto creativo central comunica continuidad: Genstone no promete un generador, promete que tu vida siga sin cortes. Que tu rutina, tu ritmo, tu comodidad no se detengan. La propuesta es simple pero potente: lo que necesitás, sigue en marcha. Esto diferencia a Genstone de la competencia no por especificaciones técnicas sino por qué resuelve: mantiene activa tu vida, protege tu tiempo. Solidez, eficiencia y continuidad como ejes del mensaje.</p>
+                <p data-i18n="project.genstone.ex3">Los generadores aún no habían llegado a Argentina. Utilicé generación de imágenes con IA para producir visuales precisas del producto final, resolviendo timing de producción de contenido. Cada aplicación —web, material técnico, redes sociales— mantiene coherencia visual y comunica consistentemente: especificaciones premium, precio competitivo, confiabilidad operativa.</p>
+            </div>
+            <div class="proj-frame stage-tall" data-parallax="-12">
+                <img src="./images/genstone/mobile-web.jpg" alt="Genstone — mobile web">
+            </div>
+        </section>
+
+        <!-- Social media grid — playful scatter of posts -->
+        <section class="proj-pieces-scatter" aria-label="Redes sociales">
+            <div class="piece piece--mezcaloclock"><img src="./images/genstone/post-01.jpg" alt="Genstone — social media post"></div>
+            <div class="piece piece--menu"><img src="./images/genstone/post-02.jpg" alt="Genstone — Mantené activa tu rutina"></div>
+            <div class="piece piece--invitation"><img src="./images/genstone/post-03.jpg" alt="Genstone — beneficio"></div>
+            <div class="piece piece--thankyou"><img src="./images/genstone/post-04.jpg" alt="Genstone — beneficio"></div>
+        </section>
+
+        <!-- Pair 2: FAQs + Product Zoom -->
+        <section class="proj-pair">
+            <div class="proj-frame pair-a" data-parallax="14">
+                <img src="./images/genstone/faq-01.jpg" alt="Genstone — FAQ social">
+            </div>
+            <div class="proj-frame pair-b" data-parallax="-10">
+                <img src="./images/genstone/zoom-01.jpg" alt="Genstone — product zoom">
+            </div>
+        </section>
+
+        <!-- Wide brand lifestyle -->
+        <div class="proj-frame proj-closing" data-parallax="8">
+            <img src="./images/genstone/lifestyle-03.jpg" alt="Genstone — brand lifestyle">
+        </div>
+
+        <!-- Ficha técnica cover + gorra pair -->
+        <section class="proj-pair">
+            <div class="proj-frame pair-a" data-parallax="-10">
+                <img src="./images/genstone/ats-cover.jpg" alt="Genstone — ficha técnica cover">
+            </div>
+            <div class="proj-frame pair-b" data-parallax="14">
+                <img src="./images/genstone/gorra.jpg" alt="Genstone — brand merchandise">
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="proj-stage proj-stage--results">
+            <div class="proj-text">
+                <span class="proj-text-num">03<span class="proj-text-label"> <span data-i18n="project.results">Resultados</span></span></span>
+                <p data-i18n="project.genstone.res1">Proyecto ejecutado y lanzado. Marca operativa en mercado.</p>
+                <p class="proj-web-link"><a href="https://www.genstone.com.ar" target="_blank" rel="noopener noreferrer">genstone.com.ar &gt;</a></p>
+            </div>
+        </section>
+
+        <!-- Next project -->
+        <footer class="proj-footer">
+            <a href="./project-bplay.html" class="proj-next" data-i18n="common.nextProject">Next Project &gt;</a>
+        </footer>
+    </article>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <nav class="footer-nav">
+            <a href="./index.html" class="footer-nav-link">Home</a>
+            <a href="./work.html" class="footer-nav-link">Work</a>
+            <a href="./contact.html" class="footer-nav-link">Contact</a>
+            <a href="./cv.html" class="footer-nav-link">CV</a>
+            <a href="https://www.linkedin.com/in/dolores-riccardo-86709313b/?locale=es" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Linkedin</a>
+            <a href="https://www.instagram.com/loliriccardo/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram</a>
+        </nav>
+        <div class="footer-contact-info">
+            <div class="contact-item">
+                <span class="contact-label">PHONE</span>
+                <a class="contact-value" href="https://wa.me/5491141773952" target="_blank" rel="noopener noreferrer">+54 9 11 4177 3952</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">MAIL</span>
+                <a class="contact-value" href="mailto:d.riccardo@icloud.com">d.riccardo@icloud.com</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-label">LOCATION</span>
+                <span class="contact-value">Buenos Aires &amp; Worldwide</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/project.js" defer></script>
+    <script src="./js/footer.js" defer></script>
+</body>
+</html>

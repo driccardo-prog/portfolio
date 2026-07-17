@@ -240,6 +240,18 @@
           ex2: "I led the full visual strategy — from graphic identity to every touchpoint of the Medellín launch. The timing worked in our favor: the city was already primed to talk about maturation (Colombia Moda + Feria de las Flores), and I hooked the visual concept into that conversation. Invitations, menus, cocktails, event signage — everything runs on the same logic. Palette, typography, composition. Every piece reinforces that it's the same mezcal, just with more time in barrel. Elegance without giving anything up.",
           res1: "The launch played out in Medellín. The concept did exactly what it was meant to — protect while accompanying. The Reposado walked in without asking the Joven to leave."
         },
+        genstone: {
+          title: 'Genstone — Dolores Riccardo',
+          clientValue: 'Genstone Generators',
+          deliverables: 'Branding & Digital Strategy',
+          ctx1: 'The premium domestic generator market is highly competitive and consolidated. Established brands maintain market dominance through pricing power.',
+          ctx2: 'The strategic challenge was to differentiate through a clear value proposition: deliver generators with technical specifications and performance equivalent to premium competitors, but with significantly lower price positioning. Build trust and credibility while maintaining affordability.',
+          pull: 'What you need keeps running.',
+          ex1: 'I developed the complete brand strategy: naming, visual identity system, brand concept, web platform, technical specifications, collateral materials, and social media management.',
+          ex2: "The core creative concept centers on continuity: Genstone doesn't promise a generator — it promises your life keeps running uninterrupted. Your routine, your pace, your comfort remain intact. The proposition is straightforward but powerful: what you need stays on. This differentiates Genstone from competitors not through technical specifications alone, but through what it actually solves — it keeps your life active and protects your time. Reliability, efficiency, and continuity anchor the messaging.",
+          ex3: 'The generator units had not yet arrived in Argentina. I leveraged AI image generation to produce precise product visuals, solving content-production timing constraints. Every application — web, technical documentation, social channels — maintains visual coherence and consistently communicates the same value: premium specifications, competitive pricing, operational reliability.',
+          res1: 'Project executed and launched. Brand active in market.'
+        },
         ramazzotti: {
           title: 'Ramazzotti Spritz Brasil — Dolores Riccardo',
           campaign: 'Ramazzotti Spritz Brasil',
@@ -484,6 +496,18 @@
           ex1: 'La decisión conceptual fue el claim: "Mismo carácter, más temple". Una frase que protege al Joven mientras abre puerta nueva. No es "mejor" ni "evolución" — es simplemente otra forma de disfrutar el mismo mezcal. Otro momento. Otra persona. Otra paleta sensorial.',
           ex2: 'Dirigí la estrategia visual completa: desde la identidad gráfica hasta cada touchpoint del lanzamiento en Medellín. El timing fue inteligente —la ciudad estaba predispuesta a hablar de maduración (Colombia Moda + Feria de las Flores)— pero conecté el concepto visual con ese relato. Invitaciones, menús, cocktails, cartelería del evento: todo responde a la misma lógica. La paleta, la tipografía, la composición. Cada pieza refuerza que es el mismo mezcal, solo con más tiempo en barrica. Elegancia sin restar.',
           res1: 'El evento se ejecutó en Medellín. El concepto funcionó en la lógica de proteger mientras acompañás: el Reposado entra sin pedir que el Joven salga.'
+        },
+        genstone: {
+          title: 'Genstone — Dolores Riccardo',
+          clientValue: 'Generadores Genstone',
+          deliverables: 'Branding & Estrategia Digital',
+          ctx1: 'El mercado de generadores domésticos premium es altamente competitivo y consolidado. Marcas establecidas dominan el posicionamiento con márgenes elevados.',
+          ctx2: 'El desafío estratégico fue diferenciarse mediante una propuesta clara: ofrecer generadores con especificaciones técnicas y rendimiento equivalentes a competidores premium, pero con una estructura de precios significativamente más competitiva. Lograr posicionamiento de confiabilidad sin comprometer accesibilidad.',
+          pull: 'Lo que necesitás, sigue en marcha.',
+          ex1: 'Desarrollé la estrategia integral de marca: naming, identidad visual, concepto estratégico, sistema de branding, desarrollo web, fichas técnicas, material colateral y gestión de redes sociales.',
+          ex2: 'El concepto creativo central comunica continuidad: Genstone no promete un generador, promete que tu vida siga sin cortes. Que tu rutina, tu ritmo, tu comodidad no se detengan. La propuesta es simple pero potente: lo que necesitás, sigue en marcha. Esto diferencia a Genstone de la competencia no por especificaciones técnicas sino por qué resuelve: mantiene activa tu vida, protege tu tiempo. Solidez, eficiencia y continuidad como ejes del mensaje.',
+          ex3: 'Los generadores aún no habían llegado a Argentina. Utilicé generación de imágenes con IA para producir visuales precisas del producto final, resolviendo timing de producción de contenido. Cada aplicación —web, material técnico, redes sociales— mantiene coherencia visual y comunica consistentemente: especificaciones premium, precio competitivo, confiabilidad operativa.',
+          res1: 'Proyecto ejecutado y lanzado. Marca operativa en mercado.'
         },
         ramazzotti: {
           title: 'Ramazzotti Spritz Brasil — Dolores Riccardo',
