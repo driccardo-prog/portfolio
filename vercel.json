@@ -11,6 +11,28 @@
       ],
       "destination": "https://doloresr.com/$1",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "portfolio-git-main-dolores-riccardo.vercel.app"
+        }
+      ],
+      "destination": "https://doloresr.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "(.*)-dolores-riccardo\\.vercel\\.app"
+        }
+      ],
+      "destination": "https://doloresr.com/$1",
+      "permanent": true
     }
   ],
   "headers": [
