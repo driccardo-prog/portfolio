@@ -2621,3 +2621,278 @@ html.is-preloading #lang-overlay { visibility: visible; }
     .genstone-site-btn { padding: 8px 16px; }
     .genstone-site-btn-url { font-size: 13px; }
 }
+
+/* ========================================================================
+   MOBILE-ONLY IMPROVEMENTS (≤820px). Desktop rules above remain untouched.
+   Consolidated readability / proportions / image scaling.
+   ======================================================================== */
+@media (max-width: 820px) {
+    /* Base — comfortable reading defaults on phones */
+    html, body { -webkit-text-size-adjust: 100%; }
+    body { font-size: 15px; line-height: 1.55; }
+    p { font-size: 15px; line-height: 1.6; }
+
+    /* Header — tight but never wrap logo/nav/CTA in awkward ways */
+    .header {
+        height: auto;
+        min-height: 56px;
+        padding: 10px 16px;
+        grid-template-columns: auto 1fr auto;
+        gap: 8px;
+        row-gap: 6px;
+    }
+    .logo { font-size: 15px; }
+    .nav-center { font-size: 12px; }
+    .nav-link { font-size: 12px; }
+    .header-right { gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .header-location { display: none; }
+    .lang-switch { font-size: 12px; }
+    .nav-link--cta { font-size: 12px; }
+
+    /* Push all page content below the header */
+    body { padding-top: 60px; }
+    .contact-page,
+    .project-page,
+    .about-page,
+    .work-page,
+    .cv-page { padding-top: 0; }
+
+    /* ==================== HOME ==================== */
+    .hero { padding: 24px 20px 40px; }
+    .hero-frame {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: 240px;
+        margin: 0 0 24px;
+    }
+    .hero-intro {
+        position: static;
+        max-width: 100%;
+        margin: 0 0 20px;
+        font-size: 14px;
+        line-height: 1.55;
+    }
+    .hero-title {
+        padding-top: 0;
+        text-indent: 0;
+        font-size: clamp(30px, 8vw, 42px);
+        line-height: 1.15;
+    }
+    .hero-bottom {
+        margin-top: 32px;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .hero-col-label { grid-column: 1; font-size: 13px; }
+    .hero-col-text  { grid-column: 1; font-size: 14px; line-height: 1.55; }
+
+    /* Selected works — single column, comfortable spacing */
+    .selected-works { padding: 40px 20px; gap: 56px; }
+    .work-meta { flex-wrap: wrap; gap: 4px 12px; font-size: 11px; }
+    .work-title { font-size: clamp(22px, 7vw, 32px); }
+    .work-annotation { display: none; }
+    .work-categories { font-size: 11px; letter-spacing: 1px; text-align: center; }
+    .work-frame { width: 100% !important; aspect-ratio: 4 / 3 !important; }
+
+    /* All Work scatter (home) — smaller scattered wall, everything visible */
+    .all-work { padding: 40px 20px 60px; }
+    .scatter { height: 720px; }
+    .all-work-title { font-size: clamp(40px, 12vw, 64px); }
+
+    /* ==================== WORK PAGE ==================== */
+    .work-head { padding: 24px 20px 8px; }
+    .work-page-title { font-size: clamp(40px, 12vw, 72px); }
+    .view-toggle { font-size: 12px; }
+    .work-row--2, .work-row--3 { grid-template-columns: 1fr; }
+    .work-card-caption { font-size: 14px; gap: 8px; }
+    .work-card-year { font-size: 13px; }
+
+    /* List view rows */
+    .list-row { padding: 12px 4px; }
+    .list-name { font-size: 22px !important; }
+
+    /* ==================== PROJECT PAGES ==================== */
+    .project-page { padding-top: 0; }
+    .project-page .proj-head { padding: 24px 20px 16px; margin-top: 0; margin-bottom: 16px; }
+    .proj-title {
+        position: static;
+        font-size: clamp(24px, 8vw, 40px) !important;
+        padding: 4px 0;
+        top: auto;
+        text-align: left;
+    }
+    .proj-title .bracket-l,
+    .proj-title .bracket-r { transform: none !important; margin: 0 0.1em; }
+    .proj-title .title-text { white-space: normal !important; transform: none !important; }
+    .proj-meta {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        padding-top: 12px;
+    }
+    .proj-meta-label { font-size: 10px; letter-spacing: 1.2px; }
+    .proj-meta-value { font-size: 13px; }
+
+    .proj-hero { margin: 0 20px 32px; }
+    .project-page .proj-hero,
+    .project-page .proj-closing,
+    .project-page .proj-frame { border-radius: 4px; }
+
+    /* Two-column stages collapse to one column */
+    .proj-stage--ab,
+    .proj-stage--ba,
+    .proj-pair,
+    .proj-stage--quote,
+    .proj-stage--results {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 0 20px !important;
+        margin-bottom: 32px !important;
+    }
+    .proj-stage--ba .stage-text,
+    .proj-stage--ab .stage-text,
+    .proj-stage--results .proj-text,
+    .proj-stage--quote .proj-pullquote,
+    .proj-text { grid-column: 1 !important; }
+
+    /* Image frames — cap heights so they don't dominate the screen */
+    .stage-tall,
+    .stage-tall--xl,
+    .stage-q-1 {
+        min-height: 0 !important;
+        aspect-ratio: 4 / 5 !important;
+        max-height: 60vh;
+    }
+    .proj-pair .pair-a,
+    .proj-pair .pair-b {
+        aspect-ratio: 4 / 3 !important;
+    }
+    .proj-closing { margin: 0 20px 24px; }
+
+    /* Paragraph copy */
+    .proj-text p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+    .proj-text-num { font-size: 40px; line-height: 1; margin-bottom: 12px; display: block; }
+    .proj-text-label { font-size: 11px; letter-spacing: 1.4px; }
+
+    /* Pull-quote */
+    .proj-pullquote {
+        font-size: clamp(24px, 6.5vw, 34px) !important;
+        line-height: 1.15 !important;
+        padding: 8px 0;
+    }
+
+    /* Next project */
+    .proj-footer { padding: 16px 20px 40px; }
+    .proj-next { font-size: 14px; }
+
+    /* ==================== ABOUT ==================== */
+    .about-hero { padding: 40px 20px 0; }
+    .about-hello { font-size: clamp(30px, 10vw, 44px); }
+    .about-name { font-size: clamp(30px, 10vw, 44px); }
+    .about-aka { font-size: 13px; }
+    .about-intro {
+        grid-template-columns: 1fr !important;
+        padding: 32px 20px !important;
+        gap: 20px !important;
+    }
+    .bio-cell p, .bio-cell { font-size: 15px !important; line-height: 1.6 !important; }
+    .about-belief { padding: 40px 20px; }
+    .belief-text { font-size: clamp(24px, 7vw, 36px); line-height: 1.2; }
+    .about-skills { padding: 24px 0; }
+    .skill-word, .skill-sep { font-size: 22px !important; }
+    .about-beyond { padding: 32px 20px; grid-template-columns: 1fr; gap: 20px; }
+    .beyond-frame { aspect-ratio: 4 / 3; }
+    .beyond-text { font-size: 15px; line-height: 1.6; }
+    .about-cta { padding: 40px 20px 60px; text-align: left; }
+    .cta-text { font-size: clamp(28px, 8vw, 40px); line-height: 1.2; }
+    .cta-line { display: block; }
+
+    /* Roaming CV button — smaller, kept safe from screen edges */
+    .cv-roaming {
+        padding: 10px 16px;
+        font-size: 12px;
+        animation-duration: 20s;
+    }
+
+    /* ==================== CV ==================== */
+    .cv-hero, .cv-body { padding: 24px 20px !important; }
+    .cv-name { font-size: clamp(40px, 12vw, 60px); }
+    .cv-subname { font-size: 13px; }
+    .cv-section-title { font-size: clamp(22px, 6.5vw, 32px); }
+    .cv-role { flex-direction: column; gap: 4px; }
+    .cv-role-name, .cv-role-title { font-size: 14px; }
+    .cv-role-desc { font-size: 13px; line-height: 1.55; }
+    .cv-tools { grid-template-columns: 1fr; gap: 14px; }
+    .cv-tool { grid-template-columns: 110px 1fr; gap: 12px; }
+    .cv-tool-name { font-size: 13px; }
+    .cv-tool-note { font-size: 10px; }
+    .cv-bar { height: 6px; }
+
+    /* ==================== CONTACT ==================== */
+    .contact-block {
+        grid-template-columns: 1fr;
+        padding: 60px 20px 32px;
+        min-height: auto;
+        gap: 32px;
+    }
+    .contact-headline { font-size: clamp(36px, 12vw, 64px); }
+    .contact-socials--inline { flex-direction: column; align-items: flex-start; gap: 12px; margin-top: 32px; }
+    .social-chip { font-size: 13px; padding: 10px 18px; }
+
+    .quote-section {
+        grid-template-columns: 1fr;
+        padding: 40px 20px 24px;
+        gap: 24px;
+    }
+    .quote-headline {
+        position: static;
+        font-size: clamp(28px, 8vw, 44px);
+        line-height: 1.05;
+        min-height: 0;
+    }
+    .quote-form-grid { grid-template-columns: 1fr; gap: 18px; }
+    .quote-field { font-size: 15px; }
+    .quote-label { font-size: 11px; letter-spacing: 1.4px; }
+    .quote-field input,
+    .quote-field select,
+    .quote-field textarea {
+        font-size: 16px; /* prevents iOS auto-zoom on focus */
+    }
+    .quote-form-foot { flex-direction: column; align-items: flex-start; gap: 20px; }
+    .quote-tagline { font-size: 14px; }
+    .quote-submit { font-size: 14px; padding: 12px 24px; }
+
+    /* ==================== FOOTER (global) ==================== */
+    .footer {
+        grid-template-columns: 1fr !important;
+        padding: 48px 20px 32px !important;
+        gap: 32px !important;
+    }
+    .footer-nav { flex-direction: row; flex-wrap: wrap; gap: 12px 20px; }
+    .footer-nav-link { font-size: 13px; }
+    .footer-contact-info { gap: 12px; }
+    .contact-label { font-size: 10px; letter-spacing: 1.4px; }
+    .contact-value { font-size: 13px; }
+}
+
+/* Extra-tight phones (<420px) */
+@media (max-width: 420px) {
+    body { font-size: 14px; }
+    p, .proj-text p { font-size: 14px; }
+    .header { padding: 8px 12px; }
+    .logo { font-size: 14px; }
+    .nav-center, .nav-link { font-size: 11px; }
+    .nav-link--cta { font-size: 11px; }
+    .lang-switch, .lang-switch-btn { font-size: 11px; }
+    .selected-works, .about-intro, .about-belief, .quote-section,
+    .contact-block { padding-left: 14px; padding-right: 14px; }
+    .proj-stage--ab, .proj-stage--ba, .proj-pair,
+    .proj-stage--quote, .proj-stage--results { padding: 0 14px !important; }
+    .proj-hero, .proj-closing { margin-left: 14px; margin-right: 14px; }
+    .genstone-lineup { padding: 20px 14px 8px; }
+    .genstone-lineup-grid { grid-template-columns: 1fr 1fr; padding: 12px; gap: 8px; }
+}
