@@ -2646,8 +2646,7 @@ html.is-preloading #lang-overlay { visibility: visible; }
     img { max-width: 100%; height: auto; }
 
     /* Kill parallax offsets on mobile (JS still runs, but --py has no effect) */
-    [data-parallax] { transform: none !important; }
-    .proj-frame { transform: none !important; }
+    [data-parallax] { transform: none !important; --py: 0 !important; }
 
     /* --- HEADER: static, stacks, ALWAYS visible --- */
     .header {
@@ -2662,23 +2661,29 @@ html.is-preloading #lang-overlay { visibility: visible; }
         padding: 14px 18px !important;
         background: var(--white);
         border-bottom: 1px solid #eee;
+        grid-template-columns: none !important;
     }
     .logo {
         font-size: 18px;
         justify-self: auto;
         flex: 0 0 auto;
     }
+    /* Force the nav to appear (earlier 900px block hides it with display:none) */
     .nav-center {
+        display: block !important;
         order: 3;
         flex: 1 0 100%;
         justify-self: auto;
         text-align: center;
         font-size: 14px;
-        line-height: 1.4;
-        padding-top: 6px;
+        line-height: 1.5;
+        padding: 8px 0 2px;
         border-top: 1px solid #f0f0f0;
+        width: 100%;
     }
-    .nav-center .nav-link { font-size: 14px; }
+    .nav-center .nav-link,
+    .nav-center a { font-size: 14px; }
+    .nav-comma { display: inline; }
     .header-right {
         order: 2;
         justify-self: auto;
@@ -2733,21 +2738,60 @@ html.is-preloading #lang-overlay { visibility: visible; }
     .selected-works {
         padding: 40px 20px !important;
         gap: 56px !important;
-        grid-template-columns: 1fr !important;
     }
-    .work-item { grid-template-columns: 1fr !important; }
-    .work-meta { flex-wrap: wrap; gap: 4px 12px; font-size: 12px; }
-    .work-title { font-size: clamp(26px, 8vw, 36px) !important; }
+    .work { gap: 20px !important; }
+    .work-meta { flex-wrap: wrap; gap: 4px 12px; font-size: 12px; justify-content: flex-start !important; }
+    .work-meta > span { white-space: normal !important; }
+    .work-title-wrapper { padding-top: 8px !important; }
+    /* Titles are long — force them to wrap and disable the scroll-driven scale */
+    .work-title {
+        display: block !important;
+        font-size: clamp(28px, 8vw, 40px) !important;
+        line-height: 1.05 !important;
+        text-align: left !important;
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: anywhere;
+    }
+    .work-title-link {
+        display: inline;
+        text-decoration: none;
+        color: inherit;
+    }
+    .work-title .bracket,
+    .work-title .bracket-l,
+    .work-title .bracket-r,
+    .work-title .title-text {
+        display: inline !important;
+        transform: none !important;
+        white-space: normal !important;
+    }
     .work-annotation { display: none !important; }
-    .work-categories { font-size: 12px; letter-spacing: 1px; text-align: left; }
+    .work-categories {
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-align: left;
+        transform: none !important;
+        margin-top: 6px !important;
+    }
+    /* Keep the frame positioned so the absolute <img inset:0> stays inside it */
     .work-frame {
+        position: relative !important;
         width: 100% !important;
         max-width: 100% !important;
-        height: auto !important;
         aspect-ratio: 4 / 3 !important;
-        position: static !important;
         transform: none !important;
+        margin: 0 !important;
     }
+    .work-frame > img,
+    .work-frame > video {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    .work-cta { font-size: 13px; text-align: right; display: block; }
 
     /* All-work scatter → clean stacked grid (scatter is unusable on phones) */
     .all-work { padding: 40px 20px 60px !important; }
@@ -2757,11 +2801,12 @@ html.is-preloading #lang-overlay { visibility: visible; }
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
         gap: 10px !important;
-        position: static !important;
+        position: relative !important;
     }
+    .scatter-frame,
     .scatter .frame,
-    .scatter [class^="f"] {
-        position: static !important;
+    .scatter > [class*="f"] {
+        position: relative !important;
         width: 100% !important;
         height: auto !important;
         aspect-ratio: 1 / 1 !important;
@@ -2770,7 +2815,18 @@ html.is-preloading #lang-overlay { visibility: visible; }
         top: auto !important;
         right: auto !important;
         bottom: auto !important;
+        display: block !important;
     }
+    .scatter-frame.f15,
+    .scatter-frame.f16,
+    .scatter-frame.f17,
+    .scatter-frame.f18,
+    .scatter-frame.f19,
+    .scatter-frame.f20,
+    .scatter-frame.f21,
+    .scatter-frame.f22,
+    .scatter-frame.f23,
+    .scatter-frame.f24 { display: block !important; }
 
     /* --- WORK PAGE --- */
     .work-head { padding: 24px 20px 8px !important; }
@@ -2880,21 +2936,31 @@ html.is-preloading #lang-overlay { visibility: visible; }
         padding: 0 !important;
     }
 
-    /* Image frames — cap heights so the whole page never turns into one giant photo */
+    /* Image frames — keep position:relative (contains absolute img inset:0) and cap sizes */
     .proj-frame,
     .stage-tall,
     .stage-tall--xl,
     .stage-q-1,
     .pair-a, .pair-b {
+        position: relative !important;
         min-height: 0 !important;
         max-height: none !important;
         height: auto !important;
         aspect-ratio: 4 / 5 !important;
         width: 100% !important;
+        transform: none !important;
     }
     .proj-pair .pair-a,
     .proj-pair .pair-b {
         aspect-ratio: 4 / 3 !important;
+    }
+    .proj-frame > img,
+    .proj-frame > video {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
     }
     .proj-closing {
         margin: 0 20px 24px !important;
@@ -2942,13 +3008,16 @@ html.is-preloading #lang-overlay { visibility: visible; }
         gap: 10px !important;
         padding: 20px !important;
         height: auto !important;
+        position: relative !important;
     }
     .proj-pieces-scatter .piece {
-        position: static !important;
+        position: relative !important;
         width: 100% !important;
         height: auto !important;
         aspect-ratio: 1 / 1 !important;
         transform: none !important;
+        left: auto !important;
+        top: auto !important;
     }
     .genstone-site-cta { padding: 28px 20px 48px !important; }
     .genstone-site-btn { padding: 12px 22px !important; font-size: 14px; }
