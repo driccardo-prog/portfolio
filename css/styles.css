@@ -502,8 +502,8 @@ button, input, select, textarea {
 .work-card {
     display: flex;
     flex-direction: column;
-    /* ~30px breathing room between the image and the bracketed title. */
-    gap: 30px;
+    /* ~15px breathing room between the image and the bracketed title. */
+    gap: 15px;
     text-decoration: none;
     color: var(--black);
     /* Keep each card intact inside its masonry column. */
