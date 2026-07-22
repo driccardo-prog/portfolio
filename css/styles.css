@@ -1680,6 +1680,30 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
     text-decoration: none;
 }
 
+/* Discreet "Download CV" pill in the footer nav */
+.footer-nav-link--download {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    margin-top: 8px;
+    padding: 5px 13px;
+    border: 1px solid var(--black);
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.footer-nav-link--download::after {
+    content: "\2193"; /* ↓ */
+    font-size: 13px;
+    line-height: 1;
+}
+.footer-nav-link--download:hover {
+    background: var(--black);
+    color: #fff;
+}
+
 .footer-contact-info {
     display: flex;
     flex-direction: column;
