@@ -486,10 +486,12 @@ button, input, select, textarea {
 [data-view-panel][hidden] { display: none !important; }
 
 .work-grid-view {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    /* Masonry-style "tetris" packing: cards flow into balanced columns with
+       no vertical white-space between images of differing heights. */
+    column-count: 2;
+    column-gap: 8px;
     padding: 0 40px 80px;
+    --bracket-shift: 28px;
 }
 
 .work-row { display: grid; gap: 8px; align-items: start; }
@@ -500,10 +502,14 @@ button, input, select, textarea {
 .work-card {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    /* ~30px breathing room between the image and the bracketed title. */
+    gap: 30px;
     text-decoration: none;
     color: var(--black);
-    align-self: start;
+    /* Keep each card intact inside its masonry column. */
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    margin-bottom: 8px;
 }
 
 .work-card-frame {
@@ -645,7 +651,7 @@ button, input, select, textarea {
 @media (max-width: 900px) {
     .work-head { flex-direction: column; align-items: flex-start; gap: 16px; padding: 40px 20px 20px; }
     .view-toggle { position: static; padding: 0; }
-    .work-grid-view { padding: 0 20px 60px; gap: 8px; }
+    .work-grid-view { padding: 0 20px 60px; column-count: 1; }
     .work-list-view { padding: 0 0 60px; }
     .work-row--2 { grid-template-columns: 1fr; }
     .work-row--3 { grid-template-columns: 1fr 1fr; }

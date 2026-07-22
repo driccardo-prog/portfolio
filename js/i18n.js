@@ -35,10 +35,16 @@
           selected: 'Selected Works',
           year: 'Year',
           bplayClient: 'Guillermo Francella x Bplay',
-          bplayAnnot: 'Official Sponsor<br>of the Argentine Heart',
+          bplayAnnot: 'Sponsor Oficial<br>del Corazón Argento',
           bplayCats: 'ART DIRECTION | KEY VISUAL | OFF & ONLINE MEDIA',
+          absolutClient: 'Absolut Tabasco x Volaris',
+          absolutAnnot: 'Intensidad a bordo<br>de Volaris',
+          absolutCats: 'ART DIRECTION | KEY VISUAL | OFF & ONLINE MEDIA | AI GENERATION',
+          truenoClient: 'Trueno x EA Sports',
+          truenoAnnot: 'Soy de donde nací,<br>mi tierra zanta',
+          truenoCats: 'ART DIRECTION | KEY VISUAL | APPAREL DESIGN',
           byoClient: 'Byo. Superfood Lab',
-          byoAnnot: 'Your best self<br>every single day.',
+          byoAnnot: 'Tu mejor versión<br>todos los días.',
           byoCats: 'BRANDING | CONCEPTS | OFF & ONLINE MEDIA | AI GENERATION',
           dhlClient: 'Juan Martín del Potro x DHL',
           dhlAnnot: 'Juan Martín<br>del Potro',
@@ -51,10 +57,10 @@
         hello: 'Hello there,',
         name: "I'm Loli,",
         aka: '(Lo, Loló, Lolita — take your pick.)',
-        bio1: 'Senior graphic designer specializing in branding, art direction, and creative campaigns. I studied at Universidad de Palermo and have been in the industry since 2017.',
+        bio1: "I came from a branding background at Universidad de Palermo, but creative campaigns are where I really belong. Leading visual concepts, executing them end to end; that's where the work hits different for me.",
         bio2: "Eight years building visual identities — 360 campaigns, key visuals, brand systems, spots. Enough time to know that pretty doesn't cut it if there's nothing to say.",
         bio3: 'I started freelancing, worked at agencies that pushed me hard, and now split my time between Pernod Ricard and independent projects.',
-        bio4: 'I want to work with people and brands that challenge me — projects where I can bring ideas, make decisions, and own every detail.',
+        bio4: 'I work best with brands and people who push me and places where I can shape ideas and stay hands-on with every detail from start to finish.',
         belief: '<span class="belief-word">Design</span> <span class="belief-word">that</span> <span class="belief-word">only</span> <span class="belief-word">looks</span> <span class="belief-word">good</span> <span class="belief-word belief-emph">doesn&rsquo;t</span> <span class="belief-word belief-emph">talk</span> <span class="belief-word">to</span> <span class="belief-word belief-emph">anyone.</span>',
         skills: {
           branding: 'Branding', ai: 'AI Content', social: 'Social Media', ooh: 'OOH',
@@ -62,7 +68,7 @@
           creativity: 'Creativity', media: 'Online & Offline Media', artdir: 'Art Direction',
           events: 'Event Organization', entrepreneur: 'Entrepreneur', mindracing: 'Mind Always Racing'
         },
-        beyond: "Outside design: animals, music — I sing and play guitar — and the constant need to make things. Creativity doesn't switch off. I'm an entrepreneur at heart, and I love running and organizing events too.",
+        beyond: "I'm a designer by trade, but honestly I'm just someone who's always making stuff. Music, leather goods, interior spaces—whatever I'm into that week. Love animals, play guitar when I can. It's not really something I turn off, it's just how I work.",
         cta: {
           l1: 'If you think', l2: 'we could do', l3: 'something great', l4: 'together, you', l5: 'know where', l6: 'to find me'
         },
@@ -285,7 +291,7 @@
       home: {
         title: 'Dolores Riccardo — Directora de Arte & Creativa',
         hero: {
-          intro: 'Con más de ocho años de experiencia, trabajo de forma freelance y en colaboración con agencias creativas, siempre buscando transformar ideas en identidades visuales que comuniquen, solucionen y dejen huella.',
+          intro: 'Trabajo de forma freelance y en colaboración con agencias creativas, siempre buscando transformar ideas en identidades visuales que comuniquen, solucionen y dejen huella.',
           title: 'Soy Dolores, aunque<br>todo&nbsp;el&nbsp;mundo&nbsp;me&nbsp;dice&nbsp;Loli&nbsp;:)<br>Tengo 27 años y vivo en Buenos&nbsp;Aires.<br>Soy Diseñadora Gráfica y&nbsp;Lic.<br>en&nbsp;Diseño&nbsp;de&nbsp;Imagen&nbsp;Empresarial.',
           colLabel: 'Art Direction<br>&amp; Creativity',
           colText: 'Diseñadora gráfica senior y creativa, con más de 8 años de experiencia.'
@@ -296,6 +302,12 @@
           bplayClient: 'Guillermo Francella x Bplay',
           bplayAnnot: 'Sponsor Oficial<br>del Corazón Argento',
           bplayCats: 'DIRECCIÓN DE ARTE | VISUAL CLAVE | MEDIOS OFF & ONLINE',
+          absolutClient: 'Absolut Tabasco x Volaris',
+          absolutAnnot: 'Intensidad a bordo<br>de Volaris',
+          absolutCats: 'DIRECCIÓN DE ARTE | VISUAL CLAVE | MEDIOS OFF & ONLINE | GENERACIÓN IA',
+          truenoClient: 'Trueno x EA Sports',
+          truenoAnnot: 'Soy de donde nací,<br>mi tierra zanta',
+          truenoCats: 'DIRECCIÓN DE ARTE | VISUAL CLAVE | DISEÑO DE INDUMENTARIA',
           byoClient: 'Byo. Superfood Lab',
           byoAnnot: 'Tu mejor versión<br>todos los días.',
           byoCats: 'BRANDING | CONCEPTOS | MEDIOS OFF & ONLINE | GENERACIÓN IA',
@@ -310,7 +322,7 @@
         hello: 'Hola, qué tal,',
         name: 'Soy Loli,',
         aka: '(o Lo, Loló, Lolita.)',
-        bio1: 'Diseñadora gráfica senior especializada en branding, dirección de arte y campañas creativas. Estudié en la Universidad de Palermo y trabajo en la industria desde 2017.',
+        bio1: 'Me especialicé en branding en la Universidad de Palermo. Empecé trabajando en identidades visuales, pero descubrí que lo mío era la creatividad y las campañas publicitarias: ese espacio donde puedo dirigir y ejecutar, donde la estrategia se convierte en visual. Hoy branding es parte de mi ADN, pero campañas creativas es donde me enciendo.',
         bio2: 'Hace más de 8 años que construyo identidades visuales — campañas 360, key visuals, spots, marcas desde cero. Aprendí que el diseño gráfico es narrativa y coherencia, no solo algo que se ve bien.',
         bio3: 'Empecé freelance, pasé por agencias que me formaron mucho, y hoy combino mi trabajo en Pernod Ricard con proyectos propios.',
         bio4: 'Quiero colaborar con personas y marcas que me desafíen. Proyectos donde pueda proponer, decidir y estar detrás de cada detalle.',
@@ -321,7 +333,7 @@
           creativity: 'Creatividad', media: 'Medios Online & Offline', artdir: 'Dirección de Arte',
           events: 'Organización de Eventos', entrepreneur: 'Emprendedora', mindracing: 'La cabeza siempre a mil'
         },
-        beyond: 'Más allá del diseño: me apasionan los animales, la música —cantar y tocar guitarra— y el acto constante de crear. La creatividad no para cuando cierro la compu. Soy emprendedora por naturaleza, y me encanta organizar y hacer eventos.',
+        beyond: 'Más allá del diseño —que además de ser mi trabajo es mi verdadera pasión—: me apasionan los animales, la música. Canto, toco guitarra, diseño ropa y tengo un emprendimiento de accesorios de cuero. Decoro espacios. Organizo eventos sociales y corporativos. Siempre hay algo en construcción. La creatividad no se apaga cuando cierro la computadora; eso es lo que soy.',
         cta: {
           l1: 'Si pensás', l2: 'que podemos', l3: 'hacer cosas', l4: 'copadas juntos,', l5: 'sabés&nbsp;dónde', l6: 'encontrarme'
         },
