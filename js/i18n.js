@@ -674,7 +674,7 @@
     requestAnimationFrame(tick);
   }
 
-  function showPicker(onPick) {
+  function showPicker(onPick, preselect) {
     const overlay = document.getElementById('lang-overlay');
     if (!overlay) { onPick && onPick('en'); return; }
     overlay.hidden = false;
@@ -682,9 +682,15 @@
     overlay.classList.add('is-visible');
     lockScroll();
 
-    let selected = 'en';
+    let selected = (preselect === 'es' || preselect === 'en') ? preselect : 'en';
     const options = overlay.querySelectorAll('.lang-option');
     options.forEach(function (btn) {
+      // Reflect any previously chosen language as the default selection.
+      if (btn.getAttribute('data-lang') === selected) {
+        btn.classList.add('is-active');
+      } else {
+        btn.classList.remove('is-active');
+      }
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         selected = btn.getAttribute('data-lang');
@@ -722,6 +728,16 @@
     try { sessionStorage.setItem('homeLoaderShown', '1'); } catch (e) {}
   }
 
+  // The language picker shows once per browser session (a fresh tab/visit),
+  // even if a language was already chosen in a previous session. Navigating
+  // between pages within the same session skips it.
+  function pickerAlreadyShownThisSession() {
+    try { return sessionStorage.getItem('langPickerShown') === '1'; } catch (e) { return false; }
+  }
+  function markPickerShown() {
+    try { sessionStorage.setItem('langPickerShown', '1'); } catch (e) {}
+  }
+
   function init() {
     let stored = null;
     try { stored = localStorage.getItem('preferredLanguage'); } catch (e) {}
@@ -736,10 +752,11 @@
       if (home) markHomeLoaderShown();
     }
 
-    if (!stored) {
-      // Picker first; loader only on home first visit
+    if (!pickerAlreadyShownThisSession()) {
+      // Picker first (once per session); loader only on home first visit.
       lockScroll();
       showPicker(function (lang) {
+        markPickerShown();
         setLanguage(lang);
         if (shouldRunLoader) {
           runLoader(finishLoader);
@@ -747,9 +764,9 @@
           document.documentElement.classList.remove('is-preloading');
           unlockScroll();
         }
-      });
+      }, stored);
     } else {
-      setLanguage(stored);
+      setLanguage(stored || 'en');
       if (shouldRunLoader) {
         lockScroll();
         runLoader(finishLoader);
