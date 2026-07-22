@@ -96,6 +96,9 @@ button, input, select, textarea {
 .nav-link--cta { color: var(--black); }
 .nav-link--cta:hover { color: var(--gray-dark); }
 
+/* Contact appears in the nav only on mobile (desktop keeps its own CTA) */
+.nav-mobile-only { display: none; }
+
 /* Nav commas: gray by default, black on the comma next to the active tab */
 .nav-comma { color: var(--gray-light); transition: color 0.15s ease; }
 .nav-link.is-active + .nav-comma,
@@ -1468,6 +1471,36 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
 /* ========== CV PAGE ========== */
 .cv-page { padding-top: 64px; }
 
+/* Floating "Download CV" button on the CV page */
+.cv-download-float {
+    position: fixed;
+    right: 28px;
+    bottom: 28px;
+    z-index: 900;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background: var(--black);
+    color: #fff;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.cv-download-float::after {
+    content: "\2193"; /* ↓ */
+    font-size: 14px;
+    line-height: 1;
+}
+.cv-download-float:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+}
+
 .cv-hero {
     padding: 80px 40px 40px;
     display: grid;
@@ -2724,7 +2757,10 @@ html.is-preloading #lang-overlay { visibility: visible; }
     .header-location { display: none !important; }
     .lang-switch { font-size: 13px; }
     .lang-switch-btn { font-size: 13px; }
-    .nav-link--cta { font-size: 13px; }
+    /* Row 1 = logo + language switch only. Drop the CTA so it doesn't read
+       like a second header; Contact moves into the nav row below. */
+    .nav-link--cta { display: none !important; }
+    .nav-mobile-only { display: inline !important; }
 
     /* No body top-padding since header is static now */
     body { padding-top: 0 !important; }
@@ -2735,9 +2771,18 @@ html.is-preloading #lang-overlay { visibility: visible; }
         position: static !important;
         width: 100% !important;
         max-width: 100% !important;
-        height: 260px !important;
+        height: auto !important;
+        aspect-ratio: auto !important;
+        background: transparent !important;
         margin: 0 0 24px !important;
         transform: none !important;
+    }
+    /* Show the whole hero image — no crop, no gray letterbox. */
+    .hero-frame > img {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
     }
     .hero-intro {
         position: static !important;
@@ -2749,9 +2794,13 @@ html.is-preloading #lang-overlay { visibility: visible; }
     .hero-title {
         padding-top: 0 !important;
         text-indent: 0 !important;
-        font-size: clamp(34px, 9vw, 48px) !important;
-        line-height: 1.15 !important;
+        /* Smaller so the &nbsp;-joined ES lines fit; anywhere-wrap as a safety net
+           so nothing is ever clipped off the right edge. */
+        font-size: clamp(19px, 5.4vw, 34px) !important;
+        line-height: 1.2 !important;
         white-space: normal !important;
+        overflow-wrap: anywhere !important;
+        word-break: normal !important;
     }
     .hero-title .bracket,
     .hero-title .bracket-l,
@@ -2770,21 +2819,25 @@ html.is-preloading #lang-overlay { visibility: visible; }
         gap: 56px !important;
     }
     .work { gap: 20px !important; }
-    .work-meta { flex-wrap: wrap; gap: 4px 12px; font-size: 12px; justify-content: flex-start !important; }
+    /* Centered meta, title and description on mobile */
+    .work-meta { flex-wrap: wrap; gap: 4px 12px; font-size: 12px; justify-content: center !important; text-align: center; }
     .work-meta > span { white-space: normal !important; }
-    .work-title-wrapper { padding-top: 8px !important; }
-    /* Titles are long — force them to wrap and disable the scroll-driven scale */
+    .work-title-wrapper { padding-top: 8px !important; text-align: center !important; }
+    /* Title on a single centered line, with the desktop bracket-open animation
+       (scaled down so it stays on screen). Font shrinks to keep one line. */
     .work-title {
-        display: block !important;
-        font-size: clamp(28px, 8vw, 40px) !important;
-        line-height: 1.05 !important;
-        text-align: left !important;
-        white-space: normal !important;
-        word-break: normal !important;
-        overflow-wrap: anywhere;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        gap: 0.05em;
+        font-size: clamp(15px, 4.6vw, 26px) !important;
+        line-height: 1.1 !important;
+        text-align: center !important;
+        white-space: nowrap !important;
     }
     .work-title-link {
-        display: inline;
+        display: inline-flex;
+        align-items: center;
         text-decoration: none;
         color: inherit;
     }
@@ -2792,38 +2845,41 @@ html.is-preloading #lang-overlay { visibility: visible; }
     .work-title .bracket-l,
     .work-title .bracket-r,
     .work-title .title-text {
-        display: inline !important;
-        transform: none !important;
-        white-space: normal !important;
+        display: inline-block !important;
+        white-space: nowrap !important;
     }
+    .work-title .bracket-l { transform: translateX(calc(var(--p, 0) * -18px)) !important; }
+    .work-title .bracket-r { transform: translateX(calc(var(--p, 0) *  18px)) !important; }
+    .work-title .title-text { transform: scale(calc(1 + var(--p, 0) * 0.08)) !important; }
     .work-annotation { display: none !important; }
     .work-categories {
         font-size: 12px;
         letter-spacing: 1px;
-        text-align: left;
+        text-align: center;
         transform: none !important;
-        margin-top: 6px !important;
+        margin-top: 8px !important;
     }
-    /* Keep the frame positioned so the absolute <img inset:0> stays inside it */
+    /* Show the whole featured image — natural height, no crop, no gray letterbox. */
     .work-frame {
         position: relative !important;
         width: 100% !important;
         max-width: 100% !important;
-        aspect-ratio: 4 / 3 !important;
+        aspect-ratio: auto !important;
         transform: none !important;
-        margin: 0 !important;
+        margin: 0 auto !important;
     }
     .work-frame > img,
     .work-frame > video {
-        position: absolute !important;
-        inset: 0 !important;
+        position: relative !important;
+        inset: auto !important;
         width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
+        height: auto !important;
+        object-fit: contain !important;
     }
-    .work-cta { font-size: 13px; text-align: right; display: block; }
+    .work-cta { font-size: 13px; text-align: center; display: block; }
 
-    /* All-work scatter → clean stacked grid (scatter is unusable on phones) */
+    /* All-work scatter → clean stacked grid with the title on top and only
+       6 tiles, so the section stays short on phones. */
     .all-work { padding: 40px 20px 60px !important; }
     .all-work-title { font-size: clamp(40px, 12vw, 64px) !important; }
     .scatter {
@@ -2847,45 +2903,52 @@ html.is-preloading #lang-overlay { visibility: visible; }
         bottom: auto !important;
         display: block !important;
     }
-    .scatter-frame.f15,
-    .scatter-frame.f16,
-    .scatter-frame.f17,
-    .scatter-frame.f18,
-    .scatter-frame.f19,
-    .scatter-frame.f20,
-    .scatter-frame.f21,
-    .scatter-frame.f22,
-    .scatter-frame.f23,
-    .scatter-frame.f24 { display: block !important; }
+    /* Only the first 6 tiles */
+    .all-work .scatter-frame:nth-of-type(n + 7) { display: none !important; }
+    /* Title first, spanning the full width */
+    .all-work-title-wrapper {
+        order: -1;
+        grid-column: 1 / -1;
+        position: relative !important;
+        left: auto !important;
+        top: auto !important;
+        transform: none !important;
+        text-align: center;
+        margin: 0 0 6px !important;
+        pointer-events: auto;
+    }
 
     /* --- WORK PAGE --- */
     .work-head { padding: 24px 20px 8px !important; }
     .work-page-title { font-size: clamp(44px, 13vw, 72px) !important; }
     .view-toggle { font-size: 13px; }
-    .work-grid,
-    .work-row,
-    .work-row--2,
-    .work-row--3 {
-        grid-template-columns: 1fr !important;
-        gap: 32px !important;
-        padding: 0 20px !important;
+    /* Single-column stack. Natural image heights (no forced 4/3 letterbox),
+       and a uniform 15px gap between each image and its bracketed title. */
+    .work-grid-view {
+        column-count: 1 !important;
+        padding: 0 20px 48px !important;
     }
     .work-card {
         width: 100% !important;
         max-width: 100% !important;
+        gap: 15px !important;
+        margin-bottom: 28px !important;
     }
     .work-card-frame,
     .work-card-image {
         width: 100% !important;
-        aspect-ratio: 4 / 3 !important;
+        aspect-ratio: auto !important;
         height: auto !important;
+        transform: none !important;
     }
     .work-card-caption {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 12px;
         font-size: 14px;
-        gap: 6px;
-        padding: 12px 2px 0;
+        padding: 0;
     }
-    .work-card-title { font-size: 15px; }
     .work-card-year { font-size: 13px; }
 
     /* List view */
@@ -3058,7 +3121,38 @@ html.is-preloading #lang-overlay { visibility: visible; }
     .proj-next { font-size: 15px !important; }
 
     /* --- ABOUT --- */
-    .about-hero { padding: 40px 20px 0 !important; }
+    .about-hero { padding: 40px 20px 0 !important; overflow: visible !important; }
+    /* Scatter → responsive grid so all the photos show (not just one). */
+    .about-scatter {
+        position: relative !important;
+        height: auto !important;
+        max-width: 100% !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+    }
+    .about-scatter .scatter-frame {
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+    }
+    .about-scatter .scatter-frame img { width: 100%; height: 100%; object-fit: cover; }
+    /* Greeting sits on top, spanning the full width. */
+    .about-hello {
+        position: relative !important;
+        inset: auto !important;
+        order: -1;
+        grid-column: 1 / -1;
+        min-height: auto !important;
+        padding: 6px 0 14px !important;
+        pointer-events: auto;
+    }
     .about-hello, .about-name { font-size: clamp(32px, 10vw, 46px) !important; }
     .about-aka { font-size: 13px; }
     .about-intro {
@@ -3109,6 +3203,15 @@ html.is-preloading #lang-overlay { visibility: visible; }
     .cv-tool-name { font-size: 14px !important; }
     .cv-tool-note { font-size: 11px !important; }
     .cv-bar { height: 6px !important; }
+    /* Floating download button centered at the bottom on mobile */
+    .cv-download-float {
+        left: 50% !important;
+        right: auto !important;
+        bottom: 16px !important;
+        transform: translateX(-50%) !important;
+        padding: 12px 24px !important;
+    }
+    .cv-download-float:hover { transform: translateX(-50%) !important; }
 
     /* --- CONTACT --- */
     .contact-block {
@@ -3165,9 +3268,9 @@ html.is-preloading #lang-overlay { visibility: visible; }
     }
     .footer-nav {
         display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        gap: 12px 20px !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        gap: 10px !important;
     }
     .footer-nav-link { font-size: 14px !important; }
     .footer-contact-info { gap: 12px !important; }
