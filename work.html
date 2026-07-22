@@ -12,11 +12,11 @@
     <script>
         (function () {
             try {
-                var hasLang = !!localStorage.getItem('preferredLanguage');
+                var pickerShown = sessionStorage.getItem('langPickerShown') === '1';
                 var p = (location.pathname || '').toLowerCase();
                 var isHome = p === '/' || p === '' || p.endsWith('/index.html') || p === '/index.html';
                 var homeShown = sessionStorage.getItem('homeLoaderShown') === '1';
-                if (!hasLang || (isHome && !homeShown)) {
+                if (!pickerShown || (isHome && !homeShown)) {
                     document.documentElement.classList.add('is-preloading');
                 }
             } catch (e) {}
