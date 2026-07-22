@@ -72,7 +72,9 @@ button, input, select, textarea {
 
 .header-location {
     font-size: 14px;
-    font-weight: 500;
+    /* Light + italic so it reads as a caption, not a button */
+    font-weight: 300;
+    font-style: italic;
     color: var(--gray-light);
     text-decoration: none;
     letter-spacing: -0.025em;
@@ -93,8 +95,22 @@ button, input, select, textarea {
 .nav-link.is-active,
 .nav-link[aria-current="page"] { color: var(--black); }
 /* The CTA link keeps default black (visual anchor) */
-.nav-link--cta { color: var(--black); }
-.nav-link--cta:hover { color: var(--gray-dark); }
+/* CTA: gray with a very subtle pulse so it still reads as a button */
+.nav-link--cta {
+    color: var(--gray-dark);
+    animation: cta-pulse 2.6s ease-in-out infinite;
+}
+.nav-link--cta:hover {
+    color: var(--black);
+    animation: none;
+}
+@keyframes cta-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .nav-link--cta { animation: none; }
+}
 
 /* Contact appears in the nav only on mobile (desktop keeps its own CTA) */
 .nav-mobile-only { display: none; }
