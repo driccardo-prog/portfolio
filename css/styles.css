@@ -72,10 +72,10 @@ button, input, select, textarea {
 
 .header-location {
     font-size: 14px;
-    /* Light + italic so it reads as a caption, not a button */
-    font-weight: 300;
+    /* Italic caption — a touch more legible than the lightest gray */
+    font-weight: 400;
     font-style: italic;
-    color: var(--gray-light);
+    color: var(--gray-text);
     text-decoration: none;
     letter-spacing: -0.025em;
     white-space: nowrap;
@@ -104,9 +104,10 @@ button, input, select, textarea {
     color: var(--black);
     animation: none;
 }
+/* Darken toward black on each pulse so it reads as a button */
 @keyframes cta-pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.55; }
+    0%, 100% { color: var(--gray-dark); }
+    50% { color: var(--black); }
 }
 @media (prefers-reduced-motion: reduce) {
     .nav-link--cta { animation: none; }
