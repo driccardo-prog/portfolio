@@ -37,3 +37,17 @@ if (!reduceMotion) {
     window.addEventListener('resize', onScroll, { passive: true });
     update();
 }
+
+/* Auto-cycling crossfade slideshows: any .js-slideshow with >1 <img>.
+   Images are stacked (absolute, inset:0); we just toggle .is-active. */
+document.querySelectorAll('.js-slideshow').forEach(function (box) {
+    var imgs = box.querySelectorAll('img');
+    if (imgs.length < 2) return;
+    var i = 0;
+    imgs.forEach(function (im, n) { im.classList.toggle('is-active', n === 0); });
+    setInterval(function () {
+        imgs[i].classList.remove('is-active');
+        i = (i + 1) % imgs.length;
+        imgs[i].classList.add('is-active');
+    }, 2600);
+});

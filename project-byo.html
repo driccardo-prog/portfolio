@@ -23,7 +23,7 @@
         })();
     </script>
 </head>
-<body class="project-page">
+<body class="project-page project-page--byo">
     <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
     <div id="lang-overlay" hidden>
       <div class="lang-picker">
@@ -70,15 +70,15 @@
             </ul>
         </header>
 
-        <!-- Hero -->
-        <div class="proj-hero proj-frame" data-parallax="6">
-            <img src="./images/byo/bolsa.jpg" alt="Byo Superfood Lab — paper bag mockup">
+        <!-- Hero: cover (Remeras Byo) -->
+        <div class="proj-hero proj-frame" data-parallax="6" style="aspect-ratio: 2400 / 1340;">
+            <img src="./images/byo/remeras-cover.jpg" alt="Byo Superfood Lab — remera del staff con el local ilustrado en la espalda">
         </div>
 
         <!-- Stage A: tall frame + Contexto -->
         <section class="proj-stage proj-stage--ab">
-            <div class="proj-frame stage-tall" data-parallax="12">
-                <img src="./images/byo/jugos-2.jpg" alt="Byo — Jugos funcionales">
+            <div class="proj-frame stage-tall" data-parallax="10" style="aspect-ratio: 1400 / 1875;">
+                <img src="./images/byo/matcha.jpg" alt="Byo — Matcha, uno de los cinco superalimentos">
             </div>
             <div class="stage-text proj-text">
                 <span class="proj-text-num">01<span class="proj-text-label"> <span data-i18n="project.context">Contexto</span></span></span>
@@ -87,21 +87,15 @@
             </div>
         </section>
 
-        <section class="proj-pair">
-            <div class="proj-frame pair-a" data-parallax="-10">
-                <img src="./images/byo/jugos-3.jpg" alt="Byo — Green Detox juice">
-            </div>
-            <div class="proj-frame pair-b" data-parallax="14">
-                <img src="./images/byo/remeras.jpg" alt="Byo — uniforme remera back">
-            </div>
-        </section>
-
-        <!-- Pull-quote -->
+        <!-- Pull-quote + signage -->
         <section class="proj-stage proj-stage--quote">
             <h2 class="proj-pullquote" data-i18n="project.byo.pull">Cinco superalimentos. Un sistema visual. IA como dirección creativa.</h2>
+            <div class="proj-frame" data-parallax="10" style="aspect-ratio: 1400 / 1875;">
+                <img src="./images/byo/we-are-open.jpg" alt="Byo — cartel &quot;We Are Open&quot; en Pilar">
+            </div>
         </section>
 
-        <!-- Stage B: Ejecución + tall frame -->
+        <!-- Stage B: Ejecución + juices crossfade -->
         <section class="proj-stage proj-stage--ba">
             <div class="stage-text proj-text">
                 <span class="proj-text-num">02<span class="proj-text-label"> <span data-i18n="project.executionCreative">Ejecución Creativa</span></span></span>
@@ -109,19 +103,46 @@
                 <p data-i18n="project.byo.ex2">Desarrollé un sistema completo de iconografía donde cada superfood se traduce en una representación visual única, funcional y reconocible. La marca no es un logo aplicado; es un sistema vivo donde los superalimentos son el lenguaje.</p>
                 <p data-i18n="project.byo.ex3">La materialización integral de la identidad — fotografía de productos, video de local, renders del espacio, contenido para redes — se ejecutó con IA como herramienta de dirección creativa. Cada visual fue dirigido bajo criterio de art direction; cada iteración respondía a decisiones estéticas y estratégicas específicas. La IA no reemplazó la creatividad; amplió la capacidad de ejecutarla.</p>
             </div>
-            <div class="proj-frame stage-tall" data-parallax="-12">
-                <img src="./images/byo/jugos-4.jpg" alt="Byo — Purple Boost juice">
+            <div class="proj-frame stage-tall js-slideshow" data-parallax="-10" style="aspect-ratio: 1081 / 1351;">
+                <img src="./images/byo/jugo-01.jpg" class="is-active" alt="Byo — Jugo Golden Roots: antiinflamatorio y refuerzo inmune">
+                <img src="./images/byo/jugo-02.jpg" alt="Byo — Jugo Green Detox: depurativo y digestivo">
+                <img src="./images/byo/jugo-03.jpg" alt="Byo — Jugo Purple Boost: energizante y antioxidante">
             </div>
         </section>
 
-        <section class="proj-pair">
-            <div class="proj-frame pair-a" data-parallax="14">
-                <img src="./images/byo/donde-21.jpg" data-fit="contain" alt="Byo — Estamos en Pilar">
+        <!-- Product lifestyle pair -->
+        <section class="byo-duo">
+            <div class="proj-frame" data-parallax="8">
+                <img src="./images/byo/bowl-lifestyle.jpg" alt="Byo — hot bowl con granola y peanut butter">
             </div>
-            <div class="proj-frame pair-b" data-parallax="-10">
-                <img src="./images/byo/acai-classic.jpg" alt="Byo — Classic Açaí Bowl mockup">
+            <div class="proj-frame" data-parallax="-8">
+                <img src="./images/byo/acai-pour.jpg" alt="Byo — açaí bowl con dressing de peanut butter">
             </div>
         </section>
+
+        <!-- Hot Bowls: the three together -->
+        <div class="proj-frame byo-feature" data-parallax="8" style="--ar: 2400 / 1404;">
+            <img src="./images/byo/hotbowls-trio.jpg" alt="Byo — los tres Hot Bowls juntos">
+        </div>
+
+        <!-- Hot Bowls menu (kept as one set) -->
+        <section class="byo-menu">
+            <div class="proj-frame"><img src="./images/byo/hotbowl-01.jpg" alt="Byo Hot Bowl — Banana Caramel Crunch"></div>
+            <div class="proj-frame"><img src="./images/byo/hotbowl-02.jpg" alt="Byo Hot Bowl — Snickers Bowl"></div>
+            <div class="proj-frame"><img src="./images/byo/hotbowl-03.jpg" alt="Byo Hot Bowl — Apple Crumble"></div>
+        </section>
+
+        <!-- Classic Açaí Bowl -->
+        <div class="proj-frame byo-feature" data-parallax="8" style="--ar: 2400 / 1475;">
+            <img src="./images/byo/acai-logo.jpg" alt="Byo — Classic Açaí Bowl con logo">
+        </div>
+
+        <!-- Pre-launch reel -->
+        <div class="byo-reel" data-parallax="6">
+            <video class="byo-reel-video" autoplay muted loop playsinline preload="metadata" poster="./images/byo/prelaunch-poster.jpg">
+                <source src="./images/byo/prelaunch.mp4" type="video/mp4">
+            </video>
+        </div>
 
         <!-- Results -->
         <section class="proj-stage proj-stage--results">
@@ -133,7 +154,7 @@
         </section>
 
         <!-- Closing wide frame -->
-        <div class="proj-frame proj-closing" data-parallax="8">
+        <div class="proj-frame proj-closing" data-parallax="8" style="aspect-ratio: 2092 / 1048;">
             <img src="./images/byo/cap2.jpg" alt="Byo — uniforme delantal">
         </div>
 
