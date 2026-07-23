@@ -23,7 +23,7 @@
         })();
     </script>
 </head>
-<body class="project-page">
+<body class="project-page project-page--bplay">
     <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
     <div id="lang-overlay" hidden>
       <div class="lang-picker">
@@ -72,13 +72,13 @@
         </header>
 
         <!-- Hero -->
-        <div class="proj-hero proj-frame" data-parallax="6">
+        <div class="proj-hero proj-frame" data-parallax="6" style="aspect-ratio: 2510 / 1406;">
             <img src="./images/bplay/01-hero-mosaic.png" alt="Pepe Argento x Bplay — making-of mosaic">
         </div>
 
-        <!-- Stage A: tall frame on left + first details on right, then a pair of frames -->
+        <!-- Stage A: tall frame on left + Context on right -->
         <section class="proj-stage proj-stage--ab">
-            <div class="proj-frame stage-tall" data-parallax="12">
+            <div class="proj-frame stage-tall" data-parallax="10" style="aspect-ratio: 898 / 1134;">
                 <img src="./images/bplay/03-pizza.png" alt="Pepe Argento — En época de Mundial, jugá consciente">
             </div>
             <div class="stage-text proj-text">
@@ -89,29 +89,49 @@
             </div>
         </section>
 
-        <section class="proj-pair">
-            <div class="proj-frame pair-a" data-parallax="-10">
-                <img src="./images/bplay/04-shirt.png" alt="Pepe Argento — Sponsor oficial del Corazón Argento">
-            </div>
-            <div class="proj-frame pair-b" data-parallax="14">
-                <img src="./images/bplay/02-billboard-street.png" alt="Bplay OOH — Corazón Argento street billboard">
-            </div>
-        </section>
+        <!-- Key visual: San Fatiga altar -->
+        <div class="proj-frame bplay-feature" data-parallax="8" style="--ar: 2000 / 1325;">
+            <img src="./images/bplay/san-fatiga.jpg" alt="San Fatiga — key visual del altar de cábalas del Corazón Argento">
+        </div>
 
         <!-- Pull-quote (no side frame — avoids repeats) -->
         <section class="proj-stage proj-stage--quote">
             <h2 class="proj-pullquote" data-i18n="project.bplay.pull">Bplay no competía contra un patrocinio oficial; competía por el corazón.</h2>
         </section>
 
-        <!-- Stage B: second details on left + tall frame on right -->
+        <!-- Stage B: Execution on left + tall frame on right -->
         <section class="proj-stage proj-stage--ba">
             <div class="stage-text proj-text">
                 <span class="proj-text-num">02<span class="proj-text-label"> <span data-i18n="project.execution">Execution</span></span></span>
-                <p data-i18n="project.bplay.ex1">Creé la identidad visual completa de la campaña: diseñé el key visual "Sponsor Oficial del Corazón Argento", desarrollé toda la estrategia gráfica para digital, OOH, redes sociales y pauta. La decisión fue clara: celeste y blanco como código visual directo a la identidad nacional, y una tipografía que evocara la argentinidad sin caer en lo obvio.</p>
-                <p data-i18n="project.bplay.ex2">Cada pieza gráfica se convirtió en una extensión del concepto: los hinchas no solo miran el Mundial, participan en él.</p>
-                <p data-i18n="project.bplay.ex3">Bplay no era patrocinador; era cómplice.</p>
+                <p data-i18n="project.bplay.ex1">Creé la identidad visual completa de la campaña: diseñé el key visual "Sponsor Oficial del Corazón Argento" y desarrollé toda la estrategia gráfica para digital, OOH, redes sociales y pauta.</p>
+                <p data-i18n="project.bplay.ex2">La decisión fue deliberada: celeste y blanco como código visual directo a la identidad nacional. Cada pieza se convirtió en una extensión del concepto central — que los hinchas no solo miran el Mundial, sino que participan activamente en él.</p>
+                <p data-i18n="project.bplay.ex3">Para eso, trabajé con Guillermo Francella (Pepe Argento). No como figura decorativa, sino como el vehículo perfecto para ese mensaje: si Pepe cree en las cábalas, si Pepe juega conscientemente, entonces el hincha también puede. Su complicidad era nuestra complicidad.</p>
+                <p data-i18n="project.bplay.ex4">Bplay no era patrocinador; era cómplice.</p>
             </div>
-            <div class="proj-frame stage-tall" data-parallax="-12">
+            <div class="proj-frame stage-tall" data-parallax="-10" style="aspect-ratio: 880 / 1134;">
+                <img src="./images/bplay/04-shirt.png" alt="Pepe Argento — Sponsor oficial del Corazón Argento">
+            </div>
+        </section>
+
+        <!-- Making-of: shoot photos -->
+        <section class="bplay-grid">
+            <div class="proj-frame"><img src="./images/bplay/rodaje-01.jpg" alt="Rodaje Corazón Argento — claqueta y Guillermo Francella"></div>
+            <div class="proj-frame"><img src="./images/bplay/rodaje-03.jpg" alt="Rodaje Corazón Argento — Pepe Argento y el hincha en el sillón"></div>
+            <div class="proj-frame"><img src="./images/bplay/rodaje-04.jpg" alt="Rodaje Corazón Argento — Pepe Argento y la pizarra de tácticas"></div>
+            <div class="proj-frame"><img src="./images/bplay/rodaje-02.jpg" alt="Rodaje Corazón Argento — set de filmación completo"></div>
+        </section>
+
+        <!-- OOH: subway doors -->
+        <div class="proj-frame bplay-feature" data-parallax="8" style="--ar: 2000 / 1493;">
+            <img src="./images/bplay/ooh-subway.jpg" alt="Bplay OOH — En época de Mundial, jugá consciente, en puertas de subte">
+        </div>
+
+        <!-- OOH pieces -->
+        <section class="bplay-stack">
+            <div class="proj-frame" style="--ar: 2514 / 1404;">
+                <img src="./images/bplay/02-billboard-street.png" alt="Bplay OOH — Corazón Argento en vía pública">
+            </div>
+            <div class="proj-frame" style="--ar: 2506 / 1336;">
                 <img src="./images/bplay/05-billboards-pair.png" alt="Bplay OOH — Vos también jugás">
             </div>
         </section>
@@ -120,7 +140,8 @@
         <section class="proj-stage proj-stage--results">
             <div class="proj-text">
                 <span class="proj-text-num">03<span class="proj-text-label"> <span data-i18n="project.results">Results</span></span></span>
-                <p data-i18n="project.bplay.res1">"Corazón Argento" obtuvo tres medallas de plata en las categorías Film, Deportes &amp; Gaming y Producción Audiovisual.</p>
+                <p data-i18n="project.bplay.res1">"Corazón Argento" ganó tres medallas en el Festival Internacional de Agencias Independientes (FEPI): Plata en Mejor Producción Integral, Plata en Mejor Comercial (Deportes &amp; Gaming) y Bronce en Mejor Film.</p>
+                <p data-i18n="project.bplay.res2">Pero la métrica real fue otra: la campaña funcionó. Mientras los argentinos celebraban cada victoria, el país se llevaba el Mundial. Eso que Bplay construyó — ser el cómplice del hincha, validar sus rituales, hacerlo sentir parte del equipo — seguía ahí, vivo.</p>
             </div>
         </section>
 
