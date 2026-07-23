@@ -2636,6 +2636,51 @@ html.is-preloading #lang-overlay { visibility: visible; }
 }
 
 /* ========================================================================
+   Juan Martín del Potro x DHL: same alignment discipline — frames matched
+   to image ratios (no "air"), rows share one ratio (never misaligned).
+   ======================================================================== */
+.project-page--dhl .proj-frame > img { object-fit: cover; }
+.project-page--dhl .stage-tall,
+.project-page--dhl .stage-q-1 { min-height: 0; }
+.project-page--dhl .proj-stage--ab,
+.project-page--dhl .proj-stage--ba,
+.project-page--dhl .proj-stage--quote,
+.project-page--dhl .proj-stage--results { align-items: center; }
+
+/* Full-width feature — graphics shown whole (frame == image ratio) */
+.project-page--dhl .dhl-feature { aspect-ratio: var(--ar); margin: 0 0 40px; }
+.project-page--dhl .dhl-feature > img { object-fit: contain; }
+
+/* Two shots side by side, same ratio → aligned */
+.dhl-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 0 0 40px; }
+.dhl-duo .proj-frame { aspect-ratio: var(--ar, 3 / 2); }
+
+/* Stacked full-width pieces, each matched to its own ratio */
+.dhl-stack { display: grid; grid-template-columns: 1fr; gap: 24px; margin: 0 0 40px; }
+.dhl-stack .proj-frame { aspect-ratio: var(--ar); }
+
+/* Self-hosted campaign film — plays on click (no autoplay) */
+.dhl-video { margin: 0 0 40px; }
+.dhl-video video {
+    display: block;
+    width: 100%;
+    aspect-ratio: var(--ar, 16 / 9);
+    object-fit: cover;
+    border-radius: 6px;
+    background: #111;
+}
+
+@media (max-width: 640px) {
+    .project-page--dhl .dhl-feature.proj-frame,
+    .dhl-stack .proj-frame { aspect-ratio: var(--ar) !important; }
+    .project-page--dhl .dhl-feature > img { object-fit: contain !important; }
+    .dhl-duo { grid-template-columns: 1fr !important; gap: 14px !important; }
+    .dhl-duo .proj-frame { aspect-ratio: var(--ar, 3 / 2) !important; }
+    .project-page--dhl .dhl-feature,
+    .dhl-duo, .dhl-stack, .dhl-video { margin: 0 0 28px !important; }
+}
+
+/* ========================================================================
    Ojo de Tigre: playful scatter of graphic pieces + enlarged claim frame
    ======================================================================== */
 .stage-tall--xl { aspect-ratio: 4 / 5; min-height: 640px; }

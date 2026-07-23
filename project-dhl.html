@@ -23,7 +23,7 @@
         })();
     </script>
 </head>
-<body class="project-page">
+<body class="project-page project-page--dhl">
     <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
     <div id="lang-overlay" hidden>
       <div class="lang-picker">
@@ -72,13 +72,13 @@
         </header>
 
         <!-- Hero -->
-        <div class="proj-hero proj-frame" data-parallax="6">
+        <div class="proj-hero proj-frame" data-parallax="6" style="aspect-ratio: 2516 / 1406;">
             <img src="./images/dhl/hero-keyvisual.png" alt="Juan Martín del Potro x DHL — #NuncaTeRindas">
         </div>
 
         <!-- Stage A: tall frame + Contexto -->
         <section class="proj-stage proj-stage--ab">
-            <div class="proj-frame stage-tall" data-parallax="12">
+            <div class="proj-frame stage-tall" data-parallax="10" style="aspect-ratio: 860 / 1410;">
                 <img src="./images/dhl/boxes-stack.png" alt="DHL Open for Us — boxes installation">
             </div>
             <div class="stage-text proj-text">
@@ -88,19 +88,20 @@
             </div>
         </section>
 
-        <section class="proj-pair">
-            <div class="proj-frame pair-a" data-parallax="-10">
-                <img src="./images/dhl/box-closeup.png" alt="DHL — Open for Us box detail">
+        <!-- Del Potro on court -->
+        <section class="dhl-duo" style="--ar: 3 / 2;">
+            <div class="proj-frame" data-parallax="8">
+                <img src="./images/dhl/court-box-02.jpg" alt="Juan Martín del Potro — sesión en cancha con caja DHL">
             </div>
-            <div class="proj-frame pair-b" data-parallax="14">
-                <img src="./images/dhl/ooh-billboard.png" alt="Juan Martín del Potro — DHL outdoor billboard">
+            <div class="proj-frame" data-parallax="-8">
+                <img src="./images/dhl/court-box-01.jpg" alt="Juan Martín del Potro — raqueta y caja DHL Open for Us">
             </div>
         </section>
 
         <!-- Pull-quote -->
         <section class="proj-stage proj-stage--quote">
             <h2 class="proj-pullquote" data-i18n="project.dhl.pull">El brief no era solo creativo — era un equilibrio.</h2>
-            <div class="proj-frame stage-q-1" data-parallax="14">
+            <div class="proj-frame stage-q-1" data-parallax="12" style="aspect-ratio: 850 / 1318;">
                 <img src="./images/dhl/detail-racket.png" alt="DHL Open for Us — tennis detail">
             </div>
         </section>
@@ -113,22 +114,66 @@
                 <p data-i18n="project.dhl.ex2">La dirección de arte se extendió al espacio físico: dirigí la escenografía del evento de lanzamiento en el MALBA.</p>
                 <p data-i18n="project.dhl.ex3">La decisión creativa central fue la restricción — dejar que la historia de Del Potro cargara la emoción mientras el diseño se mantenía preciso, moderno y disciplinado.</p>
             </div>
-            <div class="proj-frame stage-tall" data-parallax="-12">
+            <div class="proj-frame stage-tall" data-parallax="-10" style="aspect-ratio: 788 / 1410;">
                 <img src="./images/dhl/box-closeup.png" alt="DHL Open for Us — yellow box">
             </div>
         </section>
 
-        <section class="proj-pair">
-            <div class="proj-frame pair-a" data-parallax="14">
-                <img src="./images/dhl/boxes-stack.png" alt="DHL — branded boxes installation">
+        <!-- ============================================================
+             CAMPAIGN FILM — self-hosted, plays on click (no autoplay).
+             Awaiting the web-sized MP4 source. Once available, uncomment:
+        <div class="dhl-video" style="--ar: 16 / 9;">
+            <video controls preload="metadata" playsinline poster="./images/dhl/portada-grande.jpg">
+                <source src="./images/dhl/delpotro-film.mp4" type="video/mp4">
+            </video>
+        </div>
+             ============================================================ -->
+
+        <!-- Un grande entre grandes -->
+        <div class="proj-frame dhl-feature" data-parallax="8" style="--ar: 1920 / 1079;">
+            <img src="./images/dhl/portada-grande.jpg" alt="Juan Martín del Potro — Un grande entre grandes, #NuncaTeRindas">
+        </div>
+
+        <!-- Event backdrop -->
+        <div class="proj-frame dhl-feature" data-parallax="8" style="--ar: 2400 / 1205;">
+            <img src="./images/dhl/banner-dhl.jpg" alt="DHL — backdrop de evento Juan Martín del Potro #NuncaTeRindas">
+        </div>
+
+        <!-- Digital banners -->
+        <section class="dhl-duo" style="--ar: 625 / 521;">
+            <div class="proj-frame" data-parallax="8">
+                <img src="./images/dhl/banner-descubri-01.jpg" alt="DHL Open for Us — banner digital Del Potro">
             </div>
-            <div class="proj-frame pair-b" data-parallax="-10">
-                <img src="./images/dhl/ooh-three-posters.png" alt="DHL Open for Us — three street posters">
+            <div class="proj-frame" data-parallax="-8">
+                <img src="./images/dhl/banner-descubri-02.jpg" alt="DHL Open for Us — banner digital #NuncaTeRindas">
             </div>
         </section>
 
-        <!-- Results -->
+        <!-- OOH pieces -->
+        <section class="dhl-stack">
+            <div class="proj-frame" data-parallax="8" style="--ar: 2512 / 1408;">
+                <img src="./images/dhl/ooh-billboard.png" alt="Juan Martín del Potro — DHL vía pública">
+            </div>
+            <div class="proj-frame" data-parallax="-8" style="--ar: 2514 / 1416;">
+                <img src="./images/dhl/ooh-three-posters.png" alt="DHL Open for Us — tres afiches de calle">
+            </div>
+        </section>
+
+        <!-- Racket close-up + table tent -->
+        <section class="dhl-duo" style="--ar: 1 / 1;">
+            <div class="proj-frame" data-parallax="8">
+                <img src="./images/dhl/racket-face.jpg" alt="Juan Martín del Potro — #NuncaTeRindas a través de la raqueta">
+            </div>
+            <div class="proj-frame" data-parallax="-8">
+                <img src="./images/dhl/table-tent.jpg" alt="DHL Open for Us — atril de mesa con QR">
+            </div>
+        </section>
+
+        <!-- Results + event photo -->
         <section class="proj-stage proj-stage--results">
+            <div class="proj-frame stage-tall" data-parallax="10" style="aspect-ratio: 1066 / 1600; grid-column: 1;">
+                <img src="./images/dhl/event-talk.jpg" alt="DHL Open for Us — charla de Del Potro en el MALBA">
+            </div>
             <div class="proj-text">
                 <span class="proj-text-num">03<span class="proj-text-label"> <span data-i18n="project.results">Resultados</span></span></span>
                 <p data-i18n="project.dhl.res1">La campaña se ejecutó en junio de 2023 con presencia en el MALBA, activaciones digitales y distribución regional de material impreso.</p>
@@ -137,7 +182,7 @@
         </section>
 
         <!-- Closing wide frame -->
-        <div class="proj-frame proj-closing" data-parallax="8">
+        <div class="proj-frame proj-closing" data-parallax="8" style="aspect-ratio: 2512 / 1406;">
             <img src="./images/dhl/event-malba.png" alt="DHL Open for Us — MALBA event">
         </div>
 
