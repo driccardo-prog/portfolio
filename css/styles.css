@@ -2516,6 +2516,55 @@ html.is-preloading #lang-overlay { visibility: visible; }
 }
 
 /* ========================================================================
+   Bplay (Corazón Argento): every frame's aspect-ratio matches its image, so
+   nothing letterboxes ("air") and images in a row never fall out of
+   alignment. Fill with cover; features (posters) use contain to stay whole.
+   ======================================================================== */
+.project-page--bplay .proj-frame > img { object-fit: cover; }
+.project-page--bplay .stage-tall { min-height: 0; }
+.project-page--bplay .proj-stage--ab,
+.project-page--bplay .proj-stage--ba { align-items: center; }
+
+/* Full-width key visuals — shown whole (frame == image ratio, so no air) */
+.project-page--bplay .bplay-feature {
+    aspect-ratio: var(--ar);
+    margin: 0 0 40px;
+}
+.project-page--bplay .bplay-feature > img { object-fit: contain; }
+
+/* Making-of: 2×2 grid of identical-ratio frames → aligned, zero air */
+.bplay-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 0 0 40px;
+}
+.bplay-grid .proj-frame { aspect-ratio: 3 / 2; }
+
+/* OOH pieces stacked full width, each matched to its own ratio */
+.bplay-stack {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 0 0 40px;
+}
+.bplay-stack .proj-frame { aspect-ratio: var(--ar); }
+
+@media (max-width: 640px) {
+    /* Re-assert bplay ratios over the global 4/5 !important mobile rule */
+    .project-page--bplay .bplay-feature.proj-frame,
+    .project-page--bplay .bplay-stack .proj-frame {
+        aspect-ratio: var(--ar) !important;
+    }
+    .project-page--bplay .bplay-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+    .project-page--bplay .bplay-grid .proj-frame { aspect-ratio: 3 / 2 !important; }
+    .project-page--bplay .bplay-feature > img { object-fit: contain !important; }
+    .project-page--bplay .bplay-feature,
+    .project-page--bplay .bplay-grid,
+    .project-page--bplay .bplay-stack { margin: 0 0 28px !important; }
+}
+
+/* ========================================================================
    Ojo de Tigre: playful scatter of graphic pieces + enlarged claim frame
    ======================================================================== */
 .stage-tall--xl { aspect-ratio: 4 / 5; min-height: 640px; }

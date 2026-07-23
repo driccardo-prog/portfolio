@@ -168,14 +168,16 @@
         bplay: {
           title: 'Guillermo Francella x Bplay — Dolores Riccardo',
           campaign: 'Sponsor Oficial del Corazón Argento',
-          ctx1: "The challenge wasn't visibility — Bplay already had reach. During the 2022 World Cup, the real question was emotional: how do you win fans over when your direct competitor owns the official sponsorship?",
-          ctx2: "The answer wasn't about the team. It was about something more Argentine than football itself: the rituals, the cábalas, the superstitions that turn watching a game into a collective religion.",
-          ctx3: "Bplay wasn't chasing a sponsorship title. It was chasing something harder to buy.",
-          pull: "Bplay wasn't chasing a sponsorship title. It was chasing something harder to buy.",
-          ex1: 'I built the full visual identity for the campaign — from the key visual "Sponsor Oficial del Corazón Argento" to the complete graphic system across digital, OOH, social media and paid media. The direction was clear: celeste and white as an unambiguous visual shorthand for Argentine identity, and type that felt local without leaning on the obvious.',
-          ex2: "Every piece extended the same idea: fans don't just watch the World Cup — they live it.",
-          ex3: "Bplay wasn't a sponsor. It was a co-conspirator.",
-          res1: '"Corazón Argento" took three silver medals — Film, Sports & Gaming, and Audiovisual Production.'
+          ctx1: "In 2022, Bplay faced a straightforward challenge: compete during the World Cup in a market where the main rival was already the official national team sponsor.",
+          ctx2: "The real question wasn't how to reach more people. It was how to actually connect with Argentine fans — at an emotional level, not a transactional one. And that connection lived in something deeper than football itself: superstitions, rituals, the obsessive way Argentines experience the sport.",
+          ctx3: "Bplay couldn't outbid a national sponsorship. So they went for the heart instead.",
+          pull: "Bplay couldn't outbid a national sponsorship. So they went for the heart instead.",
+          ex1: 'I built the visual identity for the entire campaign: the key visual "Official Sponsor of Argentina\'s Heart," and all the graphic strategy across digital, OOH, social, and media planning.',
+          ex2: "The choice was intentional: light blue and white as a direct visual code to national identity. Every asset — every post, every billboard, every feed — became an extension of one idea: fans don't just watch the World Cup. They play in it.",
+          ex3: "That's where Guillermo Francella came in. Not as a celebrity attachment, but as the perfect embodiment of the message. Pepe Argento believes in superstitions. Pepe plays consciously. So can you. His complicity was the campaign's complicity.",
+          ex4: "Bplay wasn't a sponsor. It was a co-conspirator.",
+          res1: '"Corazón Argento" won three medals at the Festival Internacional de Agencias Independientes (FEPI): Silver for Best Integrated Production, Silver for Best Commercial (Sports & Gaming), and Bronze for Best Film.',
+          res2: "But the real proof was simpler: it worked. While Argentina lifted the World Cup, Bplay had already built something that stuck — a brand that felt like it was rooting with you, not just selling to you. That was the campaign."
         },
         byo: {
           title: 'Byo. Superfood Lab — Dolores Riccardo',
@@ -437,10 +439,12 @@
           ctx2: 'La pregunta no era cómo llegar a más gente, sino cómo conectar emocionalmente con los hinchas argentinos. La respuesta estaba en algo más profundo que un equipo: las cábalas, los rituales, la superstición que define cómo los argentinos viven el fútbol.',
           ctx3: 'Bplay no competía contra un patrocinio oficial; competía por el corazón.',
           pull: 'Bplay no competía contra un patrocinio oficial; competía por el corazón.',
-          ex1: 'Creé la identidad visual completa de la campaña: diseñé el key visual "Sponsor Oficial del Corazón Argento", desarrollé toda la estrategia gráfica para digital, OOH, redes sociales y pauta. La decisión fue clara: celeste y blanco como código visual directo a la identidad nacional, y una tipografía que evocara la argentinidad sin caer en lo obvio.',
-          ex2: 'Cada pieza gráfica se convirtió en una extensión del concepto: los hinchas no solo miran el Mundial, participan en él.',
-          ex3: 'Bplay no era patrocinador; era cómplice.',
-          res1: '"Corazón Argento" obtuvo tres medallas de plata en las categorías Film, Deportes & Gaming y Producción Audiovisual.'
+          ex1: 'Creé la identidad visual completa de la campaña: diseñé el key visual "Sponsor Oficial del Corazón Argento" y desarrollé toda la estrategia gráfica para digital, OOH, redes sociales y pauta.',
+          ex2: 'La decisión fue deliberada: celeste y blanco como código visual directo a la identidad nacional. Cada pieza se convirtió en una extensión del concepto central — que los hinchas no solo miran el Mundial, sino que participan activamente en él.',
+          ex3: 'Para eso, trabajé con Guillermo Francella (Pepe Argento). No como figura decorativa, sino como el vehículo perfecto para ese mensaje: si Pepe cree en las cábalas, si Pepe juega conscientemente, entonces el hincha también puede. Su complicidad era nuestra complicidad.',
+          ex4: 'Bplay no era patrocinador; era cómplice.',
+          res1: '"Corazón Argento" ganó tres medallas en el Festival Internacional de Agencias Independientes (FEPI): Plata en Mejor Producción Integral, Plata en Mejor Comercial (Deportes & Gaming) y Bronce en Mejor Film.',
+          res2: 'Pero la métrica real fue otra: la campaña funcionó. Mientras los argentinos celebraban cada victoria, el país se llevaba el Mundial. Eso que Bplay construyó — ser el cómplice del hincha, validar sus rituales, hacerlo sentir parte del equipo — seguía ahí, vivo.'
         },
         byo: {
           title: 'Byo. Superfood Lab — Dolores Riccardo',
