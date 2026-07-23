@@ -2565,6 +2565,65 @@ html.is-preloading #lang-overlay { visibility: visible; }
 }
 
 /* ========================================================================
+   Byo. Superfood Lab: same alignment discipline — frames matched to image
+   ratios (no "air"), rows share one ratio (never misaligned), and the menu
+   sets are kept grouped. Includes the juices crossfade + the launch reel.
+   ======================================================================== */
+.project-page--byo .proj-frame > img { object-fit: cover; }
+.project-page--byo .stage-tall { min-height: 0; }
+.project-page--byo .proj-stage--ab,
+.project-page--byo .proj-stage--ba,
+.project-page--byo .proj-stage--quote { align-items: center; }
+
+/* Full-width feature shots — shown whole (frame == image ratio) */
+.project-page--byo .byo-feature { aspect-ratio: var(--ar); margin: 0 0 40px; }
+.project-page--byo .byo-feature > img { object-fit: contain; }
+
+/* Two portrait product shots, side by side (same ratio → aligned) */
+.byo-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 0 0 40px; }
+.byo-duo .proj-frame { aspect-ratio: 1400 / 1875; }
+
+/* Hot Bowls menu — the three cards kept together as one set */
+.byo-menu { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 0 0 40px; }
+.byo-menu .proj-frame { aspect-ratio: 1080 / 1350; }
+
+/* Crossfade slideshow (juices): stacked frames that cycle one over the other */
+.js-slideshow > img { opacity: 0; transition: opacity 0.9s ease; }
+.js-slideshow > img.is-active { opacity: 1; }
+
+/* Pre-launch vertical reel, centered */
+.byo-reel { display: flex; justify-content: center; margin: 0 0 40px; }
+.byo-reel-video {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 720 / 1296;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    background: #ececec;
+}
+
+@media (max-width: 640px) {
+    .project-page--byo .byo-feature.proj-frame { aspect-ratio: var(--ar) !important; }
+    .project-page--byo .byo-feature > img { object-fit: contain !important; }
+    /* Hot Bowls become a swipeable strip so they stay together */
+    .byo-menu {
+        grid-auto-flow: column;
+        grid-template-columns: none;
+        grid-auto-columns: 78%;
+        overflow-x: auto;
+        gap: 12px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 6px;
+    }
+    .byo-menu .proj-frame { scroll-snap-align: center; aspect-ratio: 1080 / 1350 !important; }
+    .byo-duo { gap: 12px; }
+    .project-page--byo .byo-feature,
+    .byo-duo, .byo-menu, .byo-reel { margin: 0 0 28px !important; }
+}
+
+/* ========================================================================
    Ojo de Tigre: playful scatter of graphic pieces + enlarged claim frame
    ======================================================================== */
 .stage-tall--xl { aspect-ratio: 4 / 5; min-height: 640px; }
