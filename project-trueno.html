@@ -23,7 +23,7 @@
         })();
     </script>
 </head>
-<body class="project-page">
+<body class="project-page project-page--trueno">
     <!-- ========== LANGUAGE PICKER OVERLAY ========== -->
     <div id="lang-overlay" hidden>
       <div class="lang-picker">
@@ -72,13 +72,13 @@
         </header>
 
         <!-- Hero -->
-        <div class="proj-hero proj-frame" data-parallax="6">
+        <div class="proj-hero proj-frame" data-parallax="6" style="aspect-ratio: 1810 / 1016;">
             <img src="./images/trueno/ig-mockup.png" alt="Trueno x EA Sports — FIFA 22 Instagram launch">
         </div>
 
         <!-- Stage A: tall frame + Contexto -->
         <section class="proj-stage proj-stage--ab">
-            <div class="proj-frame stage-tall" data-parallax="12">
+            <div class="proj-frame stage-tall" data-parallax="10" style="aspect-ratio: 946 / 1140;">
                 <img src="./images/trueno/trueno-shirt-bw.png" alt="Trueno holding Tierra Zanta kit">
             </div>
             <div class="stage-text proj-text">
@@ -88,19 +88,17 @@
             </div>
         </section>
 
-        <section class="proj-pair">
-            <div class="proj-frame pair-a" data-parallax="-10">
-                <img src="./images/trueno/trueno-detail.png" alt="Trueno wearing the kit">
+        <!-- Launch video -->
+        <div class="trueno-video" data-parallax="6">
+            <div class="trueno-video-frame">
+                <iframe src="https://www.youtube.com/embed/WQwRla5wreM?rel=0" title="Trueno x EA Sports — Tierra Zanta" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
-            <div class="proj-frame pair-b" data-parallax="14">
-                <img src="./images/trueno/kit-detail.png" alt="Tierra Zanta kit detail — EA Sports">
-            </div>
-        </section>
+        </div>
 
         <!-- Pull-quote -->
         <section class="proj-stage proj-stage--quote">
             <h2 class="proj-pullquote" data-i18n="project.trueno.pull">Soy de donde nací, donde voy a morir. Mi tierra zanta.</h2>
-            <div class="proj-frame stage-q-1" data-parallax="14">
+            <div class="proj-frame stage-q-1" data-parallax="12" style="aspect-ratio: 694 / 742;">
                 <img src="./images/trueno/kit-mockup.png" alt="Tierra Zanta kit mockup">
             </div>
         </section>
@@ -112,10 +110,20 @@
                 <p data-i18n="project.trueno.ex1">Trabajé directamente con Trueno en sesiones de trabajo para entender la profundidad de "Tierra Zanta". A partir de sus elementos visuales —firma, símbolos personales, referencias de su territorio— diseñé el kit completo: camiseta, pantalones, accesorios.</p>
                 <p data-i18n="project.trueno.ex2">La decisión creativa fue la paleta: dorado y negro. Estos colores viven en el ADN visual de Trueno y del álbum "Bien o Mal". Cada elemento respondía directamente a lo que Trueno explicaba sobre su identidad, su territorio y su historia.</p>
             </div>
-            <div class="proj-frame stage-tall" data-parallax="-12">
-                <img src="./images/trueno/fifa-panel.png" alt="Trueno Tierra Zanta kit in FIFA 22 game">
+            <div class="proj-frame stage-tall" data-parallax="-10" style="aspect-ratio: 842 / 1060;">
+                <img src="./images/trueno/trueno-detail.png" alt="Trueno wearing the kit">
             </div>
         </section>
+
+        <!-- Kit detail -->
+        <div class="proj-frame trueno-feature" data-parallax="8" style="--ar: 1862 / 1370;">
+            <img src="./images/trueno/kit-detail.png" alt="Tierra Zanta kit detail — EA Sports">
+        </div>
+
+        <!-- In-game panel -->
+        <div class="proj-frame trueno-feature" data-parallax="8" style="--ar: 1706 / 752;">
+            <img src="./images/trueno/fifa-panel.png" alt="Trueno Tierra Zanta kit in FIFA 22 game">
+        </div>
 
         <!-- Results -->
         <section class="proj-stage proj-stage--results">
