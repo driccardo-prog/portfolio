@@ -2659,17 +2659,6 @@ html.is-preloading #lang-overlay { visibility: visible; }
 .dhl-stack { display: grid; grid-template-columns: 1fr; gap: 24px; margin: 0 0 40px; }
 .dhl-stack .proj-frame { aspect-ratio: var(--ar); }
 
-/* Self-hosted campaign film — plays on click (no autoplay) */
-.dhl-video { margin: 0 0 40px; }
-.dhl-video video {
-    display: block;
-    width: 100%;
-    aspect-ratio: var(--ar, 16 / 9);
-    object-fit: cover;
-    border-radius: 6px;
-    background: #111;
-}
-
 @media (max-width: 640px) {
     .project-page--dhl .dhl-feature.proj-frame,
     .dhl-stack .proj-frame { aspect-ratio: var(--ar) !important; }
@@ -2677,7 +2666,7 @@ html.is-preloading #lang-overlay { visibility: visible; }
     .dhl-duo { grid-template-columns: 1fr !important; gap: 14px !important; }
     .dhl-duo .proj-frame { aspect-ratio: var(--ar, 3 / 2) !important; }
     .project-page--dhl .dhl-feature,
-    .dhl-duo, .dhl-stack, .dhl-video { margin: 0 0 28px !important; }
+    .dhl-duo, .dhl-stack { margin: 0 0 28px !important; }
 }
 
 /* ========================================================================
