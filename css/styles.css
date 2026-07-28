@@ -1491,13 +1491,20 @@ p.bio-cell { font-size: 14px; line-height: 1.5; color: var(--black); margin: 0; 
 .cv-page { padding-top: 64px; }
 
 /* Floating "Download CV" button on the CV page */
-.cv-download-float {
+.cv-download-floats {
     position: fixed;
     right: 28px;
     bottom: 28px;
     z-index: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+.cv-download-float {
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
     gap: 8px;
     padding: 12px 22px;
     background: var(--black);
@@ -3489,15 +3496,17 @@ html.is-preloading #lang-overlay { visibility: visible; }
     .cv-tool-name { font-size: 14px !important; }
     .cv-tool-note { font-size: 11px !important; }
     .cv-bar { height: 6px !important; }
-    /* Floating download button centered at the bottom on mobile */
-    .cv-download-float {
+    /* Floating download buttons centered at the bottom on mobile */
+    .cv-download-floats {
         left: 50% !important;
         right: auto !important;
         bottom: 16px !important;
         transform: translateX(-50%) !important;
-        padding: 12px 24px !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 8px !important;
     }
-    .cv-download-float:hover { transform: translateX(-50%) !important; }
+    .cv-download-float { padding: 12px 20px !important; }
 
     /* --- CONTACT --- */
     .contact-block {
