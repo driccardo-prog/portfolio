@@ -953,6 +953,27 @@ button, input, select, textarea {
     transition: background 0.2s ease, transform 0.2s ease;
 }
 .quote-submit:hover { transform: translateY(-1px); }
+.quote-submit:disabled { opacity: 0.6; cursor: default; transform: none; }
+
+/* Inline thank-you panel (replaces the form after a successful send) */
+.quote-thanks {
+    padding: 40px 0 20px;
+    animation: contactFadeUp 0.5s ease both;
+}
+.quote-thanks-title {
+    font-size: clamp(40px, 6vw, 76px);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    color: var(--black);
+    margin: 0 0 14px;
+}
+.quote-thanks-sub {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--gray-dark);
+    margin: 0;
+}
 
 .contact-footer {
     display: flex;
