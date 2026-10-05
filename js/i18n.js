@@ -21,7 +21,8 @@
         },
         nextProject: 'Next Project >',
         seeWholeDeal: '< See the whole deal >',
-        getInTouch: "Let's get in touch ;)"
+        getInTouch: "Let's get in touch ;)",
+        cvPdf: './Dolores-Riccardo-CV-EN.pdf'
       },
       home: {
         title: 'Dolores Riccardo — Art Director & Creative',
@@ -286,7 +287,8 @@
         },
         nextProject: 'Próximo Proyecto >',
         seeWholeDeal: '< Mirá el proyecto completo >',
-        getInTouch: 'Hablemos de tu próximo proyecto ;)'
+        getInTouch: 'Hablemos de tu próximo proyecto ;)',
+        cvPdf: './Dolores-Riccardo-CV-ES.pdf'
       },
       home: {
         title: 'Dolores Riccardo — Directora de Arte & Creativa',
@@ -580,6 +582,10 @@
     document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
       const v = getByPath(dict, el.getAttribute('data-i18n-alt'));
       if (v != null) el.setAttribute('alt', v);
+    });
+    document.querySelectorAll('[data-i18n-href]').forEach(function (el) {
+      const v = getByPath(dict, el.getAttribute('data-i18n-href'));
+      if (v != null) el.setAttribute('href', v);
     });
     document.querySelectorAll('[data-i18n-typewriter]').forEach(function (el) {
       const v = getByPath(dict, el.getAttribute('data-i18n-typewriter'));
